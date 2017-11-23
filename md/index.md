@@ -1,106 +1,89 @@
 
 # Data Journalism, Spring 2018
 
-This class is for students who want to make finding and reporting stories from data part of their toolkit. It will be useful for anyone interested in investigative journalism, which nowadays is often heavily data-driven, or those keen to use data to provide context for and ground-truth regular beat reporting. You should be comfortable with numbers, and thinking critically and quantitatively. You must be prepared to work with some simple code (in R and SQL), and to get your hands dirty with real-life, messy data!
+This course is for students who want to make finding and reporting stories from data part of their toolkit. It will be useful for anyone interested in investigative journalism, which nowadays is often heavily data-driven, or those keen to use data to provide context and ground-truth regular for beat reporting. You should be comfortable with numbers, and thinking critically and quantitatively. You must be prepared to work with some simple code (in R and SQL), and to get your hands dirty with real-life, messy data!
 
 ### Weekly schedule
 
-We will meet in **108/Lower NG** on Thursdays from 6pm - 9pm. Your instructors are [**Peter Aldhous**](http://www.peteraldhous.com/) and **[Amanda Hickman](http://velociraptor.info/)**, will maintain office hours over Skype.  You are encouraged to arrange appointments to discuss your work.
+We will meet in **108/Lower NG** on Thursdays from 6pm - 9pm. Your instructors, [**Peter Aldhous**](http://www.peteraldhous.com/) and **[Amanda Hickman](http://velociraptor.info/)**, will maintain office hours over Skype. You are encouraged to arrange appointments to discuss your work.
 
 
- - ####**Aug. 25:**	[**What is data?**](week1.html)
-Categorical and continuous variables; basic operations for interviewing a dataset; sampling and margins of error; plotting and summarizing distributions; choosing bins for your data; basic newsroom math; correlation and its pitfalls; exploring differences between groups; scatter plots.
-
-  - **Assignment:** Calculate summary statistics; subscribe to data viz blogs etc to follow latest developments in visualization.
-
-- ####**Sept. 1:** 	[**Data visualization: basic principles**](week2.html)
-Encoding data using visual cues; choosing chart types to show comparisons, composition (parts of the whole) and connections; using color effectively; using chart furniture, minimizing chart junk and highlighting the story; avoiding pitfalls; good practice, including for interactive graphics.
-
- - **Assignment:** Quiz on good practice in visualization and data analysis.
+ - ####**Jan. 18:**	[**What is data?**](week1.html)
+Categorical and continuous variables; basic operations for interviewing a dataset; sampling and margins of error; plotting and summarizing distributions; choosing bins for your data; basic newsroom math. (**Peter Aldhous**)
 
 
-- ####**Sept. 8:** [**Interviewing data: exploratory graphical analysis**](week3.html)
-We will use [Tableau Public](http://www.tableausoftware.com/public/) to explore and visualize World Bank data on neonatal deaths across the globe, creating an interactive online dashboard.
+- ####**Jan. 25:** 	[**Data journalism: Types of stories**](week2.html)
+Through a tour of some great examples of data journalism, we'll get inspiration for our work in this course. (**Peter Aldhous**)
 
- - **Assignment:** Make another dashboard from the same data.
-
-
-- ####**Sept. 15:** [**Using GitHub, and starting your final projects**](week4.html)
-We will explore how to use [GitHub](https://github.com/) for version control of a project, before you pitch ideas for your final projects.
-
- - **Assignment:** Submit a pitch for your final project; also make an appointment to discuss this with your instructor the following week.
+ - **Assignment:** Quiz on good practice in data analysis and data journalism.
 
 
-- ####**Sept. 22:** [**Acquiring, cleaning, and formatting data**](week5.html)
-Data search and download tricks, including [Table2Clipboard](https://addons.mozilla.org/en-US/firefox/addon/dafizilla-table2clipboard/) and [DownThemAll!](https://addons.mozilla.org/en-US/firefox/addon/downthemall/) Firefox plugins; manipulating urls and using APIs to acquire data; scraping data from the web with [OutWit Hub](https://www.outwit.com/products/hub/); cleaning data with [Open Refine](http://openrefine.org/); converting data between different formats using [Mr. Data Converter](http://shancarter.github.io/mr-data-converter/).
-
- - **Assignment:** Data cleaning task.
+- ####**Feb. 1:** [**Working with spreadsheets**](week3.html)
+Description t/k (**Amanda Hickman**)
 
 
-- ####**Sep. 29:** [Let's apply what we've learned so far](week6.html)
-You will obtain and process World Bank data on life expectancy and GDP per capita for the world's nations from the web, and then create a Tableau visualization inspired by [this Gapminder video](http://www.gapminder.org/videos/200-years-that-changed-the-world-bbc/).
+- ####**Feb. 8:** [**Acquiring, cleaning, and formatting data**](week4.html)
+Decription t/k (**Peter Aldhous**)
 
- - **Assignment:** Download and process World Bank data on nations' carbon dioxide emissions per capita, and make a simple Tableau dashboard.
-
-
-- #### **Oct. 6:**	[**Manipulating data with R**](week7.html)
-Introduction to [R](http://www.r-project.org/), [R Studio](http://www.rstudio.com/) and the [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) package for data manipulation.
+- ####**Feb. 15:** [**R, R Studio, and the tidyverse**](week5.html)
+Introduction to [R](https://www.r-project.org/), [R Studio](https://www.rstudio.com/) and the [tidyverse](https://www.tidyverse.org/) packages for data journalism. (**Peter Aldhous**)
 
 
-- #### **Oct. 13:** [**Making static graphics with R**](week8.html)
-Making charts with the [ggplot2](http://ggplot2.org/) R package.
+- ####**Feb. 22:** [**Data journalism in the tidyverse**](week6.html)
+ We'll use tidyverse packages to recreate the analysis behind published data stories. (**Peter Aldhous**)
 
- - **Assignment:** Process data and make charts using R.
-
-
--  ####**Oct. 20:**[** Principles of mapping**](week9.html)
-Basic mapping principles:  projections, geocoding, geodata formats; approaches to putting data onto maps, including choropleth maps, scaled symbols, hexagonal binning and cartograms.
-
- - **Assignment:** Continue work on final project, delivering a progress report.
+ - **Assignment:** t/k
 
 
--  ####**Oct. 27:** [**Making static maps and processing geodata with GIS software**](week10.html)
-We will use [QGIS](http://qgis.org/en/site/) to make a multi-layered map. We will also learn how to use QGIS to process geodata.
+- #### **Mar. 1:**	[**Don't let the data lie to you**](week7.html)
+Description t/k (**Amanda Hickman**)
+
+- **Assignment:** t/k
+
+
+- #### **Mar. 8:** [**Introduction to databases and SQL**](week8.html)
+Description t/k (**Amanda Hickman**)
+
+ - **Assignment:** t/k
+
+
+-  ####**Mar. 15:** [**Finding stories using maps**](week9.html)
+Description t/k (**Amanda Hickman**)
+
+ - **Assignment:**  t/k
+
+
+-  ####**Mar. 22:** [**Maps meet databases**](week10.html)
+Description t/k. (**Amanda Hickman**)
 
  - **Assignment:** continue work on final project, delivering a progress report.
 
 
--  ####**Nov.3:** [**Making interactive maps**](week11.html)
-We will use [CARTO](https://carto.com/) to create interactive online maps.
-
-  -  **Assignment:** Submit a full project update, via your GitHub account, for review in next week's meetings.
+-  ####**Mar. 29:** Spring Break -- No class 
 
 
-- ####**Nov. 10:** No Class
-Instead, one-on-one meetings will be arranged with instructor to discuss progress with your final projects.
+- ####**Apr. 5:**	[**More with fun with R**](week11.html)
+Connecting to databases from R. Pulling data from the web. Correcting for inflation and seasonal trends. (**Peter Aldhous**)
 
+- ####**Apr. 12:**  [t/k](week12.html)
+Description t/k (**Amanda Hickman**)
 
-- ####**Nov. 17:**	[**From R to interactive charts and maps**](week13.html)
-We will explore R packages called [htmlwidgets](http://www.htmlwidgets.org/) that allow you to create JavaScript visualizations straight from your data with a minimum of coding.
+- ####**Apr. 19:**  [Putting it all into practice: 1](week13.html)
+Drawing from the headlines, we'll attempt some original reporting from data. We may emerge with a story. We may crash and burn. The goal is for you to experience how this works in an actual newsroom, under deadline pressure. (**Peter Aldhous and Amanda Hickman**)
 
- -  **Assignment:** Continue work on final project, delivering a progress report.
+- ####**Apr. 26:**  [Putting it all into practice: 2](week14.html)
+Continuation from last week's class. (** Peter Aldhous and Amanda Hickman**)
 
+- ####**May 4:**  [Next steps: The cutting edge of data journalism](week15.html)
+Show and tell on advanced methods on data journalism, including machine learning and text analysis. (**Peter Aldhous and Amanda Hickman**)
 
-- ####**Nov 24:** Thanksgiving -- No Class
-
- - **Assignment:** Continue work on your final project.
-
-
-- ####**Dec. 1:** [Iteration and animation: loops, GIFs, and videos](week14.html)
-We will explore how to make animation frames by writing loops in R, and use [ImageMagick](http://imagemagick.org/script/index.php), [FFmpeg](http://ffmpeg.org/) and the [gganimate](https://github.com/dgrtwo/gganimate) package to make animated GIFs and videos.
-
- - **Assignment:** complete your final project, file via your GitHub account.
-
-
-- ####**Dec. 8:** [Student presentations on final projects](week15.html)
-You will each present your final project work to the class, explain the process of creating the graphics, choices in  analysis and design, and problems that arose and how these were addressed.
 
 ### Recommended reading
 
-Alberto Cairo: [*The Functional Art: An Introduction to Information Graphics and Visualization*](http://www.amazon.com/The-Functional-Art-introduction-visualization/dp/0321834739/)
-Nathan Yau: [*Data Points: Visualization That Means Something*](http://www.amazon.com/Data-Points-Visualization-Means-Something/dp/111846219X)
+Sarah Cohen: [*Numbers in the Newsroom: Using Math and Statistics in News*](http://store.ire.org/products/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition)
 
-Further reading/viewing will be recommended to support weekly class material.
+Philip Meyer: [*Precision Journalism: A Reporter's Introduction to Social Science Methods*](http://www.amazon.com/Precision-Journalism-Reporters-Introduction-Science/dp/0742510883)
+
 
 ### Attendance
 
@@ -108,8 +91,7 @@ Unexcused absence from two classes will drop you one letter grade; a third unexc
 
 ### Grading
 
-Class participation, weekly assignments: **45%**
-Final project: **45%**
+Class participation, weekly assignments: **90%**
 Attendance:	**10%**
 
 ### Good manners
