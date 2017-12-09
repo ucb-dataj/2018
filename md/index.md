@@ -18,11 +18,11 @@ Through a tour of some great examples of data journalism, we'll get inspiration 
  - **Assignment:** Quiz on good practice in data analysis and data journalism.
 
 
-- ####**Feb. 1:** [**Working with spreadsheets**](week3.html)
-Description t/k (**Amanda Hickman**)
+- #### Feb. 1: [**Working with spreadsheets**](week3.html)
+Understanding spreadsheet functions and pivot tables is the foundation for the rest of your exploration of data. We'll look at how to troubleshoot and use spreadsheets.   (**Amanda Hickman**)
 
 
-- ####**Feb. 8:** [**Acquiring, cleaning, and formatting data**](week4.html)
+- #### Feb. 8: [**Acquiring, cleaning, and formatting data**](week4.html)
 Decription t/k (**Peter Aldhous**)
 
 - ####**Feb. 15:** [**R, R Studio, and the tidyverse**](week5.html)
@@ -36,7 +36,7 @@ Introduction to [R](https://www.r-project.org/), [R Studio](https://www.rstudio.
 
 
 - #### **Mar. 1:**	[**Don't let the data lie to you**](week7.html)
-Description t/k (**Amanda Hickman**)
+Data is as full of lies as people are, but somehow we are inclined to believe numbers in ways we we wouldn't believe sentences. We'll look at ways that numbers lie to us and people lie to each other with numbers.  (**Amanda Hickman**)
 
 - **Assignment:** t/k
 
@@ -47,7 +47,7 @@ Description t/k (**Amanda Hickman**)
  - **Assignment:** t/k
 
 
--  ####**Mar. 15:** [**Finding stories using maps**](week9.html)
+-  #### **Mar. 15:** [**Finding stories using maps**](week9.html)
 Description t/k (**Amanda Hickman**)
 
  - **Assignment:**  t/k
@@ -59,20 +59,20 @@ Description t/k. (**Amanda Hickman**)
  - **Assignment:** continue work on final project, delivering a progress report.
 
 
--  ####**Mar. 29:** Spring Break -- No class 
+-  ####**Mar. 29:** Spring Break -- No class
 
 
 - ####**Apr. 5:**	[**More with fun with R**](week11.html)
 Connecting to databases from R. Pulling data from the web. Correcting for inflation and seasonal trends. (**Peter Aldhous**)
 
 - ####**Apr. 12:**  [t/k](week12.html)
-Description t/k (**Amanda Hickman**)
+As the semester progresses, we want to hear from you about tools you're interested in tackling.  (**Amanda Hickman**)
 
 - ####**Apr. 19:**  [Putting it all into practice: 1](week13.html)
 Drawing from the headlines, we'll attempt some original reporting from data. We may emerge with a story. We may crash and burn. The goal is for you to experience how this works in an actual newsroom, under deadline pressure. (**Peter Aldhous and Amanda Hickman**)
 
 - ####**Apr. 26:**  [Putting it all into practice: 2](week14.html)
-Continuation from last week's class. (** Peter Aldhous and Amanda Hickman**)
+Continuation from last week's class. (**Peter Aldhous and Amanda Hickman**)
 
 - ####**May 4:**  [Next steps: The cutting edge of data journalism](week15.html)
 Show and tell on advanced methods on data journalism, including machine learning and text analysis. (**Peter Aldhous and Amanda Hickman**)
@@ -112,8 +112,4 @@ These are some basic expectations of students with regards to academic integrity
 
 ### Disability accommodations
 
-If you need disability-related accommodations in this class, if you have emergency medical information you wish to share with the instructor, or if you need special arrangements in case the building must be evacuated, please inform the instructor as soon as possible by seeing him after class or making an appointment to visit during office hours. If you are not currently listed with DSP (Disabled Students’ Program) but believe that you could benefit from their support, you may [apply online](http://dsp.berkeley.edu/).
-
-
-
-
+If you need disability-related accommodations in this class, if you have emergency medical information you wish to share with the instructor, or if you need special arrangements in case the building must be evacuated, please inform the instructors as soon as possible by seeing one of us after class or making an appointment to visit during office hours. If you are not currently listed with DSP (Disabled Students’ Program) but believe that you could benefit from their support, we encourage you to [apply online](http://dsp.berkeley.edu/).
