@@ -5,7 +5,7 @@ When you try to install some of the software below, your Mac may refuse to do so
 
 ### [Chrome](https://www.mozilla.org/en-US/firefox/new/)
 
-Some of the tools we will use are Chrome add-ons. Ensure that you have the latest version of this popular web browser. [Download Chromes](https://www.mozilla.org/en-US/firefox/all/); if already installed, make sure you are updated to the latest version [following these instructions](https://support.google.com/chrome/answer/95414?co=GENIE.Platform%3DDesktop&hl=en).
+Some of the tools we will use are Chrome add-ons. Ensure that you have the latest version of this popular web browser. Download Chrome [from here](https://www.mozilla.org/en-US/firefox/all/); if already installed, make sure you are updated to the latest version [following these instructions](https://support.google.com/chrome/answer/95414?co=GENIE.Platform%3DDesktop&hl=en).
 
 ### [Google Sheets](https://www.google.com/sheets/about/)
 Our spreadsheet application for these classes will be Google Sheets. Use from your [Google Drive ]()account.
@@ -14,7 +14,7 @@ Our spreadsheet application for these classes will be Google Sheets. Use from yo
 A powerful tool for data processing and cleaning. Download the latest **stable version** [from here](http://openrefine.org/download.html). When launched, Open Refine will work in your default web browser; note that your data remains on your computer, and is not uploaded to the web.
 
 ### [R](http://www.r-project.org/) and [R Studio](http://www.rstudio.com/)
-R is a software environment and programming language for statistical computing and graphics. Download the latest `.pkg` installer for OSX from [here](https://cran.rstudio.com/). R Studio provides a user interface that makes it much easier to use. Download the latest **free** version of RStudio Desktop [from here](http://www.rstudio.com/products/rstudio/download/).
+R is a software environment and programming language for statistical computing, data analysis, and graphics. Think of it as a Swiss Army knife for working with datw. Download the latest `.pkg` installer for OSX from [here](https://cran.rstudio.com/). R Studio provides a user interface that makes it much easier to use. Download the latest **free** version of RStudio Desktop [from here](http://www.rstudio.com/products/rstudio/download/).
 
 ### [Postgres.app](https://postgresapp.com/)
 
@@ -33,7 +33,7 @@ Now install the `.pkg` files in numbered order:
 - GDAL
 - NumPy
 - matplotlib
-- QGIS.
+- QGIS
 
 
 

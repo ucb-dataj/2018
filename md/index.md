@@ -1,7 +1,7 @@
 
 # Data Journalism, Spring 2018
 
-This course is for students who want to make finding and reporting stories from data part of their toolkit. It will be useful for anyone interested in investigative journalism, which nowadays is often heavily data-driven, or those keen to use data to provide context and ground-truth regular for beat reporting. You should be comfortable with numbers, and thinking critically and quantitatively. You must be prepared to work with some simple code (in R and SQL), and to get your hands dirty with real-life, messy data!
+This course is for students who want to make finding and reporting stories from data part of their toolkit. It will be useful for anyone interested in investigative journalism, which nowadays is often heavily data-driven, or those keen to use data to provide context and ground-truth for regular beat reporting. You should be comfortable with numbers, and thinking critically and quantitatively. You must be prepared to work with some simple code (in R and SQL), and to get your hands dirty with real-life, messy data!
 
 ### Weekly schedule
 
