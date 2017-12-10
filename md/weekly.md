@@ -25,4 +25,8 @@ Exercise: file your code and the final result.
 ## Notes
 Talk to Peter, but where do we want to put things like Geocoding tip sheets? Wiki? Or in a class page?
 
+A: We can do it on these pages.
+I have a geocoder here: https://github.com/paldhous/refine-geocoder
+
 Do we want to bring in speakers? Who are good speakers to bring in?
+That's an option for the TBD class, maybe. I invite Ben Welsh for my Santa Cruz class. Somebody with his enthusiasm would be great. If Lam was in town she'd be good for social data.
