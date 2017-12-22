@@ -38,7 +38,7 @@ A common mistake made by reporters starting to work with data is to throw lots o
 
 Download the data for this session from [here](data/week1.zip), unzip the folder and place it on your desktop. It contains the following files:
 
-- `berkeley_collisions.csv` Data on injury and fatal traffic accidents in Richmond, California, from 2006 to 2016, from the [Transportation Injury Mapping System](http://tims.berkeley.edu/). The data comes from the California Highway Patrol’s [Statewide Integrated Traffic Records System](http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp) and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research & Education Center.
+- `berkeley_collisions.csv` Data on injury and fatal traffic accidents in Berkeley from 2006 to 2016, from the [Transportation Injury Mapping System](http://tims.berkeley.edu/). The data comes from the California Highway Patrol’s [Statewide Integrated Traffic Records System](http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp) and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research & Education Center.
 
 - `mlb_salaries_2015.csv` Salaries of players in Major League Baseball at the start of the 2015 season, from the [Lahman Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/).
 
@@ -96,7 +96,7 @@ There's a third type of data we often need to consider: **date and time**. A sim
 
 Datasets will usually contain a mixture of categorical, continuous, and date/time variables.
 
-The Richmond traffic accidents data is in a typical layout, with each row in the data representing an individual collision, each of which has a unique code, its `CASEID`. Having a unique ID for each record in a dataset is good practice.
+The Berkeley traffic accidents data is in a typical layout, with each row in the data representing an individual collision, each of which has a unique code, its `CASEID`. Having a unique ID for each record in a dataset is good practice.
 
 Here, each of the columns in the data is a separate variable.
 
@@ -108,7 +108,7 @@ But the other columns in this view, including `DAYWEEK` and `CRASHSEV` are actua
 
 Like this example, many datasets are hard to understand without their supporting documentation. So each time you acquire a dataset, make sure you also obtain any documents/descriptions that are necessary to interpret it. These might be called the "codebook," "data dictionary," or "record layout." Whatever they are called, you will need to understand all of the variables in the data, and how they are coded.
 
-[Here is the codebook](TIMS.html) for the Richmond traffic accident data. Notice, for example, how the day of the week and the severity of the collision are coded:
+[Here is the codebook](TIMS.html) for the Berkeley traffic accident data. Notice, for example, how the day of the week and the severity of the collision are coded:
 
 ![](./img/class1_8.jpg)
 

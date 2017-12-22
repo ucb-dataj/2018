@@ -84,7 +84,7 @@
 <h3 id="the-data-we-will-use-today"><a name="the-data-we-will-use-today" href="#the-data-we-will-use-today"></a>The data we will use today</h3>
 <p>Download the data for this session from <a href="data/week1.zip">here</a>, unzip the folder and place it on your desktop. It contains the following files:</p>
 <ul>
-<li><p><code>berkeley_collisions.csv</code> Data on injury and fatal traffic accidents in Richmond, California, from 2006 to 2016, from the <a href="http://tims.berkeley.edu/">Transportation Injury Mapping System</a>. The data comes from the California Highway Patrol’s <a href="http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp">Statewide Integrated Traffic Records System</a> and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research &amp; Education Center.</p>
+<li><p><code>berkeley_collisions.csv</code> Data on injury and fatal traffic accidents in Berkeley from 2006 to 2016, from the <a href="http://tims.berkeley.edu/">Transportation Injury Mapping System</a>. The data comes from the California Highway Patrol’s <a href="http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp">Statewide Integrated Traffic Records System</a> and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research &amp; Education Center.</p>
 </li><li><p><code>mlb_salaries_2015.csv</code> Salaries of players in Major League Baseball at the start of the 2015 season, from the <a href="http://www.seanlahman.com/baseball-archive/statistics/">Lahman Baseball Database</a>.</p>
 </li></ul>
 <p>These files are in CSV format, which stands for comma-separated values; they have a <code>.csv</code> extension. These are plain text files, in which columns in the data are separated by commas. CSV is a common format for storing and exchanging data. Values that are intended to be treated as text, rather than numbers, are often enclosed in quote marks.</p>
@@ -116,13 +116,13 @@
 <p>There’s a third type of data we often need to consider: <strong>date and time</strong>. A simple timeline treats date/time as a continuous variable, but date/time data can also be made categorical (days of the week, months of the year, and so on).</p>
 <h3 id="know-the-variables-in-your-data,-and-how-they-are-coded"><a name="know-the-variables-in-your-data,-and-how-they-are-coded" href="#know-the-variables-in-your-data,-and-how-they-are-coded"></a>Know the variables in your data, and how they are coded</h3>
 <p>Datasets will usually contain a mixture of categorical, continuous, and date/time variables.</p>
-<p>The Richmond traffic accidents data is in a typical layout, with each row in the data representing an individual collision, each of which has a unique code, its <code>CASEID</code>. Having a unique ID for each record in a dataset is good practice.</p>
+<p>The Berkeley traffic accidents data is in a typical layout, with each row in the data representing an individual collision, each of which has a unique code, its <code>CASEID</code>. Having a unique ID for each record in a dataset is good practice.</p>
 <p>Here, each of the columns in the data is a separate variable.</p>
 <p>Don’t assume, however, that every number in a dataset represents a continuous variable. Text descriptions can make datasets unwieldy, so database managers often adopt simpler codes, which are often be numbers, to store categorical data.</p>
 <p>Looking at the first few columns, <code>YEAR_</code> is fairly obviously a date-related variable, while the longitudes and latitudes (<code>POINT_Y</code> and <code>POINT_X</code>) for each collision, and the numbers of people <code>KILLED</code> or <code>INJURED</code>, are continuous variables.</p>
 <p>But the other columns in this view, including <code>DAYWEEK</code> and <code>CRASHSEV</code> are actually categorical variables, coded as numbers.</p>
 <p>Like this example, many datasets are hard to understand without their supporting documentation. So each time you acquire a dataset, make sure you also obtain any documents/descriptions that are necessary to interpret it. These might be called the “codebook,” “data dictionary,” or “record layout.” Whatever they are called, you will need to understand all of the variables in the data, and how they are coded.</p>
-<p><a href="TIMS.html">Here is the codebook</a> for the Richmond traffic accident data. Notice, for example, how the day of the week and the severity of the collision are coded:</p>
+<p><a href="TIMS.html">Here is the codebook</a> for the Berkeley traffic accident data. Notice, for example, how the day of the week and the severity of the collision are coded:</p>
 <p><img src="./img/class1_8.jpg" alt=""></p>
 <h3 id="is-your-data-wide-or-long?"><a name="is-your-data-wide-or-long?" href="#is-your-data-wide-or-long?"></a>Is your data wide or long?</h3>
 <p>Often, especially if you are working with data over time, the data you obtain may not be in the format above, with one variable in each column.</p>
