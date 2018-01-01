@@ -38,7 +38,7 @@ A common mistake made by reporters starting to work with data is to throw lots o
 
 Download the data for this session from [here](data/week1.zip), unzip the folder and place it on your desktop. It contains the following files:
 
-- `berkeley_collisions.csv` Data on injury and fatal traffic accidents in Berkeley from 2006 to 2016, from the [Transportation Injury Mapping System](http://tims.berkeley.edu/). The data comes from the California Highway Patrol’s [Statewide Integrated Traffic Records System](http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp) and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research & Education Center.
+- `berkeley_collisions.csv` Data on injury and fatal traffic accidents in Berkeley from 2006 to 2014, from the [Transportation Injury Mapping System](http://tims.berkeley.edu/). The data comes from the California Highway Patrol’s [Statewide Integrated Traffic Records System](http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp) and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research & Education Center.
 
 - `mlb_salaries_2015.csv` Salaries of players in Major League Baseball at the start of the 2015 season, from the [Lahman Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/).
 
