@@ -11,6 +11,8 @@ We will meet in **108/Lower NG** on Thursdays from 6pm - 9pm. Your instructors, 
  - ####**Jan. 18:**	[**What is data?**](week1.html)
 Categorical and continuous variables; basic operations for interviewing a dataset; sampling and margins of error; plotting and summarizing distributions; choosing bins for your data; basic newsroom math. (**Peter Aldhous**)
 
+	- **Assignment** File a preliminary pitch for a data-driven story.
+
 
 - ####**Jan. 25:** 	[**Data journalism: Types of stories**](week2.html)
 Through a tour of some great examples of data journalism, we'll get inspiration for our work in this course. (**Peter Aldhous**)
@@ -21,18 +23,23 @@ Through a tour of some great examples of data journalism, we'll get inspiration 
 - #### Feb. 1: [**Working with spreadsheets**](week3.html)
 Understanding spreadsheet functions and pivot tables is the foundation for the rest of your exploration of data. We'll look at how to troubleshoot and use spreadsheets.   (**Amanda Hickman**)
 
+	- **Assignment** Revise your pitch for a data-driven story.
+
 
 - #### Feb. 8: [**Acquiring, cleaning, and formatting data**](week4.html)
 Decription t/k (**Peter Aldhous**)
 
+
 - ####**Feb. 15:** [**R, R Studio, and the tidyverse**](week5.html)
 Introduction to [R](https://www.r-project.org/), [R Studio](https://www.rstudio.com/) and the [tidyverse](https://www.tidyverse.org/) packages for data journalism. (**Peter Aldhous**)
+
+ -  **Assignment:** Exercises to reinforce skills from today's class.
 
 
 - ####**Feb. 22:** [**Data journalism in the tidyverse**](week6.html)
  We'll use tidyverse packages to recreate the analysis behind published data stories. (**Peter Aldhous**)
 
- - **Assignment:** t/k
+ - **Assignment:**
 
 
 - #### **Mar. 1:**	[**Don't let the data lie to you**](week7.html)
@@ -56,7 +63,7 @@ Description t/k (**Amanda Hickman**)
 -  ####**Mar. 22:** [**Maps meet databases**](week10.html)
 Description t/k. (**Amanda Hickman**)
 
- - **Assignment:** continue work on final project, delivering a progress report.
+ - **Assignment:**
 
 
 -  ####**Mar. 29:** Spring Break -- No class
@@ -67,6 +74,9 @@ Connecting to databases from R. Pulling data from the web. Correcting for inflat
 
 - ####**Apr. 12:**  [t/k](week12.html)
 As the semester progresses, we want to hear from you about tools you're interested in tackling.  (**Amanda Hickman**)
+
+ - **Assignment:** t/k
+ 
 
 - ####**Apr. 19:**  [Putting it all into practice: 1](week13.html)
 Drawing from the headlines, we'll attempt some original reporting from data. We may emerge with a story. We may crash and burn. The goal is for you to experience how this works in an actual newsroom, under deadline pressure. (**Peter Aldhous and Amanda Hickman**)
