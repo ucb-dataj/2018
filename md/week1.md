@@ -38,7 +38,7 @@ A common mistake made by reporters starting to work with data is to throw lots o
 
 Download the data for this session from [here](data/week1.zip), unzip the folder and place it on your desktop. It contains the following files:
 
-- `berkeley_collisions.csv` Data on injury and fatal traffic accidents in Berkeley from 2006 to 2016, from the [Transportation Injury Mapping System](http://tims.berkeley.edu/). The data comes from the California Highway Patrol’s [Statewide Integrated Traffic Records System](http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp) and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research & Education Center.
+- `berkeley_collisions.csv` Data on injury and fatal traffic accidents in Berkeley from 2006 to 2014, from the [Transportation Injury Mapping System](http://tims.berkeley.edu/). The data comes from the California Highway Patrol’s [Statewide Integrated Traffic Records System](http://iswitrs.chp.ca.gov/Reports/jsp/userLogin.jsp) and was then geocoded for mapping by UC Berkeley’s Safe Transportation Research & Education Center.
 
 - `mlb_salaries_2015.csv` Salaries of players in Major League Baseball at the start of the 2015 season, from the [Lahman Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/).
 
@@ -267,7 +267,7 @@ The mode is less commonly used, but in this case also tells us something interes
 
 ### Spreadsheet functions
 
-In the formulas above, `AVERAGE`, `MEDIAN` and `MODE` are **functions**. They act on the data specified in the brackets. We'll become much more familiar with functions was we work with R and SQL code in the coming weeks.
+In the formulas above, `AVERAGE`, `MEDIAN` and `MODE` are **functions**. They act on the data specified in the parentheses. We'll become much more familiar with functions as we work with R and SQL code in the coming weeks.
 
 Notice as you start to type a formula that Google Sheets will suggest functions that you can use:
 
@@ -277,7 +277,7 @@ And when it's clear which function you are using, Google Sheets gives some hints
 
 ![](./img/class1_25.jpg)
 
-[Here](https://support.google.com/docs/table/25273?hl=en) is a full list of the functions available in Google Sheets. As you can see, there are many.
+[Here](https://support.google.com/docs/table/25273?hl=en) is a full list of the functions available in Google Sheets.
 
 ### Rounding: Avoid spurious precision
 
@@ -324,7 +324,7 @@ Here is a listing of the polls conducted in the run-up to the Alabama Senate Spe
 
 Notice the sample sizes -- here all for Likely Voters (LV), and the figures for Margin of Error (MoE).
 
-The Trafalgar Group poll, for instance, gave Republican Ror Moore a lead of 5 percentage points, 51% to 46%, but the margin of error was 2.6 percentage points. What this means is that the pollsters were 95% confident from their sample of more than 1,400 likely voters that Moores's support lay between 48.4% and 53.6% (51%, plus or minus 2.6 percentage points), while Democrat Doug Jones's support lay between 43.4% and 48.6% (46%, plus or minus 2.6 percentage points) -- not exactly clear cut.
+The Trafalgar Group poll, for instance, gave Republican Roy Moore a lead of 5 percentage points, 51% to 46%, but the margin of error was 2.6 percentage points. What this means is that the pollsters were 95% confident from their sample of more than 1,400 likely voters that Moores's support lay between 48.4% and 53.6% (51%, plus or minus 2.6 percentage points), while Democrat Doug Jones's support lay between 43.4% and 48.6% (46%, plus or minus 2.6 percentage points) -- not exactly clear cut.
 
 But look at the wide divergence in results from the various polls. Especially in a volatile race like this, you don't want to place too much reliance on a single poll.
 
