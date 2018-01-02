@@ -30,7 +30,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Class notes<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="week1.html">What is data?</a></li>
-								<li><a href="week2.html">Types of stories?</a></li>
+								<li><a href="week2.html">Types of stories</a></li>
 								<li><a href="week3.html">Working with spreadsheets</a></li>
 								<li><a href="week4.html">Acquiring, cleaning, and formatting data</a></li>
 								<li><a href="week5.html">R, RStudio, and the tidyverse</a></li>
@@ -201,12 +201,12 @@
 <p>Across Major League Baseball at the start of the 2015 season, the mean salary was $4.3 million. But when summarizing a distribution in a single value, we usually want to give a “typical” number. Here the mean is inflated by the vast salaries paid to a handful of star players, and may be a bad choice. The median salary of $1.9 million gives a more realistic view of what a typical MLB player was paid.</p>
 <p>The mode is less commonly used, but in this case also tells us something interesting: it was $507,500, a sum earned by 19 out of the 817 players. This was the minimum salary paid under 2015 MLB contracts, which explains why it turns up more frequently than any other number. A journalist who considered the median, mode, and full range of the salary distribution may produce a richer story than one who failed to think beyond the “average.”</p>
 <h3 id="spreadsheet-functions"><a name="spreadsheet-functions" href="#spreadsheet-functions"></a>Spreadsheet functions</h3>
-<p>In the formulas above, <code>AVERAGE</code>, <code>MEDIAN</code> and <code>MODE</code> are <strong>functions</strong>. They act on the data specified in the brackets. We’ll become much more familiar with functions was we work with R and SQL code in the coming weeks.</p>
+<p>In the formulas above, <code>AVERAGE</code>, <code>MEDIAN</code> and <code>MODE</code> are <strong>functions</strong>. They act on the data specified in the parentheses. We’ll become much more familiar with functions as we work with R and SQL code in the coming weeks.</p>
 <p>Notice as you start to type a formula that Google Sheets will suggest functions that you can use:</p>
 <p><img src="./img/class1_24.jpg" alt=""></p>
 <p>And when it’s clear which function you are using, Google Sheets gives some hints on how it should be used:</p>
 <p><img src="./img/class1_25.jpg" alt=""></p>
-<p><a href="https://support.google.com/docs/table/25273?hl=en">Here</a> is a full list of the functions available in Google Sheets. As you can see, there are many.</p>
+<p><a href="https://support.google.com/docs/table/25273?hl=en">Here</a> is a full list of the functions available in Google Sheets.</p>
 <h3 id="rounding:-avoid-spurious-precision"><a name="rounding:-avoid-spurious-precision" href="#rounding:-avoid-spurious-precision"></a>Rounding: Avoid spurious precision</h3>
 <p>Often when you run calculations on numbers, you’ll obtain precise answers that can run to many decimal places. But think about the precision with which the original numbers were measured, and don’t quote numbers that are more precise than this. When rounding numbers to the appropriate level of precision, if the next digit is four or less, round down; if it’s six or more, round up. There are various schemes for rounding if the next digit is five, and there are no further digits to go on: I’d suggest rounding to an even number, which may be up or down, as this is the international standard in computing.</p>
 <p>To round the mean value for the baseball salary data to two decimal places, use the following formula in an empty cell in the spreadsheet:</p>
@@ -229,7 +229,7 @@
 <p><img src="./img/class1_26.jpg" alt=""></p>
 <p>(Source: <a href="https://www.realclearpolitics.com/epolls/2017/senate/al/alabama_senate_special_election_moore_vs_jones-6271.html">RealClearPolitics</a>)</p>
 <p>Notice the sample sizes — here all for Likely Voters (LV), and the figures for Margin of Error (MoE).</p>
-<p>The Trafalgar Group poll, for instance, gave Republican Ror Moore a lead of 5 percentage points, 51% to 46%, but the margin of error was 2.6 percentage points. What this means is that the pollsters were 95% confident from their sample of more than 1,400 likely voters that Moores’s support lay between 48.4% and 53.6% (51%, plus or minus 2.6 percentage points), while Democrat Doug Jones’s support lay between 43.4% and 48.6% (46%, plus or minus 2.6 percentage points) — not exactly clear cut.</p>
+<p>The Trafalgar Group poll, for instance, gave Republican Roy Moore a lead of 5 percentage points, 51% to 46%, but the margin of error was 2.6 percentage points. What this means is that the pollsters were 95% confident from their sample of more than 1,400 likely voters that Moores’s support lay between 48.4% and 53.6% (51%, plus or minus 2.6 percentage points), while Democrat Doug Jones’s support lay between 43.4% and 48.6% (46%, plus or minus 2.6 percentage points) — not exactly clear cut.</p>
 <p>But look at the wide divergence in results from the various polls. Especially in a volatile race like this, you don’t want to place too much reliance on a single poll.</p>
 <p>When dealing with polling and survey data, look for the margins of error. Be careful not to mislead your audience by making a big deal of differences that may just be due to sampling error. Consider quoting polling averages for a defined period, which are likely to be more reliable, as it’s unlikely that all of the polls will be affected by sampling error in exactly the same way.</p>
 <p><a href="https://www.surveymonkey.com/mp/margin-of-error-calculator/">Here</a> is a simple web app, from SurveyMonkey, that allows you to estimate the margin of error given the sample size, the confidence level, and the size of the population. There are about 225 million eligible U.S. voters. While fewer will be registered and fewer still will actually vote, see what happens if you put 225,000,000 into the population box, and 500 or 1,000 into the sample size box. A larger sample will give a smaller margin of error.</p>
