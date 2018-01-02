@@ -38,12 +38,10 @@ Introduction to [R](https://www.r-project.org/), [R Studio](https://www.rstudio.
 
  - **Assignment:**
 
-
 - #### **Mar. 1:**	[**Don't let the data lie to you**](week7.html)
 Data is as full of lies as people are, but somehow we are inclined to believe numbers in ways we we wouldn't believe sentences. We'll look at ways that numbers lie to us and people lie to each other with numbers.  (**Amanda Hickman**)
 
-- **Assignment:** t/k
-
+  - **Assignment:** t/k
 
 - #### **Mar. 8:** [**Introduction to databases and SQL**](week8.html)
 Description t/k (**Amanda Hickman**)
