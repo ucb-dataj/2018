@@ -1,4 +1,4 @@
-# Data Sources
+# Notes on Potential Data Sources
 
 +  *Week 1*: fatal injury and accident data, baseball salaries
 
@@ -22,4 +22,16 @@
 +  *Week 13*:
 +  *Week 14*:
 
+
+## Other Ideas
+
 Amanda: Campaign spending/donations in SF Mayoral race
+
+
+Fresno:
+Infant mortality, methamphetamine, health disparities
+Clovis vs Fresno income statistics
+Police statistics
+Real estate development -- campaign donations? Housing developer Grandville homes; housing prices; land use change?
+Groundwater maps, nitrates in water, water quality, premature babies
+Air quality
