@@ -12,10 +12,12 @@ By Wednesday night, if it is your turn, you need to post one data set to the cla
 + A link to the data, or instructions for getting to the data.
 + A description of the context of the data: who collected this data? Is it archival or living? What is the context of the collection?
 
-*Question* Where do we want them to post these? (Not on Github -- amanda will ask Jeremy)
+They should be posted to bCourses.
 
 
 ## Pitches
+
+
 Exercise: file your code and the final result.
 (Frequent Assignment) your assignments this semester will be a mix of pitches and exercises. The phrase "pitch" will mean a lot of different things over the course of your career. In this class, this semester, a pitch should describe a story you're ready to write. And it should be based on data.
 
@@ -27,6 +29,8 @@ Talk to Peter, but where do we want to put things like Geocoding tip sheets? Wik
 
 A: We can do it on these pages.
 I have a geocoder here: https://github.com/paldhous/refine-geocoder
+
+http://amandabee.github.io/CUNY-data-skills/hands-on/goodquestions.html
 
 Do we want to bring in speakers? Who are good speakers to bring in?
 That's an option for the TBD class, maybe. I invite Ben Welsh for my Santa Cruz class. Somebody with his enthusiasm would be great. If Lam was in town she'd be good for social data.
