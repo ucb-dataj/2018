@@ -19,4 +19,4 @@ Don't Let the Data Lie To You
 
 * https://twitter.com/iMDRW/status/412789925541867520 <-- $5000 house; inflation.
 
-* https://fivethirtyeight.com/features/we-used-broadband-data-we-shouldnt-have-heres-what-went-wrong/?ex_cid=story-twitter 
+* https://fivethirtyeight.com/features/we-used-broadband-data-we-shouldnt-have-heres-what-went-wrong/
