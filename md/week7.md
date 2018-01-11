@@ -6,7 +6,7 @@ Don't Let the Data Lie To You
 * Basics: understand the context under which data was collected
 
 * 311 Data (find article on who calls 311; look at some 311 basics)
-  * https://nextcity.org/daily/entry/who-is-most-likely-dial-311
+  * https://nextcity.org/daily/entry/who-is-most-likely-dial-311  
 
 * The Fires (Joe Flood); Compstat; --
   * **VA Hospitals** are addicted to metrics and they almost always turn out to be gameable.
@@ -18,3 +18,5 @@ Don't Let the Data Lie To You
 * Means and medians and who is "average"
 
 * https://twitter.com/iMDRW/status/412789925541867520 <-- $5000 house; inflation.
+
+* https://fivethirtyeight.com/features/we-used-broadband-data-we-shouldnt-have-heres-what-went-wrong/?ex_cid=story-twitter 
