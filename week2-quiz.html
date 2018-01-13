@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="markdown github">
+
+	<header class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<nav role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">J298 Data Journalism</a>
+				</div> <!-- /.navbar-header -->
+			</nav>
+		</div> <!-- /.navbar-header -->
+	</header>
+
+
+
+	<div class="container all">
+
+		<div class="panel panel-default quiz" style="margin:0 auto">
+			<div class="panel-body">
+				<form name="quizform" method="post" action="http://peteraldhous.com/php/petermailer.php" class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputName" class="col-lg-12">Name</label>
+						<div class="col-lg-12">
+							<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Your name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail" class="col-lg-12">Email</label>
+						<div class="col-lg-12">
+							<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your email">
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ1" class="col-lg-12">1. Identify the categorical variables from this list: a) month of the year; b) height (meters); c) identifies as conservative or liberal; d) speed (mph); e) weight (lbs); f) speed (high, medium, low).</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ1" name="inputQ1" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ2" class="col-lg-12">2. List three possible summary statistics (aggregate measures) for a continuous variable, with a one-sentence explanation of each. For example, sum is the result of adding together the values for all records in the dataset. (Do not repeat this example!)</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ2" name="inputQ2" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ3" class="col-lg-12">3. What should be the delimiter in a text file of data with the extension <code>.csv</code>?</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ3" name="inputQ3" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ4" class="col-lg-12">4. An agency’s budget was $21 million in 2017. It is $24.5 million in 2018. What was the percentage increase, rounded to one decimal place?</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ4" name="inputQ4" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ5" class="col-lg-12">5. There were 15,000 violent crimes in 2017 in city A, which had a population of 350,000. There were 9,000 violent crimes in City B, which had a population of 500,000. Complete the following sentence with a number rounded to one decimal place: “City A’s violent crime rate was ... times that of city B.”</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ5" name="inputQ5" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ6" class="col-lg-12">6. When writing a spreadsheet formula, what is the first character that you should type?</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ6" name="inputQ6" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ7" class="col-lg-12">7. Donald Trump’s approval rating is estimatated at 40% in a new poll. The margin of error is 3.5 percentage points. If this poll had been repeated 100 times, what is the range of values within which his approval rating would fall within 95% of the time?</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ7" name="inputQ7" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ8" class="col-lg-12">8. Why are variables containing text values often put within quote marks in a CSV file?</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ8" name="inputQ8" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ9" class="col-lg-12">9. What type of chart is this?</label>
+						<div class="col-lg-12">
+							<img src="img/class1_13.png" alt="">
+							<textarea class="form-control" rows="4" id="inputQ9" name="inputQ9" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<label for="inputQ10" class="col-lg-12">10. <a href="http://www.nytimes.com/2010/09/16/nyregion/16caps.html?_r=0">This story</a> made page A1 of <em>The New York Times</em>, but is seriously flawed as a work of data journalism. In no more than two paragraphs, explain what was wrong. Hint: Think “compared to what?” and explain what would need to be measured and calculated, to really know whether Yankees caps tend to be worn by criminals. (There are no marks here for simply saying the story was vague!)</label>
+						<div class="col-lg-12">
+							<textarea class="form-control" rows="4" id="inputQ10" name="inputQ10" placeholder="Answer here"></textarea>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<div class="col-lg-12">
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+	</div> <!-- /.container all -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

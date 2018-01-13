@@ -14,7 +14,7 @@ Our spreadsheet application for these classes will be Google Sheets. Use from yo
 A powerful tool for data processing and cleaning. Download the latest **stable version** [from here](http://openrefine.org/download.html). When launched, Open Refine will work in your default web browser; note that your data remains on your computer, and is not uploaded to the web.
 
 ### [R](http://www.r-project.org/) and [R Studio](http://www.rstudio.com/)
-R is a software environment and programming language for statistical computing, data analysis, and graphics. Think of it as a Swiss Army knife for working with datw. Download the latest `.pkg` installer for OSX from [here](https://cran.rstudio.com/). R Studio provides a user interface that makes it much easier to use. Download the latest **free** version of RStudio Desktop [from here](http://www.rstudio.com/products/rstudio/download/).
+R is a software environment and programming language for statistical computing, data analysis, and graphics. Think of it as a Swiss Army knife for working with data. Download the latest `.pkg` installer for OSX from [here](https://cran.rstudio.com/). R Studio provides a user interface that makes it much easier to use. Download the latest **free** version of RStudio Desktop [from here](http://www.rstudio.com/products/rstudio/download/).
 
 ### [Postgres.app](https://postgresapp.com/)
 

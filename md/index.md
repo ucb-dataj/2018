@@ -11,13 +11,13 @@ We will meet in **108/Lower NG** on Thursdays from 6pm - 9pm. Your instructors, 
  - ####**Jan. 18:**	[**What is data?**](week1.html)
 Categorical and continuous variables; basic operations for interviewing a dataset; sampling and margins of error; plotting and summarizing distributions; choosing bins for your data; basic newsroom math. (**Peter Aldhous**)
 
-	- **Assignment** File a preliminary pitch for a data-driven story. Also, read stories for discussion in week 2.
+	- **Assignment:** File a preliminary pitch for a data-driven story. Also, read stories for discussion in week 2.
 
 
 - ####**Jan. 25:** 	[**Data journalism: Types of stories**](week2.html)
 Through a tour of some great examples of data journalism, we'll get inspiration for our work in this course. (**Peter Aldhous**)
 
-	- **Assignment** Quiz on good practice in data analysis and data journalism.
+	- **Assignment:** Quiz on good practice in data analysis and data journalism.
 
 
 - #### Feb. 1: [**Working with spreadsheets**](week3.html)
@@ -47,31 +47,34 @@ We'll use tidyverse packages to explore data on opioid prescription under Medica
 - #### **Mar. 1:**	[**Don't let data lie to you**](week7.html)
 Data is as full of lies as people, but somehow we are inclined to believe numbers in ways we we wouldn't believe sentences. We'll look at ways that numbers lie to us and people lie to each other with numbers.  (**Amanda Hickman**)
 
- 	- **Assignment** t/k --
+ 	- **Assignment** Submit a reporting and data analysis plan, based on your earlier pitch.
 
 
 - #### **Mar. 8:** [**Introduction to databases and SQL**](week8.html)
-We'll introduce PostgreSQL and SQL, or structured query language, which we use to interact with Postgres.   (**Amanda Hickman**)
+We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions of data.(**Amanda Hickman**)
 
 	- **Assignment** Skill reinforcement assignment in PostgreSQL.
-
+	
 
 -  #### **Mar. 15:** [**Finding stories using maps**](week9.html)
-PostGIS is a powerful PostgreSQL plugin that we'll use for geographic queries.(**Amanda Hickman**)
+An introduction to [QGIS](https://qgis.org/en/site/), using its point-and-click interface to perform simple geographic analyses. (**Amanda Hickman**)
 
-	- **Assignment** Skill reinforcement assignment.
+	- **Assignment** Skill reinforcement assignment in QGIS.
 
 
--  ####**Mar. 22:** [**Maps meet databases**](week10.html) 
-We'll explore more advanced queries that combine geographic analysis with databases. We'll also discuss the tool or strategy you'd like to tackle in week 12 (**Amanda Hickman**)
+-  ####**Mar. 22:** [**Maps meet databases**](week10.html)
+We'll use QGIS together with [PostGIS](https://postgis.net/), a powerful PostgreSQL plugin that we'll use for geographic analysis. We'll also discuss the tool or strategy you'd like to tackle in week 12. (**Amanda Hickman**)
 
-	- **Assignment** Skill reinforcement assignment.
+	- **Assignment** Skill reinforcement assignment in PostGIS.
 
 
 -  ####**Mar. 29:** Spring Break -- No class
 
 - ####**Apr. 5:**	[**More with fun with R**](week11.html)
 Connecting to databases from R. Pulling data from the web. Correcting for inflation and seasonal trends. (**Peter Aldhous**)
+
+	- **Assignment** Submit a progress report on your data analysis.
+
 
 - ####**Apr. 12:**  [**Open class: To be determined**](week12.html)
 As the semester progresses, we want to hear from you about tools you're interested in tackling. We're leaving week 12 open to new opportunities and inspiration that present themselves this semester.  (**Amanda Hickman**)
@@ -84,6 +87,9 @@ Drawing from the headlines, we'll attempt some original reporting from data. We 
 
 - ####**Apr. 26:**  [Putting it all into practice: 2](week14.html)
 Continuation from last week's class. (**Peter Aldhous and Amanda Hickman**)
+
+	- **Assignment** Submit your data journalism project.
+
 
 - ####**May 4:**  [Next steps: The cutting edge of data journalism](week15.html)
 Show and tell on advanced methods on data journalism, including machine learning and text analysis. (**Peter Aldhous and Amanda Hickman**)

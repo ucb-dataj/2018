@@ -49,6 +49,10 @@ Data journalism is just one tool in a good reporter's toolbox. What other report
 - **Does the story have any weaknesses?**
 Good reporters try to "bullet proof" their stories by looking for holes and anticipating how an interested party might try to attack the analysis as flawed. Did the reporters behind these stories leave any vulnerabilities?
 
+### Assignment
+
+Complete [this quiz](week2-quiz.html) on good practice and basic principles of data journalism.
+
 
 
 
