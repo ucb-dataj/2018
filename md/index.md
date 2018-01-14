@@ -49,20 +49,20 @@ Data is as full of lies as people, but somehow we are inclined to believe number
 
  	- **Assignment** Submit a reporting and data analysis plan, based on your earlier pitch.
 
-
 - #### **Mar. 8:** [**Introduction to databases and SQL**](week8.html)
 We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions of data.(**Amanda Hickman**)
 
 	- **Assignment** Skill reinforcement assignment in PostgreSQL.
 
-
 -  #### **Mar. 15:** [**Finding stories using maps**](week9.html)
 [QGIS](https://qgis.org/en/site/) is a desktop geographic information system (or GIS) application that we'll use to view, edit, and analyze geographic data. (**Amanda Hickman**)
 
+	- **Assignment** Skill reinforcement assignment in QGIS.
 
 -  ####**Mar. 22:** [**Maps meet databases**](week10.html)
 [PostGIS](https://postgis.net/) adds support for geographic queries and objects to Postgres -- it is a powerful tool for geographic analysis, and it plugs right into QGIS. We'll explore more advanced queries that take advantage of PostGIS's power.  We'll also discuss the tool or strategy you'd like to tackle in week 12. (**Amanda Hickman**)
 
+   - **Assignment** Skill reinforcement assignment in PostGIS.
 
 -  ####**Mar. 29:** Spring Break -- No class
 
