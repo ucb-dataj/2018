@@ -47,13 +47,12 @@ We'll introduce Postgres and SQL, or structured query language, which we use to 
 	- **Assignment** Skill reinforcement assignment in Postgres.
 
 -  #### **Mar. 15:** [**Finding stories using maps**](week9.html)
-PostGIS is a powerful Postgres plugin that we'll use for geographic queries.(**Amanda Hickman**)
+QGIS is a desktop geographic information system (or GIS) application that we'll use to view, edit, and analyze geographic data. (**Amanda Hickman**)
 
 	- **Assignment**  Skill reinforcement assignment in PostGIS.
 
 -  ####**Mar. 22:** [**Maps meet databases**](week10.html)
-
-We'll explore more advanced queries that combine geographic analysis with databases. We'll also discuss the tool or strategy you'd like to tackle in week 12 (**Amanda Hickman**)
+PostGIS adds support for geographic queries and objects to Postgres -- it is a powerful tool for geographic analysis, and it plugs right into QGIS. We'll explore more advanced queries that take advantage of PostGIS's power. (**Amanda Hickman**)
 
 	- **Assignment** Skill reinforcement assignment.
 
