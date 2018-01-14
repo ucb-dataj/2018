@@ -34,7 +34,7 @@ So we're going to encourage you to develop a data frame of mind. Rather then bei
 
 A common mistake made by reporters starting to work with data is to throw lots of numbers into their stories. This is rarely enlightening and usually off-putting. The goal of working with data is for you to find new stories, or gain a deeper understanding of what your're covering. When you tell those stories, use only the numbers that are necessary to get the point across.
 
-### The data we will use today
+### The data we will use
 
 Download the data for this session from [here](data/week1.zip), unzip the folder and place it on your desktop. It contains the following files:
 
@@ -432,7 +432,7 @@ In the examples given above, the null hypotheses are that there is no relationsh
 
 The resulting probabilities are often given as *p* values, which are shown as decimal numbers between 0 and 1.
 
-The decimal 0.001 is the same as the fraction 1/1000, and < is the mathematical symbol for “less than.” So this means that there was less than one in a thousand chance that the difference in participation in the riot between Northerners and Southerners was caused by a chance sampling effect.
+The decimal 0.001 is the same as the fraction 1/1000, and `<` is the mathematical symbol for “less than.” So this means that there was less than one in a thousand chance that the difference in participation in the riot between Northerners and Southerners was caused by a chance sampling effect.
 
 This would be called a “significant” result. When statisticians use this word, they don’t necessarily mean that the result has real-world consequence. It just means that the result is unlikely to be due to chance. However, if you have framed your question carefully, a statistically significant result may be very consequential indeed.
 
@@ -462,6 +462,20 @@ For example, by the early 1990s epidemiological studies suggested that women who
 
 Data journalists should be very wary of falling into similar traps. While you may not be able to gather all of the necessary data and run statistical tests, take special care to think about possible lurking variables.
 
+### Assignment
+
+- **File a preliminary pitch for a data-driven story.** This should clearly articulate the thought you've already put into this reporting idea. The more thorough your pitch, the more feedback we can give you. At a minimum, it should include:
+
+  + A description of the area you're interested in exploring or reporting on, with the questions to intend to address.
+
+  + A news hook, or explanation of why this matters now.
+  + A description of the data that's available and the agencies or organizations that maintains it.
+
+  You are only required to submit one pitch, however you may submit up to three, if you'd like us to advise on which one looks most promising.
+  
+  **Due: Date and time t/k** 
+
+- **Reading assignment.** Read the stories for discussion in [week 2](week2,html), and come to class next week prepared to address the questions about them posed in the class notes. 
 
 ### Further reading
 
