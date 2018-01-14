@@ -22,8 +22,12 @@ Download from [here](https://postgresapp.com/) and follow the installation instr
 
 This software allows you to work with [PostgreSQL](https://www.postgresql.org/) databases, including running spatial queries on geographic data using the [PostGIS](http://postgis.net/) extension.
 
+### [Postico](https://eggerapps.at/postico/)
+
+Postgres is a command line application -- Postico is a graphical client that makes it much (much) easier to work in Postgres. 
+
 ### [QGIS](http://qgis.org/en/site/)
-The leading open source Geographic Information System, which we will use to make maps and analyze geographic data. Download the latest **standard** version of QGIS and its requirements [from here](http://www.kyngchaos.com/software/qgis/). 
+The leading open source Geographic Information System, which we will use to make maps and analyze geographic data. Download the latest **standard** version of QGIS and its requirements [from here](http://www.kyngchaos.com/software/qgis/).
 
 Double-click on the downloaded `.dmg` file, which will open this window
 
@@ -34,13 +38,3 @@ Now install the `.pkg` files in numbered order:
 - NumPy
 - matplotlib
 - QGIS
-
-
-
-
-
-
-
-
-
-
