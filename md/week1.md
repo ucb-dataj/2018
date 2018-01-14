@@ -34,7 +34,7 @@ So we're going to encourage you to develop a data frame of mind. Rather then bei
 
 A common mistake made by reporters starting to work with data is to throw lots of numbers into their stories. This is rarely enlightening and usually off-putting. The goal of working with data is for you to find new stories, or gain a deeper understanding of what your're covering. When you tell those stories, use only the numbers that are necessary to get the point across.
 
-### The data we will use today
+### The data we will use
 
 Download the data for this session from [here](data/week1.zip), unzip the folder and place it on your desktop. It contains the following files:
 
