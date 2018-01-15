@@ -26,7 +26,7 @@ or
 
 > I can't install Open Refine! I tried, but the download is just broken.
 
-All we know is that you're using QGIS, or R, or Open Refine. We don't know what you've tried, we don't know what happens when you try it, I don't know what you thought was going to happen. I don't know what "glitch" I should be looking for. So I don't know enough to help you. A good question will include all of this:
+All we know is that you're using QGIS, or R, or Open Refine. We don't know what you've tried, we don't know what happens when you try it, and we don't know what you thought was going to happen. So we don't know enough to help you. A good question will include all of this:
 
 *   What steps will reproduce the problem? (Sometimes this means actually walking through the steps again, until you reach the problem.)
 *   If you're working with code or data, we probably need to see your data to reproduce the problem! Put your code or data into a [gist](http://gist.github.com) or [pastebin](http://paste.debian.net/) and include a link with your question.
