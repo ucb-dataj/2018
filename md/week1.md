@@ -469,13 +469,15 @@ Data journalists should be very wary of falling into similar traps. While you ma
   + A description of the area you're interested in exploring or reporting on, with the questions to intend to address.
 
   + A news hook, or explanation of why this matters now.
-  + A description of the data that's available and the agencies or organizations that maintains it.
+  + A description of the data that's available and the agencies or organizations that maintain it.
 
   You are only required to submit one pitch, however you may submit up to three, if you'd like us to advise on which one looks most promising.
   
-  **Due: Date and time t/k** 
+  **Due: Sat Jan 20 at 8pm** 
 
-- **Reading assignment.** Read the stories for discussion in [week 2](week2,html), and come to class next week prepared to address the questions about them posed in the class notes. 
+- **Reading assignment.** Read the stories for discussion in [week 2](week2,html), and come to class next week prepared to address the questions about them posed in the class notes.
+
+  **Due: By next week's class** 
 
 ### Further reading
 

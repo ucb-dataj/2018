@@ -51,7 +51,11 @@ Good reporters try to "bullet proof" their stories by looking for holes and anti
 
 ### Assignment
 
-Complete [this quiz](week2-quiz.html) on good practice and basic principles of data journalism.
+- Complete [this quiz](week2-quiz.html) on good practice and basic principles of data journalism.
+ 
+ **Due: Weds Jan 24 at 8pm**
+
+
 
 
 

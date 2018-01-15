@@ -1,6 +1,8 @@
-### Asking Good Questions
+# If you get stuck
 
-If you challenge yourself (and you should challenge yourself), you're bound to get stuck. Technology is changing constantly, so learning how to ask the right questions and get help with new tools is probably more important than actually learning how to use any one tool well today. <!--more-->
+### Asking good questions
+
+If you challenge yourself (and you should challenge yourself), you're bound to get stuck. Technology is changing constantly, so learning how to ask the right questions and get help with new tools is probably more important than actually learning how to use any one tool well today. 
 
 ProPublica's Sisi Wei has a great [intro to asking questions](https://www.propublica.org/nerds/how-to-ask-programming-questions).
 
@@ -35,12 +37,12 @@ All we know is that you're using QGIS, or R, or Open Refine. We don't know what 
 
 Walk us through it, step by step. Don't just say "I followed the instructions," describe the instructions you followed. You're aiming for something like this:
 
-> I can download Refine just fine, but when I try to actually open it, I get an error that says the file is corrupted: "OpenRefine is damaged and can't be opened. You should move it to the Trash" -- I've downloaded it three time from three different browsers and I keep getting the same error.
+> I can download Refine just fine, but when I try to actually open it, I get an error that says the file is corrupted: "OpenRefine is damaged and can't be opened. You should move it to the Trash" -- I've downloaded it three times from three different browsers and I keep getting the same error.
 
-(If you are actually getting that particular error, [the solution](https://github.com/OpenRefine/OpenRefine/issues/590) is not particularly intuitive: You have to fix your Privacy and Security settings.
+(If you are actually getting that particular error, [the solution](https://github.com/OpenRefine/OpenRefine/issues/590) is not particularly intuitive: You have to fix your Privacy and Security settings.)
 
 
-## Where should you get help?
+### Where should you get help?
 
 You're always welcome to ask your instructors for help. When you're stuck on a technical problem ("Am I on the right track with my pitch?" is not a technical problem; "Why is QGIS drawing San Francisco's shapefiles in the middle of the bay?" is a technical problem) consider opening [a new issue](https://github.com/ucb-dataj/2018/issues). It's good practice.
 
