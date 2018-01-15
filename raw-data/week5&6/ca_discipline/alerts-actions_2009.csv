@@ -1,0 +1,698 @@
+alert_date,last_name,first_name,middle_name,name_suffix,city,state,license,action_type,action_date
+2009-01-02T00:00:00Z,Michalski,Michael,H.,Jr.,La Mesa,CA,G 86189,Public Reprimand,2008-01-02T00:00:00Z
+2009-01-02T00:00:00Z,Aguas,Jesus,Morales,,Glendale,CA,A34280,First Amended Accusation Filed,2008-12-16T00:00:00Z
+2009-01-02T00:00:00Z,Assad,Hany,Youssef,,San Ramon,CA,A 54309,Accusation & Petition to Revoke Probation,2008-12-22T00:00:00Z
+2009-01-02T00:00:00Z,DeCruz,Delores,,,Arcadia,CA,G 65527,Accusation Filed,2008-12-29T00:00:00Z
+2009-01-02T00:00:00Z,Exum,Janice,Maria,,Compton,CA,G 66570,Accusation Filed,2008-12-16T00:00:00Z
+2009-01-02T00:00:00Z,Farshi,Ramin,,,West Hills,CA,G 75062,Accusation Filed,2008-12-16T00:00:00Z
+2009-01-02T00:00:00Z,Garcia,James,,,Brentwood,CA,A 55176,Accusation Filed,2008-12-24T00:00:00Z
+2009-01-02T00:00:00Z,Garrison,Thomas,Edwin,,Ogden,UT,C 50929,First Amended Accusation Filed,2008-12-16T00:00:00Z
+2009-01-02T00:00:00Z,McCall,Bruce,Burton,,San Francisco,CA,G 79333,Accusation Filed,2008-12-22T00:00:00Z
+2009-01-02T00:00:00Z,Melahoures,Konstantinos,,,Mission Viejo,CA,A 40532,Accusation Filed,2008-12-17T00:00:00Z
+2009-01-02T00:00:00Z,Morgan,Charles,Dignam,,Oshkosh,WI,G 27598,Accusation Filed,2008-12-18T00:00:00Z
+2009-01-02T00:00:00Z,Muller,Richard,Lewayne,,San Jose,CA,G 42566,Accusation Filed,2008-12-17T00:00:00Z
+2009-01-02T00:00:00Z,Rosas,Jose,Antonio,,San Francisco,CA,A 72019,First Amended Accusation Filed,2008-12-23T00:00:00Z
+2009-01-02T00:00:00Z,Sobeck,Gregg,Robert,,Sherman Oaks,CA,A 68256,First Amended Accusation Filed,2008-12-17T00:00:00Z
+2009-01-02T00:00:00Z,Sun,Jen,S.,,Las Vegas,NV,A 82642,Accusation Filed,2008-12-19T00:00:00Z
+2009-01-02T00:00:00Z,Lee,Sondra,Benay,,Lancaster,CA,A 71268,First Amended Accusation Dismissed,2008-12-16T00:00:00Z
+2009-01-05T00:00:00Z,Gillespie,Thomas,Miller,,San Francisco,CA,A 84706,Revoked,2009-01-05T00:00:00Z
+2009-01-05T00:00:00Z,Curley,Michael,Patrick,,Murrietta,CA,A 45008,Public Reprimand,2009-01-05T00:00:00Z
+2009-01-05T00:00:00Z,Derakhshan,Iraj,,,Charleston,WV,A 26416,Public Reprimand,2009-01-05T00:00:00Z
+2009-01-05T00:00:00Z,Fisher,Stephen,Neal,,Pittsburgh,PA,G 54042,Decision,2009-01-05T00:00:00Z
+2009-01-05T00:00:00Z,Hakhamimi,Kamron,Kenneth,,Studio City,CA,A 74169,Decision,2009-01-05T00:00:00Z
+2009-01-05T00:00:00Z,Mehlmauer,Marilyn,Ann,,Pasadena,CA,G 35270,Public Reprimand,2009-01-05T00:00:00Z
+2009-01-05T00:00:00Z,Roger,Vincent,David,,San Diego,CA,G 18625,Public Reprimand,2009-01-05T00:00:00Z
+2009-01-05T00:00:00Z,Salazar,Robert,Gonzales,,Fresno,CA,G 42244,Decision,2009-01-05T00:00:00Z
+2009-01-07T00:00:00Z,Khan,Ataur-Rehman,Rizwan,,Houston,TX,A 65459,Decision,2009-01-07T00:00:00Z
+2009-01-07T00:00:00Z,Freeman,Barry,John,,Los Angeles,CA,G 46887,Public Reprimand,2009-01-05T00:00:00Z
+2009-01-07T00:00:00Z,Hack,Terrence,Charles,,Ayer,MA,G 50146,Public Reprimand,2009-01-05T00:00:00Z
+2009-01-08T00:00:00Z,Yeung,Clement,Ka-Chun,,Honolulu,HI,G 43350,Suspended,2009-01-08T00:00:00Z
+2009-01-14T00:00:00Z,Brannigan,John,,,Los Banos,CA,A 77781,Revoked,2009-01-12T00:00:00Z
+2009-01-14T00:00:00Z,Espy,Clarke,David,,Los Angeles,CA,G 19054,Public Reprimand,2009-01-12T00:00:00Z
+2009-01-14T00:00:00Z,Chan,Joseph,Ling-Hang,,Oakland,CA,G 50691,Decision,2009-01-12T00:00:00Z
+2009-01-16T00:00:00Z,Moshiri,Bahram,Tafreshi,,Arlington,VA,A 45115,Surrendered,2009-01-14T00:00:00Z
+2009-01-20T00:00:00Z,Mazaheri,Morton,Reza,,Los Angeles,CA,A 30149,Revoked,2009-01-20T00:00:00Z
+2009-01-20T00:00:00Z,Cosgrove,Michael,Joseph,,Davis,CA,G 62191,Accusation Filed,2009-01-05T00:00:00Z
+2009-01-20T00:00:00Z,Dietrich,Daniel,Scott,,Stockton,CA,A 95731,Accusation Filed,2009-01-14T00:00:00Z
+2009-01-20T00:00:00Z,Funk,Wayne,A.,,El Cajon,CA,C 15738,Accusation Filed,2009-01-07T00:00:00Z
+2009-01-20T00:00:00Z,Gillian,Terry,Allen,,Fresno,CA,A 29523,Accusation Filed,2009-01-14T00:00:00Z
+2009-01-20T00:00:00Z,Hampton,William,Wilson,,Fullerton,CA,A 41730,Accusation Filed,2009-01-05T00:00:00Z
+2009-01-20T00:00:00Z,Jones,Nolan,Carthell,,Los Angeles,CA,A 30400,First Amended Accusation & Petition To Revoke Probation,2009-01-07T00:00:00Z
+2009-01-20T00:00:00Z,Marks,Dana,Ralph,,Reno,NV,A 56403,Accusation Filed,2009-01-14T00:00:00Z
+2009-01-20T00:00:00Z,Martinez,Jorge,Adolfo,,Murrieta,CA,A 49113,Accusation Filed,2009-01-09T00:00:00Z
+2009-01-20T00:00:00Z,Schafer,Jeffry,B.,,Coronado,CA,G 36897,Accusation Filed,2009-01-06T00:00:00Z
+2009-01-20T00:00:00Z,Senador,Jose,Jacinto,Jr.,Palos Verdes Estates,CA,A 30062,First Amended Accusation Filed,2009-01-15T00:00:00Z
+2009-01-20T00:00:00Z,Smyle,Bernard,Alan,,Ventura,CA,G 54868,Accusation Filed,2009-01-13T00:00:00Z
+2009-01-20T00:00:00Z,Tamer,Moussa,Pierre,,Bakersfield,CA,G 67142,Accusation Filed,2009-01-09T00:00:00Z
+2009-01-20T00:00:00Z,Williams,Daniel,Atherton,Jr.,Greenville,CA,G 37614,Accusation Filed,2009-01-07T00:00:00Z
+2009-01-21T00:00:00Z,Kiely,Andrew,A.,,Long Beach,CA,A 22800,Decision,2009-01-20T00:00:00Z
+2009-01-22T00:00:00Z,Dietrich,Peter,Scott,,Sacramento,CA,G 60965,Suspended,2009-01-21T00:00:00Z
+2009-01-22T00:00:00Z,O'Neill,Mary,M.,,San Jose,CA,G 69694,Public Reprimand,2009-01-22T00:00:00Z
+2009-01-22T00:00:00Z,Miller,Stephen,P.,,Houston,TX,G 16153,Revoked,2009-01-22T00:00:00Z
+2009-01-23T00:00:00Z,Chen,P.,Matthew,,Berkeley,CA,A 79729,Public Letter of Reprimand,2009-01-22T00:00:00Z
+2009-01-27T00:00:00Z,Bedney,Donald,Lew,,Loma Linda,CA,C 38955,Surrendered,2009-01-27T00:00:00Z
+2009-01-27T00:00:00Z,Chang,Elmer,,,Hayward,CA,A 68792,Public Letter of Reprimand,2009-01-27T00:00:00Z
+2009-01-27T00:00:00Z,McIntyre,Robert,C.,,Twain Harte,CA,A 20692,Decision,2009-01-28T00:00:00Z
+2009-01-28T00:00:00Z,Sarkissian,Vahe,,,Walnut Creek,CA,A 90620,Out of State Suspension Order,2009-01-28T00:00:00Z
+2009-02-02T00:00:00Z,Slay,Robert,Duncan,Jr.,Palos Verdes Estates,CA,G 31037,Public Reprimand,2009-01-30T00:00:00Z
+2009-02-02T00:00:00Z,Barker,Bruce,C.,,San Francisco,CA,G 57849,Decision,2009-01-30T00:00:00Z
+2009-02-02T00:00:00Z,Chernoff,William,Gregory,,Santa Rosa,CA,A 51787,Decision,2009-01-30T00:00:00Z
+2009-02-02T00:00:00Z,Bryan,Bruce,Jackson,,Pinetop,AZ,G 53799,Accusation Filed,2009-01-22T00:00:00Z
+2009-02-02T00:00:00Z,Buckwalter,Kevin,Ray,,Las Vegas,NV,A 63401,Accusation Filed,2009-01-27T00:00:00Z
+2009-02-02T00:00:00Z,Cohen,Robert,Hugh,,West Hollywood,CA,G 60961,Accusation Filed,2009-01-23T00:00:00Z
+2009-02-02T00:00:00Z,Gough,James,Stockton,,Scottsdale,AZ,C 42510,Accusation Filed,2009-01-27T00:00:00Z
+2009-02-02T00:00:00Z,Henriquez,Jaime,O.,,Arcadia,CA,A 79202,Accusation Filed,2009-01-26T00:00:00Z
+2009-02-02T00:00:00Z,Jefferson,Richard,J.,,Los Angeles,CA,G 15425,Accusation Filed,2009-01-26T00:00:00Z
+2009-02-02T00:00:00Z,Kiely,Andrew,Al,,Long Beach,CA,A 22800,Accusation Filed,2009-01-20T00:00:00Z
+2009-02-02T00:00:00Z,Lieberman,Alexander,,,City of Industry,CA,A 20798,Accusation Filed,2009-01-16T00:00:00Z
+2009-02-02T00:00:00Z,McMahon,Dennis,Michael,,Mountain View,CA,A 88141,Accusation Filed,2009-01-28T00:00:00Z
+2009-02-02T00:00:00Z,Rheinschild,Gary,W.,,Anaheim Hills,CA,G 13342,First Amended Accusation Filed,2009-01-27T00:00:00Z
+2009-02-02T00:00:00Z,Roberg,Bradford,Churchill,,McHenry,IL,G 43905,First Amended Accusation Filed,2009-01-23T00:00:00Z
+2009-02-02T00:00:00Z,Salcedo,Gina,Marie,,Jacksonville,NC,A 94810,Accusation Filed,2009-01-22T00:00:00Z
+2009-02-02T00:00:00Z,Borchers,Doyle,John,III,Stanford,CA,A 64879,First Amended Accusation Withdrawn,2009-01-27T00:00:00Z
+2009-02-02T00:00:00Z,Simpson,William,Bernard,,Carson,CA,G 43101,Accusation Withdrawn,2009-01-16T00:00:00Z
+2009-02-02T00:00:00Z,Aguas,Jesus,Morales,,Glendale,CA,A 34280,Decision,2009-02-02T00:00:00Z
+2009-02-02T00:00:00Z,Aziz,Nader,E.,,Lake Barrington,IL,G 83778,Public Reprimand,2009-02-02T00:00:00Z
+2009-02-02T00:00:00Z,Shah,Mukesh,H.,,Santa Ana,CA,A 44952,Accusation & Petition to Revoke Probation,2009-02-02T00:00:00Z
+2009-02-03T00:00:00Z,Jain,Anamika,,,Las Vegas,NV,G 87884,Suspended,2009-02-03T00:00:00Z
+2009-02-04T00:00:00Z,Zegarra,J.,Peter,,Sacramento,CA,G 52872,First Amended Accusation Filed,2009-01-05T00:00:00Z
+2009-02-04T00:00:00Z,Zegarra,J.,Peter,,Sacramento,CA,G 52872,Second Amended Accusation Filed,2009-01-26T00:00:00Z
+2009-02-05T00:00:00Z,Casey,Kirk,Christopher,,Chico,CA,G 61633,Decision,2009-02-05T00:00:00Z
+2009-02-05T00:00:00Z,Chi,Peter,Lieh-Chuan,,Tracy,CA,A 53856,Superior Court Order/Suspended,2009-02-05T00:00:00Z
+2009-02-09T00:00:00Z,McCall,Bruce,Burton,,San Francisco,CA,G 79333,Surrendered,2009-02-05T00:00:00Z
+2009-02-13T00:00:00Z,Attia,Fadia,Rafla,,Corona,CA,A 45954,Public Reprimand,2009-02-12T00:00:00Z
+2009-02-13T00:00:00Z,Novell,Laura,Ann,,Mountain View,HI,A 88754,Public Reprimand,2009-02-13T00:00:00Z
+2009-02-17T00:00:00Z,Bonilla,Roberto,Ramon,,Los Angeles,CA,A 36897,Accusation Filed,2009-02-10T00:00:00Z
+2009-02-17T00:00:00Z,Brewer,Eugene,Allan,,Indianapolis,IN,G 59832,Accusation & Petition to Revoke Probation,2009-02-09T00:00:00Z
+2009-02-17T00:00:00Z,Cortina,Pablo,Garza,,Ukiah,CA,G 47561,Accusation Filed,2009-02-10T00:00:00Z
+2009-02-17T00:00:00Z,Estiandan,Carlos,Pena,,Los Angeles,CA,A 38326,Accusation Filed,2009-02-10T00:00:00Z
+2009-02-17T00:00:00Z,Lang,L.,Khadijah,,Los Angeles,CA,G 66503,Petition to Revoke Probation Filed,2009-02-05T00:00:00Z
+2009-02-17T00:00:00Z,Lola,Alejandrino,,,Newark,CA,A 18860,Accusation Filed,2009-02-04T00:00:00Z
+2009-02-17T00:00:00Z,Overton,John,Blanton,,Stockton,CA,C 38023,Accusation Filed,2009-02-13T00:00:00Z
+2009-02-17T00:00:00Z,Ott,Derek,Alan,,Los Angeles,CA,A 61601,First Amended Accusation Filed,2009-02-13T00:00:00Z
+2009-02-17T00:00:00Z,Pham,Phuong-Anh,Thi,,Fair Oaks,CA,A 62741,Accusation Filed,2009-02-09T00:00:00Z
+2009-02-17T00:00:00Z,Schaeffer,Richard,J.,,Scottsdale,AZ,G 11390,Accusation Filed,2009-02-09T00:00:00Z
+2009-02-17T00:00:00Z,Zaslow,Ely,David,,Asheville,NC,C 52963,Accusation Filed,2009-02-02T00:00:00Z
+2009-02-17T00:00:00Z,Retter,Paul,Eugene,,Henderson,NV,C 38173,Accusation Withdrawn,2009-02-03T00:00:00Z
+2009-02-19T00:00:00Z,Estiandan,Carlos,,,Los Angeles,CA,A 38326,Superior Court Order/Restriction,2009-02-18T00:00:00Z
+2009-02-23T00:00:00Z,Ames,Bruce,Anthony,Jr.,Medford,OR,A 97046,Revoked,2009-02-20T00:00:00Z
+2009-02-23T00:00:00Z,Baldwin,Kenneth,Leslie,,San Luis Obispo,CA,G 34268,Public Reprimand,2009-02-20T00:00:00Z
+2009-02-23T00:00:00Z,King,David,Howe,,Darien,IL,G 81262,Revoked,2009-02-20T00:00:00Z
+2009-02-23T00:00:00Z,Derbes,Linda,Kaufman,,Honolulu,HI,G 81106,Revoked,2009-02-23T00:00:00Z
+2009-02-23T00:00:00Z,Pormir,Hoshang,M.,,Yorba Linda,CA,A 49827,Suspended,2009-02-20T00:00:00Z
+2009-02-23T00:00:00Z,Bass,Bernard,Norman,,North Hollywood,CA,G 28057,Decision,2009-02-20T00:00:00Z
+2009-02-23T00:00:00Z,Corbin,Frederic,H.,,Brea,CA,G 41325,Decision,2009-02-20T00:00:00Z
+2009-02-23T00:00:00Z,Iida,Bob,Mitsuru,,Sutter Creek,CA,A 44831,Decision,2009-02-23T00:00:00Z
+2009-02-24T00:00:00Z,Banks,Brenda,L.,,Gahanna,OH,A 43066,Suspended,2009-02-23T00:00:00Z
+2009-02-25T00:00:00Z,Lovelace,Stewart,W.,,Manhattan Beach,CA,C 30263,Decision,2009-02-25T00:00:00Z
+2009-02-26T00:00:00Z,Perry,Allan,W.,,Glendale,CA,G 4336,Decision,2009-02-26T00:00:00Z
+2009-02-26T00:00:00Z,Raneses,Jovencio,L.,,San Diego,CA,C 37687,Revoked,2009-02-26T00:00:00Z
+2009-03-02T00:00:00Z,Alavi,Abdollah,,,Blythe,CA,A 33686,Accusation Filed,2009-02-24T00:00:00Z
+2009-03-02T00:00:00Z,Arora,Ajit,Singh,,Agua Dulce,CA,G 47654,First Amended Accusation Filed,2009-02-24T00:00:00Z
+2009-03-02T00:00:00Z,Freeman,Mark,Evan,,Newport Beach,CA,C 52034,Accusation Filed,2009-02-24T00:00:00Z
+2009-03-02T00:00:00Z,Hilburg,Leland,E.,,Tarzana,CA,G 3725,Accusation Filed,2009-02-18T00:00:00Z
+2009-03-02T00:00:00Z,Holmes,Victor,Alan,,Ridgecrest,CA,G 69242,Accusation Filed,2009-02-24T00:00:00Z
+2009-03-02T00:00:00Z,Johnson,James,Bruce,,Metairie,LA,C 50403,Accusation Filed,2009-02-23T00:00:00Z
+2009-03-02T00:00:00Z,Pham,Khanh,Gia,,Westminster,CA,A 41805,Accusation & Petition to Revoke Probation,2009-02-19T00:00:00Z
+2009-03-03T00:00:00Z,Palmer,Robert,Byron,,Sonora,CA,G 53445,Suspended,2009-02-27T00:00:00Z
+2009-03-04T00:00:00Z,Seid,Lorilyn,Louise,,San Francisco,CA,A 75441,Suspended,2009-03-04T00:00:00Z
+2009-03-05T00:00:00Z,Jones,Charles,Ferdinand,II,Los Angeles,CA,A 46217,Suspended,2009-03-05T00:00:00Z
+2009-03-05T00:00:00Z,McMahon,Dennis,Michael,,Mountain View,CA,A 88141,Surrendered,2009-03-05T00:00:00Z
+2009-03-09T00:00:00Z,Dileo,Gerard,Michael,,Bradenton,FL,C 42843,Decision,2009-03-09T00:00:00Z
+2009-03-09T00:00:00Z,Platt,Michael,Edward,,Rancho Mirage,CA,G 23729,Decision,2009-03-09T00:00:00Z
+2009-03-11T00:00:00Z,Watson,Louis,Herman,,Claremont,CA,G 32156,Revoked,2009-03-09T00:00:00Z
+2009-03-13T00:00:00Z,Dhanda,Anand,,,Pasadena,MD,C 50297,Public Reprimand,2009-03-09T00:00:00Z
+2009-03-16T00:00:00Z,Khalid,Shahper,,,Riverside,CA,A 49816,Revoked,2009-03-13T00:00:00Z
+2009-03-16T00:00:00Z,Chan,Bryan,Edwin,,Rancho Palos Verdes,CA,A 54240,Public Reprimand,2009-03-16T00:00:00Z
+2009-03-16T00:00:00Z,Lorenzana,Vona,Wright,,Lafayette,CA,G 71680,Decision,2009-03-16T00:00:00Z
+2009-03-16T00:00:00Z,Madrid,William,L.,,Lakewood,CA,A 48312,Public Reprimand,2009-03-16T00:00:00Z
+2009-03-17T00:00:00Z,Waterman,Jane,Lynn,,Wolcott,VT,C 51611,Suspended,2009-03-12T00:00:00Z
+2009-03-18T00:00:00Z,Caceres,Jose,Angel,,Buena Park,CA,A 47901,Accusation Filed,2009-03-03T00:00:00Z
+2009-03-18T00:00:00Z,Chi,Peter,Lieh-Chuan,,Tracy,CA,A 53856,First Amended Accusation Filed,2009-03-13T00:00:00Z
+2009-03-18T00:00:00Z,Halim,Neil,L.,,Shreveport,LA,C 53327,Accusation Filed,2009-03-10T00:00:00Z
+2009-03-18T00:00:00Z,Hossain,Mohammad,Moazzam,,Redlands,CA,A 34101,Accusation Filed,2009-03-03T00:00:00Z
+2009-03-18T00:00:00Z,Lenson,Richard,,,Napa,CA,G 59970,Accusation Filed,2009-03-09T00:00:00Z
+2009-03-18T00:00:00Z,Leversen,Owen,Peter,,Temecula,CA,A 44529,Accusation Filed,2009-03-03T00:00:00Z
+2009-03-18T00:00:00Z,Miskinyar,Shir,A.,,Santa Ana,CA,A 50080,Accusation Filed,2009-03-03T00:00:00Z
+2009-03-18T00:00:00Z,O'Neil,Kelly,James,,Temecula,CA,A 36888,First Amended Accusation Filed,2009-02-07T00:00:00Z
+2009-03-18T00:00:00Z,Robinson,Harrell,Edward,,Anaheim Hills,CA,G 38954,Second Amended Accusation Filed,2009-03-03T00:00:00Z
+2009-03-18T00:00:00Z,Tan,Benita,Basa,,Union City,CA,A 53599,Accusation & Petition to Revoke Probation,2009-03-04T00:00:00Z
+2009-03-18T00:00:00Z,Varga,Clayton,Alexander,,Pasadena,CA,G 52859,First Amended Accusation Filed,2009-03-02T00:00:00Z
+2009-03-18T00:00:00Z,Yankes,Max,Edward,,Visalia,CA,A 81907,Accusation Filed,2009-03-05T00:00:00Z
+2009-03-18T00:00:00Z,Zaky,Amal,Youssef,,Huntington Park,CA,A 38447,Accusation Filed,2009-03-02T00:00:00Z
+2009-03-18T00:00:00Z,C.,Hamid,Reza Safari,,Fresno,CA,A 53849,First Amended Accusation Dismissed,2009-03-12T00:00:00Z
+2009-03-19T00:00:00Z,Robinson,Joan,Real,,Soulsbyville,CA,A 68413,Suspended,2009-03-18T00:00:00Z
+2009-03-19T00:00:00Z,Williamson,Lawrence,James,,Windsor,CA,A 73495,Suspended,2009-03-19T00:00:00Z
+2009-03-23T00:00:00Z,Bui,Tam,Duy,,San Francisco,CA,A 40047,Decision,2009-03-23T00:00:00Z
+2009-03-23T00:00:00Z,Goings,Conchita,Yatar,,Cerritos,CA,A 41071,Decision,2009-03-23T00:00:00Z
+2009-03-23T00:00:00Z,Jenkins,Elizabeth,Ann,,Woodland Hills,CA,A 95751,Decision,2009-03-23T00:00:00Z
+2009-03-23T00:00:00Z,Yeager,Kimberly,Kay,,La Jolla,CA,G 55659,Public Reprimand,2009-03-20T00:00:00Z
+2009-03-23T00:00:00Z,Holland,Sundy,Rae,,Lynwood,CA,C 52693,Revoked,2009-03-23T00:00:00Z
+2009-03-24T00:00:00Z,Hughes,Derek,Patick,,Yuba City,CA,A 61410,Surrendered,2009-03-24T00:00:00Z
+2009-03-24T00:00:00Z,Brewer,Eugene,Allan,,Indianapolis,IN,G 59832,Suspended,2009-03-24T00:00:00Z
+2009-03-24T00:00:00Z,Kunhardt,George,Randolph,,Sebec,ME,C 40625,Public Letter of Reprimand,2009-03-19T00:00:00Z
+2009-03-25T00:00:00Z,Manusov,Eron,Grant,,Foxfire Village,NC,G 87762,Public Reprimand,2009-03-25T00:00:00Z
+2009-03-25T00:00:00Z,Scheid,Peter,John Elliot,,Orange,CA,A 70698,Decision,2009-03-25T00:00:00Z
+2009-03-25T00:00:00Z,Grewal,Ranjit,Singh,,Torrance,CA,A 38510,Suspended,2009-03-20T00:00:00Z
+2009-03-26T00:00:00Z,Sherman,Stephen,H.,,Arcadia,CA,G 15834,Public Reprimand,2009-03-26T00:00:00Z
+2009-03-26T00:00:00Z,Law,Charles,Edward,Jr.,Los Angeles,CA,G 20667,Decision,2009-03-26T00:00:00Z
+2009-03-30T00:00:00Z,Lung,Roy,Chi Wing,,Fountain Valley,CA,A 53998,Revoked,2009-03-30T00:00:00Z
+2009-03-30T00:00:00Z,Booth,Geoffrey,Allan,,Santa Monica,CA,A 74560,Decision,2009-03-30T00:00:00Z
+2009-03-30T00:00:00Z,Lee,Joon,Sang,,Houston,TX,A 36592,Public Reprimand,2009-03-30T00:00:00Z
+2009-03-30T00:00:00Z,Webb,David,Morrow,,Placerville,CA,C 50637,Decision,2009-03-30T00:00:00Z
+2009-04-02T00:00:00Z,Ewing,Douglass,Eugene,,Santa Ana,CA,G 20110,Surrendered,2009-04-02T00:00:00Z
+2009-04-02T00:00:00Z,McClain,Tracie,J.,,Van Nuys,CA,A 68968,Revoked,2009-04-02T00:00:00Z
+2009-04-03T00:00:00Z,Hollander,Neil,,,Huntington Beach,CA,G 18418,Surrendered,2009-04-03T00:00:00Z
+2009-04-06T00:00:00Z,Annabel,Roger,Gerard,,Chino Hills,CA,A 53036,Accusation Filed,2009-03-25T00:00:00Z
+2009-04-06T00:00:00Z,Bernstein,Clifford,Alexander,,Newport Beach,CA,G 73289,Accusation Filed,2009-03-17T00:00:00Z
+2009-04-06T00:00:00Z,Chou,Stella,Yi,,Sandy,UT,C 52753,Accusation Filed,2009-03-19T00:00:00Z
+2009-04-06T00:00:00Z,Gillian,Terry,Allen,,Fresno,CA,A 29523,First Amended Accusation & Petition To Revoke Probation,2009-03-27T00:00:00Z
+2009-04-06T00:00:00Z,Graves,Benjamin,Harrison,III,Livingston,TX,G 86826,Accusation Filed,2009-03-17T00:00:00Z
+2009-04-06T00:00:00Z,Hollander,Neil,,,Huntington Beach,CA,G 18418,Accusation Filed,2009-03-24T00:00:00Z
+2009-04-06T00:00:00Z,Jain,Anamika,,,Las Vegas,NV,G 87884,Accusation Filed,2009-03-17T00:00:00Z
+2009-04-06T00:00:00Z,Khan,Shagufta,Parvin,,San Diego,CA,A 29867,Accusation & Petition to Revoke Probation,2009-03-27T00:00:00Z
+2009-04-06T00:00:00Z,Kramer,Stephine,,,Mesa,AZ,A 49943,Accusation Filed,2009-03-16T00:00:00Z
+2009-04-06T00:00:00Z,Letson,Kurt,,,Orange,CA,A 76350,Accusation,2009-03-17T00:00:00Z
+2009-04-06T00:00:00Z,Mikulecky,Michael,S.,,Redding,CA,A 90779,Accusation Filed,2009-03-17T00:00:00Z
+2009-04-06T00:00:00Z,Moayed,Sepideh,,,Los Altos Hills,CA,A 77967,Accusation Filed,2009-03-18T00:00:00Z
+2009-04-06T00:00:00Z,Monke,J.,Victor,,Los Angeles,CA,G 2335,Accusation Filed,2009-03-24T00:00:00Z
+2009-04-06T00:00:00Z,Palmer,Robert,Byron,,Sonora,CA,G 53445,Accusation Filed,2009-03-18T00:00:00Z
+2009-04-06T00:00:00Z,Rice,James,Lloyd,,La Jolla,CA,C 32074,Accusation Filed,2009-03-18T00:00:00Z
+2009-04-06T00:00:00Z,Sarkissian,Vahe,,,Walnut Creek,CA,A 90620,Accusation Filed,2009-03-24T00:00:00Z
+2009-04-06T00:00:00Z,Zhang,Douglas,Dong-Li,,San Leandro,CA,A 63200,Accusation Filed,2009-03-23T00:00:00Z
+2009-04-06T00:00:00Z,Atilano,Lorraine,Christine,,Upland,CA,A 75703,First Amended Accusation Dismissed,2009-03-30T00:00:00Z
+2009-04-06T00:00:00Z,Bernstein,Clifford,Alexander,,Newport Beach,CA,G 73289,First Amended Accusation Withdrawn,2009-03-16T00:00:00Z
+2009-04-07T00:00:00Z,Lake,Gerald,Eugene,,San Diego,CA,G 20748,Decision,2009-04-06T00:00:00Z
+2009-04-07T00:00:00Z,Sobeck,Gregg,Robert,,Sherman Oaks,CA,A 68256,Public Reprimand,2009-04-06T00:00:00Z
+2009-04-08T00:00:00Z,Hollander,Neil,,,Huntington Beach,CA,G 18418,Surrendered,2009-04-03T00:00:00Z
+2009-04-08T00:00:00Z,Lowe,James,Whitton,,New Orleans,LA,A 73317,Suspended,2009-04-08T00:00:00Z
+2009-04-08T00:00:00Z,Patel,Mehmood,M.,,Lafayette,LA,A 31205,Suspended,2009-04-08T00:00:00Z
+2009-04-08T00:00:00Z,Duggal,Arun,,,Modesto,CA,A 42295,Public Reprimand,2009-04-03T00:00:00Z
+2009-04-08T00:00:00Z,Phillips,Maryanne,De Forest,,Las Vegas,NV,A 63753,Decision,2009-04-06T00:00:00Z
+2009-04-09T00:00:00Z,Smith,Jeffrey,Scott,,Midland,TX,G 76071,Surrendered,2009-04-09T00:00:00Z
+2009-04-09T00:00:00Z,Adams,Jan,Rudalgo,,Los Angeles,CA,A 51004,Surrendered,2009-04-08T00:00:00Z
+2009-04-09T00:00:00Z,Morgan,Charles,Dignam,,Oshkosh,WI,G 27598,Revoked,2009-04-08T00:00:00Z
+2009-04-10T00:00:00Z,Rosio,Timothy,John,,Cameron Park,CA,G 46069,Decision,2009-04-10T00:00:00Z
+2009-04-14T00:00:00Z,Ford,Glenn,Marcus,,Bakersfield,CA,G 42473,Suspended,2009-04-13T00:00:00Z
+2009-04-16T00:00:00Z,Camp,Gregory,Burnham,,Wilmington,NC,C 34329,Revoked,2009-04-16T00:00:00Z
+2009-04-17T00:00:00Z,Bussell,Letantia,Bernadette,,Beverly Hills,CA,G 30563,Decision,2009-04-17T00:00:00Z
+2009-04-17T00:00:00Z,Houten,Lorne,,,Woodland Hills,CA,A 39450,Decision,2009-04-17T00:00:00Z
+2009-04-20T00:00:00Z,Cheng,Lisa,Tao,,Emeryville,CA,A 99448,Public Letter of Reprimand,2009-04-16T00:00:00Z
+2009-04-20T00:00:00Z,Hampton,William,Wilson,,Fullerton,CA,A 41730,Revoked,2009-04-20T00:00:00Z
+2009-04-20T00:00:00Z,Jones,Nolan,Carthell,,Los Angeles,CA,A 30400,Revoked,2009-04-20T00:00:00Z
+2009-04-20T00:00:00Z,Adams,Jan,Rudalgo,,Los Angeles,CA,A 51004,First Amended Accusation Filed,2009-04-01T00:00:00Z
+2009-04-20T00:00:00Z,Cowen,George,David,,Castro Valley,CA,G 23713,Accusation Filed,2009-04-08T00:00:00Z
+2009-04-20T00:00:00Z,Goodstein,Wallace,Allen,,Beverly Hills,CA,G 26339,First Amended Accusation & Petition To Revoke Probation,2009-04-14T00:00:00Z
+2009-04-20T00:00:00Z,Lawrence,Gale,Hewson,,Seal Beach,CA,A 54642,Accusation Filed,2009-04-15T00:00:00Z
+2009-04-20T00:00:00Z,Nazarian,Mark,Lawrence,,Solana Beach,CA,G 63835,Accusation Filed,2009-04-02T00:00:00Z
+2009-04-20T00:00:00Z,Suvak,Janine,Gail,,Los Alamitos,CA,A 93043,Accusation Filed,2009-04-09T00:00:00Z
+2009-04-20T00:00:00Z,Vederman,William,Herbert,,Oakland,CA,G 19049,Accusation Filed,2009-04-15T00:00:00Z
+2009-04-20T00:00:00Z,Waterman,Jane,Lynn,,Wolcott,VT,C 51611,First Amended Accusation Filed,2009-04-02T00:00:00Z
+2009-04-20T00:00:00Z,Williamson,Lawrence,James,,Windsor,CA,A 73495,Accusation Filed,2009-04-03T00:00:00Z
+2009-04-23T00:00:00Z,Balt,Steven,Leo,,San Rafael,CA,A 87849,Decision,2009-04-23T00:00:00Z
+2009-04-23T00:00:00Z,Blikian,Anahit,H.,,Los Angeles,CA,A 39608,Decision,2009-04-23T00:00:00Z
+2009-04-23T00:00:00Z,Jerrard,Nicholas,Joseph,,San Diego,CA,A 68407,Revoked,2009-04-23T00:00:00Z
+2009-04-27T00:00:00Z,Vangala,Venkat,Reddy,"aka Reddy-Vangala, Venkat",Victorville,CA,A 40666,Decision,2009-04-27T00:00:00Z
+2009-04-27T00:00:00Z,Wasserman,Matthew,William,,Katy,TX,A 86109,Decision,2009-04-27T00:00:00Z
+2009-04-27T00:00:00Z,Kern,Seymour,P.,,Carlsbad,CA,G 26212,Revoked,2009-04-27T00:00:00Z
+2009-04-29T00:00:00Z,Ong-Veloso,Angelo,M.,Jr.,Lake Havasu City,AZ,A 62439,Public Letter of Reprimand,2009-04-28T00:00:00Z
+2009-04-29T00:00:00Z,Trevino,Ricardo,J.,,San Jose,CA,C 29426,Public Letter of Reprimand,2009-04-24T00:00:00Z
+2009-05-01T00:00:00Z,Honzel,Mark,Robert,,Beverly Hills,CA,A 43785,Public Reprimand,2009-05-01T00:00:00Z
+2009-05-04T00:00:00Z,Albert,Wesley,D.,,Upland,CA,A 29091,Revoked,2009-05-04T00:00:00Z
+2009-05-04T00:00:00Z,Chavez,Eric,M.,,Atlanta,GA,A 67412,Surrendered,2009-05-04T00:00:00Z
+2009-05-04T00:00:00Z,Schaeffer,Richard,J.,,Scottsdale,AZ,G 11390,Revoked,2009-05-04T00:00:00Z
+2009-05-05T00:00:00Z,Cassim,A.,Haniffa,,Los Angeles,CA,A 61999,Accusation Filed,2009-04-30T00:00:00Z
+2009-05-05T00:00:00Z,Covarrubias,Gonzalo,Antonio,,San Juan Capistrano,CA,A 32492,Petition to Revoke Probation Filed,2009-04-17T00:00:00Z
+2009-05-05T00:00:00Z,Frankel,Allan,Israel,,Marina Del Rey,CA,G 34474,Accusation Filed,2009-04-22T00:00:00Z
+2009-05-05T00:00:00Z,Grewal,Ranjit,Singh,,Torrance,CA,A 38510,Accusation & Petition to Revoke Probation,2009-04-28T00:00:00Z
+2009-05-05T00:00:00Z,Hopper,Jennifer,Louise,,Roseville,CA,A 72295,Accusation Filed,2009-04-27T00:00:00Z
+2009-05-05T00:00:00Z,Keyes,Charles,E.,,Mill Valley,CA,A 15718,Accusation Filed,2009-04-20T00:00:00Z
+2009-05-05T00:00:00Z,Nath,Mahendra,,,Fresno,CA,A 32279,Petition to Revoke Probation Filed,2009-04-27T00:00:00Z
+2009-05-05T00:00:00Z,Robinson,Harrell,Edward,,Anaheim Hills,CA,G 38954,Third Amended Accusation Filed,2009-04-21T00:00:00Z
+2009-05-05T00:00:00Z,Ventura,Ones,Adviento,,Glendale,CA,A 48324,Accusation Filed,2009-04-27T00:00:00Z
+2009-05-05T00:00:00Z,Vu,Dan,Quoc,,Long Beach,CA,A 48672,Accusation Filed,2009-04-24T00:00:00Z
+2009-05-05T00:00:00Z,Williams,Jeffrey,K.,,San Diego,CA,G 59161,Accusation Filed,2009-04-24T00:00:00Z
+2009-05-05T00:00:00Z,Zachariah,Abraham,,,Los Gatos,CA,A 37144,Accusation & Petition to Revoke Probation,2009-04-21T00:00:00Z
+2009-05-05T00:00:00Z,Babaali,Hossein,,,Santa Monica,CA,G 86162,Accusation Withdrawn,2009-04-23T00:00:00Z
+2009-05-05T00:00:00Z,Covarrubias,Gonzalo,Antonio,,San Juan Capistrano,CA,A 32492,Petition to Revoke Probation Withdrawn,2009-04-23T00:00:00Z
+2009-05-05T00:00:00Z,McCleve,Bryan,Richard,,Freedom,CA,G 75967,Accusation Withdrawn,2009-04-23T00:00:00Z
+2009-05-07T00:00:00Z,Arora,Ajit,Singh,,Agua Dulce,CA,G 47654,Decision,2009-05-07T00:00:00Z
+2009-05-07T00:00:00Z,Cosgrove,Michael,Joseph,,Davis,CA,G 62191,Decision,2009-05-07T00:00:00Z
+2009-05-07T00:00:00Z,Grant,John,Francis,,Frazier Park,CA,A 63101,Decision,2009-05-07T00:00:00Z
+2009-05-07T00:00:00Z,Sullivan,Thomas,Clifford,,Shavertown,PA,A 41748,Public Reprimand,2009-05-07T00:00:00Z
+2009-05-08T00:00:00Z,Ang,Eriberto,C.,Jr.,Chino Hills,CA,A 42030,Surrendered,2009-05-07T00:00:00Z
+2009-05-14T00:00:00Z,Allen,Everett,Douglas,,Crescent City,CA,G 54881,Decision,2009-05-13T00:00:00Z
+2009-05-18T00:00:00Z,Payne,Brownell,Hilliard,,Culver City,CA,A 26350,Decision,2009-05-15T00:00:00Z
+2009-05-18T00:00:00Z,Ott,Derek,Alan,,Los Angeles,CA,A 61601,Public Reprimand,2009-05-18T00:00:00Z
+2009-05-18T00:00:00Z,Ziemba,Jason,Scott,,Valencia,CA,A 68372,Decision,2009-05-18T00:00:00Z
+2009-05-18T00:00:00Z,Bohlman,Gary,Richard,,Temecula,CA,G 25154,Accusation Filed,2009-05-07T00:00:00Z
+2009-05-18T00:00:00Z,Buhr,Leslie,Richard,,Kerman,CA,G 66637,Accusation Filed,2009-05-14T00:00:00Z
+2009-05-18T00:00:00Z,Covarrubias,Gonzalo,Antonio,,San Juan Capistrano,CA,A 32492,Accusation & Petition to Revoke Probation,2009-05-08T00:00:00Z
+2009-05-18T00:00:00Z,Daniels,Toni,D.,,Berkeley,CA,A 34345,Accusation Filed,2009-05-14T00:00:00Z
+2009-05-18T00:00:00Z,Dietrich,Peter,Scott,,Sacramento,CA,G 60965,Accusation Filed,2009-05-06T00:00:00Z
+2009-05-18T00:00:00Z,Ford,Glenn,Marcus,,Bakersfield,CA,G 42473,Accusation Filed,2009-05-14T00:00:00Z
+2009-05-18T00:00:00Z,Guo,Weixing,,,Charleston,WV,A 85097,Accusation Filed,2009-05-14T00:00:00Z
+2009-05-18T00:00:00Z,Hansell,Robert,Anthony,,Punta Gorda,FL,G 79218,Accusation Filed,2009-05-07T00:00:00Z
+2009-05-18T00:00:00Z,Kapelanski,David,Peter,,San Diego,CA,G 75274,Accusation Filed,2009-05-07T00:00:00Z
+2009-05-18T00:00:00Z,Manougian,Edward,,,El Cerrito,CA,C 17929,Accusation Filed,2009-05-08T00:00:00Z
+2009-05-18T00:00:00Z,Nejat-Bina,David,,,Brea,CA,G 80039,Accusation Filed,2009-05-13T00:00:00Z
+2009-05-18T00:00:00Z,Reuland,Ralf,Volker,,San Clemente,CA,G 72259,Accusation Filed,2009-05-12T00:00:00Z
+2009-05-18T00:00:00Z,Robinson,Joan,Real,,Soulsbyville,CA,A 68413,Accusation Filed,2009-05-01T00:00:00Z
+2009-05-18T00:00:00Z,Rosnow,Jan,Marie,,Sacramento,CA,G 47921,Accusation Filed,2009-05-07T00:00:00Z
+2009-05-18T00:00:00Z,Sills,Jack,Howard,,Santa Ana,CA,G 43525,Accusation Filed,2009-05-05T00:00:00Z
+2009-05-18T00:00:00Z,Strickland,Jeffrey,Dean,,Marina Del Rey,CA,A 81465,Accusation Filed,2009-05-08T00:00:00Z
+2009-05-18T00:00:00Z,Ware,Dana,Suzanne,,Chester,CA,G 55407,Accusation Filed,2009-05-07T00:00:00Z
+2009-05-18T00:00:00Z,West,Brian,Robert,,Beverly Hills,CA,G 65175,Petition to Revoke Probation Filed,2009-05-06T00:00:00Z
+2009-05-18T00:00:00Z,Yeung,Clement,Ka-Chun,,Honolulu,HI,G 43350,Accusation Filed,2009-05-05T00:00:00Z
+2009-05-18T00:00:00Z,Ziyar,Latif,,,Fresno,CA,A 55320,Amended Accusation Filed,2009-05-01T00:00:00Z
+2009-05-18T00:00:00Z,Dada,Festus,Bamidele,,Corona,CA,A 40801,Accusation & Petition To Revoke Probation Withdrawn,2009-05-05T00:00:00Z
+2009-05-18T00:00:00Z,Silver,Daniel,Mark,,Encino,CA,C 31379,Accusation Dismissed,2009-05-11T00:00:00Z
+2009-05-19T00:00:00Z,Edwards,Michael,,,Sugarland,TX,A 91508,Restrictions,2009-05-13T00:00:00Z
+2009-05-19T00:00:00Z,Thornton,Howard,Allen,,San Rafael,CA,G 17377,Suspended,2009-05-18T00:00:00Z
+2009-05-19T00:00:00Z,Rice,Jeffrey,Warren,,Monterey,CA,G 37279,Public Letter of Reprimand,2009-05-18T00:00:00Z
+2009-05-20T00:00:00Z,Wigginton,Nancy,Hunt,,Castro Valley,CA,A 76070,Public Reprimand,2009-05-20T00:00:00Z
+2009-05-20T00:00:00Z,Salcedo,Gina,Marie,,Jacksonville,NC,A 94810,Surrendered,2009-05-20T00:00:00Z
+2009-05-22T00:00:00Z,Kosins,Mark,Steven,,San Clemente,CA,A 25406,Decision,2009-05-22T00:00:00Z
+2009-05-22T00:00:00Z,Williams,Dallas,De Vere,,Milliken,CO,G 20740,Public Letter of Reprimand,2009-05-18T00:00:00Z
+2009-05-22T00:00:00Z,Wang,Taishine,,,South Gate,CA,A 42340,Suspended,2009-05-22T00:00:00Z
+2009-05-29T00:00:00Z,Kaplan,Roy,Alan,,Encinitas,CA,G 31859,Public Letter of Reprimand,2009-05-27T00:00:00Z
+2009-05-29T00:00:00Z,Horiagon,Thomas,M.,,Cheyenne,WY,G 57696,Public Letter of Reprimand,2009-05-28T00:00:00Z
+2009-06-01T00:00:00Z,Goldsmith,Stanley,,,Hayward,CA,G 20538,Order/Restriction,2009-05-26T00:00:00Z
+2009-06-03T00:00:00Z,Anderson,Donovan,John,,Mohave Valley,AZ,G 48061,First Amended Accusation Filed,2009-05-18T00:00:00Z
+2009-06-03T00:00:00Z,Bains,Sartaj,Singh,,Roseville,CA,A 51579,Accusation Filed,2008-09-04T00:00:00Z
+2009-06-03T00:00:00Z,Bloomquist,Catrina,Ann,,Pismo Beach,CA,GFE 42635,Accusation Filed,2009-05-22T00:00:00Z
+2009-06-03T00:00:00Z,Brewer,Eugene,Allan,,Indianapolis,IN,G 59832,First Amended Accusation & Petition To Revoke Probation,2009-05-19T00:00:00Z
+2009-06-03T00:00:00Z,Feeney,Craig,Michael,,Richland,WA,G 36976,Accusation Filed,2009-05-20T00:00:00Z
+2009-06-03T00:00:00Z,Foliente,Esther,Lapena,,Pomona,CA,A 30616,Accusation Filed,2009-05-28T00:00:00Z
+2009-06-03T00:00:00Z,McCuin,Jerome,Ellis,,Rancho Cucamonga,CA,C 36270,Accusation & Petition to Revoke Probation,2009-05-28T00:00:00Z
+2009-06-03T00:00:00Z,Roberg,Bradford,Churchill,,McHenry,IL,G 43905,Second Amended Accusation Filed,2009-05-18T00:00:00Z
+2009-06-03T00:00:00Z,Thornton,Howard,Allen,,San Rafael,CA,G 17377,Accusation Filed,2009-05-28T00:00:00Z
+2009-06-03T00:00:00Z,Roozrokh,Hootan,Christopher,,San Francisco,CA,A 83949,Accusation Withdrawn,2009-05-27T00:00:00Z
+2009-06-03T00:00:00Z,Malik,Michael,Yusef Abdul,,Long Beach,CA,A 69726,Decision,2009-06-03T00:00:00Z
+2009-06-04T00:00:00Z,Powers,Thomas,S.,,Westminster,CA,G 15640,Public Letter of Reprimand,2009-05-27T00:00:00Z
+2009-06-04T00:00:00Z,Garforth,Emma,May,,Davis,CA,A 73103,Public Reprimand,2009-06-04T00:00:00Z
+2009-06-04T00:00:00Z,O'Neil,Kelly,James,,Temecula,CA,A 36888,Decision,2009-06-04T00:00:00Z
+2009-06-05T00:00:00Z,Riffel,Sergio,Roberto,,Yuba City,CA,A 41494,Decision,2009-06-05T00:00:00Z
+2009-06-08T00:00:00Z,Fayaz,Imran,,,The Woodlands,TX,A 67748,Public Reprimand,2009-06-08T00:00:00Z
+2009-06-08T00:00:00Z,O'Connor,Thomas,A.,,Cudahy,WI,G 15934,Decision,2009-06-08T00:00:00Z
+2009-06-11T00:00:00Z,Cooper,Viraf,Rustom,,Beaumont,TX,CFE 42603,Decision,2009-06-11T00:00:00Z
+2009-06-11T00:00:00Z,Jamieson,Brian,David,,Raleigh,NC,AFE 83299,Suspended,2009-06-11T00:00:00Z
+2009-06-12T00:00:00Z,Sterner,Robert,Fulton,,San Diego,CA,G 51708,Decision,2009-06-12T00:00:00Z
+2009-06-15T00:00:00Z,Bryan,Bruce,Jackson,,Pinetop,AZ,G 53799,Revoked,2009-06-15T00:00:00Z
+2009-06-15T00:00:00Z,Monke,J.,Victor,,Los Angeles,CA,G 2335,Revoked,2009-06-15T00:00:00Z
+2009-06-15T00:00:00Z,Kotlewski,Adam,,,Los Angeles,CA,G 39644,Public Reprimand,2009-06-15T00:00:00Z
+2009-06-17T00:00:00Z,Williams,Charles,Darryl,,Santa Ana,CA,C 42786,Surrendered,2009-06-17T00:00:00Z
+2009-06-18T00:00:00Z,Al-Shaikh,Raad,Andrew,,Fremont,CA,A 63005,Accusation Filed,2009-06-15T00:00:00Z
+2009-06-18T00:00:00Z,Denson-Lino,Joyce,Marie,,Poway,CA,G 78985,Accusation Filed,2009-06-03T00:00:00Z
+2009-06-18T00:00:00Z,Douthit,John,Davey,,Englewood,CO,C 29112,Accusation Filed,2009-06-15T00:00:00Z
+2009-06-18T00:00:00Z,Dureza,Catalino,Dominic,,La Quinta,CA,A 66607,Accusation Filed,2009-06-15T00:00:00Z
+2009-06-18T00:00:00Z,Ghafur,Naeemah,Howell,,Castaic,CA,A 79585,Accusation Filed,2009-06-10T00:00:00Z
+2009-06-18T00:00:00Z,Goldsmith,Stanley,,,Hayward,CA,G 20538,Accusation & Petition to Revoke Probation,2009-06-09T00:00:00Z
+2009-06-18T00:00:00Z,Good,Leonard,James,,Roslyn,NY,G 46941,Accusation Filed,2009-06-15T00:00:00Z
+2009-06-18T00:00:00Z,Hanks,Howard,Stanley,,Oakdale,CA,G 79143,Accusation Filed,2009-06-02T00:00:00Z
+2009-06-18T00:00:00Z,Mathews,Roger,D.,,Carmichael,CA,A 20921,Accusation & Petition to Revoke Probation,2009-06-02T00:00:00Z
+2009-06-18T00:00:00Z,Mazer,Neal,Stuart,,Santa Barbara,CA,G 86314,Accusation Filed,2009-06-09T00:00:00Z
+2009-06-18T00:00:00Z,Melahoures,Konstantinos,,,Mission Viejo,CA,A 40532,First Amended Accusation Filed,2009-06-03T00:00:00Z
+2009-06-18T00:00:00Z,Morasch,Robert,Gregory,,Walla Walla,WA,A 66927,Accusation Filed,2009-06-09T00:00:00Z
+2009-06-18T00:00:00Z,Patel,Mehmood,M.,,Lafayette,LA,A 31205,Accusation Filed,2009-06-09T00:00:00Z
+2009-06-18T00:00:00Z,Robinson,Harrell,Edward,,Anaheim Hills,CA,G 38954,Fourth Amended Accusation Filed,2009-06-03T00:00:00Z
+2009-06-18T00:00:00Z,Ruben,David,Alan,,Tucson,AZ,G 44789,Accusation Filed,2009-06-09T00:00:00Z
+2009-06-18T00:00:00Z,Sazani,Thomas,A.,,Orcutt,CA,A 42368,Accusation Filed,2009-06-01T00:00:00Z
+2009-06-18T00:00:00Z,Uwaydah,Munir,,,Redondo Beach,CA,A 62059,Third Amended Accusation Filed,2009-06-09T00:00:00Z
+2009-06-18T00:00:00Z,Wettach,George,Edward,,Menlo Park,CA,C 31903,Accusation Filed,2009-06-15T00:00:00Z
+2009-06-18T00:00:00Z,Yorobe,Edwin,Mendez,,San Diego,CA,A 29827,Accusation Filed,2009-06-10T00:00:00Z
+2009-06-18T00:00:00Z,Spector,Robert,Ira,,Los Angeles,CA,G 24756,Accusation Dismissed,2009-06-15T00:00:00Z
+2009-06-19T00:00:00Z,Bonilla,Roberto,Ramon,,Los Angeles,CA,A 36897,Restrictions,2009-01-27T00:00:00Z
+2009-06-23T00:00:00Z,Niemann,Petra,Susanne,,Munich,Germany,A 76281,Surrendered,2009-06-23T00:00:00Z
+2009-06-23T00:00:00Z,Song,Jong,Eon,,Moreno Valley,CA,A 34264,Decision,2009-06-22T00:00:00Z
+2009-06-25T00:00:00Z,Brown,James,Robert,,Rancho Cucamonga,CA,A 51937,Decision,2009-06-25T00:00:00Z
+2009-06-25T00:00:00Z,Katiby,Naim,Safiuillah,,San Leandro,CA,A 50826,Superior Court Order/Restriction,2009-06-05T00:00:00Z
+2009-06-26T00:00:00Z,Bamdad,Masoud,,,San Fernando,CA,A 51598,Revoked,2009-06-26T00:00:00Z
+2009-06-29T00:00:00Z,Chase,David,S.,,Burlington,VT,G 14199,Revoked,2009-06-29T00:00:00Z
+2009-06-29T00:00:00Z,Bloomquist,Catrina,Ann,,Pismo Beach,CA,GFE 42635,Surrendered,2009-06-26T00:00:00Z
+2009-06-29T00:00:00Z,Roberg,Bradford,Churchill,,McHenry,IL,G 43905,Surrendered,2009-06-26T00:00:00Z
+2009-06-29T00:00:00Z,Corona,Paul,Daniel,,Laguna Niguel,CA,G 69171,Decision,2009-06-29T00:00:00Z
+2009-07-01T00:00:00Z,Chen,Dennis,Hui-Ting,,Newport Beach,CA,A 26597,Suspended,2009-06-26T00:00:00Z
+2009-07-01T00:00:00Z,Kiely,Andrew,A.,,Long Beach,CA,A 22800,Surrendered,2009-06-30T00:00:00Z
+2009-07-02T00:00:00Z,Rajagopal,Usha,,,San Francisco,CA,A 53230,Decision,2009-07-02T00:00:00Z
+2009-07-02T00:00:00Z,West,Brian,Robert,,Beverly Hills,CA,G 65175,Revoked,2009-07-02T00:00:00Z
+2009-07-03T00:00:00Z,Panagotacos,Daphne,Irmgard,,Westlake Village,CA,G 66971,Public Letter of Reprimand,2009-06-24T00:00:00Z
+2009-07-07T00:00:00Z,Goodstein,Wallace,Allen,,Beverly Hills,CA,G 26339,Decision,2009-07-06T00:00:00Z
+2009-07-07T00:00:00Z,Lee,Michael,Hyun-Tae,,Sarasota,FL,G 86181,Public Reprimand,2009-07-06T00:00:00Z
+2009-07-08T00:00:00Z,Baber,James,Randall,,Fayetteville,AR,C 52817,Accusation Filed,2009-06-29T00:00:00Z
+2009-07-08T00:00:00Z,Bass,Howard,Reginald,,Lancaster,CA,C 39193,First Amended Accusation Filed,2009-06-29T00:00:00Z
+2009-07-08T00:00:00Z,Cruz,Dolores,De,,Arcadia,CA,G 65527,First Amended Accusation Filed,2009-06-29T00:00:00Z
+2009-07-08T00:00:00Z,Dhillon,Manprit,Kaur,,Lancaster,CA,A 75869,Accusation Filed,2009-06-22T00:00:00Z
+2009-07-08T00:00:00Z,Keenan,Robert,Stuart,,Palm Springs,CA,A 54423,Accusation Filed,2009-06-18T00:00:00Z
+2009-07-08T00:00:00Z,Levene,Susanne,S.,,Rugby,ND,G 79641,Accusation Filed,2009-06-26T00:00:00Z
+2009-07-08T00:00:00Z,Lyapis,Victor,,,San Francisco,CA,A 54424,Accusation Filed,2009-06-18T00:00:00Z
+2009-07-08T00:00:00Z,Mazzarella,Vincent,Anthony,,Chico,CA,G 82089,Accusation Filed,2009-06-24T00:00:00Z
+2009-07-08T00:00:00Z,Qurtom,Helmy,Abdul-Fattah,,Beltsville,MD,AFE 52829,Accusation Filed,2009-06-22T00:00:00Z
+2009-07-08T00:00:00Z,Sheibani,Shane,,,Beverly Hills,CA,A 56075,Accusation Filed,2009-06-15T00:00:00Z
+2009-07-08T00:00:00Z,Sun,Andrew,S.,,Monterey Park,CA,G 13537,Accusation & Petition to Revoke Probation,2009-06-18T00:00:00Z
+2009-07-08T00:00:00Z,Tabriz,A.,Reza Nassehzadeh,,Milpitas,CA,A 72923,Accusation Filed,2009-06-19T00:00:00Z
+2009-07-08T00:00:00Z,Utecht,Theodore,Donald,,Crescent City,CA,A76712,Accusation Filed,2009-06-29T00:00:00Z
+2009-07-08T00:00:00Z,Wang,Taishine,,,South Gate,CA,A 42340,Accusation & Petition to Revoke Probation,2009-06-23T00:00:00Z
+2009-07-08T00:00:00Z,Zaremba,Claudette,Ann,,Sitka,AK,AFE 52142,First Amended Accusation Filed,2009-06-16T00:00:00Z
+2009-07-08T00:00:00Z,Chirban,Angelo,Louis,,West Bountiful,UT,G 86550,Accusation Withdrawn,2009-06-29T00:00:00Z
+2009-07-08T00:00:00Z,Park,Chong,Hee,,Livingston,NJ,A 38230,Accusation Withdrawn,2009-06-19T00:00:00Z
+2009-07-08T00:00:00Z,Sefa-Boakye,Kofi,D.,,Chula Vista,CA,G 59670,Accusation Dismissed,2009-06-19T00:00:00Z
+2009-07-09T00:00:00Z,Annabel,Roger,Gerard,,Chino Hills,CA,A 53036,Decision,2009-07-09T00:00:00Z
+2009-07-13T00:00:00Z,Exum,Janice,Maria,,Compton,CA,G 66570,Decision,2009-07-10T00:00:00Z
+2009-07-13T00:00:00Z,Ritchie,Rand,Cecil,,Pismo Beach,CA,G 41327,Decision,2009-07-13T00:00:00Z
+2009-07-20T00:00:00Z,Kitt,Victor,Vichai,,Bakersfield,CA,C 41263,Public Letter of Reprimand,2009-07-09T00:00:00Z
+2009-07-20T00:00:00Z,Mann,Joseph,McElroy,III,Escondido,CA,G 21242,Public Letter of Reprimand,2009-07-09T00:00:00Z
+2009-07-20T00:00:00Z,Romero,Eliott,,,Anaheim Hills,CA,G 48383,Public Letter of Reprimand,2009-07-14T00:00:00Z
+2009-07-20T00:00:00Z,Taaid,Hamid,,,Midland,MI,G 55732,Revoked,2009-07-17T00:00:00Z
+2009-07-20T00:00:00Z,Anderson,Donovan,John,,Mohave Valley,AZ,G 48061,Second Amended Accusation Filed,2009-07-09T00:00:00Z
+2009-07-20T00:00:00Z,Cruz,Dolores,De,,Arcadia,CA,G 65527,Second Amended Accusation Filed,2009-07-09T00:00:00Z
+2009-07-20T00:00:00Z,Dutta,Sukalpa,John,,Victorville,CA,A 87325,Accusation & Petition to Revoke Probation,2009-07-09T00:00:00Z
+2009-07-20T00:00:00Z,Friedman,Enrique,Jaime,,Hesperia,CA,A 26023,Accusation Filed,2009-07-03T00:00:00Z
+2009-07-20T00:00:00Z,Garrison,Thomas,Edwin,,Ogden,UT,C 50929,Second Amended Accusation Filed,2009-07-15T00:00:00Z
+2009-07-20T00:00:00Z,Lowe,James,Whitton,,New Orleans,LA,A 73317,Accusation Filed,2009-07-15T00:00:00Z
+2009-07-20T00:00:00Z,Moon,Robert,Hahn,,Fullerton,CA,A 76947,Accusation Filed,2009-07-03T00:00:00Z
+2009-07-20T00:00:00Z,Sreenivasan,Purnima,Ravi,,Walnut Creek,CA,A 82039,Accusation Filed,2009-07-14T00:00:00Z
+2009-07-22T00:00:00Z,Aram,Davar,,,Chino Hills,CA,A 46392,Decision,2009-07-20T00:00:00Z
+2009-07-22T00:00:00Z,Dyke,Gregory,John Van,,Mission Viejo,CA,A 51101,Public Reprimand,2009-07-20T00:00:00Z
+2009-07-22T00:00:00Z,Hancock,Joseph,Edward,,Lubbock,TX,G 39430,Public Letter of Reprimand,2009-07-21T00:00:00Z
+2009-07-23T00:00:00Z,Lake,Gerald,Eugene,,San Diego,CA,G 20748,Surrendered,2009-07-22T00:00:00Z
+2009-07-23T00:00:00Z,Zaslow,Ely,David,,Asheville,NC,G 52963,Surrendered,2009-07-21T00:00:00Z
+2009-07-23T00:00:00Z,Raoof,Tooraj,,,Encino,CA,A 42698,Decision,2009-07-23T00:00:00Z
+2009-07-27T00:00:00Z,Shin,Daniel,,,Marina Del Rey,CA,G 75155,Decision,2009-07-24T00:00:00Z
+2009-07-27T00:00:00Z,Cohen,Robert,Hugh,,West Hollywood,CA,G 60961,Decision,2009-07-27T00:00:00Z
+2009-07-27T00:00:00Z,Choi,Joon,,,Glendale,CA,G 80351,Public Reprimand,2009-07-27T00:00:00Z
+2009-07-27T00:00:00Z,Edwards,Gary,Stephen,,La Palma,CA,G 45147,Public Reprimand,2009-07-27T00:00:00Z
+2009-07-29T00:00:00Z,Bergstrom,Carl,Raymond,,Carmel,CA,G 59866,Suspended,2009-07-28T00:00:00Z
+2009-07-29T00:00:00Z,Kettel,Louis,Michael,,San Diego,CA,G 59705,Public Letter of Reprimand,2009-07-28T00:00:00Z
+2009-07-29T00:00:00Z,Grier,Raymond,Edward,,Long Beach,CA,A 32041,Surrendered,2009-07-29T00:00:00Z
+2009-07-30T00:00:00Z,Renan,Jehuda,,,Burbank,CA,A 41738,Public Reprimand,2009-07-30T00:00:00Z
+2009-07-30T00:00:00Z,Ourian,Simon,S.,,Beverly Hills,CA,A 65201,Decision,2009-07-30T00:00:00Z
+2009-08-04T00:00:00Z,Levitan,Russ,L.,,San Luis Obispo,CA,G 58508,Public Letter of Reprimand,2009-07-29T00:00:00Z
+2009-08-04T00:00:00Z,Osei-Tutu,Ernest,Paul,,Brooklyn,NY,G 85302,Public Letter of Reprimand,2009-07-31T00:00:00Z
+2009-08-04T00:00:00Z,Muller,Richard,Lewayne,,San Jose,CA,G 42566,Public Reprimand,2009-08-03T00:00:00Z
+2009-08-05T00:00:00Z,Banks,Brenda,L.,,Gahanna,OH,A 43066,Accusation Filed,2009-07-23T00:00:00Z
+2009-08-05T00:00:00Z,Charn,Kenny,Kamfai,,Jackson,CA,G 68975,Accusation Filed,2009-07-16T00:00:00Z
+2009-08-05T00:00:00Z,Garcia,Jerry,Steven,,Anaheim,CA,G 86442,Accusation Filed,2009-07-23T00:00:00Z
+2009-08-05T00:00:00Z,Hagen,Karl,Matthew,,Orlando,FL,G 70206,Accusation Filed,2009-07-29T00:00:00Z
+2009-08-05T00:00:00Z,Hooper,Gregory,Fitzgerald,,Sunnyvale,CA,G 68160,Accusation Filed,2009-07-28T00:00:00Z
+2009-08-05T00:00:00Z,Jain,Anamika,,,Las Vegas,NV,G 87884,First Amended Accusation Filed,2009-07-28T00:00:00Z
+2009-08-05T00:00:00Z,Jamieson,Brian,David,,Raleigh,NC,A 83299,Accusation Filed,2009-07-23T00:00:00Z
+2009-08-05T00:00:00Z,Khan,Shagufta,Parvin,,San Diego,CA,A 29867,First Amended Accusation & Petition To Revoke Probation,2009-07-30T00:00:00Z
+2009-08-05T00:00:00Z,Kragness,Martin,B.,,Fairfax,CA,A 94392,Accusation Filed,2009-07-31T00:00:00Z
+2009-08-05T00:00:00Z,Lopez,Robert,,,Chino,CA,G 75281,Accusation Filed,2009-07-30T00:00:00Z
+2009-08-05T00:00:00Z,Mehta,Deepak,,,Vacaville,CA,A 63312,Accusation Filed,2009-07-30T00:00:00Z
+2009-08-05T00:00:00Z,Miranda,Conrado,J.R.,IV,Glendale,CA,C 51139,Accusation Filed,2009-07-31T00:00:00Z
+2009-08-05T00:00:00Z,Okada,Mark,Akira,,San Diego,CA,A 40510,Accusation Filed,2009-07-16T00:00:00Z
+2009-08-05T00:00:00Z,Yu,Luke,Cheng-Chung,,Irvine,CA,A 32425,Accusation Filed,2009-07-21T00:00:00Z
+2009-08-05T00:00:00Z,Aldana,Daniel,Herman,,Irvine,CA,G 80094,Accusation Withdrawn,2009-07-16T00:00:00Z
+2009-08-05T00:00:00Z,Fritch,Charles,David,,Bakersfield,CA,C 33729,Accusation Dismissed,2009-07-27T00:00:00Z
+2009-08-05T00:00:00Z,Woods,Norman,Peter,,San Jose,CA,G 34166,Accusation Withdrawn,2009-07-29T00:00:00Z
+2009-08-11T00:00:00Z,Scruggs,Ramon,,,Santa Ana,CA,G 48978,Revoked,2009-08-10T00:00:00Z
+2009-08-11T00:00:00Z,Tollette,Armond,Tennyson,Jr.,Inglewood,CA,G 50837,Surrendered,2009-08-11T00:00:00Z
+2009-08-13T00:00:00Z,Burnham,John,R.,,Laguna Beach,CA,A 20659,Public Reprimand,2009-08-13T00:00:00Z
+2009-08-13T00:00:00Z,Reuland,Ralf,Volker,,San Clemente,CA,G 72259,Decision,2009-08-13T00:00:00Z
+2009-08-13T00:00:00Z,Umali,Rene,,,Redding,CA,G 71638,Decision,2009-08-13T00:00:00Z
+2009-08-19T00:00:00Z,Anderson,Richard,Coveney,II,Sutton,MA,G 87404,Accusation Filed,2009-08-10T00:00:00Z
+2009-08-19T00:00:00Z,Bahrambeygui,Ghassem,,,La Jolla,CA,A 23545,Accusation Filed,2009-08-12T00:00:00Z
+2009-08-19T00:00:00Z,Buchbinder,Maurice,,,Encinitas,CA,A 38176,Accusation Filed,2009-08-13T00:00:00Z
+2009-08-19T00:00:00Z,Dirocco,Gregory,C.,,Newport Beach,CA,G 44951,Accusation Filed,2009-08-11T00:00:00Z
+2009-08-19T00:00:00Z,Elgin,Thomas,Michael,,Newport Beach,CA,A 55569,Accusation Filed,2009-08-11T00:00:00Z
+2009-08-19T00:00:00Z,Howe,David,Alan,,El Cajon,CA,A 66398,Accusation Filed,2009-08-11T00:00:00Z
+2009-08-19T00:00:00Z,Levin,Kenneth,,,Palm Springs,CA,GFE 32363,Accusation Filed,2009-08-06T00:00:00Z
+2009-08-19T00:00:00Z,Longwell,John,,,San Jose,CA,G 21069,Accusation Filed,2009-08-05T00:00:00Z
+2009-08-19T00:00:00Z,Miles,Alexander,Christian,,Kingman,AZ,A 84181,Accusation Filed,2009-08-13T00:00:00Z
+2009-08-19T00:00:00Z,Montandon,Henri,Eugene,,Walnut Creek,CA,G 55626,Accusation Filed,2009-08-06T00:00:00Z
+2009-08-19T00:00:00Z,Oh,Dong,Suck,,Tustin,CA,A 38686,Accusation Filed,2009-08-13T00:00:00Z
+2009-08-19T00:00:00Z,Rheinschild,Gary,W.,,Anaheim Hills,CA,G 13342,Second Amended Accusation Filed,2009-08-13T00:00:00Z
+2009-08-19T00:00:00Z,Shah,Nayan,,,Diamond Bar,CA,A 80851,Accusation Filed,2009-08-10T00:00:00Z
+2009-08-19T00:00:00Z,Simon,Roy,Howard,,Torrance,CA,G 60934,Accusation Filed,2009-08-04T00:00:00Z
+2009-08-19T00:00:00Z,Smith,Derrick,Lee,,Temecula,CA,G 50178,Accusation Filed,2009-08-10T00:00:00Z
+2009-08-19T00:00:00Z,Takasugi,Scott,T.,,Oxnard,CA,A 43093,First Amended Accusation Filed,2009-08-12T00:00:00Z
+2009-08-19T00:00:00Z,Vanichsombat,Artit,George,,Lawndale,CA,A 77014,Accusation Filed,2009-08-11T00:00:00Z
+2009-08-19T00:00:00Z,Winblad,John,Mark,,Winfield,KS,GFE 47949,Accusation Filed,2009-08-10T00:00:00Z
+2009-08-19T00:00:00Z,Wolfe,Lawrence,I.,,San Carlos,CA,C 11479,Accusation Filed,2009-08-10T00:00:00Z
+2009-08-19T00:00:00Z,Wolfenden,William,J.,Jr.,San Francisco,CA,A 21279,Accusation Filed,2009-08-06T00:00:00Z
+2009-08-20T00:00:00Z,Zylanoff,Phillipa,Louise,,Applegate,MI,G 34223,Surrendered,2009-08-20T00:00:00Z
+2009-08-24T00:00:00Z,Fry,Marion,P.,,Cool,CA,G 57771,Decision,2009-08-21T00:00:00Z
+2009-08-25T00:00:00Z,Jefferson,Richard,J.,,Los Angeles,CA,G 15425,Decision,2009-08-24T00:00:00Z
+2009-08-25T00:00:00Z,Seifert,John,Dupont,,Garland,TX,G 18424,Decision,2009-08-24T00:00:00Z
+2009-08-25T00:00:00Z,Bolanos,Jose,Raul,,Los Gatos,CA,G 52463,Suspended,2009-08-24T00:00:00Z
+2009-08-28T00:00:00Z,Ter-Ohanessian,Srbouhi,,,Los Angeles,CA,A 46038,Revoked,2009-08-28T00:00:00Z
+2009-08-28T00:00:00Z,Sweeney,Michael,Alan,,Santa Rosa,CA,G 61169,Public Reprimand,2009-08-28T00:00:00Z
+2009-08-28T00:00:00Z,Williamson,Lawrence,James,,Windsor,CA,A 73495,Decision,2009-08-28T00:00:00Z
+2009-09-01T00:00:00Z,Neger,Robert,Edmond,,Burlingame,CA,A 26741,Public Reprimand,2009-08-31T00:00:00Z
+2009-09-01T00:00:00Z,Winblad,John,Mark,,Winfield,KS,GFE 47949,Surrendered,2009-08-31T00:00:00Z
+2009-09-02T00:00:00Z,Cohn,Cal,Kenneth,,Houston,TX,G 17175,Accusation Filed,2009-08-25T00:00:00Z
+2009-09-02T00:00:00Z,Eliaz,Isaac,,,Sebastopol,CA,A 73390,Accusation Filed,2009-08-26T00:00:00Z
+2009-09-02T00:00:00Z,Guzman,Eduardo,Jose,,Downey,CA,A 50344,Accusation Filed,2009-08-26T00:00:00Z
+2009-09-02T00:00:00Z,Kurdy,Yousef,,,San Diego,CA,A 36827,First Amended Accusation & Petition To Revoke Probation,2009-08-21T00:00:00Z
+2009-09-02T00:00:00Z,Lara,Gustavo,,,Riverside,CA,A 77165,Accusation Filed,2009-08-26T00:00:00Z
+2009-09-02T00:00:00Z,Modi,Jasvant,N.,,Los Angeles,CA,A 39818,Accusation & Petition to Revoke Probation,2009-08-14T00:00:00Z
+2009-09-02T00:00:00Z,Valcarcel,Jorge,Alberto,,Downey,CA,A 36786,Accusation & Petition to Revoke Probation,2009-08-25T00:00:00Z
+2009-09-02T00:00:00Z,Meurs,Dirk,Hendrick Van,,Albany,CA,G 40574,Petition to Revoke Probation Filed,2009-08-25T00:00:00Z
+2009-09-02T00:00:00Z,Wolin,Maurice,Jay,,Piedmont,CA,G 63494,Accusation Filed,2009-08-25T00:00:00Z
+2009-09-02T00:00:00Z,Woodward,Paul,Douglas,,Napa,CA,A 30765,Petition to Revoke Probation Filed,2009-08-27T00:00:00Z
+2009-09-02T00:00:00Z,Yin,Allan,J.T.,,Costa Mesa,CA,G 13309,Accusation Filed,2009-08-28T00:00:00Z
+2009-09-02T00:00:00Z,Young,Samuel,,,Hayward,CA,A 42792,Accusation Filed,2009-08-26T00:00:00Z
+2009-09-02T00:00:00Z,Magone,Margart,Ann,,San Diego,CA,G 69985,Decision,2009-09-02T00:00:00Z
+2009-09-02T00:00:00Z,Mikulecky,Michael,S.,,Redding,CA,A 90779,Public Reprimand,2009-09-02T00:00:00Z
+2009-09-08T00:00:00Z,Newman,Jeffrey,L.,,Vista,CA,A 43808,Public Reprimand,2009-09-08T00:00:00Z
+2009-09-08T00:00:00Z,Miyashita,Jean,Tomi,,Tarzana,CA,G 79761,Suspended,2009-09-01T00:00:00Z
+2009-09-08T00:00:00Z,Lowe,James,Whitton,,New Orleans,LA,A 73317,Surrendered,2009-09-08T00:00:00Z
+2009-09-08T00:00:00Z,Sandy,Victor,Hugo A.,,Riverside,CA,A 33435,Surrendered,2009-09-08T00:00:00Z
+2009-09-08T00:00:00Z,Starks,Wayne,Dion,,Redlands,CA,C 50845,Decision,2009-09-04T00:00:00Z
+2009-09-09T00:00:00Z,Estiandan,Carlos,Pena,,Los Angeles,CA,A 38326,Surrendered,2009-09-09T00:00:00Z
+2009-09-09T00:00:00Z,Qurtom,Helmy,Abdul-Fattah,,Beltsville,MD,AFE 52829,Surrendered,2009-09-09T00:00:00Z
+2009-09-09T00:00:00Z,Gogan,William,Thomas,,Irvine,CA,A 22286,Public Letter of Reprimand,2009-09-03T00:00:00Z
+2009-09-09T00:00:00Z,Okoh,James,Ikemefuna,,Eden Prairie,MN,A 101418,Public Letter of Reprimand,2009-09-03T00:00:00Z
+2009-09-10T00:00:00Z,Sheibani,Shane,,,Beverly Hills,CA,A 56075,Decision,2009-09-10T00:00:00Z
+2009-09-10T00:00:00Z,Ziyar,Latif,,,Fresno,CA,A 55320,Decision,2009-09-10T00:00:00Z
+2009-09-16T00:00:00Z,Lemaile-Williams,Robert,L.,,Rowland Heights,CA,A 29921,Restrictions,2009-09-14T00:00:00Z
+2009-09-17T00:00:00Z,Salinger,David,L.,,Olympic Valley,CA,G 59234,Decision,2009-09-17T00:00:00Z
+2009-09-17T00:00:00Z,Pham,Khanh,Gia,,Westminster,CA,A 41805,Suspended,2009-09-14T00:00:00Z
+2009-09-21T00:00:00Z,Bolanos,Jose,Raul,,Los Gatos,CA,G 52463,Accusation Filed,2009-09-03T00:00:00Z
+2009-09-21T00:00:00Z,Lemaile-Williams,Robert,L.,,Rowland Heights,CA,A 29921,Accusation Filed,2009-09-11T00:00:00Z
+2009-09-21T00:00:00Z,Lola,Alejandrino,,,Newark,CA,A 18860,First Amended Accusation Filed,2009-09-09T00:00:00Z
+2009-09-21T00:00:00Z,Miyashiti,Jean,Tomi,,Tarzana,CA,G 79761,Accusation Filed,2009-09-15T00:00:00Z
+2009-09-21T00:00:00Z,Novegrod,Melvyn,H.,,Fountain Valley,CA,G 17742,Accusation Filed,2009-09-08T00:00:00Z
+2009-09-21T00:00:00Z,Penner,Monte,Winston,,Pilot Hill,CA,G 71997,Accusation Filed,2009-09-01T00:00:00Z
+2009-09-21T00:00:00Z,Phillips,Jeffrey,Lawrence,,Yuba City,CA,G 64950,Accusation Filed,2009-09-02T00:00:00Z
+2009-09-21T00:00:00Z,Sorbera,Thomas,Anthony,,Lodi,CA,A 74942,Accusation Filed,2009-09-09T00:00:00Z
+2009-09-21T00:00:00Z,Marik,Jaroslav,Jan,,Beverly Hills,CA,A 23697,Accusation Filed,2009-09-02T00:00:00Z
+2009-09-21T00:00:00Z,Karmali,Hasni,,,Beverly Hills,CA,A 97692,Suspended,2009-09-10T00:00:00Z
+2009-09-21T00:00:00Z,Keeley,Samuel,B.,,Pittsburgh,PA,G 54930,Suspended,2009-09-21T00:00:00Z
+2009-09-21T00:00:00Z,Koerber,Walter,Albert,Jr.,Harrisburg,PA,G 28087,Suspended,2009-09-21T00:00:00Z
+2009-09-21T00:00:00Z,Jung,James,Man-Gil,,Los Angeles,CA,A 48898,Decision,2009-09-17T00:00:00Z
+2009-09-22T00:00:00Z,Menaster,Michael,John,,San Francisco,CA,G 72112,Decision,2009-09-21T00:00:00Z
+2009-09-22T00:00:00Z,Fraker,John,Temple,,Odessa,FL,G 88399,Public Letter of Reprimand,2009-09-17T00:00:00Z
+2009-09-22T00:00:00Z,Hayes,Maria,Melbourne,,East Moriches,NY,G 75089,Public Reprimand,2009-09-17T00:00:00Z
+2009-09-23T00:00:00Z,Caceres,Jose,Angel,,Buena Park,CA,A 47901,Public Reprimand,2009-09-23T00:00:00Z
+2009-09-23T00:00:00Z,Dutta,Sukalpa,John,,Victorville,CA,A 87325,Decision,2009-09-23T00:00:00Z
+2009-09-23T00:00:00Z,Hsiao,Luke,I-Jen,,San Bernardino,CA,A 32101,Decision,2009-09-23T00:00:00Z
+2009-09-23T00:00:00Z,Alavi,Abdollah,,,Blythe,CA,A 33686,Surrendered,2009-09-23T00:00:00Z
+2009-09-23T00:00:00Z,Keenan,Robert,Stuart,,Palm Springs,CA,A 54423,Revoked,2009-09-23T00:00:00Z
+2009-09-24T00:00:00Z,Cook,Albert,Paul,,Hemet,CA,A 22030,Surrendered,2009-09-22T00:00:00Z
+2009-09-24T00:00:00Z,Moayed,Sepideh,,,Los Altos Hills,CA,A 77967,Decision,2009-09-24T00:00:00Z
+2009-09-24T00:00:00Z,Orkand,Steven,Paul,,Carmichael,CA,G 31757,Public Reprimand,2009-09-24T00:00:00Z
+2009-09-25T00:00:00Z,Than,Than,,,Antioch,CA,A 65810,Public Letter of Reprimand,2009-09-24T00:00:00Z
+2009-09-25T00:00:00Z,Barnett,Andrew,Bruce,,San Francisco,CA,G 42760,Public Letter of Reprimand,2009-09-25T00:00:00Z
+2009-09-25T00:00:00Z,Ewing,Russell,Charles,II,Folsom,CA,G 19294,Public Letter of Reprimand,2009-09-25T00:00:00Z
+2009-09-25T00:00:00Z,Kapelanski,David,Peter,,San Diego,CA,G 75274,Revoked,2009-09-25T00:00:00Z
+2009-09-28T00:00:00Z,Cabrera,Malrubio,,II,Sacramento,CA,A 74118,Public Reprimand,2009-09-28T00:00:00Z
+2009-09-28T00:00:00Z,Ventura,Ones,Adviento,,Glendale,CA,A 48324,Decision,2009-09-28T00:00:00Z
+2009-09-30T00:00:00Z,Lewis,Jeffrey,Earl,,Fairfield,IA,G 29805,Suspended,2009-09-28T00:00:00Z
+2009-09-30T00:00:00Z,Kabacy,George,E.,,Lacey,WA,G 13766,Revoked,2009-09-30T00:00:00Z
+2009-09-30T00:00:00Z,Robinson,Harrell,Edward,,Anaheim Hills,CA,G 38954,Surrendered,2009-09-30T00:00:00Z
+2009-09-30T00:00:00Z,Gyi,Khin,Khin,,Culver City,CA,G 62062,Decision,2009-09-30T00:00:00Z
+2009-09-30T00:00:00Z,Smyle,Bernard,Alan,,Beverly Hills,CA,G 54868,Decision,2009-09-30T00:00:00Z
+2009-10-01T00:00:00Z,Faithorn,Eleanor,Perry,,New York,NY,G 47495,Suspended,2009-09-30T00:00:00Z
+2009-10-01T00:00:00Z,Cluskey,Edward,A. Mc,,Happy Valley,OR,G 70496,Surrendered,2009-10-01T00:00:00Z
+2009-10-05T00:00:00Z,Eidelman,William,S.,,Los Angeles,CA,G 32011,Public Reprimand,2009-10-05T00:00:00Z
+2009-10-05T00:00:00Z,Farshi,Ramin,,,West Hills,CA,G 75062,Decision,2009-10-05T00:00:00Z
+2009-10-05T00:00:00Z,Garcia,Jaime,,,Brentwood,CA,A 55176,Public Reprimand,2009-10-05T00:00:00Z
+2009-10-05T00:00:00Z,Gorum,Wendell,Jay,II,Hempstead,NY,A 79119,Decision,2009-10-05T00:00:00Z
+2009-10-05T00:00:00Z,Good,Leonard,James,,Roslyn,NY,G 46941,Surrendered,2009-10-05T00:00:00Z
+2009-10-06T00:00:00Z,Takasugi,Scott,T.,,Oxnard,CA,A 43093,Surrendered,2009-10-06T00:00:00Z
+2009-10-07T00:00:00Z,Asher,David,Todd,,Anaheim,CA,A 67110,Accusation Filed,2009-09-23T00:00:00Z
+2009-10-07T00:00:00Z,Bergstrom,Carl,Raymond,,Carmel,CA,G 59866,Accusation Filed,2009-09-25T00:00:00Z
+2009-10-07T00:00:00Z,Berman,Michael,Leonard,,Santa Ana,CA,G 21754,Accusation Filed,2009-09-24T00:00:00Z
+2009-10-07T00:00:00Z,Chen,Dennis,Hui-Ting,,Newport Beach,CA,A 26597,Accusation Filed,2009-09-30T00:00:00Z
+2009-10-07T00:00:00Z,Djordjevic,Borko,,,Rancho Mirage,CA,A 31228,Accusation Filed,2009-09-30T00:00:00Z
+2009-10-07T00:00:00Z,Eisenberg,Elliot,S.,,San Francisco,CA,G 32012,Accusation Filed,2009-09-17T00:00:00Z
+2009-10-07T00:00:00Z,Kadet,Stephen,Mark,,Parkland,FL,C 53151,Accusation Filed,2009-09-24T00:00:00Z
+2009-10-07T00:00:00Z,Karmali,Hasni,,,Beverly Hills,CA,A 97692,Accusation Filed,2009-09-24T00:00:00Z
+2009-10-07T00:00:00Z,Lemaile-Williams,Robert,L.,,Rowland Heights,CA,A 29921,First Amended Accusation Filed,2009-09-24T00:00:00Z
+2009-10-07T00:00:00Z,Leversen,Owen,Peter,,Temecula,CA,A 44529,First Amended Accusation Filed,2009-09-18T00:00:00Z
+2009-10-07T00:00:00Z,Modi,Jasvant,N.,,Los Angeles,CA,A 39818,First Amended Accusation Filed,2009-09-14T00:00:00Z
+2009-10-07T00:00:00Z,Pormir,Hoshang,,,Lake Isabella,CA,A 49827,Accusation Filed,2009-09-30T00:00:00Z
+2009-10-07T00:00:00Z,Rasmussen,Leif,,,Greenville,CA,G 27227,Accusation Filed,2009-09-22T00:00:00Z
+2009-10-07T00:00:00Z,Stamm,Patricia,Jane,,San Rafael,CA,G 40384,Accusation Filed,2009-09-21T00:00:00Z
+2009-10-07T00:00:00Z,Tran,Binh,To,,San Diego,CA,A 79716,First Amended Accusation Filed,2009-09-28T00:00:00Z
+2009-10-07T00:00:00Z,Wade,Sherylann,,,Apple Valley,CA,G 43427,Accusation Filed,2009-09-30T00:00:00Z
+2009-10-07T00:00:00Z,Williams,Monique,B.,,Altadena,CA,A 54185,First Amended Accusation Filed,2009-09-23T00:00:00Z
+2009-10-07T00:00:00Z,Win,Tin,Tin,,Lake Havasu City,AZ,A 73053,Accusation Filed,2009-09-22T00:00:00Z
+2009-10-07T00:00:00Z,Witzling,Sandy,,,Long Beach,CA,A 30242,Accusation Filed,2009-09-23T00:00:00Z
+2009-10-07T00:00:00Z,Yang,George,Gang,,Carlsbad,CA,A 76886,Accusation Filed,2009-09-22T00:00:00Z
+2009-10-12T00:00:00Z,Sadeghi,Hossein,M.,,San Diego,CA,A 60751,Public Reprimand,2009-10-08T00:00:00Z
+2009-10-14T00:00:00Z,Roca,Margo,Hirshman,,Port Charlotte,FL,G 88118,Public Letter of Reprimand,2009-10-07T00:00:00Z
+2009-10-14T00:00:00Z,Bell,Timothy,Vernon,,Long Beach,CA,G 85325,Public Letter of Reprimand,2009-10-07T00:00:00Z
+2009-10-14T00:00:00Z,Borrell,Leo,James,,Houston,TX,C 31240,Public Letter of Reprimand,2009-10-07T00:00:00Z
+2009-10-14T00:00:00Z,Smith,Barlow,,,Marble Falls,TX,G 35320,Public Letter of Reprimand,2009-10-12T00:00:00Z
+2009-10-14T00:00:00Z,Chung,Yong,Wun,,Santa Ana,CA,A 38317,Decision,2009-10-14T00:00:00Z
+2009-10-15T00:00:00Z,Dhillon,Charanjit,Singh,,Phoenix,AZ,A 36100,Decision,2009-10-15T00:00:00Z
+2009-10-15T00:00:00Z,Turner,Ernest,Alvin,,Lebanon,TN,C 38429,Revoked,2009-10-15T00:00:00Z
+2009-10-15T00:00:00Z,Wolfe,Lawrence,I.,,San Carlos,CA,C 11479,Surrendered,2009-10-15T00:00:00Z
+2009-10-19T00:00:00Z,Paul,Peter,Conrad,,Riverside,CA,A 40030,Superior Court Order/Restriction,2009-10-16T00:00:00Z
+2009-10-20T00:00:00Z,Iida,Bob,Mitsuru,,Sutter Creek,CA,A 44831,Surrendered,2009-10-14T00:00:00Z
+2009-10-20T00:00:00Z,Enmon,Cleveland,James,,Decatur,GA,A 93821,Suspended,2009-10-19T00:00:00Z
+2009-10-21T00:00:00Z,Bernstein,Clifford,Alexander,,Newport Beach,CA,G 73289,First Amended Accusation Filed,2009-10-13T00:00:00Z
+2009-10-21T00:00:00Z,Farahmand,Nooshin,,,Anaheim,CA,A 56465,Accusation Filed,2009-10-05T00:00:00Z
+2009-10-21T00:00:00Z,Kumra,Rajiv,,,Aurora,CO,C 50114,Accusation Filed,2009-10-08T00:00:00Z
+2009-10-21T00:00:00Z,Maissian,Abraham,,,Glendale,CA,A 52772,Accusation Filed,2009-10-14T00:00:00Z
+2009-10-21T00:00:00Z,Petitt,John,Charles,,Santa Maria,CA,G 52812,Accusation & Petition to Revoke Probation,2009-10-07T00:00:00Z
+2009-10-21T00:00:00Z,Chavira,Alberto,,,Escondido,CA,G 50302,Accusation Dismissed,2009-10-15T00:00:00Z
+2009-10-21T00:00:00Z,Cruz,Dolores,De,,Arcadia,CA,G 65527,Accusation Dismissed,2009-10-05T00:00:00Z
+2009-10-21T00:00:00Z,Popplewell,James,R.,,Stockton,CA,G 42377,Accusation Withdrawn,2009-10-13T00:00:00Z
+2009-10-21T00:00:00Z,Ho,Joseph,Manhei,,Victorville,CA,G 73155,Public Reprimand,2009-10-20T00:00:00Z
+2009-10-22T00:00:00Z,Goings,Conchita,Yatar,,Cerritos,CA,A 41071,Surrendered,2009-10-21T00:00:00Z
+2009-10-22T00:00:00Z,Longwell,John,De Forest,Jr.,San Jose,CA,G 21069,Surrendered,2009-10-22T00:00:00Z
+2009-10-23T00:00:00Z,Tamer,Moussa,Pierre,,Bakersfield,CA,G 67142,Public Reprimand,2009-10-23T00:00:00Z
+2009-10-28T00:00:00Z,Cochran,Richard,Kenneth,,Tempe,AZ,C 53336,Public Letter of Reprimand,2009-10-23T00:00:00Z
+2009-10-28T00:00:00Z,Holmes,Victor,Alan,,Ridgecrest,CA,G 69242,Public Reprimand,2009-10-28T00:00:00Z
+2009-10-28T00:00:00Z,Liu,Yong,Jian,,Suwanee,GA,A 80050,Surrendered,2009-10-27T00:00:00Z
+2009-10-29T00:00:00Z,Cohn,Cal,Kenneth,,Houston,TX,G 17175,Surrendered,2009-10-28T00:00:00Z
+2009-10-29T00:00:00Z,Pinc,Roger,David,,Pittsburg,IL,G 39346,Surrendered,2009-10-28T00:00:00Z
+2009-10-29T00:00:00Z,In,George,Chitam,,Los Angeles,CA,A 48565,Decision,2009-10-26T00:00:00Z
+2009-10-29T00:00:00Z,Lovelace,Stewart,W.,,Manhattan Beach,CA,C 30263,Board Order,2009-10-26T00:00:00Z
+2009-11-02T00:00:00Z,Anderson,Donovan,John,,Mohave Valley,AZ,G 48061,Decision,2009-10-29T00:00:00Z
+2009-11-02T00:00:00Z,Realyvasquez,Fidel,,Jr.,Davis,CA,G 33283,Decision,2009-10-30T00:00:00Z
+2009-11-03T00:00:00Z,Newton,William,Lee,,Portland,OR,C 34415,Surrendered,2009-11-03T00:00:00Z
+2009-11-04T00:00:00Z,Oranburg,Philip,Reid,,Boca Raton,FL,G 86928,Public Letter of Reprimand,2009-11-03T00:00:00Z
+2009-11-04T00:00:00Z,Rodriguez,Maria,Innocencia,,Huntington Park,CA,G 49312,Public Letter of Reprimand,2009-11-03T00:00:00Z
+2009-11-04T00:00:00Z,Ali,Ashmead,,,California City,CA,G 78625,Accusation Filed,2009-10-29T00:00:00Z
+2009-11-04T00:00:00Z,Bortz,Walter,Michael,,Ukiah,CA,G 83310,Accusation Filed,2009-10-28T00:00:00Z
+2009-11-04T00:00:00Z,Dietrich,Peter,Scott,,Sacramento,CA,G 60965,First Amended Accusation Filed,2009-10-27T00:00:00Z
+2009-11-04T00:00:00Z,Fenton,Barry,Jay,,Dallas,TX,G 38398,Accusation Filed,2009-10-23T00:00:00Z
+2009-11-04T00:00:00Z,Garrison,Thomas,Edwin,,Ogden,UT,C 50929,Third Amended Accusation Filed,2009-10-27T00:00:00Z
+2009-11-04T00:00:00Z,Hastik,Karin,Lelsie,,San Francisco,CA,A 60374,Amended Accusation Filed,2009-10-22T00:00:00Z
+2009-11-04T00:00:00Z,Nadjmabadi,Esmail,,,Bakersfield,CA,A 56456,Amended Accusation Filed,2009-10-29T00:00:00Z
+2009-11-04T00:00:00Z,Nguyen,Hieu,,,Glendale,CA,A 70907,Accusation Filed,2009-10-29T00:00:00Z
+2009-11-04T00:00:00Z,Polterock,Jerrold,,,Gaffney,SC,G 16347,Accusation Filed,2009-10-23T00:00:00Z
+2009-11-04T00:00:00Z,Robinson,Joan,Real,,Soulsbyville,CA,A 68413,First Amended Accusation Filed,2009-10-27T00:00:00Z
+2009-11-04T00:00:00Z,Venger,Benjamin,Herschel,,Las Vegas,NV,CFE 50264,Accusation Filed,2009-10-29T00:00:00Z
+2009-11-04T00:00:00Z,Washington,Sharon,Denise,,Tracy,CA,G 70516,Second Amended Accusation Filed,2009-10-21T00:00:00Z
+2009-11-04T00:00:00Z,Winfield,Julie,Anne,,Corte Madera,CA,A 55830,Accusation Filed,2009-10-29T00:00:00Z
+2009-11-04T00:00:00Z,Yeh,Yun,Szu,,Las Vegas,NV,A 65313,Accusation Filed,2009-10-27T00:00:00Z
+2009-11-04T00:00:00Z,Aram,Davar,,,Chino Hills,CA,A 46392,Suspended,2009-11-03T00:00:00Z
+2009-11-05T00:00:00Z,Lemaile-Williams,Robert,L.,,Rowland Heights,CA,A 29921,Suspended,2009-11-03T00:00:00Z
+2009-11-09T00:00:00Z,Covarrubias,Gonzalo,Antonio,,San Juan Capistrano,CA,A 32492,Revoked,2009-11-09T00:00:00Z
+2009-11-09T00:00:00Z,Pham,Khanh,Gia,,Westminster,CA,A 41805,Surrendered,2009-11-09T00:00:00Z
+2009-11-10T00:00:00Z,Dietrich,Daniel,Scott,,Stockton,CA,A 95731,Decision,2009-11-09T00:00:00Z
+2009-11-10T00:00:00Z,Gillian,Terry,Allen,,Fresno,CA,A 29523,Decision,2009-11-09T00:00:00Z
+2009-11-10T00:00:00Z,Jazayeri,M.,Jay,,Long Beach,CA,A 33300,Public Reprimand,2009-11-09T00:00:00Z
+2009-11-10T00:00:00Z,Lachman,Norman,J.,,Los Angeles,CA,GFE 15903,Decision,2009-11-09T00:00:00Z
+2009-11-12T00:00:00Z,Hagen,Karl,Matthew,,Orlando,FL,G 70206,Revoked,2009-11-12T00:00:00Z
+2009-11-12T00:00:00Z,Bass,Howard,Reginald,,Los Angeles,CA,C 39193,Surrendered,2009-11-10T00:00:00Z
+2009-11-10T00:00:00Z,Patel,Mehmood,R.,,Lafayette,LA,A 31205,Surrendered,2009-11-10T00:00:00Z
+2009-11-16T00:00:00Z,Lawrence,Gale,Hewson,,Seal Beach,CA,A 54642,Decision,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Eichenberg,Brian,Jeffrey,,Murrieta,CA,A 55426,Public Letter of Reprimand,2009-11-12T00:00:00Z
+2009-11-17T00:00:00Z,Bautista-Quint,Edith,Quiachon,,Alexandria,VA,A 84482,Public Letter of Reprimand,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Chung,Theodore,W.,,San Gabriel,CA,G 12383,Public Reprimand,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Holland,Joshua,David,,Phonenix,AZ,G 61203,Public Letter of Reprimand,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Inciong,Jesus,Gil Belen,,Norfolk,VA,A 97557,Public Letter of Reprimand,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Bonner,Ernest,Lincoln,Jr.,Alameda,CA,A 30477,Accusation Filed,2009-11-04T00:00:00Z
+2009-11-17T00:00:00Z,Fider,Alex,Abelardo Sarmiento,,Murfreesboro,TN,A 51631,Accusation Filed,2009-11-02T00:00:00Z
+2009-11-17T00:00:00Z,Foote,Ronald,Hope,,Las Vegas,NV,G 66195,Accusation Filed,2009-11-10T00:00:00Z
+2009-11-17T00:00:00Z,Hochberg,Richard,Alan,,Long Beach,CA,G 24647,Accusation Filed,2009-11-10T00:00:00Z
+2009-11-17T00:00:00Z,Hardman,John,Rolin,,Greeley,CO,A 95527,Accusation Filed,2009-11-12T00:00:00Z
+2009-11-17T00:00:00Z,Horan,Kathleen,Louise,,Santa Rosa,CA,G 35154,Accusation Filed,2009-11-04T00:00:00Z
+2009-11-17T00:00:00Z,Keeley,Samuel,B.,,Pittsburgh,PA,G 54930,Accusation Filed,2009-11-03T00:00:00Z
+2009-11-17T00:00:00Z,Lee,Richard,Kenneth,,Fremont,CA,G 50154,Accusation Filed,2009-11-10T00:00:00Z
+2009-11-17T00:00:00Z,Lewis,Jeffrey,Earl,,Fairfield,IA,G 29805,Accusation Filed,2009-11-04T00:00:00Z
+2009-11-17T00:00:00Z,Mata,David,Joseph,,Hemet,CA,G 64183,Accusation Filed,2009-11-09T00:00:00Z
+2009-11-17T00:00:00Z,Medica,John,Francis,,Richland,WA,G 83892,Accusation Filed,2009-11-05T00:00:00Z
+2009-11-17T00:00:00Z,Patwardhan,Vinod,C.,,Upland,CA,A 29318,Accusation Filed,2009-11-10T00:00:00Z
+2009-11-17T00:00:00Z,Shelton,Raymond,Alan,,Monrovia,CA,G 60028,Accusation Filed,2009-11-12T00:00:00Z
+2009-11-17T00:00:00Z,Tashjian,Kevork,George,Jr.,Glendale,CA,A 81027,Accusation Filed,2009-11-03T00:00:00Z
+2009-11-17T00:00:00Z,Wolfe,Michael,Benjamin,,Los Gatos,CA,A 63089,Accusation Filed,2009-11-09T00:00:00Z
+2009-11-17T00:00:00Z,Eichenberg,Jeffrey,,,Murrieta,CA,A 55426,Public Letter of Reprimand,2009-11-12T00:00:00Z
+2009-11-17T00:00:00Z,Bautista-Quint,Edith,Quiachon,,Alexandria,VA,A 84482,Public Letter of Reprimand,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Chung,Theodore,W.,,San Gabriel,CA,G 12383,Public Reprimand,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Holland,Joshua,David,,Phoenix,AZ,G 61203,Public Letter of Reprimand,2009-11-16T00:00:00Z
+2009-11-17T00:00:00Z,Inciong,Jesus,Gil Belen,,Norfolk,VA,A 97557,Public Letter of Reprimand,2009-11-16T00:00:00Z
+2009-11-23T00:00:00Z,Funk,Wayne,A.,,El Cajon,CA,C 15738,Surrendered,2009-11-17T00:00:00Z
+2009-11-23T00:00:00Z,Jain,Anamika,,,Las Vegas,NV,G 87884,Decision,2009-11-20T00:00:00Z
+2009-11-24T00:00:00Z,Assad,Hany,Youssef,,San Ramon,CA,A 54309,Revoked,2009-11-23T00:00:00Z
+2009-11-24T00:00:00Z,Bergstrom,Carl,Raymond,,Carmel,CA,G 59866,Revoked,2009-11-23T00:00:00Z
+2009-11-24T00:00:00Z,Feeney,Craig,Michael,,Richland,WA,G 36976,Public Reprimand,2009-11-23T00:00:00Z
+2009-11-24T00:00:00Z,Miskinyar,Shir,A.,,Santa Ana,CA,A 50080,Decision,2009-11-23T00:00:00Z
+2009-11-24T00:00:00Z,Freeman,Mark,Evan,,Arroyo Grande,CA,C 52034,Suspended,2009-11-23T00:00:00Z
+2009-11-24T00:00:00Z,Henriquez,Jaime,O.,,Arcadia,CA,A 79202,Decision,2009-11-19T00:00:00Z
+2009-11-24T00:00:00Z,Miller,Glenn,Edward,,Santa Monica,CA,G 29077,Decision,2009-11-19T00:00:00Z
+2009-11-24T00:00:00Z,Yermian,John-Paul,R.,,Van Nuys,CA,A 42042,Public Reprimand,2009-11-19T00:00:00Z
+2009-11-25T00:00:00Z,Ronan,Kevin,John,,Durham,NH,GFE 77176,Revoked,2009-11-19T00:00:00Z
+2009-11-25T00:00:00Z,Mishlove,Lawrence,Alan,,Tarzana,CA,A 52846,Suspended,2009-11-24T00:00:00Z
+2009-11-25T00:00:00Z,Murota,Janice,,,Oakland,CA,G 43850,Public Letter of Reprimand,2009-11-24T00:00:00Z
+2009-11-30T00:00:00Z,Aram,Davar,,,Chino Hills,CA,A 46392,Suspended,2009-11-23T00:00:00Z
+2009-11-30T00:00:00Z,Shah,Mukesh,H.,,Santa Ana,CA,A 44952,Revoked,2009-11-27T00:00:00Z
+2009-11-30T00:00:00Z,Ware,Dana,Suzanne,,Chester,CA,G 55407,Decision,2009-11-30T00:00:00Z
+2009-12-01T00:00:00Z,Celniker,Benny,,,Phoenix,AZ,G 35877,Accusation Filed,2009-11-16T00:00:00Z
+2009-12-01T00:00:00Z,Hamilton,Richard,Edward,Jr.,Mammoth Lakes,CA,G 34133,Accusation Filed,2009-11-25T00:00:00Z
+2009-12-01T00:00:00Z,McQueen,Carlton,Kitridge,,New Orleans,LA,A 93692,Accusation Filed,2009-11-18T00:00:00Z
+2009-12-01T00:00:00Z,Parr,Terence,James,,Hendricks,MN,G 42348,Accusation & Petition to Revoke Probation,2009-11-16T00:00:00Z
+2009-12-01T00:00:00Z,Poliquin-Williams,Nicole,,,Los Angeles,CA,A 30419,Accusation Filed,2009-11-25T00:00:00Z
+2009-12-01T00:00:00Z,Quach,Thomas,Tri,,Westminster,CA,G 80556,Accusation Filed,2009-11-24T00:00:00Z
+2009-12-01T00:00:00Z,Smith,John,Wallace,,Wilmette,IL,G 18469,Accusation Filed,2009-11-25T00:00:00Z
+2009-12-01T00:00:00Z,Waugh,Amanda,Darlene,,Irvine,CA,A 99335,Accusation Filed,2009-11-25T00:00:00Z
+2009-12-03T00:00:00Z,Knorr,Philip,Andrew,,Freedom,CA,G 56315,Public Reprimand,2009-12-01T00:00:00Z
+2009-12-03T00:00:00Z,Sack,Jeffrey,Brett,,Sarasota,FL,A 47918,Decision,2009-12-03T00:00:00Z
+2009-12-03T00:00:00Z,Nugent,Luis,Philip,,Montebello,CA,G 47906,Suspended,2009-12-03T00:00:00Z
+2009-12-08T00:00:00Z,Waxman,Samuel,,,West Hollywood,CA,A 28064,Public Reprimand,2009-12-07T00:00:00Z
+2009-12-09T00:00:00Z,Miles,Alexander,Christian,,Kingman,AZ,A 84181,Revoked,2009-12-09T00:00:00Z
+2009-12-10T00:00:00Z,Kotzen,Rene,Marlon,,Brooklyn,NY,A 53047,Surrendered,2009-12-09T00:00:00Z
+2009-12-14T00:00:00Z,Bains,Sartaj,Singh,,Roseville,CA,A 51579,Surrendered,2009-12-14T00:00:00Z
+2009-12-14T00:00:00Z,Zic,Zeljko,,,San Pedro,CA,A 25474,Suspended,2009-12-07T00:00:00Z
+2009-12-15T00:00:00Z,Rathe,Charles,Nicholas,,Windsor,Ontario,C 50586,Suspended,2009-12-07T00:00:00Z
+2009-12-15T00:00:00Z,Levine,Harvey,Allan,,New York,NY,G 13400,Surrendered,2009-12-08T00:00:00Z
+2009-12-16T00:00:00Z,Ahmed,A.,Razzaque,,Brookline,MA,A 30485,Accusation Filed,2009-12-01T00:00:00Z
+2009-12-16T00:00:00Z,Aram,Davar,,,Chino Hills,CA,A 46392,Accusation & Petition to Revoke Probation,2009-12-08T00:00:00Z
+2009-12-16T00:00:00Z,Berbos,J.,Nickolas,,Fullerton,CA,G 54630,Accusation Filed,2009-12-14T00:00:00Z
+2009-12-16T00:00:00Z,Bortz,Walter,Michael,,Ukiah,CA,G 83310,Amended Accusation Filed,2009-12-10T00:00:00Z
+2009-12-16T00:00:00Z,Breen,Peter,Herschel,,Orange,CA,G 78104,First Amended Accusation Filed,2009-12-07T00:00:00Z
+2009-12-16T00:00:00Z,Chao,David,Jee Wei,,San Diego,CA,G 78677,Accusation Filed,2009-12-14T00:00:00Z
+2009-12-16T00:00:00Z,Cohen,Wendy,Ellen,,Englewood,NJ,G 22145,Accusation Filed,2009-12-09T00:00:00Z
+2009-12-16T00:00:00Z,Copeland,John,W.,,Antioch,CA,C 26299,Accusation Filed,2009-12-02T00:00:00Z
+2009-12-16T00:00:00Z,Derrick,Marvin,James,,Decatur,IL,G 47855,Accusation Filed,2009-12-03T00:00:00Z
+2009-12-16T00:00:00Z,Freeman,Mark,Evan,,Arroyo Grande,CA,C 52034,Accusation & Petition to Revoke Probation,2009-12-15T00:00:00Z
+2009-12-16T00:00:00Z,Gamage,Kevin,Nimal,,Pomona,CA,A 45641,Accusation & Petition to Revoke Probation,2009-12-02T00:00:00Z
+2009-12-16T00:00:00Z,Glaser,David,Neal,,Encino,CA,G 40041,Accusation Filed,2009-12-14T00:00:00Z
+2009-12-16T00:00:00Z,Gutierrez,Godofredo,R.,,Baldwin Park,CA,A 60481,Accusation Filed,2009-12-15T00:00:00Z
+2009-12-16T00:00:00Z,Ho,Taylor,,,Fontana,CA,A 60101,Accusation Filed,2009-12-15T00:00:00Z
+2009-12-16T00:00:00Z,Multani,Gurmeet,Singh,,Colton,CA,A 48279,Accusation Filed,2009-12-10T00:00:00Z
+2009-12-16T00:00:00Z,Nguyen,Hieu,,,Long Beach,CA,A 70907,First Amended Accusation Filed,2009-12-01T00:00:00Z
+2009-12-16T00:00:00Z,Pappas,Nicholas,,,Novato,CA,C 28598,Accusation Filed,2009-12-02T00:00:00Z
+2009-12-16T00:00:00Z,Rand,Jerry,Neil,,San Diego,CA,G 25749,Accusation & Petition to Revoke Probation,2009-12-14T00:00:00Z
+2009-12-16T00:00:00Z,Sokoloff,Bret,Robert,,Germantown,TN,A 73416,Accusation Filed,2009-12-01T00:00:00Z
+2009-12-16T00:00:00Z,Zic,Zeljko,,,San Pedro,CA,A 25474,Accusation Filed,2009-12-15T00:00:00Z
+2009-12-16T00:00:00Z,Wang,Taishine,,,Cerritos,CA,A 42340,Decision,2009-12-16T00:00:00Z
+2009-12-17T00:00:00Z,Douthit,John,Davey,,Englewood,CO,C 29112,Public Reprimand,2009-12-17T00:00:00Z
+2009-12-21T00:00:00Z,Gandy,Juanita,,,Bakersfield,CA,G 55002,Decision,2009-12-21T00:00:00Z
+2009-12-21T00:00:00Z,Graves,Benjamin,Harrison,III,Livingston,TX,G 86826,Decision,2009-12-21T00:00:00Z
+2009-12-21T00:00:00Z,Denson-Lino,Joyce,Marie,,Poway,CA,G 78985,Decision,2009-12-21T00:00:00Z
+2009-12-21T00:00:00Z,Goldsmith,Stanley,,,Hayward,CA,G 20538,Revoked,2009-12-18T00:00:00Z
+2009-12-21T00:00:00Z,Robinson,Joan,Real,,Soulsbyville,CA,A 68413,Surrendered,2009-12-21T00:00:00Z
+2009-12-21T00:00:00Z,Ehsan,Reza,Ray,,Los Angeles,CA,A 50372,Public Letter of Reprimand,2009-12-17T00:00:00Z
+2009-12-23T00:00:00Z,Freeman,Mark,Evan,,Arroyo Grande,CA,C 52034,Decision,2009-12-23T00:00:00Z
+2009-12-23T00:00:00Z,Quenneville,Suzanne,Marie,,San Diego,CA,A 38355,Decision,2009-12-23T00:00:00Z
+2009-12-23T00:00:00Z,Zegarra,J.,Peter,,Sacramento,CA,G 52872,Decision,2009-12-23T00:00:00Z
+2009-12-28T00:00:00Z,Quenneville,Suzanne,Marie,,San Diego,CA,A 38355,Order,2009-12-18T00:00:00Z
+2009-12-28T00:00:00Z,Thompson,Christopher,,,Montebello,CA,G 31475,Suspended,2009-12-24T00:00:00Z
+2009-12-29T00:00:00Z,Huang,Milton,Peechuan,,Scotts Valley,CA,CFE 50791,Surrendered,2009-12-24T00:00:00Z
+2009-12-30T00:00:00Z,Levine,Glenn,Laurence,,San Andreas,CA,G 85223,Public Letter of Reprimand,2009-12-24T00:00:00Z
+2009-12-30T00:00:00Z,Tran,Binh,To,,San Diego,CA,A 79716,Public Reprimand,2009-12-24T00:00:00Z
+2009-12-30T00:00:00Z,Woodward,Paul,Douglas,,Napa,CA,A 30765,Decision,2009-12-24T00:00:00Z
+2009-12-30T00:00:00Z,Lola,Alejandrino,,,Newark,CA,A 18860,Surrendered,2009-12-30T00:00:00Z
+2009-12-30T00:00:00Z,Mahakian,Charles,G.,,Las Vegas,NV,G 14144,Public Letter of Reprimand,2009-12-29T00:00:00Z
+2009-12-31T00:00:00Z,Yeung,Clement,Ka-Chun,,Honolulu,HI,G 43350,Surrendered,2009-11-10T00:00:00Z
+2009-12-31T00:00:00Z,Attygalla,Mallika,P.,,Los Angeles,CA,AFE 36990,Surrendered,2009-12-29T00:00:00Z
+2009-12-31T00:00:00Z,Greenwald,Steven,Howard,,San Diego,CA,GFE 28769,Surrendered,2009-12-29T00:00:00Z

@@ -1,0 +1,28 @@
+Searches
+
+CA Med Board licenses
+https://search.dca.ca.gov/results
+
+NPI
+https://npiregistry.cms.hhs.gov/
+
+Open Payments
+https://openpaymentsdata.cms.gov/
+
+Prescribers
+https://projects.propublica.org/checkup/
+
+
+Downloads
+
+Open Payments
+https://www.cms.gov/OpenPayments/Explore-the-Data/Dataset-Downloads.html
+
+Medicare Part D prescriptions
+https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Part-D-Prescriber.html
+
+NBER NPI to State License Crosswalk
+http://www.nber.org/data/npi-state-license-crosswalk.html
+
+CA Med Board discipline
+http://www.mbc.ca.gov/Publications/Disciplinary_Actions/

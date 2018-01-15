@@ -1,0 +1,180 @@
+[
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "invert": false,
+          "caseSensitive": false,
+          "query": "ALERT ",
+          "name": "ALERT ISSUE DATE",
+          "type": "text",
+          "columnName": "ALERT ISSUE DATE"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column NAME by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "NAME",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column last_name at index 2 based on column NAME 1 using expression grel:value.partition(smartSplit(value,\" \")[-1])[1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "last_name",
+    "columnInsertIndex": 2,
+    "baseColumnName": "NAME 1",
+    "expression": "grel:value.partition(smartSplit(value,\" \")[-1])[1]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column first_name at index 2 based on column NAME 1 using expression grel:value.partition(smartSplit(value,\" \")[0])[1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "first_name",
+    "columnInsertIndex": 2,
+    "baseColumnName": "NAME 1",
+    "expression": "grel:value.partition(smartSplit(value,\" \")[0])[1]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column first_names at index 2 based on column NAME 1 using expression grel:value.partition(smartSplit(value,\" \")[-1])[0]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "first_names",
+    "columnInsertIndex": 2,
+    "baseColumnName": "NAME 1",
+    "expression": "grel:value.partition(smartSplit(value,\" \")[-1])[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column middle_name at index 3 based on column first_names using expression grel:value.partition(smartSplit(value,\" \")[0])[-1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "middle_name",
+    "columnInsertIndex": 3,
+    "baseColumnName": "first_names",
+    "expression": "grel:value.partition(smartSplit(value,\" \")[0])[-1]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column NAME 1",
+    "columnName": "NAME 1"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column first_names",
+    "columnName": "first_names"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column NAME 2 to name_suffix",
+    "oldColumnName": "NAME 2",
+    "newColumnName": "name_suffix"
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column CITY/STATE by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CITY/STATE",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 2
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column CITY/STATE 1 to city",
+    "oldColumnName": "CITY/STATE 1",
+    "newColumnName": "city"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column CITY/STATE 2 to state",
+    "oldColumnName": "CITY/STATE 2",
+    "newColumnName": "state"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column ALERT ISSUE DATE to alert_date",
+    "oldColumnName": "ALERT ISSUE DATE",
+    "newColumnName": "alert_date"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column LICENSE NUMBER to license",
+    "oldColumnName": "LICENSE NUMBER",
+    "newColumnName": "license"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column TYPE OF ACTION to action_type",
+    "oldColumnName": "TYPE OF ACTION",
+    "newColumnName": "action_type"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column DATE OF ACTION to action_date",
+    "oldColumnName": "DATE OF ACTION",
+    "newColumnName": "action_date"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column state using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "state",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column name_suffix using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "name_suffix",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
