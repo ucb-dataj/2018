@@ -473,7 +473,7 @@ Data journalists should be very wary of falling into similar traps. While you ma
 
   You are only required to submit one pitch, however you may submit up to three, if you'd like us to advise on which one looks most promising.
   
-  **Due: Sat Jan 20 at 8pm** 
+  **Due: Sat Jan 27 at 8pm** 
 
 - **Reading assignment.** Read the stories for discussion in [week 2](week2,html), and come to class next week prepared to address the questions about them posed in the class notes.
 
