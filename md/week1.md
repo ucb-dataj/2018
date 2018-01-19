@@ -475,7 +475,7 @@ Data journalists should be very wary of falling into similar traps. While you ma
   
   **Due: Sat Jan 27 at 8pm** 
 
-- **Reading assignment.** Read the stories for discussion in [week 2](week2,html), and come to class next week prepared to address the questions about them posed in the class notes.
+- **Reading assignment.** Read the stories for discussion in [week 2](week2.html), and come to class next week prepared to address the questions about them posed in the class notes.
 
   **Due: By next week's class** 
 
