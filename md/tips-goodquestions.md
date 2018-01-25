@@ -6,7 +6,6 @@ ProPublica's Sisi Wei has a great [intro to asking questions](https://www.propub
 
 Questions like these are hard to answer:
 
-
 > I've been trying for the past couple of hours to figure out what exactly I'm doing wrong with the  assignment. My spreadsheet is attached -- can you tell me what I'm doing wrong?
 
 or
