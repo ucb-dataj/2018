@@ -1,36 +1,57 @@
 ## Week 3
 *Instructor: Amanda Hickman*
 
+### Quiz Review
+How did we do?
+
+
+### Spreadsheets
+
 Spreadsheets are the simplest tool in your data toolbox. There are some real limitations that you'll encounter when you try to use spreadsheets for large datasets or complex, reproducible analysis, but some facility with core spreadsheet functions will go a long, long way towards improving your data skills.
 
-We're going to use Google Sheets in class, but [LibreOffice Calc](https://www.libreoffice.org/download/download/) is a great, open source option.
+Sort, filter, summarize, group and join.
+
+<!--Workbench?-->
+
+
+We're going to use Google Sheets in class, but [LibreOffice Calc](https://www.libreoffice.org/download/download/) is a great, open source option. Excel is also perfectly good, though it's been a long time since anyone showed me a reason to choose it over LibreOffice.
 
 ## Filtering:
 
 ## Formulas
-Basics: =SUM, =AVERAGE
+Basics: =SUM, =AVERAGE, =MAX, =MIN
 Advanced spread sheetery (RIGHT, LEFT, TRIM)
 
+Start with a question from our Week 2 Quiz:
 
+> 5. There were 15,000 violent crimes in 2017 in city A, which had a population of 350,000. There were 9,000 violent crimes in City B, which had a population of 500,000. Complete the following sentence with a number rounded to one decimal place: “City A’s violent crime rate was ... times that of city B.”
+
+
+| City | Crimes | Population | Formula         | Rate |
+|------|--------|------------|-----------------|------|
+| A    | 15000  | 350000     | =(B2/C2)*100000 | 4286 |
+| B    | 9000   | 500000     | =(B3/C3)*100000 | 1800 |
+
+
+## Pivot Tables
 
 ....................
 
 Notes for heavy revision...
 
-We're going to look at Oakland 311 data.
+Later this semester, we'll use some much more powerful tools, especially R. And the honest truth is that spreadsheets can be super dangerous. It's hard to keep track of the transformations you're applying when they're hidden in spreadsheet functions. But: you can do a lot in spreadsheets and sometimes they're exactly the right tool.
 
-Later this semester, we'll use some much more powerful tools, especially R. And the honest truth is that spreadsheets can be super dangerous. It's hard to keep track of the transformations you're applying when they're hidden in spreadsheet functions.
+# CSVKit
 
-Bonus: CSV Kit (installing it and using it to break up a data set)
-
+If we power through spreadsheets, I want to show you CSVkit, which is a powerful command line tool for chewing through data that's a little too big (or not) for a spreadsheet.
 
 https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Tutorial:-Installing-CSVKit
 ..............
 
 </home/amanda/Public/CUNY_Coursebits/CUNY-data-skills_pages/\_posts/2015-02-11-refine.md>
 
-## Keep spreadsheeting
-Filter [NYC's 311 call data](https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9?) to include only Noise complaints from 2014. (Use `Complaint Type`, `starts with` and "Noise"; then add a second filter for `Created Date` between January 1, 2014 and January 1, 2015.)
+## Homework
+Filter [San Francisco's 311 call data](https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9?) to include only Noise complaints from 2014. (Use `Complaint Type`, `starts with` and "Noise"; then add a second filter for `Created Date` between January 1, 2014 and January 1, 2015.)
 
 Play around with it and post *something* interesting to the tumblr, tagged `311 assignment`.
 
@@ -281,3 +302,6 @@ Use [`wc -l`](http://unixhelp.ed.ac.uk/CGI/man-cgi?wc) and `split`
 and `less -N` (or `=` while in `less`)
 
 `head` and `tail`
+
+Evergreen stories:
+https://www.eastbayexpress.com/oakland/too-many-rapes-dismissed/Content?oid=12633555
