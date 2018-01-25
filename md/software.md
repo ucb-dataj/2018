@@ -24,7 +24,7 @@ This software allows you to work with [PostgreSQL](https://www.postgresql.org/) 
 
 ### [Postico](https://eggerapps.at/postico/)
 
-Postgres is a command line application -- Postico is a graphical client that makes it much (much) easier to work in Postgres. 
+Postico is a user interface that makes it much (much) easier to work with PostgreSQL databases. Download from [here](https://eggerapps.at/postico/).
 
 ### [QGIS](http://qgis.org/en/site/)
 The leading open source Geographic Information System, which we will use to make maps and analyze geographic data. Download the latest **standard** version of QGIS and its requirements [from here](http://www.kyngchaos.com/software/qgis/).

@@ -1,0 +1,843 @@
+alert_date,last_name,first_name,middle_name,name_suffix,city,state,license,action_type,action_date
+2014-01-02T00:00:00Z,Anderson,Scott,Dodd,,Carmichael,CA,G 33616,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Bernstein,Louis,David,,Redding,CA,G 22023,First Amended Accusation Filed,2013-12-17T00:00:00Z
+2014-01-02T00:00:00Z,Beverly,Shereen,Lukathy,,Lawndale,CA,G 68251,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Buckley,Robert,Arthur,,Lafayette,CA,G 73194,Accusation Filed,2013-12-18T00:00:00Z
+2014-01-02T00:00:00Z,Carr,Mianda,Cheree,,Chula Vista,CA,A 104660,Accusation Filed,2013-12-10T00:00:00Z
+2013-01-02T00:00:00Z,Chan,Yen,Hoang,,Ontario,CA,A 85761,Accusation Filed,2013-12-27T00:00:00Z
+2014-01-02T00:00:00Z,Chang,Sean,Chia,,Thousand Oaks,CA,A 112950,Accusation Filed,2013-12-06T00:00:00Z
+2014-01-02T00:00:00Z,Dove,Kristi,Ann,,San Diego,CA,A 55667,Accusation Filed,2013-11-04T00:00:00Z
+2014-01-02T00:00:00Z,Hassan,Allen,C.,,Sacramento,CA,C 29816,Accusation Filed,2013-12-27T00:00:00Z
+2014-01-02T00:00:00Z,Hedin,Andrea,Louise,,San Rafael,CA,G 46755,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Hirsch,Jason,Gabriel,,Los Angeles,CA,A 114749,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Luftman,Debra,Beth,,Calabasas,CA,G 65273,Accusation Filed,2013-12-20T00:00:00Z
+2014-01-02T00:00:00Z,Lum,Owen,Myung Chi,,San Jose,CA,C 37864,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Nwaigwe,Manasseh,C.,,Glendale,CA,A 42532,Accusation Filed,2013-12-26T00:00:00Z
+2014-01-02T00:00:00Z,Mykita,Gayle,M.,,Playa del Rey,CA,G 34500,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Putta,Lakshmidevi,V.,,Burbank,CA,A 77357,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Schwartz,Irving,Jack,,Yuba City,CA,A 37528,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Shubhakar,S.N.,,,Porterville,CA,A 33936,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Tawakol,Raif,,,Merced,CA,C 40824,Accusation Filed,2013-12-02T00:00:00Z
+2014-01-02T00:00:00Z,Wells,James,Darrick,,Selma,CA,G 78059,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Williams,Calvin,E.,,New Orleans,LA,G 66782,Accusation Filed,2013-12-12T00:00:00Z
+2014-01-02T00:00:00Z,Woodward,Artis,,,Garden Grove,CA,A 40488,Accusation Filed,2013-12-27T00:00:00Z
+2013-01-02T00:00:00Z,Zormeier,Michele,Marie,,Healdsburg,CA,A 76795,Public Reprimand,2013-12-27T00:00:00Z
+2014-01-03T00:00:00Z,Lobo,Carolyn,Mary,,Mission Hills,CA,A 63239,Decision,2014-01-03T00:00:00Z
+2014-01-03T00:00:00Z,Vaughn,Janice,Marie,,West Linn,OR,G 88563,Surrendered,2013-01-03T00:00:00Z
+2014-01-09T00:00:00Z,Gonzalez,Efrain,Diego,,Rocklin,CA,C 52340,Surrendered,2014-01-06T00:00:00Z
+2014-01-09T00:00:00Z,Leong,Collin,,,San Francisco,CA,A 23867,Suspended,2014-01-07T00:00:00Z
+2014-01-09T00:00:00Z,Schumacher,Robert,Mayo,,Ridgecrest,CA,G 13195,Surrendered,2014-01-09T00:00:00Z
+2014-01-10T00:00:00Z,Anderson,Donovan,John,,Mohave Valley,AZ,G 48061,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Cohen,Harry,Bernard,,Oro Valley,AZ,C 51177,Surrendered,2014-01-07T00:00:00Z
+2014-01-10T00:00:00Z,Gerson,Samuel,Jeffrey,,La Jolla,CA,A 116916,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Gorelikova,Svetlana,V.,,Cupertino,CA,A 102339,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Gullion,Guy,Rogers,,Occidental,CA,A 50284,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Neel,Elizabeth,Elaine,,Panama City,FL,C 32201,Public Reprimand,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Ronan,Kevin,John,,Santa Monica,CA,G 77176,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Rosenfeld,Joann,,,Ukiah,CA,G 88377,Public Reprimand,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Tzeng,Yu-Yea,Mimi,,Manteca,CA,A 68367,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Wenneker,Wendell,Warren,,Napa,CA,G 37197,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Ziegler,Ross,Elliot,,Palo Alto,CA,G 40394,Decision,2014-01-10T00:00:00Z
+2014-01-10T00:00:00Z,Zinnanti,William,J.,,Santa Cruz,CA,A 118089,Decision,2014-01-10T00:00:00Z
+2014-01-13T00:00:00Z,Salleroli,Christian,M.,,West Holywood,CA,A 55029,Cancelled,2014-01-10T00:00:00Z
+2014-01-15T00:00:00Z,Flores,Jose,Luis,,Fresno,CA,A 69861,Suspended,2014-01-10T00:00:00Z
+2014-01-17T00:00:00Z,Barahona,Joaquin,Antonio,,San Francisco,CA,G 61084,Revoked,2014-01-17T00:00:00Z
+2014-01-17T00:00:00Z,Bianchi,Anthony,Steven,,Fallbrook,CA,A 63365,Decision,2014-01-17T00:00:00Z
+2014-01-17T00:00:00Z,Peterson,Ralph,Laurence,,Oakland,CA,G 49099,Public Reprimand,2014-01-17T00:00:00Z
+2014-01-17T00:00:00Z,Rust,Gary,Alan,,San Francisco,CA,G 84324,Decision,2014-01-17T00:00:00Z
+2014-01-17T00:00:00Z,Salleroli,Christian,M.,,West Holywood,CA,A 55029,Cancelled,2014-01-10T00:00:00Z
+2014-01-17T00:00:00Z,Washburn,Erik,Robert,,Vallejo,CA,A 105631,Decision,2014-01-17T00:00:00Z
+2014-01-21T00:00:00Z,Adams,Jan,Rudalgo,,Fountain Valley,CA,A 51004,Petition to Revoke Probation Filed,2014-01-07T00:00:00Z
+2014-01-21T00:00:00Z,Balasundaram,Raj,,,Downey,CA,A 107910,Accusation Filed,2014-01-02T00:00:00Z
+2014-01-21T00:00:00Z,Follette,David,Michael,,Sacramento,CA,A 26120,Accusation Filed,2014-01-13T00:00:00Z
+2014-01-21T00:00:00Z,Goldberg,Michael,Jay,,Tarzana,CA,A 25404,First Amended Accusation Filed,2014-01-15T00:00:00Z
+2014-01-21T00:00:00Z,Gorey,Roseann,F.,,Stockton,CA,G 37450,Accusation Filed,2014-01-15T00:00:00Z
+2014-01-21T00:00:00Z,Heric,Thomas,M.,,Los Angeles,CA,A 22944,Accusation & Petitition to Revoke Probation Filed,2014-01-13T00:00:00Z
+2014-01-21T00:00:00Z,Hsu,Hwei-Jung,,,San Pablo,CA,A 32019,Accusation Filed,2014-01-15T00:00:00Z
+2014-01-21T00:00:00Z,Kadesky,Yale,Mitchell,,Escondido,CA,C 50002,Accusation Filed,2014-01-09T00:00:00Z
+2014-01-21T00:00:00Z,Meadows,Lee,Hastings,,Tamuning,Guam,G 51817,Accusation Filed,2013-12-31T00:00:00Z
+2014-01-21T00:00:00Z,Nevins,James,Phillip,,Temecula,CA,A 26710,Accusation Filed,2014-01-09T00:00:00Z
+2014-01-21T00:00:00Z,Patterson,Stanley,Claiborne,,Oxnard,CA,A 72314,Accusation Filed,2014-01-14T00:00:00Z
+2014-01-21T00:00:00Z,Paule,William,Joel,,Carpinteria,CA,G 84131,Accusation Filed,2014-01-15T00:00:00Z
+2014-01-21T00:00:00Z,Ragain,Kermit,V.,,Gold Hill,OR,A 22085,Accusation Filed,2014-01-15T00:00:00Z
+2014-01-21T00:00:00Z,Shankar,Prithvi,Nambalat,,Modesto,CA,A 92177,Accusation Filed,2014-01-15T00:00:00Z
+2014-01-21T00:00:00Z,Streit,Charles,Coonan,,Fullerton,CA,A 25530,Accusation Filed,2014-01-15T00:00:00Z
+2014-01-21T00:00:00Z,Venning,Dale,Randall,,Anaheim,,G 35217,Accusation Filed,2014-01-07T00:00:00Z
+2014-01-21T00:00:00Z,Weiner,Keith,Mitchell,,Orange,CA,G 53493,Accusation Filed,2014-01-02T00:00:00Z
+2014-01-22T00:00:00Z,Gravich,Anna,,,Los Angeles,CA,A 40805,Revoked,2014-01-22T00:00:00Z
+2014-01-28T00:00:00Z,Kroupa,Vladimir,P.,,Porterville,CA,A 48466,Suspended,2014-01-27T00:00:00Z
+2014-01-29T00:00:00Z,Knight,George,Frederick,,St. Petersburg,FL,G 87926,Revoked,2014-01-27T00:00:00Z
+2014-01-30T00:00:00Z,Song,Jong,Eon,,Moreno Valley,CA,A 34264,Revoked,2014-01-30T00:00:00Z
+2014-01-31T00:00:00Z,Nicolaou,Daemeon,Achilles,,Sacramento,CA,A 111473,Public Reprimand,2014-01-31T00:00:00Z
+2014-01-31T00:00:00Z,Noonan,Kevin,Bernard,,Venice,CA,G 37792,Revoked,2014-01-31T00:00:00Z
+2014-01-31T00:00:00Z,Tincopaminan,Luis,Felix,,Whittier,CA,A 31264,Decision,2014-01-31T00:00:00Z
+2014-02-04T00:00:00Z,Ayodele,Emmanuel,A.,,Los Angeles,CA,A 46478,Suspended,2014-02-03T00:00:00Z
+2014-02-04T00:00:00Z,Hafezi,Fred,Farhad,,Corona,CA,G 19337,Revoked,2014-01-17T00:00:00Z
+2014-02-04T00:00:00Z,Leong,Collin,,,San Francisco,CA,A 23867,Surrendered,2014-02-04T00:00:00Z
+2014-02-04T00:00:00Z,Reyes,Rodolfo,Constantino,,Lillington,NC,A 48777,Public Reprimand,2014-01-31T00:00:00Z
+2014-02-04T00:00:00Z,Ross,Brandon,Michael,,La Jolla,CA,A 76782,Surrendered,2014-02-04T00:00:00Z
+2014-02-04T00:00:00Z,Salehani,Foad,,,Los Angeles,CA,A 54079,Cease Practice Order Issued,2014-02-04T00:00:00Z
+2014-02-04T00:00:00Z,Sturdivant,Ted,,,McAllen,TX,A 52105,Suspended,2014-02-04T00:00:00Z
+2014-02-04T00:00:00Z,Tuyen,Ngoc,Le,,Fountain Valley,CA,A 37031,Surrendered,2014-02-04T00:00:00Z
+2014-02-04T00:00:00Z,Williams,Dallas,D.,,Milliken,CO,G 20740,Suspended,2014-02-03T00:00:00Z
+2014-02-05T00:00:00Z,Azzawi,Zaher,,,Alta Loma,CA,A 48743,Decision,2014-02-05T00:00:00Z
+2014-02-05T00:00:00Z,Chao,Lawrence,Lotung,,San Francisco,CA,A 55511,Public Reprimand,2014-01-31T00:00:00Z
+2014-02-05T00:00:00Z,Volkova,Irina,,,Schenectady,NY,A 101170,Decision,2014-01-31T00:00:00Z
+2014-02-06T00:00:00Z,Chang,Richard,C.,,Fontana,CA,A 86339,Decision,2014-02-06T00:00:00Z
+2014-02-07T00:00:00Z,Enoki,Nathan,Reh,,Vancouver,WA,A 77096,Public Reprimand,2014-02-07T00:00:00Z
+2014-02-07T00:00:00Z,Hazzan,Samar,,,Northridge,CA,A 73965,Public Reprimand,2014-02-07T00:00:00Z
+2014-02-07T00:00:00Z,Ruiz,Cynthia,Elaine,,Redlands,CA,G 48844,Decision,2014-02-07T00:00:00Z
+2014-02-07T00:00:00Z,Zierold,Dustin,,,Vacaville,CA,A 85833,Decision,2014-02-07T00:00:00Z
+2014-02-10T00:00:00Z,Abrahams,Ariel,Eliahou,,Los Angeles,CA,G 86496,Accusation Filed,2014-01-29T00:00:00Z
+2014-02-10T00:00:00Z,Bradbury,David,Robert,,Roseville,CA,A 60078,Accusation Filed,2014-01-16T00:00:00Z
+2014-02-10T00:00:00Z,Cortina,Pablo,Garza,,Ukiah,CA,G 47561,Accusation & Petitition to Revoke Probation Filed,2014-01-30T00:00:00Z
+2014-02-10T00:00:00Z,Dominguez,Steven,,,Downey,CA,A 48186,First Amended Accusation Filed,2014-01-21T00:00:00Z
+2014-02-10T00:00:00Z,Eisenberg,James,W.,,Los Angeles,CA,G 23834,Accusation Filed,2014-01-21T00:00:00Z
+2014-02-10T00:00:00Z,Flores,Jose,Luis,,Fresno,CA,A 69861,First Amended Accusation Filed,2014-01-28T00:00:00Z
+2014-02-10T00:00:00Z,Freisleben-Cook,Lois,A.,,Williston,ND,G 45968,Accusation Filed,2014-01-28T00:00:00Z
+2014-02-10T00:00:00Z,Jourgensen,David,Ray,,Oakland,CA,G 48141,Accusation Filed,2014-01-21T00:00:00Z
+2014-02-10T00:00:00Z,Hadweh,Youssef,B.,,Chowchilla,CA,G 74536,Accusation Filed,2014-01-29T00:00:00Z
+2014-02-10T00:00:00Z,Heikali,Moosa,,,Los Angeles,CA,A 40559,Petition to Revoke Probation Filed,2014-01-30T00:00:00Z
+2014-02-10T00:00:00Z,Jessop,Carol,Joanne,,Oakland,CA,G 44754,Accusation Filed,2014-01-29T00:00:00Z
+2014-02-10T00:00:00Z,Lai,Michelle,Quynh,,Hattiesburg,MS,A 99890,Accusation Filed,2014-01-29T00:00:00Z
+2014-02-10T00:00:00Z,Lee,Chan,Woo,,South Gate,CA,A 89666,First Amended Accusation Filed,2014-01-30T00:00:00Z
+2014-02-10T00:00:00Z,Light,Mark,Warren,,Paradise,CA,G 32061,Accusation Filed,2014-01-27T00:00:00Z
+2014-02-10T00:00:00Z,Lowe,David,Huei-Chung,,Camarillo,CA,G 24041,Accusation Filed,2014-01-30T00:00:00Z
+2014-02-10T00:00:00Z,Madanahalli,Malini,B.,,Saratoga,CA,A 63947,Accusation Filed,2014-01-31T00:00:00Z
+2014-02-10T00:00:00Z,Phillips,Charles,Roy,,Fresno,CA,G 16783,Accusation Filed,2014-01-24T00:00:00Z
+2014-02-10T00:00:00Z,Seid,Lorilyn,Louise,,San Francisco,CA,A 75441,First Amended Accusation Filed,2014-01-29T00:00:00Z
+2014-02-10T00:00:00Z,Schmit,Gerard,M.,,Walnut Creek,CA,C 26891,Accusation Filed,2014-01-16T00:00:00Z
+2014-02-10T00:00:00Z,Yee,Cary,Ka-Hum,,Riverside,CA,A 39133,Cease Practice Order Issued,2014-02-07T00:00:00Z
+2014-02-12T00:00:00Z,Chiong,Sandra,S.,,San Marino,CA,A 32877,Surrendered,2014-02-12T00:00:00Z
+2014-02-14T00:00:00Z,Chan,Michael,Cheeluen,,Cerritos,CA,G 31114,Revoked,2014-02-14T00:00:00Z
+2014-02-14T00:00:00Z,Datkhaeva,Tatyana,,,Westminster,CO,A 98043,Suspended,2014-02-14T00:00:00Z
+2014-02-14T00:00:00Z,Goldberg,Michael,Jay,,Tarzana,CA,A 25404,Decision,2014-02-14T00:00:00Z
+2014-02-18T00:00:00Z,Hsu,Hwei-Jung,,,San Pablo,CA,A 32019,Surrendered,2014-02-18T00:00:00Z
+2014-02-18T00:00:00Z,Streams,Michael,Louis,,Culver City,CA,C 34005,Suspended,2014-02-13T00:00:00Z
+2014-02-21T00:00:00Z,Knost,Patrick,Michael,,Placerville,CA,G 85499,Revoked,2014-02-20T00:00:00Z
+2014-02-24T00:00:00Z,Lin,Thomas,,,Monterey Park,CA,A 64211,Restrictions,2013-09-27T00:00:00Z
+2014-02-25T00:00:00Z,Ohemeng,Augustus,K.,,Buena Park,CA,A 48589,Suspended,2014-02-25T00:00:00Z
+2014-02-25T00:00:00Z,Schwartz,Irving,Jack,,Yuba City,CA,A 37528,Suspended,2014-02-25T00:00:00Z
+2014-02-26T00:00:00Z,Aldridge,Marianne,,,Yucaipa,CA,A 117382,Revoked,2014-02-26T00:00:00Z
+2014-02-26T00:00:00Z,Annis,Jonathan,,,Carmel,CA,C 51075,Accusation Filed,2014-02-06T00:00:00Z
+2014-02-26T00:00:00Z,Aquitania,Ramoncito,,,San Diego,CA,G 70129,Accusation Filed,2014-02-04T00:00:00Z
+2014-02-26T00:00:00Z,Benjamin,Zan,,,Anaheim Hills,CA,A 54540,Accusation Filed,2014-02-13T00:00:00Z
+2014-02-26T00:00:00Z,Byrd,Jennie,Gail,,Benicia,CA,C 40889,Accusation Filed,2014-02-12T00:00:00Z
+2014-02-26T00:00:00Z,Contreras,Victor,D.,,Santa Paula,CA,G 52723,Accusation Filed,2014-02-11T00:00:00Z
+2014-02-26T00:00:00Z,Fett,David,Richard,,Los Angeles,CA,A 37237,Accusation Filed,2014-02-05T00:00:00Z
+2014-02-26T00:00:00Z,Fleming,William,Kermit,,Playa Vista,CA,A 97279,Decision,2014-02-26T00:00:00Z
+2014-02-26T00:00:00Z,Friedberg,Barry,Lynn,,Newport Beach,CA,G 29706,Accusation Filed,2014-02-03T00:00:00Z
+2014-02-26T00:00:00Z,Friese,Steven,Buckles,,Anchorage,AK,A 85938,Accusation Filed,2014-02-03T00:00:00Z
+2014-02-26T00:00:00Z,Gorey,Roseann,F.,,Stockton,CA,G 37450,First Amended Accusation Filed,2014-01-30T00:00:00Z
+2014-02-26T00:00:00Z,Hauben,Steven,Paul,,Wildomar,CA,A 56326,Accusation Filed,2014-02-12T00:00:00Z
+2014-02-26T00:00:00Z,Lane,Ingvild,Gangsaas,,Folsom,CA,C 53026,Second Amended Accusation Filed,2014-02-10T00:00:00Z
+2014-02-26T00:00:00Z,Michas,Constantine,A.,,Fresno,CA,G 18558,Accusation Filed,2014-02-11T00:00:00Z
+2014-02-26T00:00:00Z,Mohan,Deepak,,,French Camp,CA,A 85611,Accusation Filed,2014-02-13T00:00:00Z
+2014-02-26T00:00:00Z,Newman,Samuel,,,Beverly Hills,CA,A 40847,Accusation Filed,2014-02-07T00:00:00Z
+2014-02-26T00:00:00Z,Onubah,Boniface,O.,,Marina Del Rey,CA,A52415,First Amended Accusation Filed,2014-02-12T00:00:00Z
+2014-02-26T00:00:00Z,Pathi,Rama,Thiru,,Apple Valley,CA,A 42515,Accusation Filed,2014-02-12T00:00:00Z
+2014-02-26T00:00:00Z,Ragain,Kermit,V.,,Gold Hill,OR,A 22085,First Amended Accusation Filed,2014-02-04T00:00:00Z
+2014-02-26T00:00:00Z,Sturdivant,Ted,Shawn,,McAllen,TX,A 52105,Accusation Filed,2014-02-12T00:00:00Z
+2014-02-26T00:00:00Z,Tessier,Deron,Jean,,Fontana,CA,A 99173,Accusation Filed,2014-02-12T00:00:00Z
+2014-02-26T00:00:00Z,Zax,Steven,,,Los Angeles,CA,C 28324,Accusation Filed,2014-02-04T00:00:00Z
+2014-02-27T00:00:00Z,Follette,David,Michael,,Sacramento,CA,A 26120,Surrendered,2014-02-26T00:00:00Z
+2014-02-28T00:00:00Z,Buckley,Robert,Arthur,,Lafayette,CA,G 73194,Decision,2014-02-28T00:00:00Z
+2014-02-28T00:00:00Z,Buckley,Robert,Arthur,,Lafayette,CA,G 73194,Suspended,2014-03-16T00:00:00Z
+2014-02-28T00:00:00Z,Glassman,Jerrold,,,San Diego,CA,G 34309,Public Reprimand,2014-02-28T00:00:00Z
+2014-02-28T00:00:00Z,Marcus,Alan,Ogden,,Laguna Hills,CA,A 39696,Decision,2014-02-28T00:00:00Z
+2014-02-28T00:00:00Z,Nguyen,John,Dung,,Fallbrook,CA,A 109246,Decision,2014-02-28T00:00:00Z
+2014-02-28T00:00:00Z,Ponce,George,A.,,Moreno Valley,CA,A 51194,Decision,2014-02-28T00:00:00Z
+2014-03-04T00:00:00Z,Zulueta,Clemente,V.,,Jackson,KY,A 69569,Surrendered,2014-03-04T00:00:00Z
+2014-03-05T00:00:00Z,Andersen,Jaron,Ross,,Glendale,CA,A 97202,Cease Practice Order Issued,2014-03-05T00:00:00Z
+2014-03-05T00:00:00Z,Balter,Kevin,Scott,,Salt Lake City,UT,G 72952,Accusation Filed,2014-02-19T00:00:00Z
+2014-03-05T00:00:00Z,Char,David,,,Roseville,CA,A 87937,Accusation Filed,2014-02-28T00:00:00Z
+2014-03-05T00:00:00Z,DeGuzman,Magnolia,,,Victorville,CA,A 98689,Accusation Filed,2014-02-28T00:00:00Z
+2014-03-05T00:00:00Z,Goldstein,Arkady,,,Encino,CA,A 47751,Cease Practice Order Issued,2014-03-04T00:00:00Z
+2014-03-05T00:00:00Z,Jutila,George,A.,,Fortuna,CA,A 20189,Accusation Filed,2014-02-28T00:00:00Z
+2014-03-05T00:00:00Z,Lee,Wai,Shat,,Fresno,CA,G 55211,Accusation Filed,2014-02-19T00:00:00Z
+2014-03-05T00:00:00Z,Chi,Peter,Lieh-Chuan,,Tracy,CA,A 53856,Revoked,2014-03-05T00:00:00Z
+2014-03-05T00:00:00Z,Kroupa,Vladimir,P.,,Porterville,CA,A 48466,Accusation Filed,2014-02-21T00:00:00Z
+2014-03-05T00:00:00Z,Rolland,Maria,Socorro,,Bakersfield,CA,A 104227,Accusation Filed,2014-02-27T00:00:00Z
+2014-03-05T00:00:00Z,Stock,Joseph,Vincent,,Chicago,IL,A 91231,Accusation Filed,2014-02-20T00:00:00Z
+2014-03-05T00:00:00Z,Trussler,Andrew,P.,,Austin,TX,A 86306,Accusation Filed,2014-02-19T00:00:00Z
+2014-03-05T00:00:00Z,Zander,Alla,,,Laguna Hills,CA,A 61985,Accusation Filed,2014-02-27T00:00:00Z
+2014-03-07T00:00:00Z,Brown,Kevin,A.,,Inglewood,CA,A 66387,Revoked,2014-03-07T00:00:00Z
+2014-03-07T00:00:00Z,Capra,Jason,,,Hurlburt Field,FL,A 111935,Public Letter of Reprimand,2014-03-03T00:00:00Z
+2014-03-07T00:00:00Z,Madatovian,Vahan,,,Glendale,CA,A 53748,Public Letter of Reprimand,2014-03-04T00:00:00Z
+2014-03-07T00:00:00Z,Ralls,Julie,Robein,,Costa Mesa,CA,G 63700,Decision,2014-03-07T00:00:00Z
+2014-03-07T00:00:00Z,Shertukde,Savita,P.,,Bakersfield,CA,A 86017,Cease Practice Order Issued,2014-03-07T00:00:00Z
+2014-03-10T00:00:00Z,Goodrich,Karen,Elaine,,Sacramento,CA,A 82414,Suspended,2014-03-10T00:00:00Z
+2014-03-11T00:00:00Z,Bonham,Marvin,L.,,Los Gatos,CA,C 38511,Suspended,2014-03-10T00:00:00Z
+2014-03-11T00:00:00Z,Gorey,Roseann,F.,,Stockton,CA,G 37450,Surrendered,2014-03-11T00:00:00Z
+2014-03-11T00:00:00Z,Seid,Lorilyn,Louise,,San Francisco,CA,A 75441,Surrendered,2014-03-11T00:00:00Z
+2014-03-13T00:00:00Z,Shin,Dong-Soo,,,La Mirada,CA,A 37182,Decision,2014-03-13T00:00:00Z
+2014-03-14T00:00:00Z,Aghazadeh-naini,Reza,,,Dunkirk,MD,C 54455,Decision,2014-03-14T00:00:00Z
+2014-03-14T00:00:00Z,Cotsirilos,Peter,John,,El Dorado Hills,CA,G 66322,Decision,2014-03-14T00:00:00Z
+2014-03-14T00:00:00Z,Levinson,Gary,David,,San Diego,CA,A 49820,Decision,2014-03-14T00:00:00Z
+2014-03-14T00:00:00Z,Li,Zizhuang,,,San Diego,CA,A 104536,Decision,2014-03-14T00:00:00Z
+2014-03-17T00:00:00Z,Eisenkop,Scott,,,Sherman Oaks,CA,G 41053,Restrictions,2014-03-07T00:00:00Z
+2014-03-18T00:00:00Z,Allgood,Norma,Lynne,,Eagle River,AK,G 68888,Public Letter of Reprimand,2014-03-10T00:00:00Z
+2014-03-18T00:00:00Z,Aghazarian,Sarkis,G.,,Baltimore,MD,A 40572,Surrendered,2014-03-18T00:00:00Z
+2014-03-18T00:00:00Z,Newman,Samuel,,,Beverly Hills,CA,A 40847,Surrendered,2014-03-18T00:00:00Z
+2014-03-19T00:00:00Z,Ziegler,Ross,Elliot,,Palo Alto,CA,G 40394,Surrendered,2014-03-18T00:00:00Z
+2014-03-20T00:00:00Z,Ali,Waqas,,,Tremont,IL,C 55857,Suspended,2014-03-19T00:00:00Z
+2014-03-20T00:00:00Z,Giri,Yashwant,B.,,Cypress,CA,C 51755,Revoked,2014-03-19T00:00:00Z
+2014-03-20T00:00:00Z,Trauba,Thomas,K.,,Salt Lake City,UT,G 66615,Suspended,2014-03-19T00:00:00Z
+2014-03-21T00:00:00Z,Camasura,Octavio,D.,,Lincoln,CA,A 30174,Decision,2014-03-21T00:00:00Z
+2014-03-21T00:00:00Z,El-Roeiy,Albert,,,Media,PA,A 46042,Accusation Filed,2014-03-10T00:00:00Z
+2014-03-21T00:00:00Z,Fischel,Alan,J.,,Eureka,CA,G 83137,Accusation Filed,2014-03-06T00:00:00Z
+2014-03-21T00:00:00Z,Fouladi,Ali,,,Newport Beach,CA,A 38712,First Amended Accusation & Petition to Revoke Probation Filed,2014-03-07T00:00:00Z
+2014-03-21T00:00:00Z,Hodge,Natalie,A.,,Paducah,KY,C 53720,Revoked,2014-03-21T00:00:00Z
+2014-03-21T00:00:00Z,Kalicinsky,Ihor,Borys,,Visalia,CA,C 43289,Accusation Filed,2014-03-11T00:00:00Z
+2014-03-21T00:00:00Z,Kim,Junuk,,,Los Angeles,CA,A 104415,Accusation Filed,2014-03-06T00:00:00Z
+2014-03-21T00:00:00Z,Lin,Thomas,H.T.,,Monterey Park,CA,A 64211,Accusation Filed,2014-03-06T00:00:00Z
+2014-03-21T00:00:00Z,Markman,Robert,S.,,Northridge,CA,G 27953,Accusation Filed,2014-03-05T00:00:00Z
+2014-03-21T00:00:00Z,Petraglia,John,Francis,,Newport Beach,CA,G 68169,Accusation Filed,2014-03-13T00:00:00Z
+2014-03-21T00:00:00Z,Pezeshki,Kevin,,,Panorama City,CA,A 67148,Revoked,2014-03-21T00:00:00Z
+2014-03-21T00:00:00Z,Shankar,Prithvi,N.,,Modesto,CA,A 92177,Amended Accusation Filed,2014-03-12T00:00:00Z
+2014-03-21T00:00:00Z,Shenassa,David,,,Weston,FL,A 102331,Accusation Filed,2014-03-05T00:00:00Z
+2014-03-21T00:00:00Z,Syed,Hozair,M.,,Anaheim,CA,A 111058,Decision,2014-03-21T00:00:00Z
+2014-03-21T00:00:00Z,Vu,Van, Huy,,Huntington Beach,CA,G 71968,First Amended Accusation Filed,2014-03-14T00:00:00Z
+2014-03-21T00:00:00Z,Williams,Dallas,D.,,Milliken,CO,G 20740,Accusation Filed,2014-03-05T00:00:00Z
+2014-03-25T00:00:00Z,Bienenstock,Bruce,,,Mountain View,CA,G 31836,Surrendered,2014-03-24T00:00:00Z
+2014-03-25T00:00:00Z,Shin,Daniel,,,Los Angeles,CA,G 75155,Suspended,2014-03-25T00:00:00Z
+2014-03-26T00:00:00Z,Choi,Bok,Yull,,Riverside,CA,A 34441,Public Reprimand,2014-03-26T00:00:00Z
+2014-03-27T00:00:00Z,Karns,Adam,David,,Los Angeles,CA,G 74846,Public Reprimand,2014-03-26T00:00:00Z
+2014-03-28T00:00:00Z,Caldwell,Kevin,John,,Crescent City,CA,G 42767,Public Reprimand,2014-03-28T00:00:00Z
+2014-03-28T00:00:00Z,Dawson,Robert,Earl,,Kenner,LA,A 45313,Decision,2014-03-28T00:00:00Z
+2014-03-28T00:00:00Z,Jain,Suprabha,N.,,Walnut Creek,CA,A 67699,Decision,2014-03-28T00:00:00Z
+2014-04-01T00:00:00Z,Wallrath,Richard,,,Bakersfield,CA,C 34437,Surrendered,2014-04-01T00:00:00Z
+2014-04-02T00:00:00Z,Bannach,Michael,C.,,Encinitas,CA,A 60021,Decision,2014-04-02T00:00:00Z
+2014-04-03T00:00:00Z,Light,Mark,Warren,,Paradise,CA,G 32061,Surrendered,2014-04-15T00:00:00Z
+2014-04-04T00:00:00Z,Marchinski,Leonard,J.,,West Reading,PA,G 59432,Suspended,2014-04-03T00:00:00Z
+2014-04-07T00:00:00Z,Goodwin,Glenda,D.,,El Dorado Hills,CA,A 71660,Restrictions,2014-04-03T00:00:00Z
+2014-04-09T00:00:00Z,Choi,Audrey,Hoiyee,,Loma Linda,CA,A 123785,Accusation Filed,2014-03-21T00:00:00Z
+2014-04-09T00:00:00Z,Clopton,James,Kirk,,El Dorado Hills,CA,G 69788,Accusation Filed,2014-03-28T00:00:00Z
+2014-04-09T00:00:00Z,Fisher,Alan,Jeffrey,,Arcadia,CA,G 44121,Second Amended Accusation Filed,2014-03-25T00:00:00Z
+2014-04-09T00:00:00Z,Ghatnekar,Jai,Vinayak,,Joshua Tree,CA,C 42883,Accusation Filed,2014-03-26T00:00:00Z
+2014-04-09T00:00:00Z,Jackson,D.,Anthony,,Inglewood,CA,G 33174,Decision,2014-04-09T00:00:00Z
+2014-04-09T00:00:00Z,Kevess,Robert,M.,,Berkeley,CA,G 57523,Accusation Filed,2014-03-17T00:00:00Z
+2014-04-09T00:00:00Z,Liepmann,Peter,Julian,,Bakersfield,CA,G 89383,Accusation Filed,2014-03-19T00:00:00Z
+2014-04-09T00:00:00Z,Lovelace,Stewart,W.,,Manhattan Beach,CA,C 30263,Petition to Revoke Probation Filed,2014-03-19T00:00:00Z
+2014-04-09T00:00:00Z,Marcus,Gary,Bruce,,Berkeley,CA,C 28611,Second Amended Accusation Filed,2014-03-21T00:00:00Z
+2014-04-09T00:00:00Z,McGroarty,John,J.,,North Hollywood,CA,G 12938,Second Amended Accusation Filed,2014-03-03T00:00:00Z
+2014-04-09T00:00:00Z,Nguyen,Hai,Van,,Oakland,CA,A 44145,Accusation Filed,2014-03-20T00:00:00Z
+2014-04-09T00:00:00Z,Patel,Jayesh,Jagubhai,,Fairfield,CA,A 72056,Accusation Filed,2014-03-25T00:00:00Z
+2014-04-09T00:00:00Z,Rubens,Lawrence,Michael,,Westerville,OH,G 29896,Accusation Filed,2014-03-18T00:00:00Z
+2014-04-10T00:00:00Z,Tabriz,A.,Reza Nassehzadeh,,Fremont,CA,A 72923,Revoked,2014-04-10T00:00:00Z
+2014-04-10T00:00:00Z,Tom,William,Chun-Yeung,,Carmel,CA,G 77995,Accusation Filed,2014-03-18T00:00:00Z
+2014-04-10T00:00:00Z,Williams,Sam,,Jr.,San Diego,CA,C 24782,First Amended Accusation Filed,2014-03-19T00:00:00Z
+2014-04-10T00:00:00Z,Wright,David,Craig,,Pacific Grove,CA,G 88577,Accusation Filed,2014-03-19T00:00:00Z
+2014-04-11T00:00:00Z,Jain,Suprabha,N.,,Walnut Creek,CA,A 67699,Decision,2014-04-07T00:00:00Z
+2014-04-11T00:00:00Z,Hopkins,Milan,Lewis,,Upper Lake,CA,C 34406,Decision,2014-04-11T00:00:00Z
+2014-04-11T00:00:00Z,Speller,Cristal,Dawn,,Glendale,CA,A 62390,Decision,2014-04-11T00:00:00Z
+2014-04-14T00:00:00Z,Gerson,Samuel,Jeffrey,,La Jolla,CA,A 116916,Cease Practice Order Issued,2014-04-11T00:00:00Z
+2014-04-14T00:00:00Z,Guess,Edgar,A.,,Beverly Hills,CA,C 29354,Surrendered,2014-04-14T00:00:00Z
+2014-04-16T00:00:00Z,Flores,Jose,Luis,,Fresno,CA,A 69861,Surrendered,2014-04-16T00:00:00Z
+2014-04-16T00:00:00Z,Montenegro,Carlos,Humberto,,Pasadena,CA,A 48811,Decision,2014-04-16T00:00:00Z
+2014-04-16T00:00:00Z,Ter-Zakarian,Hovanes,J.,,Hollywood,CA,A 45597,Public Reprimand,2014-04-16T00:00:00Z
+2014-04-16T00:00:00Z,Vo,Nhat,Cong,,North Hills,CA,A 60568,Decision,2014-04-16T00:00:00Z
+2014-04-17T00:00:00Z,Carter,Enrique,Delano,,Pasco,WA,G 29154,Surrendered,2014-04-17T00:00:00Z
+2014-04-17T00:00:00Z,Le Chabrier,Lana,,,Sacramento,CA,A 90040,Revoked,2014-04-17T00:00:00Z
+2014-04-17T00:00:00Z,Nation,Roman,Michael,,Lynn Haven,FL,A 93829,Decision,2014-04-17T00:00:00Z
+2014-04-18T00:00:00Z,Clements,Todd,Michael,,Jonesboro,AR,A 94598,Revoked,2014-04-22T00:00:00Z
+2014-04-18T00:00:00Z,Huang,Alan,Wen,,Dublin,CA,A 111806,Restrictions,2014-04-22T00:00:00Z
+2014-04-21T00:00:00Z,Ghebe,Waddah,H.,,Oceanside,CA,C 53321,Suspended,2014-04-21T00:00:00Z
+2014-04-22T00:00:00Z,Abad-Santos,Criselda,Calayan,,Beverly Hills,CA,A 105195,Petition to Revoke Probation Filed,2014-04-10T00:00:00Z
+2014-04-22T00:00:00Z,Akmakjian,Jack,H.,,Riverside,CA,G 62470,Accusation Filed,2014-04-14T00:00:00Z
+2014-04-22T00:00:00Z,Azar-Farr,Shaaban,,,Granada Hills,CA,A 32840,Petition to Revoke Probation Filed,2014-04-09T00:00:00Z
+2014-04-22T00:00:00Z,Brown,Howard,Richard,,Fuquay Varina,NC,G 68644,Accusation Filed,2014-04-02T00:00:00Z
+2014-04-22T00:00:00Z,Callis,Gilbert,D.,,North Hollywood,CA,C 24147,Accusation Withdrawn,2014-04-14T00:00:00Z
+2014-04-22T00:00:00Z,Chang,Candace,Shiao-Rong,,Riverside,CA,A 62000,Accusation & Petitition to Revoke Probation Filed,2014-04-03T00:00:00Z
+2014-04-22T00:00:00Z,Childers,Ben,Jason,,Riverside,CA,G 76953,Accusation Filed,2014-04-11T00:00:00Z
+2014-04-22T00:00:00Z,DeJesus,Violeta,Moyer,,Anaheim,CA,A 48057,Accusation Filed,2014-04-04T00:00:00Z
+2014-04-22T00:00:00Z,Finkleman,Lowell,Craig,,Gig Harbor,WA,G 48223,Accusation Filed,2014-04-02T00:00:00Z
+2014-04-22T00:00:00Z,Gutner,Kim,A.,,Del Mar,CA,G 59083,Accusation Filed,2014-04-08T00:00:00Z
+2014-04-22T00:00:00Z,Hale,Maurice,Jeffrey,,Glendale,CA,G 84687,First Amended Accusation Filed,2014-04-01T00:00:00Z
+2014-04-22T00:00:00Z,Kurian,Leonard,Sunil,,Lancaster,CA,G 70489,First Amended Accusation Filed,2014-04-08T00:00:00Z
+2014-04-22T00:00:00Z,Madrid,Cecelia,Theresa,,Burbank,CA,G 48480,Petition to Revoke Probation Filed,2014-04-08T00:00:00Z
+2014-04-22T00:00:00Z,Martin,Donald,C.,,Sonoma,CA,C 18453,Accusation Withdrawn,2014-04-02T00:00:00Z
+2014-04-22T00:00:00Z,Nielsen,Eric,Jon,,Sacramento,CA,G 66218,Accusation Filed,2014-04-07T00:00:00Z
+2014-04-22T00:00:00Z,Ohemeng,Augustus,Kwadwo Atta,,Buena Park,CA,A 48589,Accusation Filed,2014-04-07T00:00:00Z
+2014-04-22T00:00:00Z,O'Laughlin,Thomas,James,,Fresno,CA,G 71958,Accusation Filed,2014-04-09T00:00:00Z
+2014-04-22T00:00:00Z,Randhawa,Rajinder,Singh,,Antelope,CA,C 50081,Accusation Filed,2014-04-02T00:00:00Z
+2014-04-22T00:00:00Z,Seshi,Beerelli,,,La Jolla,CA,A 79526,Accusation Filed,2014-04-10T00:00:00Z
+2014-04-22T00:00:00Z,Stubblefield,Matthew,Sinclair,,Palo Alto,CA,G 72442,Accusation Filed,2014-04-10T00:00:00Z
+2014-04-22T00:00:00Z,Vajanaphanich,Mana,,,Roseville,CA,A 62727,Accusation Withdrawn,2014-04-07T00:00:00Z
+2014-04-22T00:00:00Z,Walters,Daniel,Glywn Walters,,Palm Springs,CA,G 39049,Accusation Filed,2014-04-02T00:00:00Z
+2014-04-22T00:00:00Z,Williams,Daniel,Atherton,,Greenville,CA,G 37614,Accusation & Petitition to Revoke Probation Filed,2014-04-11T00:00:00Z
+2014-04-22T00:00:00Z,Winick,Jeffrey,Philip,,Fresno,CA,G 46812,Accusation Filed,2014-04-11T00:00:00Z
+2014-04-22T00:00:00Z,Yee,Cary,Ka-Hum,,Riverside,CA,A 39133,Petition to Revoke Probation Filed,2014-04-08T00:00:00Z
+2014-04-23T00:00:00Z,Rochfort,Gregory,Jean,,Hubert,NC,A 89614,Public Letter of Reprimand,2014-04-23T00:00:00Z
+2014-04-24T00:00:00Z,Dunson,Teddrick,Lovell,,West Sacramento,CA,A 100414,Public Letter of Reprimand,2014-04-22T00:00:00Z
+2014-04-24T00:00:00Z,Ganji,Srinivas,Stalin,,Covington,LA,A 38463,Public Letter of Reprimand,2014-04-22T00:00:00Z
+2014-04-24T00:00:00Z,Herbst,Mark,D.,,Los Angeles,CA,G 59419,Decision,2014-04-24T00:00:00Z
+2014-04-24T00:00:00Z,Herling,John,Joseph,,La Quinta,CA,A 45233,Public Letter of Reprimand,2014-04-24T00:00:00Z
+2014-04-25T00:00:00Z,Chao,David,Jee Wei,,San Diego,CA,G 78677,Decision,2014-04-25T00:00:00Z
+2014-04-25T00:00:00Z,Dang,Surinder,,,Fountain Valley,CA,A 24948,Decision,2014-04-25T00:00:00Z
+2014-04-25T00:00:00Z,Zikria,Gul,Ahmed,,Milpitas,CA,G 54355,Decision,2014-04-25T00:00:00Z
+2014-04-28T00:00:00Z,Galleno,Maya,L.,,Bronx,NY,A 90269,Automatic Cancellation Order,2014-04-25T00:00:00Z
+2014-04-28T00:00:00Z,Hook,Robert,Lee,Jr.,Auburn,CA,C 22610,Surrendered,2014-04-28T00:00:00Z
+2014-04-29T00:00:00Z,Byrd,Jennie,Gail,,Benicia,CA,C 40889,Suspended,2014-04-29T00:00:00Z
+2014-05-01T00:00:00Z,Schmit,Gerard,M.,,Walnut Creek,CA,C 26891,Surrendered,2014-05-01T00:00:00Z
+2014-05-01T00:00:00Z,Shrier,Peter,Reuben,,Sherman Oaks,CA,G 86871,Decision,2014-05-01T00:00:00Z
+2014-05-02T00:00:00Z,Ghosh,Kris,,,San Marcos,CA,G 80421,Public Letter of Reprimand,2014-04-29T00:00:00Z
+2014-05-06T00:00:00Z,Chiarottino,Michael,,,San Rafael,CA,G 39528,Suspended,2014-05-05T00:00:00Z
+2014-05-07T00:00:00Z,Zazzi,Adrienne,Marie,,Downey,CA,G 49699,Public Letter of Reprimand,2014-04-30T00:00:00Z
+2014-05-08T00:00:00Z,Alegria,Rudolpho,Jaramillo,,Indio,CA,A 37049,Second Amended Accusation Filed,2014-04-29T00:00:00Z
+2014-05-08T00:00:00Z,Ali,Waqas,,,Tremont,IL,C 55857,Accusation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Anderson,Daniel,Dean,,San Diego,CA,G 64471,Accusation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Basco,Michael,Angelo,,Washington,DC,G 88898,First Amended Accusation Filed,2014-04-23T00:00:00Z
+2014-05-08T00:00:00Z,Bascoy,Louis,T.,,Los Angeles,CA,A 29037,Accusation Filed,2014-04-24T00:00:00Z
+2014-05-08T00:00:00Z,Burlacoff,Susan,Gayle,,Toronto,Ontario,A 54033,First Amended Accusation Filed,2014-04-24T00:00:00Z
+2014-05-08T00:00:00Z,Calma,Jacques,Michael,,Alameda,CA,G 33179,Accusation Filed,2014-04-28T00:00:00Z
+2014-05-08T00:00:00Z,Chang,Helen,Yuk Yu,,San Diego,CA,G 34578,Accusation Filed,2014-04-23T00:00:00Z
+2014-05-08T00:00:00Z,Christensen,David,Ged,,San Luis Obispo,CA,G 81578,Accusation Filed,2014-04-24T00:00:00Z
+2014-05-08T00:00:00Z,Davis,Scott,Mitchell,,Bangor,ME,G 75950,Accusation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Fisher,Stephen,Neal,,Pittsburgh,PA,G 54042,Surrendered,2014-04-28T00:00:00Z
+2014-05-08T00:00:00Z,Gerber,Bret,Robert,,San Diego,CA,G 79213,Accusation Filed,2014-04-24T00:00:00Z
+2014-05-08T00:00:00Z,Gerson,Samuel,Jeffrey,,La Jolla,CA,A 116916,Accusation & Petitition to Revoke Probation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Hess,Jason,R.,,San Diego,CA,A 104343,Accusation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Horiagon,Thomas,M.,,Highlands Ranch,CO,G 57696,Accusation Filed,2014-04-24T00:00:00Z
+2014-05-08T00:00:00Z,Jodhani,Madhu,,,Yuba City,CA,A 50459,Accusation Filed,2014-04-29T00:00:00Z
+2014-05-08T00:00:00Z,Knoll,James,Lyle,,Pagosa Springs,CO,C 53409,Accusation Withdrawn,2014-04-24T00:00:00Z
+2014-05-08T00:00:00Z,Koftan,Charles,Eldon,,Englewood,CO,G 71434,Accusation Filed,2014-04-23T00:00:00Z
+2014-05-08T00:00:00Z,Page,Gary,Wayne,,Dana Point,CA,A 67353,Second Amended Accusation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Pero,James,Edward,,Thousand Oaks,CA,G 70281,Accusation Filed,2014-04-21T00:00:00Z
+2014-05-08T00:00:00Z,Rodriguez,Eric,Joseph,,Stow,OH,C 55622,Accusation Filed,2014-04-30T00:00:00Z
+2014-05-08T00:00:00Z,Ruiz,Gonzalo,Flores,,Lamont,CA,G 75692,Accusation Filed,2014-04-23T00:00:00Z
+2014-05-08T00:00:00Z,Salehani,Foad,,,Los Angeles,CA,A 54079,Petition to Revoke Probation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Smith,Barlow,,,Marble Falls,TX,G 35320,Accusation Filed,2014-04-24T00:00:00Z
+2014-05-08T00:00:00Z,Smith,Dean,P.,,Chico,CA,A 20785,Accusation Filed,2014-04-22T00:00:00Z
+2014-05-08T00:00:00Z,Trauba,Thomas,Kent,,Salt Lake City,UT,G 66615,Accusation Filed,2014-04-22T00:00:00Z
+2014-05-12T00:00:00Z,Bowen,David,,,Palm Desert,CA,A 60193,Decision,2014-05-09T00:00:00Z
+2014-05-12T00:00:00Z,Le,Jacqueline,Kim,,Palm Springs,CA,A 98827,Public Letter of Reprimand,2014-05-08T00:00:00Z
+2014-05-12T00:00:00Z,Lifson,Robert,I.,,Beverly Hills,CA,G 45355,Decision,2014-05-08T00:00:00Z
+2014-05-14T00:00:00Z,Shamaan,Ihsan,Najib,,Bell,CA,A 36951,Public Letter of Reprimand,2014-05-12T00:00:00Z
+2014-05-14T00:00:00Z,Weinstein,Wilfred,Max,,Los Angeles,CA,A 31553,Surrendered,2014-05-12T00:00:00Z
+2014-05-15T00:00:00Z,Babu,Narayanappa,S.,,Chicago,IL,A 105876,Suspended,2014-05-14T00:00:00Z
+2014-05-15T00:00:00Z,Thatipelli,Mallik,Rao,,Bakersfield,CA,C 53592,Decision,2014-05-15T00:00:00Z
+2014-05-19T00:00:00Z,Work,William,Ralph,,Fresno,CA,A 66593,Cease Practice Order Issued,2014-05-16T00:00:00Z
+2014-05-20T00:00:00Z,Inan,Zabrin,,,Chicago,IL,C 54308,Surrendered,2014-05-20T00:00:00Z
+2014-05-20T00:00:00Z,Irvine,William,J.,,Marysville,CA,A 45025,Surrendered,2014-05-20T00:00:00Z
+2014-05-23T00:00:00Z,Ananeh-Firempong,Owusu,,,Beverly Hills,CA,G 42397,Suspended,2014-05-22T00:00:00Z
+2014-05-23T00:00:00Z,Lai,Michelle,Quynh Chi,,Hattiesburg,MS,A 99890,Revoked,2014-05-23T00:00:00Z
+2014-05-23T00:00:00Z,Soliman,Mikhayl,S.,,Wayne,MI,C 54595,Suspended,2014-05-22T00:00:00Z
+2014-05-27T00:00:00Z,Aaron,Deborah,Lyn,,Scottsdale,AZ,G 70081,Surrendered,2014-05-22T00:00:00Z
+2014-05-29T00:00:00Z,Polk,Daniel,Henry,,Palos Park,IL,G 46125,Revoked,2014-05-29T00:00:00Z
+2014-05-30T00:00:00Z,Allen,David,Bruce,,Sacramento,CA,C 53466,Decision,2014-05-30T00:00:00Z
+2014-05-30T00:00:00Z,Hossain,Mohammad,Moazzam,,Redlands,CA,A 34101,Decision,2014-05-30T00:00:00Z
+2014-06-04T00:00:00Z,Berger,Michael,Dean,,Fallbrook,CA,G 21264,Revoked,2014-05-26T00:00:00Z
+2014-06-04T00:00:00Z,Capizzi,Martha,B.,,San Diego,CA,A 34221,Surrendered,2014-06-03T00:00:00Z
+2014-06-04T00:00:00Z,Eisenberg,James,W.,,Woodland Hills,CA,G 23834,Revoked,2014-06-04T00:00:00Z
+2014-06-04T00:00:00Z,Imani,Manouchehr,,,Upland,CA,A 54892,Surrendered,2014-05-29T00:00:00Z
+2014-06-04T00:00:00Z,Lin,Thomas,H.T.,,Monterey Park,CA,A 64211,Restrictions,2014-05-30T00:00:00Z
+2014-06-04T00:00:00Z,Park,Gyoung,Jae,,Tustin,CA,C 52205,Public Letter of Reprimand,2014-05-27T00:00:00Z
+2014-06-04T00:00:00Z,Pirouzian,Amir,,,Walnut Creek,CA,A 60792,Revoked,2014-05-23T00:00:00Z
+2014-06-06T00:00:00Z,Anastassiou,Peter,Thomas,,San Francisco,CA,A 43203,Public Reprimand,2014-06-06T00:00:00Z
+2014-06-06T00:00:00Z,Arenas,Jesse,Penunuri,,La Puente,CA,G 37465,Decision,2014-06-06T00:00:00Z
+2014-06-06T00:00:00Z,Danque,Flora,Ishihara,,La Mesa,CA,A 62874,Decision,2014-06-06T00:00:00Z
+2014-06-09T00:00:00Z,Abadir,Maher,Nashed,,Modesto,CA,A 24538,Petition to Revoke Probation Filed,2014-05-19T00:00:00Z
+2014-06-09T00:00:00Z,Andersen,Jaron,Ross,,Glendale,CA,A 97202,Accusation & Petitition to Revoke Probation Filed,2014-05-23T00:00:00Z
+2014-06-09T00:00:00Z,Annabel,Roger,Gerard,,Chino Hills,CA,A 53036,Petition to Revoke Probation Filed,2014-05-02T00:00:00Z
+2014-06-09T00:00:00Z,Barry,Michelle,Sharon,,San Francisco,CA,G 85355,Accusation Filed,2014-05-28T00:00:00Z
+2014-06-09T00:00:00Z,Candelaria,Yessennia,,,Rocklin,CA,C 52575,First Amended Accusation Filed,2014-05-19T00:00:00Z
+2014-06-09T00:00:00Z,Canga,Cynthia,Rose C.,,Bountiful,UT,A 72274,Accusation Filed,2014-05-30T00:00:00Z
+2014-06-09T00:00:00Z,Charlap,Robert,Steven,,Studio City,CA,G 85076,Accusation Filed,2014-05-14T00:00:00Z
+2014-06-09T00:00:00Z,Chavin,Michael,Alan,,Morristown,TN,G 59872,Decision,2014-06-06T00:00:00Z
+2014-06-09T00:00:00Z,Chiarottino,Michael,Roger,,San Rafael,CA,G 39528,Accusation Filed,2014-05-27T00:00:00Z
+2014-06-09T00:00:00Z,Clark,Dennis,Larry,,Long Beach,CA,G 25400,Decision,2014-06-08T00:00:00Z
+2014-06-09T00:00:00Z,Conley,Gene,Raymond,,Fresno,CA,G 40586,Accusation Filed,2014-05-22T00:00:00Z
+2014-06-09T00:00:00Z,Cotsen,Thomas,Adam,,Los Angeles,CA,G 79392,First Amended Accusation Filed,2014-05-29T00:00:00Z
+2014-06-09T00:00:00Z,Cox,Brent,Taylor,,Mill Valley,CA,G 34595,First Amended Accusation Filed,2014-05-19T00:00:00Z
+2014-06-09T00:00:00Z,Dauphin-Baptiste,Roseline,,,Glendale,CA,G 55469,Accusation Filed,2014-05-13T00:00:00Z
+2014-06-09T00:00:00Z,Jong,Ann,De,,New Richmond,WI,A 118790,Accusation Filed,2014-05-22T00:00:00Z
+2014-06-09T00:00:00Z,DeSanto,Joseph,Anthony,,Laguna Niguel,CA,G 81151,Accusation Filed,2014-05-05T00:00:00Z
+2014-06-09T00:00:00Z,Dumas,Frederick,Joseph,,Mendocino,CA,A 32054,Accusation Filed,2014-05-29T00:00:00Z
+2014-06-09T00:00:00Z,Ekelem,Ifeatu,E.,,Fresno,CA,A 43177,First Amended Accusation Filed,2014-05-09T00:00:00Z
+2014-06-09T00:00:00Z,Fioravanti,Bernard,Louis,,Okay,OK,G 86451,Accusation Filed,2014-05-22T00:00:00Z
+2014-06-09T00:00:00Z,Khamishon,Ilya,,,Folsom,CA,A 54344,Accusation Filed,2014-05-21T00:00:00Z
+2014-06-09T00:00:00Z,McQuade,Mary,Virginia,,Carmel,CA,G 59938,Accusation Filed,2014-05-29T00:00:00Z
+2014-06-09T00:00:00Z,Mangoba,Luther,Bien,,Riverside,CA,A 77574,Accusation Filed,2014-05-22T00:00:00Z
+2014-06-09T00:00:00Z,Marchinski,Leonard,J.,,West Reading,PA,G 59432,Accusation Filed,2014-05-23T00:00:00Z
+2014-06-09T00:00:00Z,Mecum,Robert,Andrew,,Whittier,CA,G 78258,Accusation Filed,2014-05-13T00:00:00Z
+2014-06-09T00:00:00Z,Mercene,Ovid,Principe,,Los Angeles,CA,A 42224,Accusation Filed,2014-05-09T00:00:00Z
+2014-06-09T00:00:00Z,Murphy,James,Thomas,,Baraboo,WI,G 89033,Accusation Filed,2014-05-09T00:00:00Z
+2014-06-09T00:00:00Z,Nevins,James,Phillip,,Temecula,CA,A 26710,First Amended Accusation Filed,2014-05-23T00:00:00Z
+2014-06-09T00:00:00Z,Rutherford,Keino,Andre,,Downey,CA,A 80432,First Amended Accusation Filed,2014-05-23T00:00:00Z
+2014-06-09T00:00:00Z,Sajedi,Ebrahim,,,Culver City,CA,A 62264,Accusation Filed,2014-05-19T00:00:00Z
+2014-06-09T00:00:00Z,Schaffner,Daniel,L.,,Coarsegold,CA,G 57725,Accusation Filed,2014-05-13T00:00:00Z
+2014-06-09T00:00:00Z,Seshi,Beerelli,,,La Jolla,CA,A 79526,First Amended Accusation Filed,2014-05-29T00:00:00Z
+2014-06-09T00:00:00Z,Shertukde,Savita,P.,,Bakersfield,CA,A 86017,Petition to Revoke Probation Filed,2014-05-02T00:00:00Z
+2014-06-09T00:00:00Z,Tuck,Michael,L.,,Northridge,CA,G 12700,Accusation Filed,2014-05-13T00:00:00Z
+2014-06-09T00:00:00Z,Uy,Lolita,Montolo,,New York,NY,A 50275,Accusation Filed,2014-05-28T00:00:00Z
+2014-06-09T00:00:00Z,Williams,Jeffery,Allen,,Spokane,WA,C 53954,Accusation Filed,2014-05-27T00:00:00Z
+2014-06-09T00:00:00Z,Xiong,Shiquan,,,Bakersfield,CA,A 102651,Accusation Filed,2014-05-15T00:00:00Z
+2014-06-09T00:00:00Z,Zormeier,Michele,Marie,,Healdsburg,CA,A 76795,Accusation Filed,2014-05-08T00:00:00Z
+2014-06-11T00:00:00Z,Cluff,Robert,Stephen,,Antioch,CA,G 80592,Public Reprimand,2014-06-11T00:00:00Z
+2014-06-11T00:00:00Z,Mercene,Ovid,Principe,,Los Angeles,CA,A 42224,Surrendered,2014-06-11T00:00:00Z
+2014-06-11T00:00:00Z,Pyle,Larry,Richard,,Redding,CA,A 37880,Decision,2014-06-11T00:00:00Z
+2014-06-12T00:00:00Z,Dominguez,Steven,,,Downey,CA,A 48186,Decision,2014-06-12T00:00:00Z
+2014-06-12T00:00:00Z,Garabet,Antoine,Leon,,Glendora,CA,G 50394,Decision,2014-06-12T00:00:00Z
+2014-06-12T00:00:00Z,Kassabian,Armen,A.,,Burbank,CA,A 96289,Decision,2014-06-12T00:00:00Z
+2014-06-12T00:00:00Z,Lynn,Philip,Anthony Raphel,,Garden Grove,CA,G 66511,Decision,2014-06-12T00:00:00Z
+2014-06-12T00:00:00Z,Swan,Brian,Michael,,Costa Mesa,CA,A 88378,Decision,2014-06-12T00:00:00Z
+2014-06-12T00:00:00Z,Williams,John,Gavin,,Moreno Valley,CA,C 38680,Decision,2014-06-12T00:00:00Z
+2014-06-13T00:00:00Z,Nylund,Barbara,Lynne,,Las Vegas,NM,G 35980,Surrendered,2014-06-13T00:00:00Z
+2014-06-16T00:00:00Z,Bonner,Ernest,Lincoln,Jr.,Alameda,CA,A 30477,Petition to Revoke Probation Filed,2014-06-09T00:00:00Z
+2014-06-16T00:00:00Z,Dreibelbis,Charles,Leroy,,Rochester,NH,C 55040,Accusation Filed,2014-06-10T00:00:00Z
+2014-06-16T00:00:00Z,Farrar,Charles,W.,,San Francisco,CA,C 23581,Accusation Filed,2014-06-04T00:00:00Z
+2014-06-16T00:00:00Z,Ganal,Besosie,Malvar,,San Jose,CA,A 31358,Accusation Filed,2014-06-05T00:00:00Z
+2014-06-16T00:00:00Z,Resnecksannes,Larry,David,,Scotts Valley,CA,G 25952,Accusation Filed,2014-06-05T00:00:00Z
+2014-06-16T00:00:00Z,Panjabi,Ravi,Sham,,Castro Valley,CA,A 55600,Accusation Filed,2014-06-09T00:00:00Z
+2014-06-16T00:00:00Z,Pyne,Cuthbert,Weston,,Los Angeles,CA,A 29958,Accusation Filed,2014-06-09T00:00:00Z
+2014-06-16T00:00:00Z,Smith,John,Philip,,Chico,CA,G 35007,Accusation Filed,2014-06-04T00:00:00Z
+2014-06-16T00:00:00Z,Van Meurs,Dirk,Hendrik,,Albany,CA,G 40574,Accusation & Petitition to Revoke Probation Filed,2014-06-13T00:00:00Z
+2014-06-16T00:00:00Z,Vergara,Felix,Antonio,,Antioch,CA,A 74444,Accusation Filed,2014-06-04T00:00:00Z
+2014-06-17T00:00:00Z,Armstrong,John,Thomas,,Napa,CA,C 37899,Decision,2014-06-16T00:00:00Z
+2014-06-17T00:00:00Z,Canty,Timothy,G.,,La Jolla,CA,G 14418,Surrendered,2014-06-17T00:00:00Z
+2014-06-17T00:00:00Z,Huang,Alan,Wen,,Dublin,CA,A 111806,Suspended,2014-06-17T00:00:00Z
+2014-06-17T00:00:00Z,Williams,John,Gavin,,Moreno Valley,CA,C 38680,Decision,2014-06-12T00:00:00Z
+2014-06-20T00:00:00Z,Gomez,Reynaldo,O.,,Palm Springs,CA,A 51395,Decision,2014-06-20T00:00:00Z
+2014-06-20T00:00:00Z,Higgins,Stephanie,Ann,,Palo Alto,CA,A 70849,Restrictions,2014-06-18T00:00:00Z
+2014-06-20T00:00:00Z,Schnierow,Bradley,Joh,,La Jolla,CA,A 67780,Suspended,2014-06-20T00:00:00Z
+2014-06-20T00:00:00Z,Venger,Benjamin,Herschel,,Ft. Mohave,AZ,C 50264,Decision,2014-06-20T00:00:00Z
+2014-06-24T00:00:00Z,Smith,Barlow,,,Marble Falls,TX,G 35320,Suspended,2014-06-20T00:00:00Z
+2014-06-25T00:00:00Z,Ragain,Kermit,V.,,Gold Hill,OR,A 22085,Surrendered,2014-06-25T00:00:00Z
+2014-06-26T00:00:00Z,Gilliland,J.,David,,Lakewood,CO,C 42251,Public Letter of Reprimand,2014-06-23T00:00:00Z
+2014-06-27T00:00:00Z,Ando,Dale,Genji,,Walnut Creek,CA,G 50003,Cease Practice Order Issued,2014-06-27T00:00:00Z
+2014-06-27T00:00:00Z,Lovelace,Stewart,W.,,Manhattan Beach,CA,C 30263,Revoked,2014-06-27T00:00:00Z
+2014-06-27T00:00:00Z,Sturdivant,Ted,Shawn,,McAllen,TX,A 52105,Revoked,2014-06-27T00:00:00Z
+2014-06-27T00:00:00Z,Wells,James,Darrick,,Selma,CA,G 78059,Public Reprimand,2014-06-27T00:00:00Z
+2014-06-30T00:00:00Z,Jutila,George,A.,,Fortuna,CA,A 20189,Surrendered,2014-06-30T00:00:00Z
+2014-07-01T00:00:00Z,Babu,Narayanappa,S.,,Chicago,IL,A 105876,Accusation Filed,2014-06-20T00:00:00Z
+2014-07-01T00:00:00Z,Catlett,Steven,Eugene,,Coachella,CA,A 43342,Accusation Filed,2014-06-23T00:00:00Z
+2014-07-01T00:00:00Z,Duer,Adam,Cole,,Roseville,CA,A 92917,Accusation Filed,2014-06-24T00:00:00Z
+2014-07-01T00:00:00Z,Dureza,Renan,Jayme,,Baltimore,MD,C 51663,Accusation Filed,2014-06-18T00:00:00Z
+2014-07-01T00:00:00Z,Gandhi,Anil,Krishakumar,,Cerritos,CA,A 30411,Accusation Filed,2014-06-24T00:00:00Z
+2014-07-01T00:00:00Z,Ghebe,Waddah,H.,,Oceanside,CA,C 53321,Accusation Filed,2014-06-23T00:00:00Z
+2014-07-01T00:00:00Z,Groth,Stephen,John,,Laguna Beach,CA,G 36991,Accusation Filed,2014-06-24T00:00:00Z
+2014-07-01T00:00:00Z,Higgins,Stephanie,Ann,,Palo Alto,CA,A 70849,Accusation Filed,2014-06-23T00:00:00Z
+2014-07-01T00:00:00Z,Mora,Lawrence,Anthony,,Los Angeles,CA,A 71399,Accusation Filed,2014-06-17T00:00:00Z
+2014-07-01T00:00:00Z,Rodriguez,Elias,S.,,Watsonville,CA,G 77669,Accusation Filed,2014-06-13T00:00:00Z
+2014-07-01T00:00:00Z,Ruminson,Ronald,Ray,,Dinuba,CA,A 44627,Accusation Filed,2014-06-27T00:00:00Z
+2014-07-01T00:00:00Z,Smith,John,Philip,,Chico,CA,G 35007,Surrendered,2014-07-01T00:00:00Z
+2014-07-01T00:00:00Z,Soliman,Mikhayl,S.,,Wayne,MI,C 54595,Accusation Filed,2014-06-18T00:00:00Z
+2014-07-01T00:00:00Z,Truong,Huy,Cong,,Corona,CA,G 80704,Accusation Filed,2014-06-25T00:00:00Z
+2014-07-01T00:00:00Z,Van Meurs,Dirk,Hendrik,,Albany,CA,G 40574,Accusation & Petitition to Revoke Probation Filed,2014-06-13T00:00:00Z
+2014-07-01T00:00:00Z,Vapnek,Evan,Michael,,San Diego,CA,G 75357,Accusation Filed,2014-06-25T00:00:00Z
+2014-07-01T00:00:00Z,Wynkoop,Walker,,,Sioux City,ND,G 87898,Accusation Filed,2014-06-17T00:00:00Z
+2014-07-01T00:00:00Z,Yee,Alvin,Ming-Czech,,Irvine,CA,A 60570,Accusation Filed,2014-06-20T00:00:00Z
+2014-07-03T00:00:00Z,Bernstein,Louis,David,,Redding,CA,G 22023,Decision,2014-07-03T00:00:00Z
+2014-07-03T00:00:00Z,Hopper,Jennifer,Louise,,Sacramento,CA,A 72295,Decision,2014-07-03T00:00:00Z
+2014-07-03T00:00:00Z,Paul,Peter,Conrad,,Riverside,CA,A 40030,Decision,2014-07-03T00:00:00Z
+2014-07-03T00:00:00Z,Tardelli,George,Peter,,La Crescenta,CA,G 43528,Cancelled,2014-06-30T00:00:00Z
+2014-07-03T00:00:00Z,Torres-Cifuentes,Gustavo,Adolfo,,Montebello,CA,A 70962,Decision,2014-07-03T00:00:00Z
+2014-07-08T00:00:00Z,Nugent,Luis,Philip,,Whittier,CA,G 47906,Cease Practice Order Issued,2014-07-07T00:00:00Z
+2014-07-09T00:00:00Z,Limansky,Raymond,Pierre,,Denver,CO,A 32735,Cancelled,2014-06-30T00:00:00Z
+2014-07-10T00:00:00Z,Kim,Steven,Sukho,,Sunnyvale,CA,G 69347,Decision,2014-07-10T00:00:00Z
+2014-07-11T00:00:00Z,Blikian,Anahit,H.,,Los Angeles,CA,A 39608,Decision,2014-07-11T00:00:00Z
+2014-07-11T00:00:00Z,Goryl,Gerard,,,Redondo Beach,CA,A 42265,Restrictions,2014-07-10T00:00:00Z
+2014-07-11T00:00:00Z,Keshishian,Ara,,,Glendale,CA,A 55904,Decision,2014-07-11T00:00:00Z
+2014-07-14T00:00:00Z,Jourgensen,David,Ray,,Oakland,CA,G 48141,Public Reprimand,2014-07-13T00:00:00Z
+2014-07-14T00:00:00Z,Bar-Din,Dorit,,,Orinda,CA,G 50349,Surrendered,2014-07-14T00:00:00Z
+2014-07-16T00:00:00Z,Lifschutz,Harry,,,Indio,CA,G 42802,Decision,2014-07-11T00:00:00Z
+2014-07-17T00:00:00Z,Bitar,Adib,Husni,,Burbank,CA,C 37506,Public Letter of Reprimand,2014-07-16T00:00:00Z
+2014-07-17T00:00:00Z,Lane,Jason,William,,Encinitas,CA,C 55242,Suspended,2014-06-30T00:00:00Z
+2014-07-17T00:00:00Z,McGroarty,John,J.,,North Hollywood,CA,G 12938,Suspended,2014-03-28T00:00:00Z
+2014-07-18T00:00:00Z,Ananeh-Firempong,Owusu,,,Beverly Hills,CA,G 42397,Accusation Filed,2014-07-03T00:00:00Z
+2014-07-18T00:00:00Z,Bartolini,Susan,,,Carpinteria,CA,A 98927,Accusation Filed,2014-07-03T00:00:00Z
+2014-07-18T00:00:00Z,Chen,Chung-Lien,,,Whittier,CA,A 39685,Accusation Filed,2014-07-15T00:00:00Z
+2014-07-18T00:00:00Z,Fan,Ryan,Andrew,,Mission Viejo,CA,A 90660,Accusation Filed,2014-07-01T00:00:00Z
+2014-07-18T00:00:00Z,Foster,Lawrence,H.,,South Lake Tahoe,CA,A 19345,First Amended Accusation Filed,2014-06-30T00:00:00Z
+2014-07-18T00:00:00Z,Frankel,Allan,Israel,,Santa Monica,CA,G 34474,Accusation & Petitition to Revoke Probation Filed,2014-06-30T00:00:00Z
+2014-07-18T00:00:00Z,Goodman,Daniel,Marc,,Redding,CA,G 63650,Accusation Filed,2014-07-07T00:00:00Z
+2014-07-18T00:00:00Z,Goodwin,Glenda,D.,,El Dorado Hills,CA,A 71660,First Amended Accusation Filed,2014-07-07T00:00:00Z
+2014-07-18T00:00:00Z,Hamid,Sultan,Said,,Concord,CA,C 42153,Accusation Filed,2014-07-01T00:00:00Z
+2014-07-18T00:00:00Z,James,Elaine,,,Los Angeles,CA,G 71988,Accusation Filed,2014-07-01T00:00:00Z
+2014-07-18T00:00:00Z,Kerr,Douglas,Paul,,Emeryville,CA,G 69670,Accusation Filed,2014-07-07T00:00:00Z
+2014-07-18T00:00:00Z,Mardones,John,A.,,Palm Springs,CA,A 41581,Accusation Filed,2014-07-03T00:00:00Z
+2014-07-18T00:00:00Z,Narayan,Pratap,Lakshmi,,Fresno,CA,C 52001,First Amended Accusation Filed,2014-07-10T00:00:00Z
+2014-07-18T00:00:00Z,Nugent,Luis,Philip,,Whittier,CA,G 47906,Petition to Revoke Probation Filed,2014-07-15T00:00:00Z
+2014-07-18T00:00:00Z,Poser,John,Shearer,,Tioga,FL,A 26206,Accusation Filed,2014-07-01T00:00:00Z
+2014-07-18T00:00:00Z,Safranko,Brenda,Jean,,Malibu,CA,G 45081,Accusation Filed,2014-07-07T00:00:00Z
+2014-07-18T00:00:00Z,Schaller,Douglas,Alvin,,Tustin,CA,G 61159,Accusation Filed,2014-07-15T00:00:00Z
+2014-07-18T00:00:00Z,Sharma,Rahul,,,Bakersfield,CA,A 72532,Accusation Filed,2014-07-15T00:00:00Z
+2014-07-18T00:00:00Z,Smith,Barlow,,,Marble Falls,TX,G 35320,First Amended Accusation Filed,2014-07-15T00:00:00Z
+2014-07-18T00:00:00Z,Syphus,Merrill,T.,,Altadena,CA,A 19993,Accusation Filed,2014-07-07T00:00:00Z
+2014-07-18T00:00:00Z,Trinh,Kim,Anh,,Fountain Valley,CA,A 87296,Accusation Filed,2014-07-03T00:00:00Z
+2014-07-18T00:00:00Z,Vesco,David,Michael,,Calabasas,CA,A 43384,Accusation Filed,2014-07-07T00:00:00Z
+2014-07-18T00:00:00Z,Washington,Toby,,,Los Angeles,CA,A 76145,Accusation Filed,2014-07-01T00:00:00Z
+2014-07-18T00:00:00Z,Work,William,Ralph,,Fresno,CA,A 66593,Petition to Revoke Probation Filed,2014-07-02T00:00:00Z
+2014-07-18T00:00:00Z,Zimmerman,Joseph,E.,,Antioch,CA,A 19234,First Amended Accusation Filed,2014-06-30T00:00:00Z
+2014-07-18T00:00:00Z,Balter,Kevin,Scott,,Salt Lake City,UT,G 72952,Accusation Withdrawn,2014-07-01T00:00:00Z
+2014-07-18T00:00:00Z,Brown,Howard,Richard,,Fuquay Varina,NC,G 68644,Accusation Withdrawn,2014-07-03T00:00:00Z
+2014-07-21T00:00:00Z,Blaylock,Andre,Vergene,,Fontana,CA,G 51438,Surrendered,2014-07-17T00:00:00Z
+2014-07-21T00:00:00Z,Burton,Harold,Glen,,Roseville,CA,C 35484,Public Reprimand,2014-07-18T00:00:00Z
+2014-07-21T00:00:00Z,Cotsen,Thomas,Adam,,Los Angeles,CA,G 79392,Decision,2014-07-17T00:00:00Z
+2014-07-21T00:00:00Z,Eisenkop,Scott,,,Sherman Oaks,CA,G 41053,Decision,2014-07-18T00:00:00Z
+2014-07-21T00:00:00Z,Fisher,Alan,Jeffrey,,Arcadia,CA,G 44121,Public Reprimand,2014-07-18T00:00:00Z
+2014-07-21T00:00:00Z,Hale,Maurice,Jeffrey,,Glendale,CA,G 84687,Public Reprimand,2014-07-17T00:00:00Z
+2014-07-21T00:00:00Z,Maddalena,Richard,Albert,,Yuba City,CA,A 50220,Public Reprimand,2014-07-17T00:00:00Z
+2014-07-21T00:00:00Z,Rolland,Maria,Socorro,,Bakersfield,CA,A 104227,Revoked,2014-07-18T00:00:00Z
+2014-07-21T00:00:00Z,Rubens,Lawrence,Michael,,Westerville,OH,G 29896,Revoked,2014-07-17T00:00:00Z
+2014-07-21T00:00:00Z,Shenassa,David,,,Weston,FL,A 102331,Public Reprimand,2014-07-17T00:00:00Z
+2014-07-22T00:00:00Z,Mykita,Gayle,M.,,Playa del Rey,CA,G 34500,Surrendered,2014-07-22T00:00:00Z
+2014-07-23T00:00:00Z,Lin,James,Thomas,,Thousand Oaks,CA,A 86869,Public Reprimand,2014-07-23T00:00:00Z
+2014-07-24T00:00:00Z,Cox,Brent,Taylor,,Mill Valley,CA,G 34594,Surrendered,2014-07-24T00:00:00Z
+2014-07-24T00:00:00Z,Kumar,Kain,,,Palmdale,CA,A 67882,Decision,2014-07-24T00:00:00Z
+2014-07-24T00:00:00Z,Rosen,Ronald,Cary,,Albuquerque,NM,G 40504,Surrendered,2014-07-21T00:00:00Z
+2014-07-25T00:00:00Z,Greenberg,Sanford,Joseph,,Palm Desert,CA,G 35672,Public Letter of Reprimand,2014-07-23T00:00:00Z
+2014-07-25T00:00:00Z,Lane,Ingvild,Gangsaas,,Folsom,CA,C 53026,Decision,2014-07-25T00:00:00Z
+2014-07-25T00:00:00Z,Schiffman,Jeffrey,Scott,,Escondido,CA,G 73875,Public Reprimand,2014-07-25T00:00:00Z
+2014-07-25T00:00:00Z,Singh,Devinderjit,,,Yuba City,CA,C 52113,Decision,2014-07-25T00:00:00Z
+2014-07-25T00:00:00Z,Snyder,Patricia,Ann,,Atascadero,CA,A 44222,Decision,2014-07-25T00:00:00Z
+2014-07-28T00:00:00Z,Wilkins,Timothy,William,,Redding,CA,A 102151,Suspended,2014-07-28T00:00:00Z
+2014-07-29T00:00:00Z,Schafer,Jeffry,B.,,Coronado,CA,G 36897,Surrendered,2014-07-29T00:00:00Z
+2014-07-30T00:00:00Z,Gerson,Samuel,Jeffrey,,Fort Myers,FL,A 116916,Decision,2014-07-30T00:00:00Z
+2014-07-30T00:00:00Z,Murray,Conrad,Robert,,Las Vegas,NV,G 71169,Surrendered,2014-07-30T00:00:00Z
+2014-07-31T00:00:00Z,Alavekios,Damon,Andrew,,Laguna Beach,CA,A 115287,Decision,2014-07-31T00:00:00Z
+2014-07-31T00:00:00Z,Andrew,Hygin,Thykootathil,,Fresno,CA,A 38710,Decision,2014-07-31T00:00:00Z
+2014-07-31T00:00:00Z,Fioravanti,Bernard,Louis,,Okay,OK,G 86451,Surrendered,2014-07-31T00:00:00Z
+2014-08-05T00:00:00Z,Chukwudi,Uche,Austine,,Gardena,CA,A 105496,Restrictions,2014-07-29T00:00:00Z
+2014-08-05T00:00:00Z,Kaplan,Jevin,Hart,,Redding,CA,A 48217,Surrendered,2014-08-05T00:00:00Z
+2014-08-05T00:00:00Z,Okoye,Charles,Ikechukwu,,Los Angeles,CA,A 96076,Restrictions,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Amirgholami,Mahin,,,West Hills,CA,A 102266,Accusation Filed,2014-07-22T00:00:00Z
+2014-08-06T00:00:00Z,Badr,Mohamed,Ibrahim,,Lake Elsinore,CA,A 56397,Accusation Filed,2014-07-21T00:00:00Z
+2014-08-06T00:00:00Z,Dennis,Niloufer,S.,,San Diego,CA,A 101524,Accusation Filed,2014-07-16T00:00:00Z
+2014-08-06T00:00:00Z,Dreibelbis,Charles,Leroy,,Rochester,NH,C 55040,Accusation Withdrawn,2014-07-25T00:00:00Z
+2014-08-06T00:00:00Z,Elzik,Ekram,Kamel,,San Clemente,CA,A 42054,Accusation Filed,2014-07-16T00:00:00Z
+2014-08-06T00:00:00Z,Holden,Paul,Kenneth,,Scottsdale,AZ,A 95064,Accusation Filed,2014-07-31T00:00:00Z
+2014-08-06T00:00:00Z,Hooper,Timothy,David,,Sonora,CA,G 55188,Accusation Filed,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Huq,Nisar,Mikail,,London,Ontario,C 51732,Accusation Filed,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Ianacone,David,Christopher,,Moreno Valley,CA,G 75636,Accusation Filed,2014-07-17T00:00:00Z
+2014-08-06T00:00:00Z,Lane,Jason,William,,Encinitas,CA,C 55242,Accusation Filed,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Moayed,Sepideh,,,Los Altos Hills,CA,A 77967,Accusation & Petitition to Revoke Probation Filed,2014-07-25T00:00:00Z
+2014-08-06T00:00:00Z,Payne,Dale,Nathaniel,,Phoenix,AZ,A 36084,Accusation Filed,2014-07-22T00:00:00Z
+2014-08-06T00:00:00Z,Perez-Munoz,Antonio,,,Palm Springs,CA,G 86746,Decision,2014-08-06T00:00:00Z
+2014-08-06T00:00:00Z,Pettinger,Clair,L.,,Modesto,CA,G 29874,Accusation Filed,2014-07-18T00:00:00Z
+2014-08-06T00:00:00Z,Pham,Timothy,Quang,,Los Angeles,CA,G 81541,Accusation Filed,2014-07-30T00:00:00Z
+2014-08-06T00:00:00Z,Rausch,Lyle,J.,,Redwood City,CA,G 45494,Accusation Filed,2014-07-16T00:00:00Z
+2014-08-06T00:00:00Z,Rojas,Rodrigo,Falla,,Apple Valley,CA,A 32285,Accusation Dismissed,2014-07-30T00:00:00Z
+2014-08-06T00:00:00Z,Sajedi,Ebrahim,,,Culver City,CA,A 62264,First Amended Accusation & Petition to Revoke Probation Filed,2014-07-24T00:00:00Z
+2014-08-06T00:00:00Z,Sandhu,Narinder,,,Sacramento,CA,A 56411,First Amended Accusation Filed,2014-07-11T00:00:00Z
+2014-08-06T00:00:00Z,Shagrun,Lamia,Mohamed,,San Francisco,CA,A 74933,Accusation Filed,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Simental,Michael,Anthony,,Riverside,CA,A 86750,Accusation Filed,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Staahl,Theodore,Edmund,,Modesto,CA,G 37452,First Amended Accusation Filed,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Webber,James,Terry,,San Diego,CA,G 29186,Accusation Filed,2014-07-29T00:00:00Z
+2014-08-06T00:00:00Z,Weilert,Michael,,,Clovis,CA,G 38379,Accusation Filed,2014-07-23T00:00:00Z
+2014-08-06T00:00:00Z,Westerback,Daryl,Walter,,Thousand Oaks,CA,A 72712,Accusation Filed,2014-07-22T00:00:00Z
+2014-08-07T00:00:00Z,Zimmerman,Joseph,E.,,Antioch,CA,A 19234,Partial Suspension Order,2014-08-05T00:00:00Z
+2014-08-08T00:00:00Z,Burlacoff,Susan,Gayle,,Toronto,Ontario,A 54033,Revoked,2014-08-08T00:00:00Z
+2014-08-08T00:00:00Z,Farrar,Charles,W.,,San Francisco,CA,C 23581,Surrendered,2014-08-08T00:00:00Z
+2014-08-08T00:00:00Z,Hui,Esther,Yun-Ling,,Mather,CA,A 81053,Decision,2014-08-08T00:00:00Z
+2014-08-08T00:00:00Z,Lee,James,Ho,,Fresno,CA,G 84634,Decision,2014-08-08T00:00:00Z
+2014-08-08T00:00:00Z,Peric,John,Mario,,Burbank,CA,A 79419,Decision,2014-08-08T00:00:00Z
+2014-08-08T00:00:00Z,Tank,Dayalal,Devraj,,Walnut,CA,A 53624,Decision,2014-08-08T00:00:00Z
+2014-08-12T00:00:00Z,Tran,Dzu,,,Westminster,CO,G 83361,Public Letter of Reprimand,2014-08-08T00:00:00Z
+2014-08-13T00:00:00Z,Stimmler,William,Harold,,Whittier,CA,G 50833,Surrendered,2014-08-13T00:00:00Z
+2014-08-13T00:00:00Z,Williams,Dallas,DeVere,,Milliken,CO,G 20740,Revoked,2014-08-13T00:00:00Z
+2014-08-14T00:00:00Z,Badr,Mohamed,Ibrahim,,Lake Elsinore,CA,A 56397,Restrictions,2014-07-09T00:00:00Z
+2014-08-15T00:00:00Z,Asperec,Joseph,Malig,,Lake Elsinore,CA,A 41691,Decision,2014-08-14T00:00:00Z
+2014-08-15T00:00:00Z,Katzman,Scott,Steven,,Fort Pierce,FL,G 71106,Public Letter of Reprimand,2014-08-11T00:00:00Z
+2014-08-15T00:00:00Z,Nawroski-Wozniak,Joanna,D.,,San Diego,CA,A 39627,Decision,2014-08-15T00:00:00Z
+2014-08-15T00:00:00Z,Rodgers,Ruth,Anna,,San Francisco,CA,A 80909,Restrictions,2014-08-13T00:00:00Z
+2014-08-15T00:00:00Z,Williams,Calvin,E.,,New Orleans,LA,G 66782,Revoked,2014-08-15T00:00:00Z
+2014-08-18T00:00:00Z,Ananias,Martin,Patricio,,Santa Rosa,CA,A 67788,Accusation Filed,2014-08-12T00:00:00Z
+2014-08-18T00:00:00Z,Antkowiak,Gregory,Thomas,,San Diego,CA,A 78990,Accusation Filed,2014-08-06T00:00:00Z
+2014-08-18T00:00:00Z,Dixon,Gus,,,Long Beach,CA,G 50775,Accusation Filed,2014-08-01T00:00:00Z
+2014-08-18T00:00:00Z,Du,Lee,Timothy,,Palo Alto,CA,A 73859,Accusation Filed,2014-08-13T00:00:00Z
+2014-08-18T00:00:00Z,Lee,Nick,H.,,Monterey Park,CA,A 61218,Accusation Filed,2014-08-11T00:00:00Z
+2014-08-18T00:00:00Z,Leon,Samuel,O.,,Hanford,CA,A 73337,Accusation Filed,2014-08-08T00:00:00Z
+2014-08-18T00:00:00Z,Orvald,Thomas,Owen,,Yakima,WA,C 36899,Accusation Filed,2014-08-12T00:00:00Z
+2014-08-18T00:00:00Z,Pak,Su-Yong,,,La Palma,CA,A 34079,Accusation Filed,2014-08-01T00:00:00Z
+2014-08-18T00:00:00Z,Prohaska,Gary,Thomas,,Palm Desert,CA,C 42755,Accusation Filed,2014-08-12T00:00:00Z
+2014-08-18T00:00:00Z,Rose,Marc,Richard,,Costa Mesa,CA,C 37054,Accusation Filed,2014-08-12T00:00:00Z
+2014-08-18T00:00:00Z,Salzman,Barnett,S.,,Fresno,CA,G 12176,Accusation Filed,2014-08-12T00:00:00Z
+2014-08-18T00:00:00Z,Somero,Michael,Stephen,,Boynton Beach,FL,G 77068,Accusation Filed,2014-08-13T00:00:00Z
+2014-08-18T00:00:00Z,Williams,Mark,Dwight,,Murrietta,CA,A 80386,First Amended Accusation Filed,2014-08-08T00:00:00Z
+2014-08-18T00:00:00Z,Wyatt,Lance,Everett,,Los Angeles,CA,G 79180,Accusation Filed,2014-08-07T00:00:00Z
+2014-08-19T00:00:00Z,Kamson,Solomon,,,Seattle,WA,G 51847,Automatic Cancellation Order,2014-08-15T00:00:00Z
+2014-08-19T00:00:00Z,Fazil,Mohammad,,,Pico Rivera,CA,A 35835,Surrendered,2014-08-19T00:00:00Z
+2014-08-20T00:00:00Z,Winter,Randy,Donnell,,Modesto,CA,G 60601,Restrictions,2014-06-25T00:00:00Z
+2014-08-21T00:00:00Z,Nelson,Jane,Carolyn,,Austin,TX,G 66213,Public Letter of Reprimand,2014-08-18T00:00:00Z
+2014-08-21T00:00:00Z,Pressman,Peter,,,Jacksonville,FL,A 77300,Surrendered,2014-08-21T00:00:00Z
+2014-08-21T00:00:00Z,Sanchez,Alejandro,Macias,,West Covina,CA,G 30158,Public Letter of Reprimand,2014-08-20T00:00:00Z
+2014-08-22T00:00:00Z,Hedvat,Yahya,,,Encino,CA,A 86664,Suspended,2014-08-22T00:00:00Z
+2014-08-25T00:00:00Z,Sabit,Aria,Omar,,Southfield,MI,A 108433,Surrendered,2014-08-25T00:00:00Z
+2014-08-27T00:00:00Z,Gill,Vivek,Singh,,Phelan,CA,A 61054,Decision,2014-08-27T00:00:00Z
+2014-08-27T00:00:00Z,Kamaka,Joseph,Kalanihuli, III,Wailuku,HI,G 88657,Surrendered,2014-08-27T00:00:00Z
+2014-08-29T00:00:00Z,Ali,Waqas,,,Tremont,IL,C 55857,Revoked,2014-08-29T00:00:00Z
+2014-08-29T00:00:00Z,Annabel,Roger,Gerard,,Chino Hills,CA,A 53036,First Amended Petition to Revoke Probation,2014-08-20T00:00:00Z
+2014-08-29T00:00:00Z,Bascoy,Louis,T.,,Los Angeles,CA,A 29037,Accusation Withdrawn,2014-08-18T00:00:00Z
+2014-08-29T00:00:00Z,Chiarottino,Michael,Roger,,San Rafael,CA,G 39528,First Amended Accusation Filed,2014-08-26T00:00:00Z
+2014-08-29T00:00:00Z,Clark-Reed,Monica,Andrea,,Houston,TX,C 55503,Accusation Filed,2014-08-21T00:00:00Z
+2014-08-29T00:00:00Z,Gallivan,Kevin,Francis,,Mission Hills,CA,G 75903,Accusation Filed,2014-08-20T00:00:00Z
+2014-08-29T00:00:00Z,Gogna,Ravi,Kant,,Manteca,CA,A 39659,Decision,2014-08-29T00:00:00Z
+2014-08-29T00:00:00Z,Harelik,Theodore,R.,,Los Angeles,CA,G 6391,Accusation Filed,2014-08-20T00:00:00Z
+2014-08-29T00:00:00Z,Klein,Arnold,William,,Beverly Hills,CA,A 24719,Accusation Withdrawn,2014-08-19T00:00:00Z
+2014-08-29T00:00:00Z,Lee,Katherine,Eunju,,Sunland,CA,A 72902,Accusation Filed,2014-08-14T00:00:00Z
+2014-08-29T00:00:00Z,Malayan,Samuel,Ara,,Glendale,CA,G 61143,Decision,2014-08-29T00:00:00Z
+2014-08-29T00:00:00Z,McQuade,Mary,Virginia,,Carmel,CA,G 59938,Decision,2014-08-28T00:00:00Z
+2014-08-29T00:00:00Z,Onubah,Boniface,Okwudili,,Marina Del Rey,CA,A 52415,Second Amended Accusation Filed,2014-08-25T00:00:00Z
+2014-08-29T00:00:00Z,Tom,William,Chun-Yeung,,Carmel,CA,G 77995,Accusation Withdrawn,2014-08-18T00:00:00Z
+2014-08-29T00:00:00Z,Zimmerman,Joseph,E.,,Antioch,CA,A 19234,Second Amended Accusation Filed,2014-08-20T00:00:00Z
+2014-09-03T00:00:00Z,Goodwin,Jeremy,LR,,Mount Shasta,CA,G 76323,Decision,2014-09-03T00:00:00Z
+2014-09-03T00:00:00Z,Glousman,Ronald,Eric,,Tarzana,CA,G 45186,Decision,2014-09-03T00:00:00Z
+2014-09-03T00:00:00Z,Hass,william,Herman,,Pensacola,FL,G 25981,Public Reprimand,2014-09-03T00:00:00Z
+2014-09-04T00:00:00Z,Byrd,Jennie,Gail,,Benicia,CA,C 40889,Public Reprimand,2014-09-04T00:00:00Z
+2014-09-05T00:00:00Z,Friese,Steven,Buckles,,Anchorage,AK,A 85938,Public Reprimand,2014-09-05T00:00:00Z
+2014-09-05T00:00:00Z,Morgan,Loren,R.,,Chico,CA,C 23681,Decision,2014-09-05T00:00:00Z
+2014-09-05T00:00:00Z,Naseem,Shahzad,,,Yuba City,CA,A 75541,Decision,2014-09-05T00:00:00Z
+2014-09-08T00:00:00Z,Bailey,David,Wayne,,Loma Linda,CA,G 78854,Suspended,2014-09-05T00:00:00Z
+2014-09-09T00:00:00Z,Ruminson,Ronald,Ray,,Dinuba,CA,A 44627,Surrendered,2014-09-09T00:00:00Z
+2014-09-10T00:00:00Z,Goryl,Gerard,Geoffrey,,Redondo Beach,CA,A 42265,Restrictions,2014-09-09T00:00:00Z
+2014-09-11T00:00:00Z,Ali,Mohamed,Sadat,,Rancho Cucamonga,CA,A 67534,Public Reprimand,2014-09-11T00:00:00Z
+2014-09-11T00:00:00Z,Buehner,Thomas,Severin,,Palm Springs,CA,G 49061,Surrendered,2014-09-11T00:00:00Z
+2014-09-12T00:00:00Z,Chang,Candace,Shiao-Rong,,Riverside,CA,A 62000,Surrendered,2014-09-12T00:00:00Z
+2014-09-12T00:00:00Z,Gupta,Kajal,,,Upland,CA,A 92637,Decision,2014-09-12T00:00:00Z
+2014-09-12T00:00:00Z,Nielson,Eric,Jon,,Sacramento,CA,G 66218,Surrendered,2014-09-12T00:00:00Z
+2014-09-12T00:00:00Z,Remis,Paul,Michael,,San Luis Obispo,CA,A 24123,Decision,2014-09-12T00:00:00Z
+2014-09-12T00:00:00Z,Suleiman,Mustafa,Ismail,,Seal Beach,CA,A 48051,Revoked,2014-09-12T00:00:00Z
+2014-09-12T00:00:00Z,Torrey,Robert,Russell,,Redlands,CA,G 34160,Public Reprimand,2014-09-12T00:00:00Z
+2014-09-12T00:00:00Z,Watson,Louis,Herman,,Claremont,CA,G 32156,Revoked,2014-09-12T00:00:00Z
+2014-09-12T00:00:00Z,Woodward,Artis,,,Garden Grove,CA,A 40488,Decision,2014-09-12T00:00:00Z
+2014-09-15T00:00:00Z,Elzik,Ekram,Kamel,,San Clemente,CA,A 42054,Surrendered,2014-09-15T00:00:00Z
+2014-09-15T00:00:00Z,Hamid,Sultan,Said,,Concord,CA,C 42153,Surrendered,2014-09-15T00:00:00Z
+2014-09-17T00:00:00Z,Farrell,Julie,Ann,,Augusta,KY,G 88765,Public Letter of Reprimand,2014-09-15T00:00:00Z
+2014-09-17T00:00:00Z,Kroupa,Vladimir,P.,,Porterville,CA,A 48466,Surrendered,2014-09-17T00:00:00Z
+2014-09-18T00:00:00Z,Adamson,Philip,Michael,,Auburn,CA,G 44912,First Amended Accusation Filed,2014-09-04T00:00:00Z
+2014-09-18T00:00:00Z,Childers,Ben,Jason,,Riverside,CA,G 76953,First Amended Accusation Filed,2014-09-04T00:00:00Z
+2014-09-18T00:00:00Z,Dolin,Robert,Harold,,Orange,CA,G 62445,Accusation Filed,2014-09-11T00:00:00Z
+2014-09-18T00:00:00Z,Homan,David,John,,San Diego,CA,A 119413,Public Letter of Reprimand,2014-09-16T00:00:00Z
+2014-09-18T00:00:00Z,Huang,Alan,Wen,,Dublin,CA,A 111806,Accusation Filed,2014-09-11T00:00:00Z
+2014-09-18T00:00:00Z,Linkous,Clayton,Eugene,,Lakeland,FL,G 47583,Accusation Filed,2014-09-04T00:00:00Z
+2014-09-18T00:00:00Z,Payne,Dale,Nathaniel,,Phoenix,AZ,A 36084,First Amended Accusation Filed,2014-09-08T00:00:00Z
+2014-09-18T00:00:00Z,Rodriguez,Leonel,Lamon,,Blyth,CA,A 54600,Accusation Filed,2014-09-03T00:00:00Z
+2014-09-18T00:00:00Z,Suter,Edgar,Arthur,,Phoenix,AZ,G 42257,Accusation Filed,2014-09-09T00:00:00Z
+2014-09-18T00:00:00Z,Taheri,Daniel,P.,,Beverly Hills,CA,G 80445,Accusation Filed,2014-09-05T00:00:00Z
+2014-09-18T00:00:00Z,Thio,Andrew,Hok-San,,Murrieta,CA,G 75296,Accusation Filed,2014-09-05T00:00:00Z
+2014-09-18T00:00:00Z,Thota,Naga,Raja,,El Cajon,CA,A 53526,Accusation Filed,2014-09-04T00:00:00Z
+2014-09-19T00:00:00Z,Foster,Robert,Wayne,,La Mesa,CA,G 56132,Public Reprimand,2014-09-19T00:00:00Z
+2014-09-19T00:00:00Z,Narayan,Pratap,Lakshmi,,Folsom,CA,C 52001,Decision,2014-09-19T00:00:00Z
+2014-09-19T00:00:00Z,Rinzler,Gary,Scott,,Sacramento,CA,G 67994,Decision,2014-09-19T00:00:00Z
+2014-09-19T00:00:00Z,Sandhu,Narinder,,,Sacramento,CA,A 56411,Decision,2014-09-19T00:00:00Z
+2014-09-19T00:00:00Z,Sandhu,Surinder,,,Fremont,CA,A 38536,Decision,2014-09-19T00:00:00Z
+2014-09-19T00:00:00Z,Schwied,Ellis,Michael,,Laguna Niguel,CA,A 39245,Decision,2014-09-19T00:00:00Z
+2014-09-19T00:00:00Z,Stock,Joseph,Vincent,,Chicago,IL,A 91231,Public Reprimand,2014-09-19T00:00:00Z
+2014-09-19T00:00:00Z,Young,Timothy,Lee,,Clearlake,CA,A 41608,Public Reprimand,2014-09-19T00:00:00Z
+2014-09-22T00:00:00Z,Poser,John,Shearer,,Tioga,FL,A 26206,Surrendered,2014-09-22T00:00:00Z
+2014-09-23T00:00:00Z,Smith,Ronald,D.,,Fresno,CA,C 21528,Surrendered,2014-09-23T00:00:00Z
+2014-09-25T00:00:00Z,Sheikh,Rafiq,Ahmed,,Sacramento,CA,A 54469,Public Reprimand,2014-09-24T00:00:00Z
+2014-09-25T00:00:00Z,Zarate,Enrique,,,Tracy,CA,C 41534,Decision,2014-09-25T00:00:00Z
+2014-09-29T00:00:00Z,Basco,Michael,Angelo,,Washington,DC,G 88898,Public Reprimand,2014-09-26T00:00:00Z
+2014-09-29T00:00:00Z,Carr,Mianda,Cheree,,Chula Vista,CA,A 104660,Public Reprimand,2014-09-26T00:00:00Z
+2014-09-29T00:00:00Z,Davis,Scott,Mitchell,,Northridge,CA,G 75950,Decision,2014-09-26T00:00:00Z
+2014-09-29T00:00:00Z,James,Elaine,,,Los Angeles,CA,G 71988,Suspended,2014-09-19T00:00:00Z
+2014-09-29T00:00:00Z,Kaleka,Virender,S.,,Selma,CA,A 43546,Public Letter of Reprimand,2014-09-25T00:00:00Z
+2014-09-29T00:00:00Z,Zhao,Xueren,,,Riverside,CA,A 105851,Decision,2014-09-26T00:00:00Z
+2014-09-30T00:00:00Z,Chung,Stanley,Bo-Shui,,Toronto,Ontario,G 27903,Surrendered,2014-09-29T00:00:00Z
+2014-09-30T00:00:00Z,Clark,Karla,Lashun,,Chicago,IL,G 89213,Suspended,2014-09-30T00:00:00Z
+2014-10-03T00:00:00Z,Lynch,Timothy,Eugene,,Santa Ana,CA,G 74208,Decision,2014-10-03T00:00:00Z
+2014-10-03T00:00:00Z,Meadows,Lee,Hastings,,Tamuning,Guam,G 51817,Surrendered,2014-10-03T00:00:00Z
+2014-10-03T00:00:00Z,Viziri,Ali,S.,,Napa,CA,G 71962,Suspended,2014-10-02T00:00:00Z
+2014-10-03T00:00:00Z,Williams,John,Gavin,,Moreno Valley,CA,C 38680,Surrendered,2014-09-29T00:00:00Z
+2014-10-08T00:00:00Z,Hartleroad,James,A.,,San Bernardino,CA,G 74901,Public Letter of Reprimand,2014-10-06T00:00:00Z
+2014-10-08T00:00:00Z,Abedi,Babak,,,La Jolla,CA,A 95902,Decision,2014-10-08T00:00:00Z
+2014-10-08T00:00:00Z,Duck,Craig,Steven,,Encinitas,CA,A 61484,Decision,2014-10-08T00:00:00Z
+2014-10-08T00:00:00Z,Greer,Scott,Douglas,,San Diego,CA,G 45636,Decision,2014-10-08T00:00:00Z
+2014-10-08T00:00:00Z,Henderson,Denise,Wynnet,,Carmichael,CA,A 67876,Decision,2014-10-08T00:00:00Z
+2014-10-08T00:00:00Z,Venning,Dale,Randall,,Anaheim,CA,G 35217,Revoked,2014-10-08T00:00:00Z
+2014-10-09T00:00:00Z,Anderson,Scott,Dodd,,Carmichael,CA,G 33616,Revoked,2014-10-09T00:00:00Z
+2014-10-09T00:00:00Z,Bailey,David,Wayne,,Loma Linda,CA,G 78854,Accusation Filed,2014-09-11T00:00:00Z
+2014-10-09T00:00:00Z,Dean,Randy,Mitchell,,Pompano Beach,FL,G 86250,Accusation Filed,2014-09-15T00:00:00Z
+2014-10-09T00:00:00Z,De Jesus,Violeta,Moyer,,Anaheim,CA,A 48057,Decision,2014-10-09T00:00:00Z
+2014-10-09T00:00:00Z,Hedvat,Yahya,,,Encino,CA,A 86664,Accusation Filed,2014-09-17T00:00:00Z
+2014-10-09T00:00:00Z,Heikali,Moosa,,,Los Angeles,CA,A 40559,First Amended Petition to Revoke Probation,2014-09-15T00:00:00Z
+2014-10-09T00:00:00Z,Hutchins,Mary,Jane B.,,Los Gatos,CA,A 50634,Accusation Filed,2014-09-16T00:00:00Z
+2014-10-09T00:00:00Z,Kazanchian,Armen,,,Glendale,CA,A 53993,Accusation Filed,2014-09-18T00:00:00Z
+2014-10-09T00:00:00Z,L'Archeveque,Dee,Maria,,Murrieta,CA,G 78038,Accusation Filed,2014-09-17T00:00:00Z
+2014-10-09T00:00:00Z,Manjunath,Madhure,Basappa,,Rowland Heights,CA,A 29758,Accusation Filed,2014-09-17T00:00:00Z
+2014-10-09T00:00:00Z,Mehrtash,Ata-Ollah,,,Paramount,CA,C 38016,Accusation Filed,2014-09-18T00:00:00Z
+2014-10-09T00:00:00Z,Orvald,Thomas,Owen,,Yakima,WA,C 36899,Surrendered,2014-10-09T00:00:00Z
+2014-10-09T00:00:00Z,Owiesy,Farough,,,Corona,CA,A 87796,Accusation Filed,2014-09-18T00:00:00Z
+2014-10-09T00:00:00Z,Said,Onsy,Ishak,,Visalia,CA,A 49843,Accusation Filed,2014-09-23T00:00:00Z
+2014-10-09T00:00:00Z,Schrot,Rudolph,Joseph,,Sacramento,CA,A 70871,Accusation Filed,2014-09-23T00:00:00Z
+2014-10-09T00:00:00Z,Svadjian,Edward,,,Sherman Oaks,CA,A 36685,Accusation Filed,2014-09-23T00:00:00Z
+2014-10-09T00:00:00Z,Walters,Daniel,Glywn,,Palm Springs,CA,G 39049,Revoked,2014-10-09T00:00:00Z
+2014-10-09T00:00:00Z,Waterbury,Jude,Thaddeus,,Elk Grove,CA,A 90991,Accusation Filed,2014-09-23T00:00:00Z
+2014-10-09T00:00:00Z,Yerevanian,Garo,,,San Diego,CA,A 26637,Accusation Filed,2014-09-19T00:00:00Z
+2014-10-10T00:00:00Z,Adams,Jan,Rudalgo,,Fountain Valley,CA,A 51004,Revoked,2014-10-10T00:00:00Z
+2014-10-10T00:00:00Z,Mantis,John,Kelly,,Manhattan Beach,CA,G 39199,Surrendered,2014-10-10T00:00:00Z
+2014-10-10T00:00:00Z,Soliman,Mikhayl,Samy,,Wayne,MI,C 54595,Revoked,2014-10-10T00:00:00Z
+2014-10-10T00:00:00Z,Staahl,Theodore,Edmund,,Modesto,CA,G 37452,Public Reprimand,2014-10-10T00:00:00Z
+2014-10-10T00:00:00Z,Syphus,Merrill,T.,,Altadena,CA,A 19993,Surrendered,2014-10-10T00:00:00Z
+2014-10-10T00:00:00Z,Trauba,Thomas,Kent,,Salt Lake City,UT,G 66615,Revoked,2014-10-10T00:00:00Z
+2014-10-13T00:00:00Z,Dowling,Mark,C.,,Stockton,CA,G 80355,Restrictions,2014-10-10T00:00:00Z
+2014-10-14T00:00:00Z,Badr,Mohamed,Ibrahim,,Lake Elsinore,CA,A 56397,Revoked,2014-10-14T00:00:00Z
+2014-10-14T00:00:00Z,Cho,Kisuk,Jay,,Santa Clara,CA,A 51445,Decision,2014-10-13T00:00:00Z
+2014-10-14T00:00:00Z,Rodgers,Ruth,Anna,,San Francisco,CA,A 80909,Suspended,2014-10-13T00:00:00Z
+2014-10-15T00:00:00Z,Hicks,David,Lawrence,,Concord,CA,A 78818,Surrendered,2014-10-13T00:00:00Z
+2014-10-15T00:00:00Z,Salzman,Barnett,S.,,Fresno,CA,G 12176,Revoked,2014-10-15T00:00:00Z
+2014-10-15T00:00:00Z,Webber,James,Terry,,San Diego,CA,G 29186,Surrendered,2014-10-15T00:00:00Z
+2014-10-16T00:00:00Z,Adams,Cameron,Russell,,Los Angeles,CA,G 82192,Accusation Filed,2014-10-06T00:00:00Z
+2014-10-16T00:00:00Z,Ajanwachuku,Vincent,E.,,Apple Valley,CA,A 43736,Accusation Dismissed,2014-10-15T00:00:00Z
+2014-10-16T00:00:00Z,Biesen-Bradley,Rita,A.,,Roseville,CA,C 42203,Accusation Filed,2014-10-07T00:00:00Z
+2014-10-16T00:00:00Z,Clark,Shannon,L.,,Sacramento,CA,A 103021,Accusation Filed,2014-10-03T00:00:00Z
+2014-10-16T00:00:00Z,Gahlinger,Paul,Maria,,Saipan,MP,G 87166,Accusation Filed,2014-10-06T00:00:00Z
+2014-10-16T00:00:00Z,Ghebe,Waddah,H.,,Oceanside,CA,C 53321,Accusation Withdrawn,2014-10-03T00:00:00Z
+2014-10-16T00:00:00Z,Goodwin,Glenda,Darlene,,Sacramento,CA,A 71660,Second Amended Accusation Filed,2014-10-06T00:00:00Z
+2014-10-16T00:00:00Z,Huq,Nisar,Mikail,,London,Ontario,C 51732,First Amended Accusation Filed,2014-10-06T00:00:00Z
+2014-10-16T00:00:00Z,Khamsi,Babak,Razaghi,,Riverside,CA,A 119808,Accusation Filed,2014-10-01T00:00:00Z
+2014-10-16T00:00:00Z,Murachanian,Kenneth,A.,,Santa Rosa,CA,A 64167,Accusation Filed,2014-10-07T00:00:00Z
+2014-10-16T00:00:00Z,Pham,Chi,Manh,,Houston,TX,C 40215,Accusation Filed,2014-10-10T00:00:00Z
+2014-10-16T00:00:00Z,Rad,Ben,,,Fresno,CA,A 40892,Accusation Filed,2014-10-01T00:00:00Z
+2014-10-16T00:00:00Z,Ranu,Gurdeep,Singh,,Fresno,CA,A 32266,First Amended Accusation Filed,2014-10-02T00:00:00Z
+2014-10-16T00:00:00Z,Streutker,Anthony,Donald,,Santa Rosa,CA,A 63917,Suspended,2014-10-15T00:00:00Z
+2014-10-16T00:00:00Z,Wijegoonaratna,Sri,Jayantha,,Anaheim Hills,CA,A 100580,Accusation Filed,2014-10-06T00:00:00Z
+2014-10-16T00:00:00Z,Yanke,Traci,Lynn,,Phoenix,AZ,C 56144,Accusation Filed,2014-10-10T00:00:00Z
+2014-10-17T00:00:00Z,Broomberg,Barry,Julian,,San Diego,CA,C 41796,Surrendered,2014-10-17T00:00:00Z
+2014-10-17T00:00:00Z,Munsif,Anand,Nachiket,,Livingston,NJ,A 50992,Revoked,2014-10-17T00:00:00Z
+2014-10-20T00:00:00Z,Vreeke,Mary,A.,,Murrieta,CA,A 78457,Restrictions,2014-10-17T00:00:00Z
+2014-10-22T00:00:00Z,Clopton,James,Kirk,,El Dorado Hills,CA,G 69788,Revoked,2014-10-17T00:00:00Z
+2014-10-23T00:00:00Z,Nwaigwe,Manasseh,C.,,Glendale,CA,A 42532,Decision,2014-10-23T00:00:00Z
+2014-10-27T00:00:00Z,Sheperd,Jaime,Manuel,,Minot,ND,G 88416,Suspended,2014-10-24T00:00:00Z
+2014-10-29T00:00:00Z,Cham,Daniel,K.,,Alhambra,CA,A 86714,Restrictions,2014-10-23T00:00:00Z
+2014-10-29T00:00:00Z,Lum,Owen,Myung Chi,,San Jose,CA,C 37864,Surrendered,2014-10-29T00:00:00Z
+2014-10-31T00:00:00Z,Abrams,Jeffrey,Joel,,San Diego,CA,G 27081,Suspended,2014-10-31T00:00:00Z
+2014-10-31T00:00:00Z,Buetow,Norman,Theodore,,Murrieta,CA,G 40726,Decision,2014-10-31T00:00:00Z
+2014-10-31T00:00:00Z,Casillas,Ernest,Yba,,Montrose,CA,A 38017,Restrictions,2014-10-24T00:00:00Z
+2014-10-31T00:00:00Z,Milazzo,Carol,Frances,,Roseville,CA,G 85272,Public Reprimand,2014-10-31T00:00:00Z
+2014-10-31T00:00:00Z,Mohan,Deepak,,,French Camp,CA,A 85611,Decision,2014-10-31T00:00:00Z
+2014-10-31T00:00:00Z,Shagrun,Lamia,Mohamed,,San Francisco,CA,A 74933,Revoked,2014-10-31T00:00:00Z
+2014-10-31T00:00:00Z,Tessier,Deron,Jean,,Fontana,CA,A 99173,Decision,2014-10-31T00:00:00Z
+2014-10-31T00:00:00Z,Tucker,James,Edward,,Newport Beach,CA,G 35623,Decision,2014-10-31T00:00:00Z
+2014-11-05T00:00:00Z,Bickman,Scott,Coleman,,Hawthorne,CA,G 76532,Revoked,2014-10-31T00:00:00Z
+2014-11-05T00:00:00Z,Jain,Ashok,Kumar,,Redding,CA,A 31286,Decision,2014-10-31T00:00:00Z
+2014-11-05T00:00:00Z,Megwa,Joseph,Maduabuchi,,Houston,TX,C 55352,Suspended,2014-11-05T00:00:00Z
+2014-11-05T00:00:00Z,Rader,William,C.,,Malibu,CA,A 22848,Revoked,2014-11-05T00:00:00Z
+2014-11-05T00:00:00Z,Tribble,John,Benjamin,,Yreka,CA,A 109949,Cease Practice Order Issued,2014-11-05T00:00:00Z
+2014-11-06T00:00:00Z,Ariyo,Adeniran,Abraham,,Lancaster,TX,A 53707,Accusation Filed,2014-10-31T00:00:00Z
+2014-11-06T00:00:00Z,Benjamin,Zan,,,Anaheim Hills,CA,A 54540,First Amended Accusation Filed,2014-10-29T00:00:00Z
+2014-11-06T00:00:00Z,Bonham,Marvin,Lawrence,,Los Gatos,CA,C 38511,Accusation Filed,2014-10-30T00:00:00Z
+2014-11-06T00:00:00Z,Grewal,Narinder,Singh,,Chatsworth,CA,C 42572,First Amended Accusation Filed,2014-10-31T00:00:00Z
+2014-11-06T00:00:00Z,Huerta-Ibarra,Jose,Felix,,Watsonville,CA,A 94115,First Amended Accusation & Petition to Revoke Probation Filed,2014-10-15T00:00:00Z
+2014-11-06T00:00:00Z,Lee,James,Ho,,Fresno,CA,G 84634,Accusation Filed,2014-10-28T00:00:00Z
+2014-11-06T00:00:00Z,Moss,Robert,Ray,,Santa Maria,CA,A 39763,Accusation Filed,2014-10-21T00:00:00Z
+2014-11-06T00:00:00Z,Patel,Hitesh,D.,,Anaheim,CA,A 50292,Accusation Filed,2014-10-28T00:00:00Z
+2014-11-06T00:00:00Z,Palmer,Robert,Byron,,Applegate,CA,G 53445,Surrendered,2014-11-06T00:00:00Z
+2014-11-06T00:00:00Z,Scoma,Joseph,Anthony,,San Diego,CA,C 33898,Accusation Filed,2014-10-14T00:00:00Z
+2014-11-06T00:00:00Z,Tanguma,Manuel,, III,San Marcos,CA,A 101646,Accusation Filed,2014-10-30T00:00:00Z
+2014-11-06T00:00:00Z,Vaziri,Ali,S.,,Napa,CA,G 71962,Accusation Filed,2014-10-21T00:00:00Z
+2014-11-07T00:00:00Z,Rausch,Lyle,J.,,Redwood City,CA,G 45494,Surrendered,2014-11-07T00:00:00Z
+2014-11-12T00:00:00Z,Golden,Paul,,,Modesto,CA,G 30602,Surrendered,2014-11-12T00:00:00Z
+2014-11-12T00:00:00Z,Wijegoonaratna,Sri,Jayantha,,Anaheim Hills,CA,A 100580,Cease Practice Order Issued,2014-11-06T00:00:00Z
+2014-11-13T00:00:00Z,Beverly,Shereen,Lukathy,,Lawndale,CA,G 68251,Public Reprimand,2014-11-13T00:00:00Z
+2014-11-13T00:00:00Z,Nugent,Luis,Philip,,Whittier,CA,G 47906,Decision,2014-11-13T00:00:00Z
+2014-11-13T00:00:00Z,Resnick,Lawrence,Harold,,Los Angeles,CA,G 16871,Restrictions,2014-11-13T00:00:00Z
+2014-11-13T00:00:00Z,Scoma,Joseph,Anthony,,San Diego,CA,C 33898,Suspended,2014-10-17T00:00:00Z
+2014-11-14T00:00:00Z,Bullock,Peter,John,,Redwood City,CA,A 31093,Decision,2014-11-14T00:00:00Z
+2014-11-14T00:00:00Z,Dang,Nga,Tuyet,,San Jose,CA,C 52542,Public Reprimand,2014-11-14T00:00:00Z
+2014-11-14T00:00:00Z,Kevess,Robert,M.,,Berkeley,CA,G 57523,Revoked,2014-11-14T00:00:00Z
+2014-11-14T00:00:00Z,Lewis,George,Milton,,Hollywood,CA,C 50188,Revoked,2014-11-14T00:00:00Z
+2014-11-14T00:00:00Z,Onubah,Boniface,Okwudili,,Marina Del Rey,CA,A 52415,Revoked,2014-11-14T00:00:00Z
+2014-11-14T00:00:00Z,Prohaska,Gary,Thomas,,Palm Desert,CA,C 42755,Surrendered,2014-11-14T00:00:00Z
+2014-11-17T00:00:00Z,Komin,Michael,Lee,,Shafter,CA,A 76214,Public Letter of Reprimand,2014-11-12T00:00:00Z
+2014-11-20T00:00:00Z,Accetta,August,David,,Huntington Beach,CA,G 61628,Accusation Filed,2014-11-06T00:00:00Z
+2014-11-20T00:00:00Z,Braunstein,Mark,Benjamin,,Sherman Oaks,CA,G 64033,Accusation Filed,2014-11-13T00:00:00Z
+2014-11-20T00:00:00Z,Carey,Joseph,Nicholas,,Los Angeles,CA,A 87082,Accusation Filed,2014-11-10T00:00:00Z
+2014-11-20T00:00:00Z,Clark,Karla,Lashun,,Chicago,IL,G 89213,Accusation Filed,2014-11-06T00:00:00Z
+2014-11-20T00:00:00Z,Davis,Ramona,E.V.,,Oakland,CA,A 14966,Accusation Filed,2014-11-06T00:00:00Z
+2014-11-20T00:00:00Z,DeLeon,Epifanio,Jose,,Walnut Creek,CA,A 75985,Public Letter of Reprimand,2014-11-19T00:00:00Z
+2014-11-20T00:00:00Z,Dowling,Mark,Christopher,,Stockton,CA,G 80355,Accusation Filed,2014-11-07T00:00:00Z
+2014-11-20T00:00:00Z,Handley,Erwin,Caldwell,Jr.,Del Mar,CA,A 48463,Accusation Filed,2014-11-05T00:00:00Z
+2014-11-20T00:00:00Z,Kidwell,Raymond,Earl,,Fresno,CA,A 66131,Accusation Withdrawn,2014-11-14T00:00:00Z
+2014-11-20T00:00:00Z,Kyri,Lien,Jay,,Huntington Beach,CA,A 122548,Accusation & Petitition to Revoke Probation Filed,2014-11-13T00:00:00Z
+2014-11-20T00:00:00Z,Lal,Munish,,,Chico,CA,A 85179,Accusation Filed,2014-11-06T00:00:00Z
+2014-11-20T00:00:00Z,Ledesma,Glenn,N.,,Beverly Hills,CA,G 44761,First Amended Accusation Filed,2014-11-13T00:00:00Z
+2014-11-20T00:00:00Z,Lenz,Heinz,Juergen,,La Jolla,CA,A 45401,Accusation Filed,2014-11-13T00:00:00Z
+2014-11-20T00:00:00Z,Lundeberg,Patricia,Marie,,San Diego,CA,G 56317,Accusation Filed,2014-11-07T00:00:00Z
+2014-11-20T00:00:00Z,Mangar,Steven,Keith,,Salinas,CA,A 65476,Accusation & Petitition to Revoke Probation Filed,2014-11-06T00:00:00Z
+2014-11-20T00:00:00Z,Mariano,Roberto,Hernandez,,North Hollywood,CA,G 73610,Accusation Filed,2014-11-12T00:00:00Z
+2014-11-20T00:00:00Z,Navarrete,Rommel,Rojas,,La Mesa,CA,G 81687,Accusation Filed,2014-11-13T00:00:00Z
+2014-11-20T00:00:00Z,Olsgard,Edward,Charles,,Eureka,CA,G 25166,Accusation Filed,2014-11-07T00:00:00Z
+2014-11-20T00:00:00Z,Paik,Phillip,Chung Pil,,San Diego,CA,A 50381,Accusation & Petitition to Revoke Probation Filed,2014-11-12T00:00:00Z
+2014-11-20T00:00:00Z,Palmer,Michael,Anthony,,Eureka,CA,G 65321,First Amended Accusation Filed,2014-11-06T00:00:00Z
+2014-11-20T00:00:00Z,Perez-Munoz,Antonio,,,Palm Springs,CA,G 86746,Surrendered,2014-11-18T00:00:00Z
+2014-11-20T00:00:00Z,Rauf,Khalid,,,Madera,CA,A 63120,Accusation Filed,2014-11-12T00:00:00Z
+2014-11-20T00:00:00Z,Rodgers,Ruth,Anna,,San Francisco,CA,A 80909,Accusation Filed,2014-11-12T00:00:00Z
+2014-11-20T00:00:00Z,Schnierow,Bradley,John,,La Jolla,CA,A 67780,Accusation Filed,2014-11-05T00:00:00Z
+2014-11-20T00:00:00Z,Streutker,Anthony,Donald,,Santa Rosa,CA,A 63917,Accusation Filed,2014-11-14T00:00:00Z
+2014-11-20T00:00:00Z,Vasudevan,Sivanandam,,,Redlands,CA,A 72543,Accusation Filed,2014-11-13T00:00:00Z
+2014-11-20T00:00:00Z,Wu,Benson,Ming-Shun,,Scarsdale,NY,G 82299,Accusation Filed,2014-11-06T00:00:00Z
+2014-11-20T00:00:00Z,Zagha,Moise,Tofic,,Encino,CA,A 34602,Accusation Filed,2014-11-07T00:00:00Z
+2014-11-20T00:00:00Z,Zand,Kambiz,Karimi,,Los Gatos,CA,A 38205,Accusation Filed,2014-11-14T00:00:00Z
+2014-11-21T00:00:00Z,Choi,Audrey,Hoiyee,,Pasadena,CA,A 123785,Decision,2014-11-21T00:00:00Z
+2014-11-21T00:00:00Z,Kayvanfar,John,J.,,Palmdale,CA,A 36821,Decision,2014-11-21T00:00:00Z
+2014-11-21T00:00:00Z,Lee,Richard,,,Whittier,CA,G 14329,Surrendered,2014-11-21T00:00:00Z
+2014-11-21T00:00:00Z,Liepmann,Peter,Julian,,Bakersfield,CA,G 89383,Decision,2014-11-21T00:00:00Z
+2014-11-21T00:00:00Z,Safranko,Brenda,Jean,,Malibu,CA,G 45081,Decision,2014-11-21T00:00:00Z
+2014-11-21T00:00:00Z,Wong,David,Yen-Mann,,Torrance,CA,G 27287,Decision,2014-11-21T00:00:00Z
+2014-11-25T00:00:00Z,Kim,Junuk,,,Houston,TX,A 104415,Surrendered,2014-11-25T00:00:00Z
+2014-11-26T00:00:00Z,Afato,Faafouina,Salapiu,,Yuba City,CA,G 76223,Decision,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Edwards,Michael,Charles,,Westminster,CA,A 91508,Decision,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Finkleman,Lowell,Craig,,Tacoma,WA,G 48223,Public Reprimand,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Habtezghi,Hagos,,,Whittier,CA,C 41500,Cease Practice Order Issued,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Page,Gary,Wayne,,Higley,AZ,A 67353,Decision,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Streit,Charles,Coonan,,Fullerton,CA,A 25530,Decision,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Trussler,Andrew,Peter,,West Lake Hills,TX,A 86306,Decision,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Williams,Elsworth,Pearl,,Pomona,CA,A 24406,Decision,2014-11-26T00:00:00Z
+2014-11-26T00:00:00Z,Williams,Mark,Dwight,,Moreno Valley,CA,A 80386,Decision,2014-11-26T00:00:00Z
+2014-12-01T00:00:00Z,O'Day,Steven,John,,Los Angeles,CA,A 53519,Decision,2014-11-28T00:00:00Z
+2014-12-01T00:00:00Z,Zimmerman,Joseph,E.,,Antioch,CA,A 19234,Decision,2014-11-28T00:00:00Z
+2014-12-01T00:00:00Z,Athanassious,Nabil,Fawzy,,Vacaville,CA,A 40963,Surrendered,2014-12-01T00:00:00Z
+2014-12-02T00:00:00Z,Williams,Jeffery,Allen,,Spokane,WA,C 53954,Surrendered,2014-12-02T00:00:00Z
+2014-12-05T00:00:00Z,Casillas,Ernest,Ybarra,,Montrose,CA,A 38017,Suspended,2014-12-04T00:00:00Z
+2014-12-05T00:00:00Z,Chang,Sean,Chia,,Thousand Oaks,CA,A 112950,Decision,2014-12-05T00:00:00Z
+2014-12-09T00:00:00Z,Bonner,Ernest,Lincoln,Jr.,Alameda,CA,A 30477,Revoked,2014-12-04T00:00:00Z
+2014-12-10T00:00:00Z,Annis,Jonathan,,,Carmel,CA,C 51075,First Amended Accusation Filed,2014-11-26T00:00:00Z
+2014-12-10T00:00:00Z,Comden,Sacha,Susan,,Costa Mesa,CA,A 112824,Accusation & Petitition to Revoke Probation Filed,2014-11-26T00:00:00Z
+2014-12-10T00:00:00Z,Gavel,David,A.,,Sierra Madre,CA,A 97054,Accusation Filed,2014-11-26T00:00:00Z
+2014-12-10T00:00:00Z,Johnson,Gary,Ronald,,San Andreas,CA,G 27755,Accusation Filed,2014-11-20T00:00:00Z
+2014-12-10T00:00:00Z,Jose,Alfredo,Yatco,Jr.,Trabuco Canyon,CA,A 24476,Accusation Dismissed,2014-11-19T00:00:00Z
+2014-12-10T00:00:00Z,Koftan,Charles,Eldon,,Englewood,CO,G 71434,Public Reprimand,2014-12-10T00:00:00Z
+2014-12-10T00:00:00Z,Lewis,Brenda,Ann,,Hayward,CA,G 52614,Accusation Filed,2014-11-20T00:00:00Z
+2014-12-10T00:00:00Z,Mischiu,Oana,Madalina,,Cupertino,CA,A 73127,Accusation Filed,2014-11-26T00:00:00Z
+2014-12-10T00:00:00Z,Mygdal,Peter,Karl,,Iowa City,IA,A 97698,Petition to Revoke Probation Filed,2014-11-26T00:00:00Z
+2014-12-10T00:00:00Z,Quiring,Mark,Edmond,,Mount Pleasant,TX,C 50839,Accusation Filed,2014-11-20T00:00:00Z
+2014-12-10T00:00:00Z,Sheperd,Jaime,Manuel,,Minot,ND,G 88416,Accusation Filed,2014-11-26T00:00:00Z
+2014-12-10T00:00:00Z,Tobinick,Edward,Lewis,,Boca Raton,FL,G 37710,Accusation Filed,2014-11-24T00:00:00Z
+2014-12-15T00:00:00Z,Petrakis,Steven,John,,Albuquerque,NM,G 35401,Revoked,2014-12-15T00:00:00Z
+2014-12-16T00:00:00Z,Westerback,Daryl,Walter,,Thousand Oaks,CA,A 72712,Surrendered,2014-12-16T00:00:00Z
+2014-12-16T00:00:00Z,Zax,Steven,,,Los Angeles,CA,C 28324,Surrendered,2014-12-15T00:00:00Z
+2014-12-17T00:00:00Z,Adamson,Philip,Michael,,Auburn,CA,G 44912,Accusation Dismissed,2014-12-12T00:00:00Z
+2014-12-17T00:00:00Z,Allen,Nathan,Hale,,Sacramento,CA,G 37098,Accusation Filed,2014-12-03T00:00:00Z
+2014-12-17T00:00:00Z,Isaacs,Larry,Mitchell,,Goshen,NY,G 86613,Accusation Filed,2014-12-09T00:00:00Z
+2014-12-17T00:00:00Z,Kelly,Eleanor,Marie,,Irvine,CA,A 64544,Accusation Filed,2014-12-10T00:00:00Z
+2014-12-17T00:00:00Z,Kram,Harry,Bernard,,Torrance,CA,G 52608,Accusation Filed,2014-12-09T00:00:00Z
+2014-12-17T00:00:00Z,Lal,Munish,,,Chico,CA,A 85179,Amended Accusation Filed,2014-12-09T00:00:00Z
+2014-12-17T00:00:00Z,Lam,Tat,Seng,,Orange,CA,A 62418,Accusation Filed,2014-12-02T00:00:00Z
+2014-12-17T00:00:00Z,McCabe,Brian,Francis,,Tucson,AZ,G 88374,Accusation Filed,2014-12-03T00:00:00Z
+2014-12-17T00:00:00Z,Martinez,Gonzalo,Gonzalez,,Palmdale,CA,G 45660,First Amended Accusation Filed,2014-12-05T00:00:00Z
+2014-12-17T00:00:00Z,Megwa,Joseph,Maduabuchi,,Houston,TX,C 55352,Accusation Filed,2014-12-03T00:00:00Z
+2014-12-17T00:00:00Z,O'Dorisio,James,Edward,,Santa Rosa,CA,A 44147,First Amended Accusation Filed,2014-12-02T00:00:00Z
+2014-12-17T00:00:00Z,Owen,Sean,Michael,,Novato,CA,A 123587,Accusation Filed,2014-12-08T00:00:00Z
+2014-12-17T00:00:00Z,Rodriguez,Hector,Fernando,,Hemet,CA,A 92346,Accusation Filed,2014-12-12T00:00:00Z
+2014-12-17T00:00:00Z,Severt,Raymond,,,Santa Rosa,CA,G 63482,Accusation Filed,2014-12-09T00:00:00Z
+2014-12-17T00:00:00Z,Street,Wendell,,,Victorville,CA,A 43837,Accusation Filed,2014-12-08T00:00:00Z
+2014-12-17T00:00:00Z,Tribble,John,Benjamin,,Yreka,CA,A 109949,Petition to Revoke Probation Filed,2014-11-20T00:00:00Z
+2014-12-17T00:00:00Z,Turner,Gilbert,R.,,Upland,CA,A 18624,Accusation Filed,2014-12-08T00:00:00Z
+2014-12-18T00:00:00Z,Rettenmaier,Mark,Albert,,Newport Beach,CA,A 32692,Restrictions,2014-12-01T00:00:00Z
+2014-12-19T00:00:00Z,Hauben,Steven,Paul,,Scottsdale,AZ,A 56326,Revoked,2014-12-19T00:00:00Z
+2014-12-19T00:00:00Z,Ranu,Gurdeep,Singh,,Fresno,CA,A 32266,Public Reprimand,2014-12-19T00:00:00Z
+2014-12-22T00:00:00Z,Rappard,George,,,Los Angeles,CA,A 63419,Public Letter of Reprimand,2014-12-18T00:00:00Z
+2014-12-23T00:00:00Z,Metzger,Allan,Lawrence,,Los Angeles,CA,G 22607,Surrendered,2014-12-23T00:00:00Z
+2014-12-24T00:00:00Z,Emmon,Cleveland,James,,Decatur,GA,A 93821,Suspended,2014-12-23T00:00:00Z
+2014-12-24T00:00:00Z,Reece,Tyron,Cleon,,Inglewood,CA,A 31509,Decision,2014-12-24T00:00:00Z
+2014-12-26T00:00:00Z,Tawakol,Raif,,,Merced,CA,C 40824,Surrendered,2014-12-22T00:00:00Z
+2014-12-26T00:00:00Z,Harrison,Otis,Russell,,Mobile,AL,A 52907,Surrendered,2014-12-23T00:00:00Z
+2014-12-30T00:00:00Z,Furman,Geoffrey,David,,Santa Ana,CA,A 36482,Public Letter of Reprimand,2014-12-24T00:00:00Z
+2014-12-30T00:00:00Z,Woolery,James,Douglas,,Napa,CA,G 34457,Public Letter of Reprimand,2014-12-26T00:00:00Z
+2014-12-30T00:00:00Z,Dureza,Renan,Jayme,,Baltimore,MD,C 51663,Surrendered,2014-12-30T00:00:00Z
+2014-12-31T00:00:00Z,Alegria,Rudolpho,Jaramillo,,Indio,CA,A 37049,Surrendered,2014-12-31T00:00:00Z
+2014-12-31T00:00:00Z,Resnick,Lawrence,Harold,,Santa Monica,CA,G 16871,Restrictions,2014-12-29T00:00:00Z

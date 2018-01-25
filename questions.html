@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>If you're stuck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="markdown github">
+
+	<header class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<nav role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">J298 Data Journalism</a>
+				</div> <!-- /.navbar-header -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Class notes<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="week1.html">What is data?</a></li>
+								<li><a href="week2.html">Types of stories</a></li>
+								<li><a href="week3.html">Working with spreadsheets</a></li>
+								<li><a href="week4.html">Acquiring, cleaning, and formatting data</a></li>
+								<li><a href="week5.html">R, RStudio, and the tidyverse</a></li>
+								<li><a href="week6.html">Data journalism in the tidyverse</a></li>
+								<li><a href="week7.html">Don't let the data lie to you</a></li>
+								<li><a href="week8.html">Databases and SQL</a></li>
+								<li><a href="week9.html">Finding stories using maps</a></li>
+								<li><a href="week10.html">Maps meet databases</a></li>
+								<li><a href="week11.html">More fun with R</a></li>
+								<li><a href="week13.html">To be determined</a></li>
+								<li><a href="week14.html">Putting it all into practice: 1</a></li>
+								<li><a href="week15.html">Putting it all into practice: 2</a></li>
+							</ul>
+						</li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="datasets.html">Data</a></li>
+						<li><a href="questions.html">If you get stuck</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Email instructors<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="mailto:p.aldhous@gmail.com">Peter Aldhous</a></li>
+								<li><a href="mailto:amanda@velociraptor.info">Amanda Hickman</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</div> <!-- /.navbar-header -->
+	</header>
+	<div class="container all">
+
+<h1 id="if-you-get-stuck"><a name="if-you-get-stuck" href="#if-you-get-stuck"></a>If you get stuck</h1>
+<h3 id="asking-good-questions"><a name="asking-good-questions" href="#asking-good-questions"></a>Asking good questions</h3>
+<p>If you challenge yourself (and you should challenge yourself), you’re bound to get stuck. Technology is changing constantly, so learning how to ask the right questions and get help with new tools is probably more important than actually learning how to use any one tool well today. </p>
+<p>ProPublica’s Sisi Wei has a great <a href="https://www.propublica.org/nerds/how-to-ask-programming-questions">intro to asking questions</a>.</p>
+<p>Questions like these are hard to answer:</p>
+<blockquote>
+<p>I’ve been trying for the past couple of hours to figure out what exactly I’m doing wrong with the  assignment. My spreadsheet is attached — can you tell me what I’m doing wrong?</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>I want to start putting together my map, but the QGIS doesn’t seem to be working on my computer. Do you know why?</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>When I run the R code from the class example, it doesn’t work.</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>I’ve been looking for a KML file for Russia and this is the closest I’ve gotten but there’s still a glitch: <a href="https://www.google.com/fusiontables/DataSource?docid=…">https://www.google.com/fusiontables/DataSource?docid=…</a> Please help! I would really like to pitch this today.</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>I can’t install Open Refine! I tried, but the download is just broken.</p>
+</blockquote>
+<p>All we know is that you’re using QGIS, or R, or Open Refine. We don’t know what you’ve tried, we don’t know what happens when you try it, and we don’t know what you thought was going to happen. So we don’t know enough to help you. A good question will include all of this:</p>
+<ul>
+<li>What steps will reproduce the problem? (Sometimes this means actually walking through the steps again, until you reach the problem.)</li><li>If you’re working with code or data, we probably need to see your data to reproduce the problem! Put your code or data into a <a href="http://gist.github.com">gist</a> or <a href="http://paste.debian.net/">pastebin</a> and include a link with your question.</li><li>What is the expected output?</li><li>What do you see instead? <strong>If you are working in code and you see an error message, we need to know what that says.</strong></li><li>What version of the software are you using?</li><li>What version of the Mac OS are you using (El Capitan, Sierra, etc)?</li></ul>
+<p>Walk us through it, step by step. Don’t just say “I followed the instructions,” describe the instructions you followed. You’re aiming for something like this:</p>
+<blockquote>
+<p>I can download Refine just fine, but when I try to actually open it, I get an error that says the file is corrupted: “OpenRefine is damaged and can’t be opened. You should move it to the Trash” — I’ve downloaded it three times from three different browsers and I keep getting the same error.</p>
+</blockquote>
+<p>(If you are actually getting that particular error, <a href="https://github.com/OpenRefine/OpenRefine/issues/590">the solution</a> is not particularly intuitive: You have to fix your Privacy and Security settings.)</p>
+<h3 id="where-should-you-get-help?"><a name="where-should-you-get-help?" href="#where-should-you-get-help?"></a>Where should you get help?</h3>
+<p>You’re always welcome to ask your instructors for help. When you’re stuck on a technical problem (“Am I on the right track with my pitch?” is not a technical problem; “Why is QGIS drawing San Francisco’s shapefiles in the middle of the bay?” is a technical problem) consider opening <a href="https://github.com/ucb-dataj/2018/issues">a new issue</a>. It’s good practice.</p>
+<p>Other good places to get help:</p>
+<ul>
+<li><a href="https://www.ire.org/resource-center/listservs/subscribe-nicar-l/">NICAR-L</a> is indispensable for connecting with other journalists who are doing innovative data and interactive reporting. Get on the list now.</li><li><a href="https://stackoverflow.com">Stack Overflow</a> is an excellent place to ask specific programming questions, but expect a lot of huffing and puffing if you aren’t following the advice here about how to ask good questions (or Stack Overflow’s own <a href="https://stackoverflow.com/help/how-to-ask">excellent post on the same</a>.</li><li>Tweet questions. Tag them #dataskills</li><li>Join <a href="https://gis.stackoverflow.com">gis.stackoverflow.com</a> – that is where you’re going to get help for QGIS and PostGIS question.</li></ul>
+
+	</div> <!-- /.container all -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
