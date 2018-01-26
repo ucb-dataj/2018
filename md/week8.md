@@ -3,6 +3,8 @@
 
 Introduction to Databases and SQL
 
+Postico
+
 Exercise: SQL Bingo
 Council Members, Votes, Districts, committees
 

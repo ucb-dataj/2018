@@ -1,6 +1,7 @@
 ## Week 9 | March 15, 2018
 *Instructor: Amanda Hickman*
 
+QGIS
 Finding Stories Using Maps
 
 * Super basic stuff; where is this happening? Where is this concentrated?
@@ -23,4 +24,4 @@ PETER: will dig out some of his favorite examples.
 
 Cal Fire shapefiles: Calculate ST_area for burn areas over last two years, vs parcel data. Intersect with land use data from 10 years ago? Building permits?
 
-How to go from making maps to coming out with really compelling conclusions. 
+How to go from making maps to coming out with really compelling conclusions.

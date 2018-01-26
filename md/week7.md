@@ -13,6 +13,8 @@ Don't Let the Data Lie To You
   * https://www.nytimes.com/2014/05/29/us/va-report-confirms-improper-waiting-lists-at-phoenix-center.html?_r=0
   * https://www.wnyc.org/story/manipulating-metrics-veterans-health-care-system / https://www.nytimes.com/2018/01/01/us/at-veterans-hospital-in-oregon-a-push-for-better-ratings-puts-patients-at-risk-doctors-say.html
 
+  * https://www.eastbayexpress.com/oakland/too-many-rapes-dismissed/Content?oid=12633555 (Couple of observations here -- if there are rewards for reducing the number of rapes, there's a clear incentive to call claims unfounded. )
+
 * Connecting the wrong dots and making assumptions that you can't actually make.
 
 * Means and medians and who is "average"
