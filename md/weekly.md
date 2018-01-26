@@ -3,15 +3,13 @@
 ## Data of the Week
 Every week, one or two students will present a data set that they've identified as interesting to the rest of the class.
 
-You'll have five minutes at the start of class to present your data findings. Plan to start by telling us something about an area you're interested in reporting on, and then identify a few agencies or organizations who are likely to collect and maintain relevant data or, identify one solid source for related data.
+You'll have ten minutes at the start of class to present your data findings.
 
 By Wednesday night, if it is your turn, you need to post one data set to bCourses. Your post should include:
 + A description of your reporting interest.
-+ At least three agencies or organizations that might collect related data, or
-+ a link to interesting related data / instructions for getting to the data (this should include enough information that someone else can follow your instructions and see the same numbers you're seeing.) If you're pointing to a specific URL, make sure you know who is behind that URL.
-+ A description of the context of the data: who collected this data? Is it archival or living? How is it collected? (If you haven't identified a specific data set, you can walk through why you think each agency or organization would have relevant data.)
-
-Note that by Week 4, we'll drop the option to point to potential data sources and expect you to actually identify a potentially usable data set.
++ A link to interesting related data / instructions for getting to the data (this should include enough information that someone else can follow your instructions and see the same numbers you're seeing.) If you're pointing to a specific URL, make sure you know who is behind that URL.
++ A description of the context of the data: who collected this data? Is it archival or living? How is it collected?
++ The questions you want to ask of this data to drive your reporting.
 
 ### Alternate description
 Data of the Week
