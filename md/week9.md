@@ -20,6 +20,9 @@ Sex offender residency restrictions: Map the facilities and use ST_Buffer / ST_u
 
 Distance to abortion clinics. https://pudding.cool/2017/09/clinics/ / https://www.npr.org/sections/health-shots/2017/10/03/555166033/for-many-women-the-nearest-abortion-clinic-is-hundreds-of-miles-away
 
+Mapping Quakes (and filtering USGS data by geography)
+http://2015.padjo.org/tutorials/spreadsheets/maps-earthquakes-spreadsheets-part-1/
+
 PETER: will dig out some of his favorite examples.
 
 Cal Fire shapefiles: Calculate ST_area for burn areas over last two years, vs parcel data. Intersect with land use data from 10 years ago? Building permits?
