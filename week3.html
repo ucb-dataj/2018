@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Week 3: Pivot Tables</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="markdown github">
+
+	<header class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<nav role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">J298 Data Journalism</a>
+				</div> <!-- /.navbar-header -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Class notes<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="week1.html">What is data?</a></li>
+								<li><a href="week2.html">Types of stories</a></li>
+								<li><a href="week3.html">Working with spreadsheets</a></li>
+								<li><a href="week4.html">Acquiring, cleaning, and formatting data</a></li>
+								<li><a href="week5.html">R, RStudio, and the tidyverse</a></li>
+								<li><a href="week6.html">Data journalism in the tidyverse</a></li>
+								<li><a href="week7.html">Don't let the data lie to you</a></li>
+								<li><a href="week8.html">Databases and SQL</a></li>
+								<li><a href="week9.html">Finding stories using maps</a></li>
+								<li><a href="week10.html">Maps meet databases</a></li>
+								<li><a href="week11.html">More fun with R</a></li>
+								<li><a href="week13.html">To be determined</a></li>
+								<li><a href="week14.html">Putting it all into practice: 1</a></li>
+								<li><a href="week15.html">Putting it all into practice: 2</a></li>
+							</ul>
+						</li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="datasets.html">Data</a></li>
+						<li><a href="questions.html">If you get stuck</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Email instructors<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="mailto:p.aldhous@gmail.com">Peter Aldhous</a></li>
+								<li><a href="mailto:amanda@velociraptor.info">Amanda Hickman</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</div> <!-- /.navbar-header -->
+	</header>
+	<div class="container all">
+    <h2 id="week-3">Week 3</h2>
+    <p><em>Instructor: Amanda Hickman</em></p>
+    <h3 id="presentations">Presentations</h3>
+    <p>Chenwei Tian &amp; Chloe Lessard</p>
+    <h3 id="quiz-review">Quiz Review</h3>
+    <p>How did we do?</p>
+    <h3 id="spreadsheets">Spreadsheets</h3>
+    <p>Spreadsheets are the simplest tool in your data toolbox. There are some real limitations that you'll encounter when you try to use spreadsheets for large datasets or complex, reproducible analysis, but some facility with core spreadsheet functions will go a long, long way towards improving your data skills.</p>
+    <p>Sort, filter, summarize, group and join.</p>
+
+    <p>We're going to use Google Sheets in class, but <a href="https://www.libreoffice.org/download/download/">LibreOffice Calc</a> is a great, open source option. Excel is also perfectly good, though it's been a long time since anyone showed me a reason to choose it over LibreOffice.</p>
+    <h2 id="formulas">Formulas</h2>
+    <p>I keep a running list of my favorite spreadsheet commands on a <a href="https://github.com/amandabee/cunyjdata/wiki/Tip-Sheet:-Spreadsheets">course wiki</a> -- it's a great resource.</p>
+    <p>You went over the basics week 1: <code>=SUM</code>, <code>=AVERAGE</code>, <code>=MAX</code>, <code>=MIN</code></p>
+    <p>Start with a question from our Week 2 Quiz:</p>
+    <blockquote>
+    <ol>
+    <li>There were 15,000 violent crimes in 2017 in city A, which had a population of 350,000. There were 9,000 violent crimes in City B, which had a population of 500,000. Complete the following sentence with a number rounded to one decimal place: “City A’s violent crime rate was ... times that of city B.”</li>
+    </ol>
+    </blockquote>
+    <p>What we need to do is normalize the data to the population.</p>
+    <table>
+    <thead>
+    <tr>
+    <th>City</th>
+    <th>Crimes</th>
+    <th>Population</th>
+    <th>Rate         </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>A</td>
+    <td>15000</td>
+    <td>350000</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>B</td>
+    <td>9000</td>
+    <td>500000</td>
+    </tr>
+    </tbody>
+    </table>
+    <table>
+    <thead>
+    <tr>
+    <th>City</th>
+    <th>Crimes</th>
+    <th>Population</th>
+    <th>Formula</th>
+    <th>Rate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>A</td>
+    <td>15000</td>
+    <td>350000</td>
+    <td>=(B2/C2)*100000</td>
+    <td>4286</td>
+    </tr>
+    <tr>
+    <td>B</td>
+    <td>9000</td>
+    <td>500000</td>
+    <td>=(B3/C3)*100000</td>
+    <td>1800</td>
+    </tr>
+    </tbody>
+    </table>
+    <h2 id="filtering-">Filtering:</h2>
+    <p>On a data set the size of ProPublica's Medicaid data, you aren't going to be able to use Google Sheets (which has a max of ~200K cells -- meaning that a four column spreadsheet can only accommodate 50K rows). So as the semester progresses and we move into tools that are way harder to use than spreadsheets are, it's because we can't use a spreadsheet.</p>
+    <p>Open the <code>311_Cases_Dec2017.csv</code> file. We're going to start by just sniffing around. The best way to get it into a Google Drive spreadsheet is to use <code>File &gt; Import ...</code></p>
+    <p>The data is San Francisco's 311 call records, from <a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6">SF's Open Data Portal</a> -- I used their service to filter out only the cases opened between 12/01/2017 12:00:00 AM and 01/01/2018 12:00:00 AM.</p>
+    <p>Click in any cell in the header row and look for the 'filter' icon. Click it. It will take a minute but we'll get a little filter icon in each header cell, and then we can start to skim a bit. Try filtering by status, and source.</p>
+    <p>Notice that it takes a minute to get through this data.</p>
+    <h2 id="pivot-tables">Pivot Tables</h2>
+    <p>Later this semester, we'll use some much more powerful tools, especially R. And the honest truth is that spreadsheets can be super dangerous. It's hard to keep track of the transformations you're applying when they're hidden in spreadsheet functions. But: you can do a lot in spreadsheets and sometimes they're exactly the right tool.</p>
+    <ul>
+    <li>Turn off the auto-filter.</li>
+    <li>Make sure you don't have any data selected.</li>
+    <li><code>Data &gt; Pivot Table...</code></li>
+    <li>Add <code>Responsible Agency</code> and then <code>Category</code> as rows</li>
+    <li>Add <code>CaseID</code> as value.</li>
+    <li>Take a look at the default operation: is the sum of all case ids a useful value?</li>
+    <li>Add <code>Supervisor District</code> as columns.</li>
+    <li>Use "Sort by" to sort within the Pivot Table.</li>
+    </ul>
+    <h3 id="try-it-">Try it:</h3>
+    <p>If you wanted to quickly see the opened vs closed case count for each Supervisor's district, how would you do that?</p>
+    <h3 id="more-data">More Data</h3>
+    <p>The USGS publishes <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php">real time earthquake data</a>, but the locations they include are not something we can sort by.</p>
+    <p>Start by using <code>Data &gt; Text to Columns ...</code> to separate out the broad location from the specifics.</p>
+    <ul>
+    <li><p>Filter for blank cells. We can copy and paste to fill in the blank cells.</p>
+    </li>
+    <li><p>Create a pivot table -- use "COUNT of Mag"; sort it by count.</p>
+    </li>
+    <li><p>Go back to the spreadsheet and Categorize by magnitude. I made the slightly arbitrary decision that we're going to call everything below 4.5 "Minor", and everything above 6.0 "Strong" -- the USGS actually has a few more grades in their system, but these are good buckets.</p>
+    </li>
+    </ul>
+    <h4 id="-lookup-e2-0-4-5-6-minor-moderate-strong-"><code>=LOOKUP(E2,{0,4.5,6},{"Minor","Moderate","Strong"})</code></h4>
+    <ul>
+    <li><p>Fill Down: Select F2 through F6 and do <kbd>ctrl</kbd><kbd>d</kbd> -- that's one "fill down" option. Or grab the blue box and pull down. Or, hover over the little blue square and double click. They're all good options.</p>
+    </li>
+    <li><p>Go back to your pivot table and add the "categories" as columns. </p>
+    </li>
+    </ul>
+    <h1 id="csvkit">CSVKit</h1>
+    <p>If we power through spreadsheets, I want to show you CSVkit, which is a powerful command line tool for chewing through data that's a little too big (or not) for a spreadsheet.</p>
+    <p><a href="https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Tutorial:-Installing-CSVKit">https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Tutorial:-Installing-CSVKit</a>
+  
+
+<h3 id="assignment"><a name="assignment" href="#assignment"></a>Assignment</h3>
+<ul>
+  <li><p>Pivot Table Assignment TK. </p>
+    <p><strong>Due: Weds Feb 7 at 8pm</strong></p>
+</li></ul>
+
+	</div> <!-- /.container all -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

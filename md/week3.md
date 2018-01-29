@@ -1,6 +1,10 @@
 ## Week 3
 *Instructor: Amanda Hickman*
 
+### Presentations
+Chenwei Tian & Chloe Lessard
+
+
 ### Quiz Review
 How did we do?
 
@@ -16,15 +20,24 @@ Sort, filter, summarize, group and join.
 
 We're going to use Google Sheets in class, but [LibreOffice Calc](https://www.libreoffice.org/download/download/) is a great, open source option. Excel is also perfectly good, though it's been a long time since anyone showed me a reason to choose it over LibreOffice.
 
-## Filtering:
-
 ## Formulas
-Basics: =SUM, =AVERAGE, =MAX, =MIN
-Advanced spread sheetery (RIGHT, LEFT, TRIM)
+
+I keep a running list of my favorite spreadsheet commands on a [course wiki](https://github.com/amandabee/cunyjdata/wiki/Tip-Sheet:-Spreadsheets) -- it's a great resource.
+
+You went over the basics week 1: `=SUM`, `=AVERAGE`, `=MAX`, `=MIN`
 
 Start with a question from our Week 2 Quiz:
 
 > 5. There were 15,000 violent crimes in 2017 in city A, which had a population of 350,000. There were 9,000 violent crimes in City B, which had a population of 500,000. Complete the following sentence with a number rounded to one decimal place: “City A’s violent crime rate was ... times that of city B.”
+
+What we need to do is normalize the data to the population.
+
+| City | Crimes | Population | Rate         
+|------|--------|------------|-----------------|
+| A    | 15000  | 350000     |                 |
+| B    | 9000   | 500000     |                 |
+
+
 
 
 | City | Crimes | Population | Formula         | Rate |
@@ -33,13 +46,54 @@ Start with a question from our Week 2 Quiz:
 | B    | 9000   | 500000     | =(B3/C3)*100000 | 1800 |
 
 
+## Filtering:
+
+On a data set the size of ProPublica's Medicaid data, you aren't going to be able to use Google Sheets (which has a max of ~200K cells -- meaning that a four column spreadsheet can only accommodate 50K rows). So as the semester progresses and we move into tools that are way harder to use than spreadsheets are, it's because we can't use a spreadsheet.
+
+Open the `311_Cases_Dec2017.csv` file. We're going to start by just sniffing around. The best way to get it into a Google Drive spreadsheet is to use `File > Import ...`
+
+The data is San Francisco's 311 call records, from [SF's Open Data Portal](https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6) -- I used their service to filter out only the cases opened between 12/01/2017 12:00:00 AM and 01/01/2018 12:00:00 AM.
+
+Click in any cell in the header row and look for the 'filter' icon. Click it. It will take a minute but we'll get a little filter icon in each header cell, and then we can start to skim a bit. Try filtering by status, and source.
+
+Notice that it takes a minute to get through this data.
+
 ## Pivot Tables
 
-....................
-
-Notes for heavy revision...
-
 Later this semester, we'll use some much more powerful tools, especially R. And the honest truth is that spreadsheets can be super dangerous. It's hard to keep track of the transformations you're applying when they're hidden in spreadsheet functions. But: you can do a lot in spreadsheets and sometimes they're exactly the right tool.
+
++ Turn off the auto-filter.
++ Make sure you don't have any data selected.
++ `Data > Pivot Table...`
++ Add `Responsible Agency` and then `Category` as rows
++ Add `CaseID` as value.
++ Take a look at the default operation: is the sum of all case ids a useful value?
++ Add `Supervisor District` as columns.
++ Use "Sort by" to sort within the Pivot Table.
+
+
+### Try it:
+
+If you wanted to quickly see the opened vs closed case count for each Supervisor's district, how would you do that?
+
+### More Data
+
+The USGS publishes [real time earthquake data](https://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php), but the locations they include are not something we can sort by.
+
+Start by using `Data > Text to Columns ... ` to separate out the broad location from the specifics.
+
++ Filter for blank cells. We can copy and paste to fill in the blank cells.
+
++ Create a pivot table -- use "COUNT of Mag"; sort it by count.
+
++ Go back to the spreadsheet and Categorize by magnitude. I made the slightly arbitrary decision that we're going to call everything below 4.5 "Minor", and everything above 6.0 "Strong" -- the USGS actually has a few more grades in their system, but these are good buckets.
+
+#### `=LOOKUP(E2,{0,4.5,6},{"Minor","Moderate","Strong"})`
+
++ Fill Down: Select F2 through F6 and do <kbd>ctrl</kbd><kbd>d</kbd> -- that's one "fill down" option. Or grab the blue box and pull down. Or, hover over the little blue square and double click. They're all good options.
+
++ Go back to your pivot table and add the "categories" as columns. 
+
 
 # CSVKit
 
@@ -86,6 +140,9 @@ sign up. That *should* get you the plan you need for our purposes. Be sure to us
 
 
 ..............
+
+=======
+We can use csvkit to trim a whole year down to a single month.
 
 
 I keep a running list of my favorite spreadsheet commands on the [cunyjdata wiki](https://github.com/amandabee/cunyjdata/wiki/Tip-Sheet:-Spreadsheets). That's a great resource.
