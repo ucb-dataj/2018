@@ -15,6 +15,9 @@ Don't Let the Data Lie To You
 
   * https://www.eastbayexpress.com/oakland/too-many-rapes-dismissed/Content?oid=12633555 (Couple of observations here -- if there are rewards for reducing the number of rapes, there's a clear incentive to call claims unfounded. )
 
+  https://www.buzzfeed.com/alexcampbell/unfounded?utm_term=.eeVX09BdV#.dhyG04gyp
+  http://www.pulitzer.org/winners/t-christian-miller-propublica-and-ken-armstrong-marshall-projec
+
 * Connecting the wrong dots and making assumptions that you can't actually make.
 
 * Means and medians and who is "average"
