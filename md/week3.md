@@ -36,13 +36,18 @@ We're going to use Google Sheets in class, but [LibreOffice Calc](https://www.li
 
 On a data set the size of ProPublica's Medicaid data, you aren't going to be able to use Google Sheets (which has a max of ~200K cells -- meaning that a four column spreadsheet can only accommodate 50K rows). So as the semester progresses and we move into tools that are way harder to use than spreadsheets are, it's because we can't use a spreadsheet.
 
-Open [`311_Cases_Dec2017.csv`](raw-data/week3/311_Cases_Dec2017.csv) . We're going to start by just sniffing around. The best way to get it into a Google Drive spreadsheet is to use `File > Import ...`
+Open [`311_Cases_Dec2017.csv`](data/week3/311_Cases_Dec2017.csv) . We're going to start by just sniffing around. The best way to get it into a Google Drive spreadsheet is to use `File > Import ...`
 
 The data is San Francisco's 311 call records, from [SF's Open Data Portal](https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6) -- I used their service to filter out only the cases opened between 12/01/2017 12:00:00 AM and 01/01/2018 12:00:00 AM.
 
 Click in any cell in the header row and look for the 'filter' icon. Click it. It will take a minute but we'll get a little filter icon in each header cell, and then we can start to skim a bit. Try filtering by status, and source.
 
 Notice that it takes a minute to get through this data.
+
+Good reading on 311 data:
++ <http://kycir.org/2018/02/01/behind-the-data-how-we-analyzed-louisville-trash-complaints/>
+
++ <http://kycir.org/2018/01/30/the-next-louisville-what-trash-cans-tell-us-about-poverty/>
 
 
 ### Pitches
@@ -52,15 +57,9 @@ In groups of 3, pull up your pitches and go over them. Questions to ask:
 * "Compared to What?" -- what are the points of comparison you'd want to see as a reader?
 * What would make it more interesting? Feel free to riff, speculate, and brainstorm but also try to dial in what you think this is going to need as a story.
 
-You have 5 minutes each, so do dial in your elevator pitch.
-
-No records requests w/out a backup plan. 
-
-Most of you need to:
-a) get your hands on the actual data and make sure there's something there, and
-b) go do some reading of other reporting on this.
-
-
+*Notes:*  Most of you need to...
+a) get your hands on the actual data and make sure there's something there,
+b) go do some reading of other reporting on this, or make a few phone calls to figure out what the context is. 
 
 ## Formulas
 
@@ -85,7 +84,7 @@ Later this semester, we'll use some much more powerful tools, especially R. And 
 + Make sure you don't have any data selected.
 + `Data > Pivot Table...`
 + Add `Responsible Agency` and then `Category` as rows
-+ Add `CaseID` as value.
++ Add `CaseID` as value.  
 + Take a look at the default operation: is the sum of all case ids a useful value?
 + Add `Supervisor District` as columns.
 + Use "Sort by" to sort within the Pivot Table.
@@ -122,17 +121,23 @@ Note that the statewide data comes with a 14 digit code. Take a look at the [dic
 If we want to know how Oakland Technical compares to the rest of Oakland's High Schools, how would you approach that?
 
 
-# CSVKit
-
-If we power through spreadsheets, I want to show you CSVkit, which is a powerful command line tool for chewing through data that's a little too big (or not) for a spreadsheet.
-
-https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Tutorial:-Installing-CSVKit
 
 # Homework
 
-Installs: you need to have chrome installed; and open refine.
+**Installs:** make sure that you have [Chrome and Open Refine installed](software.html).
 
-Pivot Table Exercise
+**Pivot Table Exercise:** The complete assignment is in bCourses.
 
-Data Presentation *Feb. 8*
+Go back to the Berkeley Collision Data that Peter shared with you [Week 1](https://ucb-dataj.github.io/2018/data/week1/berkeley_collisions.csv). Use a pivot table to get the total number of fatalities by day of the week for each year. You will probably want to consult the [data dictionary](https://ucb-dataj.github.io/2018/TIMS.html).
+
+* What day of the week had the most fatal crashes in Berkeley, between 2006 and 2014?
+
+Then, revise your pivot table to answer the following two questions keeping in mind that a single fatal crash may include multiple fatalities:
+
+* Has the number of severe or fatal crashes gone up, gone down, or stayed about the same? (You can eyeball this.)
+* What kind of weather was noted at the time of the most serious and fatal collisions? What conclusion can you reasonably draw from that?
+
+Share your spreadsheet with me (abh@berkeley.edu) so I can see your pivot table.
+
+**Data Presentation _Feb. 8_**
 Cat Schuknecht & James Steinbauer
