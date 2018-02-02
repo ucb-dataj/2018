@@ -59,7 +59,7 @@ In groups of 3, pull up your pitches and go over them. Questions to ask:
 
 *Notes:*  Most of you need to...
 a) get your hands on the actual data and make sure there's something there,
-b) go do some reading of other reporting on this, or make a few phone calls to figure out what the context is. 
+b) go do some reading of other reporting on this, or make a few phone calls to figure out what the context is.
 
 ## Formulas
 
@@ -130,7 +130,7 @@ If we want to know how Oakland Technical compares to the rest of Oakland's High 
 
 Go back to the Berkeley Collision Data that Peter shared with you [Week 1](https://ucb-dataj.github.io/2018/data/week1/berkeley_collisions.csv). Use a pivot table to get the total number of fatalities by day of the week for each year. You will probably want to consult the [data dictionary](https://ucb-dataj.github.io/2018/TIMS.html).
 
-* What day of the week had the most fatal crashes in Berkeley, between 2006 and 2014?
+* What day of the week had the most fatalities in Berkeley, between 2006 and 2014?
 
 Then, revise your pivot table to answer the following two questions keeping in mind that a single fatal crash may include multiple fatalities:
 
