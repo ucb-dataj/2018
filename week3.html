@@ -108,10 +108,17 @@
 <p>We're going to use Google Sheets in class, but <a href="https://www.libreoffice.org/download/download/">LibreOffice Calc</a> is a great, open source option. Excel is also perfectly good, though it's been a long time since anyone showed me a reason to choose it over LibreOffice.</p>
 <h3 id="filtering-">Filtering:</h3>
 <p>On a data set the size of ProPublica's Medicaid data, you aren't going to be able to use Google Sheets (which has a max of ~200K cells -- meaning that a four column spreadsheet can only accommodate 50K rows). So as the semester progresses and we move into tools that are way harder to use than spreadsheets are, it's because we can't use a spreadsheet.</p>
-<p>Open <a href="raw-data/week3/311_Cases_Dec2017.csv"><code>311_Cases_Dec2017.csv</code></a> . We're going to start by just sniffing around. The best way to get it into a Google Drive spreadsheet is to use <code>File &gt; Import ...</code></p>
+<p>Open <a href="data/week3/311_Cases_Dec2017.csv"><code>311_Cases_Dec2017.csv</code></a> . We're going to start by just sniffing around. The best way to get it into a Google Drive spreadsheet is to use <code>File &gt; Import ...</code></p>
 <p>The data is San Francisco's 311 call records, from <a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6">SF's Open Data Portal</a> -- I used their service to filter out only the cases opened between 12/01/2017 12:00:00 AM and 01/01/2018 12:00:00 AM.</p>
 <p>Click in any cell in the header row and look for the 'filter' icon. Click it. It will take a minute but we'll get a little filter icon in each header cell, and then we can start to skim a bit. Try filtering by status, and source.</p>
 <p>Notice that it takes a minute to get through this data.</p>
+<p>Good reading on 311 data:</p>
+<ul>
+<li><p><a href="http://kycir.org/2018/02/01/behind-the-data-how-we-analyzed-louisville-trash-complaints/">http://kycir.org/2018/02/01/behind-the-data-how-we-analyzed-louisville-trash-complaints/</a></p>
+</li>
+<li><p><a href="http://kycir.org/2018/01/30/the-next-louisville-what-trash-cans-tell-us-about-poverty/">http://kycir.org/2018/01/30/the-next-louisville-what-trash-cans-tell-us-about-poverty/</a></p>
+</li>
+</ul>
 <h3 id="pitches">Pitches</h3>
 <p>In groups of 3, pull up your pitches and go over them. Questions to ask:</p>
 <ul>
@@ -119,11 +126,9 @@
 <li>"Compared to What?" -- what are the points of comparison you'd want to see as a reader?</li>
 <li>What would make it more interesting? Feel free to riff, speculate, and brainstorm but also try to dial in what you think this is going to need as a story.</li>
 </ul>
-<p>You have 5 minutes each, so do dial in your elevator pitch.</p>
-<p>No records requests w/out a backup plan. </p>
-<p>Most of you need to:
-a) get your hands on the actual data and make sure there's something there, and
-b) go do some reading of other reporting on this.</p>
+<p><em>Notes:</em>  Most of you need to...
+a) get your hands on the actual data and make sure there's something there,
+b) go do some reading of other reporting on this, or make a few phone calls to figure out what the context is. </p>
 <h2 id="formulas">Formulas</h2>
 <p>I keep a running list of my favorite spreadsheet commands on a <a href="https://github.com/amandabee/cunyjdata/wiki/Tip-Sheet:-Spreadsheets">course wiki</a> -- it's a great resource.</p>
 <p>You went over the basics week 1: <code>=SUM</code>, <code>=AVERAGE</code>, <code>=MAX</code>, <code>=MIN</code></p>
@@ -190,14 +195,21 @@ b) go do some reading of other reporting on this.</p>
 <p>The State of California publishes quite a bit of <a href="https://www.cde.ca.gov/ds/sd/sd/filescohort.asp">high school graduation</a> data statewide. Open  <a href="raw-data/week3/calpads_cohort16_alameda.csv">calpad_cohort16_alameda.csv</a> in Google Sheets.</p>
 <p>Note that the statewide data comes with a 14 digit code. Take a look at the <a href="https://www.cde.ca.gov/ds/sd/sd/fscohort.asp">dictionary</a> and let's figure out how to break out the CDS into county, district, school.</p>
 <p>If we want to know how Oakland Technical compares to the rest of Oakland's High Schools, how would you approach that?</p>
-<h1 id="csvkit">CSVKit</h1>
-<p>If we power through spreadsheets, I want to show you CSVkit, which is a powerful command line tool for chewing through data that's a little too big (or not) for a spreadsheet.</p>
-<p><a href="https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Tutorial:-Installing-CSVKit">https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Tutorial:-Installing-CSVKit</a></p>
 <h1 id="homework">Homework</h1>
-<p>Installs: make sure that you have <a href="software.html">Chrome and Open Refine installed</a>. </p>
-<p>Pivot Table Exercise: </p>
-<h3 id="data-presentation-feb-8-">Data Presentation <em>Feb. 8</em></h3>
-<p>Cat Schuknecht &amp; James Steinbauer</p>
+<p><strong>Installs:</strong> make sure that you have <a href="software.html">Chrome and Open Refine installed</a>.</p>
+<p><strong>Pivot Table Exercise:</strong> The complete assignment is in bCourses.</p>
+<p>Go back to the Berkeley Collision Data that Peter shared with you <a href="https://ucb-dataj.github.io/2018/data/week1/berkeley_collisions.csv">Week 1</a>. Use a pivot table to get the total number of fatalities by day of the week for each year. You will probably want to consult the <a href="https://ucb-dataj.github.io/2018/TIMS.html">data dictionary</a>.</p>
+<ul>
+<li>What day of the week had the most fatal crashes in Berkeley, between 2006 and 2014?</li>
+</ul>
+<p>Then, revise your pivot table to answer the following two questions keeping in mind that a single fatal crash may include multiple fatalities:</p>
+<ul>
+<li>Has the number of severe or fatal crashes gone up, gone down, or stayed about the same? (You can eyeball this.)</li>
+<li>What kind of weather was noted at the time of the most serious and fatal collisions? What conclusion can you reasonably draw from that?</li>
+</ul>
+<p>Share your spreadsheet with me (abh@berkeley.edu) so I can see your pivot table.</p>
+<p><strong>Data Presentation <em>Feb. 8</em></strong>
+Cat Schuknecht &amp; James Steinbauer</p>
 	</div> <!-- /.container all -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
