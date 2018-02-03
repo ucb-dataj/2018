@@ -14,6 +14,8 @@ Download the data for this class from [here](data/week4.zip), unzip the folder a
 
 - `ucb_stanford_2014.csv` Data on federal government grants to UC Berkeley and Stanford University in 2014, downloaded from [USASpending.gov](https://www.usaspending.gov/Pages/Default.aspx).
 
+- `alerts-actions_2017.xls` Records of [disciplinary alerts issued and actions taken](http://www.mbc.ca.gov/Publications/Disciplinary_Actions/) by the Medical Board of California in 2017.
+
 
 Not so many years ago, data was hard to obtain. Often journalists would have to painstakingly compile their own datasets from paper records. The Internet has changed the game. Today, many government and other public databases can now be queried online, and the results of those searches downloaded. Other datasets can be downloaded in their entirety.
 
@@ -400,6 +402,21 @@ You can then copy and paste this output into a text editor, and save the file wi
 
 To convert data from JSON or XML into text files, use Open Refine. First create a new project and import your JSON or XML file. Then use the `Export` button and select `Tab-separated value` or `Comma-separated value` to export as a text file.
 
+### Excercise/assignment
+
+ - Using Open Refine, process the Medical Board of California 2017 disciplinary data in the file `alerts-actions_2017.xls` in the following way:
+  - Separate city and state into two columns.
+  - Process the doctors' names into four columns for each of: last name; first name; other names; suffix (Jr., II etc, if present).
+  - Make sure no text columns have leading or trailing white space.
+  - Remove the space from the license numbers so that they read
+  - Remove the multiple header rows through the data
+  - Rename all columns so that there are no spaces in the column names.
+  - Fix any other problems you may find in the data.
+  - Export the processed data as a CSV file.
+  - Extract the JSON that would allow your data processing pipeline to be repeated on another of the downloads from [this page](http://www.mbc.ca.gov/Publications/Disciplinary_Actions/). Save the extracted JSON in a text file with the extension `.json`.
+  - File your CSV and JSON files via bCourses.
+
+**Deadline: Weds Feb 14 at 8pm**
 
 ### Further reading/resources
 
