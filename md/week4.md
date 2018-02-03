@@ -408,7 +408,7 @@ To convert data from JSON or XML into text files, use Open Refine. First create 
   - Separate city and state into two columns.
   - Process the doctors' names into four columns for each of: last name; first name; other names; suffix (Jr., II etc, if present).
   - Make sure no text columns have leading or trailing white space.
-  - Remove the space from the license numbers so that they read
+  - Remove the space from the license numbers so that they have the format `G34377`, `A92917`, and so on.
   - Remove the multiple header rows through the data
   - Rename all columns so that there are no spaces in the column names.
   - Fix any other problems you may find in the data.
