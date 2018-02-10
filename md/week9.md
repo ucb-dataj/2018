@@ -1,6 +1,19 @@
 ## Week 9 | March 15, 2018
 *Instructor: Amanda Hickman*
 
+Tile map scale plugin allows you to pull in a tile base map:
+
+"tile map scale plugin" -- automatically zooms you to an available tile layer, which the other base map plugins don't do. 
+
+osm mapnik
+
+in project properties, enable on the fly crs transformation
+
+write the query that pulls points from the db and turns them into tracks
+
+
+
+
 QGIS
 Finding Stories Using Maps
 
