@@ -22,35 +22,35 @@ Through a tour of some great examples of data journalism, we'll get inspiration 
 - #### Feb. 1: [**Working with spreadsheets**](week3.html)
 Understanding spreadsheet functions and pivot tables is the foundation for the rest of your exploration of data. We'll learn how to troubleshoot and use spreadsheets.  (**Amanda Hickman**)
 
-	- **Assignment** Revise your pitch for a data-driven story.
-
+	- **Assignment:** Pivot table assignment.
 
 - #### Feb. 8: [**Acquiring, cleaning, and formatting data**](week4.html)
 Where and how to find data online. Tips and tricks for downloading unruly data, including browser extensions to extract data from web tables and download from multiple files *en masse*. (**Peter Aldhous**)
 
-	- **Assignment** Data cleaning exercise.
+	- **Assignment:** Data cleaning exercise.
+  - **Assignment:** Revise your pitch for a data-driven story. *Due Feb 24*
 
 
 - ####**Feb. 15:** [**R, R Studio, and the tidyverse**](week5.html)
 Introduction to [R](https://www.r-project.org/), [R Studio](https://www.rstudio.com/) and the [tidyverse](https://www.tidyverse.org/) packages for data journalism. (**Peter Aldhous**)
 
-	- **Assignment** Exercises to reinforce concepts learned in class.
+	- **Assignment:** Exercises to reinforce concepts learned in class.
 
 
 - ####**Feb. 22:** [**Data journalism in the tidyverse**](week6.html)
 We'll use tidyverse packages to explore data on opioid prescription under Medicare in California, and related datasets on the doctors involved. (**Peter Aldhous**)
 
-	- **Assignment** Further exercises with the data from class.
+	- **Assignment:** Further exercises with the data from class.
 
 
 - #### **Mar. 1:**	[**Don't let data lie to you**](week7.html)
 Data is as full of lies as people, but somehow we are inclined to believe numbers in ways we we wouldn't believe sentences. We'll look at ways that numbers lie to us and people lie to each other with numbers.  (**Amanda Hickman**)
 
- 	- **Assignment** Submit a reporting and data analysis plan, based on your earlier pitch.
+ 	- **Assignment:** Submit a reporting and data analysis plan, based on your earlier pitch.
 
 
-- #### **Mar. 8:** [**Introduction to databases and SQL**](week8.html)
-We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions of data.(**Amanda Hickman**)
+- #### **Tuesday Mar. 6:** [**Introduction to databases and SQL**](week8.html)
+We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions of data. Note that this class will meet on a Tuesday. (**Amanda Hickman**)
 
 	- **Assignment** Skill reinforcement assignment in PostgreSQL.
 
@@ -59,7 +59,7 @@ We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions
 [QGIS](https://qgis.org/en/site/) is a desktop geographic information system (or GIS) application that we'll use to view, edit, and analyze geographic data. (**Amanda Hickman**)
 
 	- **Assignment** Skill reinforcement assignment in QGIS.
-	
+
 
 -  ####**Mar. 22:** [**Maps meet databases**](week10.html)
 [PostGIS](https://postgis.net/) adds support for geographic queries and objects to Postgres -- it is a powerful tool for geographic analysis, and it plugs right into QGIS. We'll explore more advanced queries that take advantage of PostGIS's power.  We'll also discuss the tool or strategy you'd like to tackle in week 12. (**Amanda Hickman**)
