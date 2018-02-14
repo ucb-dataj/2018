@@ -33,7 +33,8 @@ Download the data for this class from [here](data/week5.zip), unzip the folder a
 	- `action_type` Type of action.
 	- `action_date` Date of action.
 
- - `ca_medicare_opioids.csv` Data on prescriptions of opioid drugs under the Medicare Part D Prescription Drug Program by doctors in California, from 2013 to 2015. Filtered from the national data downloads available [here](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Part-D-Prescriber.html). This is the public release of the data that ProPublica used FOIA to obtain for earlier years for the story we discussed in Week 2. Contains the following variables:
+
+- `ca_medicare_opioids.csv` Data on prescriptions of opioid drugs under the Medicare Part D Prescription Drug Program by doctors in California, from 2013 to 2015. Filtered from the national data downloads available [here](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Part-D-Prescriber.html). This is the public release of the data that ProPublica used FOIA to obtain for earlier years for the story we discussed in Week 2. Contains the following variables:
   - `npi` [National Provider Identifier](https://npiregistry.cms.hhs.gov/) (NPI) for the doctor/organization making the claim. This is a unique code for each health care provider.
   - `nppes_provider_last_org_name` For individual doctors, their last name. For organizations, the organziation name.
   - `nppes_provider_first_name` First name for indivisual doctors, blank for organizations.
@@ -261,7 +262,7 @@ So this code will convert `alert_date` codes to text:
 ```r
 # convert alert_date to text
 ca_discipline$alert_date <- as.character(ca_discipline$alert_date)
-glipse(ca_discipline)
+glimpse(ca_discipline)
 ```
 Notice that the data type for `alert_date` has now changed:
 
@@ -400,18 +401,24 @@ To demonstrate the `bind_rows` function, we will **filter** for doctors with rev
 
 ```R
 # doctors in Berkeley who had their licenses revoked
-revoked_oak <- ca_discipline %>%
+revoked_berk <- ca_discipline %>%
   filter(action_type == "Revoked"
        & city == "Berkeley")
 
 # doctors in Oakland who had their licenses revoked
-revoked_berk <- ca_discipline %>%
+revoked_oak <- ca_discipline %>%
   filter(action_type == "Revoked"
        & city == "Oakland")
 
 # doctors in Berkeley or Oakland who have had their licenses revoked
 revoked_oak_berk <- bind_rows(revoked_oak, revoked_berk)
 ```
+
+#### In-class practice with filtering and sorting
+
+- **Filter** the `ca_discipline` data to show licenses `Revoked` for doctors based in Los Angeles. **Sort** the result in reverse date order, most recent first. 
+
+- **Filter** the data to show licenses `Suspended` or `Revoked` for doctors in Los Angeles or San Diego. **Sort** the result in alphabetical order of the doctors' names, first by last name, then by first name, then by middle name(s). (Hint: You can sort by multiple variables by separating them with a comma.)
 
 #### Write data to a CSV file
 
@@ -523,6 +530,12 @@ This should be the result:
 In this code we calculated two summary statistics, `mean` and `median`, in the same `summarize` function, separating each calculation by a comma. First, however, we had to `ungroup` the grouped `actions_year_month` data frame.
 
 Think about the similarities and differences between **grouping** and **summarizing** data using **dplyr** and the spreadsheet pivot tables you made in week 3. We will discuss this in class.
+
+#### In-class practice with filtering, grouping, and summarizing
+
+- Calculate the total number of licenses `Suspended` or `Revoked` for doctors based in California for each year.
+
+- Calculate the total number of licences for doctors based in states other than California that were revoked for each year.
 
 ### Work with the opioid prescriptions data
 
@@ -672,25 +685,17 @@ These actions ensure that R Studio will open cleanly, without the remants from a
 
 These exercises are designed for you to practice writing code to **filter**, **sort**, **group**, and **summarize** data.
 
-- Filter the `ca_discipline` data to show licenses `Revoked` for doctors based in Los Angeles.
-
-- Filter the data to show licenses `Suspended` or `Revoked` for doctors in Los Angeles or San Diego.
-
-- Calculate the total number of licenses `Suspended` or `Revoked` for doctors based in California for each year.
-
-- Calculate the total number of licences for doctors based in states other than California that were revoked over the entire period from 2009 to 2017.
-
-- Find the doctor(s) based in California with the largest number of actions in the `ca_discipline` data. Hint: Make sure you include enough variables in the `group_by` function so that you can easily identify the doctors from the data that is returned. (Note: Many of these actions will be different stages of the same case.)
+- Find the doctor(s) based in California with the largest number of actions in the `ca_discipline` data. Hint: Make sure you include enough variables in the `group_by` function so that you can easily identify the doctors from the data that is returned (think name, location etc).
 
 - Filter the `ca_opioids` data for providers who prescribed `PERCOCET` (this is a brand name, not a generic name) in 2015, and find who wrote the most prescriptions of the drug.
 
-- Calculate to the total days' supply of opioids prescribed by doctors in Berkeley in each year.
+- Calculate the total days' supply of opioids prescribed by doctors in Berkeley in each year.
 
 - Calculate the total number of prescriptions and total cost of the opioids given to seniors (aged 65 and older) in Oakland in 2015.
 
-- Make a data frame with one column, `generic_drug`, showing all the opioid drugs in the `ca_opioids` data (with no duplicates)
+- Make a data frame with one column, `generic_drug`, showing all the generic drugs in the `ca_opioids` data (with no duplicates)
 
-- This will reveal that our code from class examining prescriptions of fentanyl ignored some formulations of the drug. Rewrite the code to answer the question "which doctors wrote the most prescriptions for fentanyl in 2015?" to correct that problem.
+This will reveal that our code from class examining prescriptions of fentanyl ignored some formulations of the drug. Although this will not be assessed as part of the assignment, for practice with a more complex query, see if you can rewrite the code to answer the question "which doctors wrote the most prescriptions for fentanyl in 2015?" to correct that problem.
 
 File your R script via bCourses by **Weds Feb 21 at 8.00pm**.
 
