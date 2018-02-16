@@ -549,11 +549,11 @@ These actions ensure that R Studio will open cleanly, without the remants from a
 
 These exercises are designed for you to practice writing code to load, **filter**, **sort**, **group**, and **summarize** data.
 
-First open the `.RData` file from class, by clicking this icon (![](./img/class5_16.jpg)), and navigating to the folder with the data. If you do this, you won't need to reload the `ca_discipline` data, and you won't need to create the variable `year` in the data, which you will need for the exercises below.
+First open the `.RData` file from class, by clicking this icon (![](./img/class5_16.jpg)) in the `Environment` panel, and navigating to the folder with the data. If you do this, you won't need to reload the `ca_discipline` data, and you won't need to create the variable `year` in the data, which you will need for the exercises below.
 
 However, if you'd like to practice these things, you are also welcome to start from scratch and include in your script the code that loads the `ca_discipline` data and creates the `year` variable.
 
-Now open a new R script, save it into the same folder as your data with the name `week5_assigment.R`, and set your working directory to this location, as before.
+Now open a new R script, save it into the same folder as your data with the name `week5_assignment.R`, and set your working directory to this location, as before.
 
 - Using the `ca_discipline` data, count the number of revoked licenses in each city in 2017 only, and sort so that the cities with the most revoked licenses appear first. Hint: `filter` by year first, then `group_by` city, then `summarize` with a count (`n()`), before sorting with `arrange`.
 
@@ -565,7 +565,7 @@ Now open a new R script, save it into the same folder as your data with the name
 
 - Load the file `ca_opioid_prescriptions.csv` using `read_csv` to make a data frame called `ca_opioids`. Then make a data frame with just one column, `generic_drug`, showing all the generic drugs in the `ca_opioids` data (with no duplicates). Hint: This is very similar to looking for all of the types of actions in the `ca_discipline` data, which we did in class. You will need to use `select`.
 
-File your R script (`week_5_assigment.R`) with the code to complete these exercises, and the saved CSV file (`doctors_all_actions.csv`), via bCourses by **Weds Feb 21 at 8.00pm**.
+File your R script (`week_5_assignment.R`) with the code to complete these exercises, and the saved CSV file (`doctors_all_actions.csv`), via bCourses by **Weds Feb 21 at 8.00pm**.
 
 ### Further reading
 
