@@ -1,5 +1,18 @@
 ## These are notes
 
+## Amanda to Do:
+* queue up data of the week.
+* Sarah El Safty: schedule a 1 on 1 before class / March 6.
+
+## Peter to do:
+
+
+## New Builds
+* Send Amanda Fire perimeter data
+
+
+
+
 ## Data of the Week
 Every week, one or two students will present a data set that they've identified as interesting to the rest of the class.
 
@@ -46,6 +59,8 @@ You are only required to submit one pitch, however you may submit up to three pi
   + A story slug -- up to three words that capture the essence of your story. Don't overthink this.
   + A description of at least three potential data sources. Your revised pitch should demonstrate that you've taken some meaningful steps to determine what data might be available, how you can acquire it, and what constraints there might be to it's usefulness.
   + At least three questions you already know you need to answer as you explore the viability of this pitch.
+
+This is your opportunity to get formal feedback
 
 
 **Reporting Plan:**

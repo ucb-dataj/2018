@@ -1,4 +1,4 @@
-## Week 8 | March 8, 2018
+## Week 8 | Tuesday March 6, 2018
 *Instructor: Amanda Hickman*
 
 Introduction to Databases and SQL
