@@ -12,9 +12,9 @@ Click on the title links to download the data. Email your instructors if you hav
 
 #### [Download Week 3](./data/week3.zip)
 
-- `calpads_cohort16_alameda.csv` The State of California publishes quite a bit of [high school graduation](https://www.cde.ca.gov/ds/sd/sd/filescohort.asp) data statewide. I pulled the state-level numbers and Alemeda county, to get us a more manageable file size.
+- `calpads_cohort16_alameda.csv` The State of California publishes quite a bit of [high school graduation](https://www.cde.ca.gov/ds/sd/sd/filescohort.asp) data statewide, here filtered for Alemeda county only.
 - `USGS_2.5_month.csv` USGS publishes [real time earthquake data](https://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php).
-- `311_Cases_Dec2017.csv` San Francisco's 311 call records, from [SF's Open Data Portal](https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6). I used Socrata to filter out only the cases opened between 12/01/2017 12:00:00 AM and 01/01/2018 12:00:00 AM.
+- `311_Cases_Dec2017.csv` San Francisco's 311 call records, from [SF's Open Data Portal](https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6), filtered for cases opened between 12/01/2017 12:00:00 AM and 01/01/2018 12:00:00 AM.
 
 #### [Download Week 4](./data/week4.zip)
 
@@ -24,13 +24,12 @@ Click on the title links to download the data. Email your instructors if you hav
 
 - `alerts-actions_2017.xls` Records of [disciplinary alerts issued and actions taken](http://www.mbc.ca.gov/Publications/Disciplinary_Actions/) by the Medical Board of California in 2017.
 
+#### [Download Week 5 & 6](./data/week5.zip)
 
+- `ca_discipline.csv` Disciplinary alerts and actions issued by the Medical Board of California from 2008 to 2017. Processed from downloads available [here](http://www.mbc.ca.gov/Publications/Disciplinary_Actions/).
+- `ca_medicare_opioids.csv` Data on prescriptions of opioid drugs under the Medicare Part D Prescription Drug Program by doctors in California, from 2013 to 2015. Filtered from the national data downloads available [here](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Part-D-Prescriber.html). This is the public release of the data that ProPublica used FOIA to obtain for earlier years for the story we discussed in Week 2. 
+- `npi_license.csv` Crosswalk file to join [National Provider Identifier](https://npiregistry.cms.hhs.gov/) codes to state license numbers, processed from the download available [here](http://www.nber.org/data/npi-state-license-crosswalk.html) to include license numbers potentially matching California doctors.
 
-
-
-#### [Download Week 5](./data/week5.zip)
-
-#### [Download Week 6](./data/week6.zip)
 
 #### [Download Week 7](./data/week7.zip)
 
