@@ -537,167 +537,35 @@ Think about the similarities and differences between **grouping** and **summariz
 
 - Calculate the total number of licences for doctors based in states other than California that were revoked for each year.
 
-### Work with the opioid prescriptions data
-
-First load and view the data:
-
-```R
-# load opioid prescription data
-ca_opioids <- read_csv("ca_medicare_opioids.csv")
-
-# look at the data
-View(ca_opioids)
-```
-
-#### Which doctors wrote the most prescriptions for fentanyl in 2015?
-
-One of the drugs in the `generic_name` variable is `FENTANYL`. Fentanyl is a particularly controversial drug, because of its strength -- it's about [75 times more powerful](https://en.wikipedia.org/wiki/Fentanyl) than morphine. That means it can [easily cause fatal overdoses](https://www.buzzfeed.com/danvergano/fentanyl-leading-overdoses).
-
-So let's look at which providers wrote the most prescriptions for fentanyl in the most recent year in the data, 2015.
-
-```r
-# who wrote the most prescriptions for fentanyl in 2015?
-fentanyl_2015 <- ca_opioids %>%
-  filter(generic_name == "FENTANYL"
-         & year == 2015) %>%
-  arrange(desc(total_claim_count)) %>%
-  select(npi,
-         nppes_provider_last_org_name,
-         nppes_provider_first_name,
-         nppes_provider_city,
-         specialty_description,
-         total_claim_count)
-```
-
-The logic of this code should now be familiar. When working with a sprawling dataset like this, with many variables, it's a good idea to use `select` to return only those that you want to see. Here we have selected identifying information for each health care provider, and `total_claim_count`.
-
-There should be 5,346 rows in the data, and the first 20 rows should look like this:
-
-![](./img/class5_15.jpg)
-
-Notice that many of the top prescribers were not doctors, but physician assistants, nurse practitioners, or pharmacists. The following code also **filters** the data to remove data for these healthcare providers:
-
-```r
-# which doctors wrote the most prescriptions for fentanyl in 2015?
-fentanyl_2015_doctors <- ca_opioids %>%
-  filter(generic_name == "FENTANYL" 
-         & year == 2015 
-         & specialty_description != "Physician Assistant" 
-         & specialty_description != "Nurse Practitioner"
-         & specialty_description != "Pharmacist") %>%
-  arrange(desc(total_claim_count)) %>%
-  select(npi,
-         nppes_provider_last_org_name,
-         nppes_provider_first_name,
-         nppes_provider_city,
-         specialty_description,
-         total_claim_count)
-```
-
-There whould be 4,673 rows in this data, and the first 20 rows should look like this:
-
-![](./img/class5_16.jpg)
-
-If you run this code, you should obtain exactly the same result:
-
-```r
-# which doctors wrote the most prescriptions for fentanyl in 2015?
-fentanyl_2015_doctors <- ca_opioids %>%
-  filter(generic_name == "FENTANYL" 
-         & year == 2015 
-         & !grepl("assistant|practitioner|pharmacist", 
-                  specialty_description, 
-                  ignore.case = TRUE)) %>%
-  arrange(desc(total_claim_count)) %>%
-  select(npi,
-         nppes_provider_last_org_name,
-         nppes_provider_first_name,
-         nppes_provider_city,
-         specialty_description,
-         total_claim_count)
-```
-
-This demonstrates some simple pattern matching on text, using the function `grepl("pattern_a|pattern_b", x)`, which searches variable `x` for values containing any of a list of text values. Including `ignore.case = TRUE` means that matches are made irrespective of the case of any of the letters.
-
-As well as allowing you to write more succint code, as above, `grepl` is useful for fuzzy text matching, when you want to find text entries that contain variations of the same word. For example, entries containing `Russia`, `Russian` and `Russia's` in variable `x` would all be found by `grepl("Russia", x)`.
-
-#### Calculate the total number of fentanyl prescriptions, their cost, and the total number of patients, for each year
-
-```R
-# calculate the total number of fentanyl prescriptions, their cost, and the total number of patient/drug , for each year
-fentanyl_year_summary <- ca_opioids %>%
-  filter(generic_name == "FENTANYL") %>%
-  group_by(year) %>%
-  summarize(claims = sum(total_claim_count),
-            cost = sum(total_drug_cost),
-            patients = sum(bene_count))
-```
-
-This code uses the `sum` function to **summarize** the data by adding the values for each year.
-
-This will be the result:
-
-![](./img/class5_17.jpg)
-
-Something has gone wrong: Instead of calculating the number of patients, the code has returned `NA`. This will happen when **summarizing** data if there are any missing, or `NA`, values. To solve the problem, use the following code, which includes `na.rm = TRUE`. This tells summary functions to remove `NA` values before running the calculation:
-
-```R
-# calculate the total number of fentanyl prescriptions, their cost, and the total number of patient/drug, for each year
-fentanyl_year_summary <- ca_opioids %>%
-  filter(generic_name == "FENTANYL") %>%
-  group_by(year) %>%
-  summarize(claims = sum(total_claim_count),
-            cost = sum(total_drug_cost),
-            patients = sum(bene_count, na.rm = TRUE))
-```
-
-![](./img/class5_18.jpg)
-
-Now we have data showing a number of patients prescribed fentanyl each year. However, we should treat this number with caution. The `NA` values are introduced wherever a doctor prescribed fentanyl to fewer than 11 patients. So each `NA` represents between 1 and 10 patients.
-
-How many patients could that be each year?
-
-```R
-# how many patients might be missing from the data?
-fentanyl_year_missing <- ca_opioids %>%
-  filter(generic_name == "FENTANYL"
-         & is.na(bene_count)) %>%
-  group_by(year) %>%
-  summarize(max_missing_patients = n()*10)
-```
-This should be the result:
-
-![](./img/class5_19.jpg)
-
-That's a lot of potentially missing patients -- more than we added up form the available data. We should abandon the idea of analyzing the number of patients.
-
-In this code we used `is.na(bene_count)` to **filter** for only the missing values, then **grouped** by year, **summarized** by counting the number of records and multiplied by 10, because each missing value could represent up to 10 patients.
-
 ### Closing down properly
 
 Whenever you exit R, get into the habit of saving your script amd the data in your environment. Then close your script and any data frames open in `View`. When you close R, select `Don't Save` at this prompt:
 
-![](./img/class5_20.jpg)
+![](./img/class5_15.jpg)
 
 These actions ensure that R Studio will open cleanly, without the remants from a previous session, when you next launch it.
 
 ### Exercises/assignment
 
-These exercises are designed for you to practice writing code to **filter**, **sort**, **group**, and **summarize** data.
+These exercises are designed for you to practice writing code to load, **filter**, **sort**, **group**, and **summarize** data.
 
-- Find the doctor(s) based in California with the largest number of actions in the `ca_discipline` data. Hint: Make sure you include enough variables in the `group_by` function so that you can easily identify the doctors from the data that is returned (think name, location etc).
+First open the `.RData` file from class, by clicking this icon (![](./img/class5_16.jpg)) in the `Environment` panel, and navigating to the folder with the data. If you do this, you won't need to reload the `ca_discipline` data, and you won't need to create the variable `year` in the data, which you will need for the exercises below.
 
-- Filter the `ca_opioids` data for providers who prescribed `PERCOCET` (this is a brand name, not a generic name) in 2015, and find who wrote the most prescriptions of the drug.
+However, if you'd like to practice these things, you are also welcome to start from scratch and include in your script the code that loads the `ca_discipline` data and creates the `year` variable.
 
-- Calculate the total days' supply of opioids prescribed by doctors in Berkeley in each year.
+Now open a new R script, save it into the same folder as your data with the name `week5_assignment.R`, and set your working directory to this location, as before.
 
-- Calculate the total number of prescriptions and total cost of the opioids given to seniors (aged 65 and older) in Oakland in 2015.
+- Using the `ca_discipline` data, count the number of revoked licenses in each city in 2017 only, and sort so that the cities with the most revoked licenses appear first. Hint: `filter` by year first, then `group_by` city, then `summarize` with a count (`n()`), before sorting with `arrange`.
 
-- Make a data frame with one column, `generic_drug`, showing all the generic drugs in the `ca_opioids` data (with no duplicates)
+- Count the number of actions of any type by city and by year, not including the incomplete data for 2008. Hint: again you need to `filter` to remove the data for 2008, but this time you will need to `group_by` two variables before counting with `summarize`.
 
-This will reveal that our code from class examining prescriptions of fentanyl ignored some formulations of the drug. Although this will not be assessed as part of the assignment, for practice with a more complex query, see if you can rewrite the code to answer the question "which doctors wrote the most prescriptions for fentanyl in 2015?" to correct that problem.
+- Find the doctor(s) based in California with the largest number of actions of any type in the `ca_discipline` data. Hint: There is no need to `filter` the data for this one. You will first need to `group_by` several variables so that you can easily identify the doctors from the data that is returned (think names, location etc). Then you will need to `summarize` with a count, before sorting with `arrange` so that the doctors with the most actions on their record are at the top of the data.
 
-File your R script via bCourses by **Weds Feb 21 at 8.00pm**.
+- Write this data to a file called `doctors_all_actions.csv`.
+
+- Load the file `ca_opioid_prescriptions.csv` using `read_csv` to make a data frame called `ca_opioids`. Then make a data frame with just one column, `generic_drug`, showing all the generic drugs in the `ca_opioids` data (with no duplicates). Hint: This is very similar to looking for all of the types of actions in the `ca_discipline` data, which we did in class. You will need to use `select`.
+
+File your R script (`week_5_assignment.R`) with the code to complete these exercises, and the saved CSV file (`doctors_all_actions.csv`), via bCourses by **Weds Feb 21 at 8.00pm**.
 
 ### Further reading
 
