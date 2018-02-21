@@ -563,7 +563,7 @@ Now open a new R script, save it into the same folder as your data with the name
 
 - Write this data to a file called `doctors_all_actions.csv`.
 
-- Load the file `ca_opioid_prescriptions.csv` using `read_csv` to make a data frame called `ca_opioids`. Then make a data frame with just one column, `generic_drug`, showing all the generic drugs in the `ca_opioids` data (with no duplicates). Hint: This is very similar to looking for all of the types of actions in the `ca_discipline` data, which we did in class. You will need to use `select`.
+- Load the file `ca_medicare_opioids.csv` using `read_csv` to make a data frame called `ca_opioids`. Then make a data frame with just one column, `generic_name`, showing all the generic drugs in the `ca_opioids` data (with no duplicates). Hint: This is very similar to looking for all of the types of actions in the `ca_discipline` data, which we did in class. You will need to use `select`.
 
 File your R script (`week_5_assignment.R`) with the code to complete these exercises, and the saved CSV file (`doctors_all_actions.csv`), via bCourses by **Weds Feb 21 at 8.00pm**.
 
