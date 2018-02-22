@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Data journalism in the tidyverse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="markdown github">
+
+	<header class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<nav role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">J298 Data Journalism</a>
+				</div> <!-- /.navbar-header -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Class notes<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="week1.html">What is data?</a></li>
+								<li><a href="week2.html">Types of stories</a></li>
+								<li><a href="week3.html">Working with spreadsheets</a></li>
+								<li><a href="week4.html">Acquiring, cleaning, and formatting data</a></li>
+								<li><a href="week5.html">R, RStudio, and the tidyverse</a></li>
+								<li><a href="week6.html">Data journalism in the tidyverse</a></li>
+								<li><a href="week7.html">Don't let the data lie to you</a></li>
+								<li><a href="week8.html">Databases and SQL</a></li>
+								<li><a href="week9.html">Finding stories using maps</a></li>
+								<li><a href="week10.html">Maps meet databases</a></li>
+								<li><a href="week11.html">More fun with R</a></li>
+								<li><a href="week13.html">To be determined</a></li>
+								<li><a href="week14.html">Putting it all into practice: 1</a></li>
+								<li><a href="week15.html">Putting it all into practice: 2</a></li>
+							</ul>
+						</li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="datasets.html">Data</a></li>
+						<li><a href="questions.html">If you get stuck</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Email instructors<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="mailto:p.aldhous@gmail.com">Peter Aldhous</a></li>
+								<li><a href="mailto:abh@berkeley.edu">Amanda Hickman</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</div> <!-- /.navbar-header -->
+	</header>
+	<div class="container all">
+
+<h1 id="data-journalism-in-the-tidyverse"><a name="data-journalism-in-the-tidyverse" href="#data-journalism-in-the-tidyverse"></a>Data journalism in the tidyverse</h1><p>In last week’s class we worked with a relatively small and simple dataset, on disciplinary actions against California doctors, to learn how to <strong>filter</strong>, <strong>sort</strong>, <strong>group</strong>, and <strong>summarize</strong> data.</p><p>Today we will work with the larger data on doctors in California prescribing opioids under Medicare Part D, learn how to <strong>join</strong> data in different data frames, and see how to make some simple charts to help make sense of your data.</p><p>First we will recap filtering, sorting, grouping and summarizing with the opioid prescription data.</p><h3 id="the-data-we-will-use"><a name="the-data-we-will-use" href="#the-data-we-will-use"></a>The data we will use</h3><p>As for last week, <a href="data/week5.zip">here</a>. It contains the following files:</p><ul>
+<li><p><code>ca_discipline.csv</code> Disciplinary alerts and actions issued by the Medical Board of California from 2008 to 2017. Processed from downloads available <a href="http://www.mbc.ca.gov/Publications/Disciplinary_Actions/">here</a>. Contains the following variables:</p>
+<ul>
+<li><code>alert_date</code> Date alert issued.</li><li><code>last_name</code> Last name of doctor/health care provider.</li><li><code>first_name</code> First name of doctor/health care provider.</li><li><code>middle_name</code> Middle/other names.</li><li><code>name_suffix</code> Name suffix (Jr., II etc)</li><li><code>city</code> City of practive location.</li><li><code>state</code> State of practice location.</li><li><code>license</code> California medical license number.</li><li><code>action_type</code> Type of action.</li><li><code>action_date</code> Date of action.</li></ul>
+</li></ul><ul>
+<li><p><code>ca_medicare_opioids.csv</code> Data on prescriptions of opioid drugs under the Medicare Part D Prescription Drug Program by doctors in California, from 2013 to 2015. Filtered from the national data downloads available <a href="https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Part-D-Prescriber.html">here</a>. This is the public release of the data that ProPublica used FOIA to obtain for earlier years for the story we discussed in Week 2. Contains the following variables:</p>
+<ul>
+<li><code>npi</code> <a href="https://npiregistry.cms.hhs.gov/">National Provider Identifier</a> (NPI) for the doctor/organization making the claim. This is a unique code for each health care provider.</li><li><code>nppes_provider_last_org_name</code> For individual doctors, their last name. For organizations, the organziation name.</li><li><code>nppes_provider_first_name</code> First name for indivisual doctors, blank for organizations.</li><li><code>nppes_provider_city</code> City where the provider is located.</li><li><code>nppes_provider_state</code> State where the provider is located; “CA” for all of these records.</li><li><code>specialty_description</code> Provider’s medical speciality, reported on their medicare claims. For providers that have more than one Medicare specialty code reported on their claims, the code associated with the largest number of services.</li><li><code>description_flag</code> Source of the <code>specialty_description</code>. <ul>
+<li><code>S</code> Medicare Specialty Code description.</li><li><code>T</code> Taxonomy Code Classification description.</li></ul>
+</li><li><code>drug_name</code> Includes both brand names (drugs that have a trademarked name) and generic names (drugs that do not have a trademarked name).</li><li><code>generic_name</code> The chemical ingredient of a drug rather than the trademarked brand name under which the drug is sold.</li><li><code>bene_count</code> Total number of unique Medicare Part D beneficiaries (i.e. patients) with at least one claim for the drug. Counts fewer than 11 are suppressed and are indicated by a blank.</li><li><code>total_claim_count</code> Number of Medicare Part D claims; includes original prescriptions and refills. If less than 11, counts are not included in the data file.</li><li><code>total_30_day_fill_count</code> Total number of Medicare Part D standardized 30-day fills. The standardized 30-day fill is derived from the number of days supplied on each Part D claim divided by 30.</li><li><code>total_day_supply</code> Total number of days’ supply for this drug.</li><li><code>total_drug_cost</code> Total cost paid for all associated claims; includes ingredient cost, dispensing fee, sales tax, and any applicable fees.</li><li><code>bene_count_ge65</code> Total number of unique Medicare Part D beneficiaries age 65 and older with at least one claim for the drug. A blank indicates the value is suppressed.</li><li><code>bene_count_ge65_suppress_flag</code> Why the <code>bene_count_ge65</code> variable is suppressed:<ul>
+<li><code>*</code> Suppressed due to <code>bene_count_ge65</code> between 1 and 10.</li><li><code>#</code> Suppressed because the “less than 65 year old” group (not displayed) contains a beneficiary count between 1 and 10.</li><li><code>total_claim_count_ge65</code> Number of Medicare Part D claims for beneficiaries age 65 and older; includes original prescriptions and refills. A blank indicates the value is suppressed.</li><li><code>ge65_suppress_flag</code> Why the  <code>total_claim_count_ge65</code>, <code>total_30_day_fill_count ge65</code>, <code>total_day_supply_ge65</code>, and <code>total_drug_cost_ge65 variables</code> are suppressed:<ul>
+<li><code>*</code> Suppressed due to <code>total_claim_count_ge65</code> between 1 and 10.</li></ul>
+</li><li><code>#</code> Suppressed because the “less than 65 year old” group (not displayed)<br>contains a claim count between 1 and 1.</li></ul>
+</li><li><code>total_30_day_fill_count_ge65</code> Number of Medicare Part D standardized 30-day fills for beneficiaries age 65 and older. If <code>total_claim_count_ge65</code> is suppressed, this variable is also suppressed.</li><li><code>total_day_supply_ge65</code> Total days’ supply for which this drug was dispensed, for beneficiaries age 65 and older. If <code>total_claim_count_ge65</code> is suppressed, this variable is also suppressed.</li><li><code>total_drug_cost_ge65</code> Total drug cost paid for all associated claims for beneficiaries age 65 and older. If <code>total_claim_count_ge65</code> is suppressed, this is also suppressed.</li><li><code>year</code> 2013, 2014, or 2015.</li></ul>
+</li><li><p><code>npi_license.csv</code> Crosswalk file to join NPI identifiers to state license numbers, processed from the download available <a href="http://www.nber.org/data/npi-state-license-crosswalk.html">here</a> to include license numbers potentially matching California doctors. This will provide one way of joining the precription data to the medical board disciplinary data. As we shall see, problems with the data mean that it is not infallible. Contains the following variables:</p>
+<ul>
+<li><code>npi</code> National Provider Identifier, as described above.</li><li><code>plicnum</code> State license number, from the original file.</li><li><code>license</code> Processed from <code>pclicnum</code> to conform to the format of California medical license numbers.</li></ul>
+</li></ul><h3 id="setting-up"><a name="setting-up" href="#setting-up"></a>Setting up</h3><p>Open a new R script, save it into the folder with the data as <code>week6.R</code> then set your working directory to the location of this file, as we did last week. Then save your environment as <code>week6.Rdata</code>.</p><p>Also load the packages we will work with today:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load packages to read, write and process data, and to work with dates
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+</code></pre>"><span class="hljs-comment"># load packages to read, write and process data, and to work with dates</span>
+<span class="hljs-keyword">library</span>(readr)
+<span class="hljs-keyword">library</span>(dplyr)
+<span class="hljs-keyword">library</span>(ggplot2)
+<span class="hljs-keyword">library</span>(scales)
+</code></pre><p>We worked with <strong>readr</strong> and <strong>dplyr</strong> last week. <strong><a href="http://ggplot2.tidyverse.org/">ggplot2</a></strong> is a package for making charts that is also part of the tidyverse; <strong><a href="https://cran.r-project.org/web/packages/scales/scales.pdf">scales</a></strong> is a package that allows numbers to displayed in formats including currency in dollars, with commas separating thousands, and so on.</p><h3 id="work-with-the-opioid-prescriptions-data"><a name="work-with-the-opioid-prescriptions-data" href="#work-with-the-opioid-prescriptions-data"></a>Work with the opioid prescriptions data</h3><p>Load and view the data:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load opioid prescription data
+ca_opioids &amp;lt;- read_csv(&quot;ca_medicare_opioids.csv&quot;)
+
+# look at the data
+View(ca_opioids)
+</code></pre>"><span class="hljs-comment"># load opioid prescription data</span>
+ca_opioids &lt;- read_csv(<span class="hljs-string">"ca_medicare_opioids.csv"</span>)
+
+<span class="hljs-comment"># look at the data</span>
+View(ca_opioids)
+</code></pre><h4 id="which-doctors-wrote-the-most-prescriptions-for-fentanyl-in-2015?"><a name="which-doctors-wrote-the-most-prescriptions-for-fentanyl-in-2015?" href="#which-doctors-wrote-the-most-prescriptions-for-fentanyl-in-2015?"></a>Which doctors wrote the most prescriptions for fentanyl in 2015?</h4><p>Fentanyl is a particularly controversial opioid, because of its strength: It’s about <a href="https://en.wikipedia.org/wiki/Fentanyl">75 times more powerful</a> than morphine. That means it can <a href="https://www.buzzfeed.com/danvergano/fentanyl-leading-overdoses">easily cause fatal overdoses</a> — although these mostly happen from illegaly purchased fentanyl.</p><p>From the final part of the assignment from last week, you should have seen that there are three variants of fentanyl in the <code>generic_name</code> data: <code>FENTANYL</code>, <code>FENTANYL CITRATE</code> and <code>FENTANYL CITRATE/PF</code>. So if we are to answer this question, we need to filter the data to include all of these drugs, and then add up the prescriptions for each doctor.</p><p>This is one way to do this:</p><pre class="r hljs"><code class="r" data-origin="<pre><code class=&quot;r&quot;># who wrote the most prescriptions for fentanyl in 2015?
+fentanyl_2015 &amp;lt;- ca_opioids %&amp;gt;%
+  filter(year == 2015
+         &amp;amp; (generic_name == &quot;FENTANYL&quot; | generic_name == &quot;FENTANYL CITRATE&quot; | generic_name == &quot;FENTANYL CITRATE/PF&quot;)) %&amp;gt;%
+  group_by(npi,
+         nppes_provider_last_org_name,
+         nppes_provider_first_name,
+         nppes_provider_city,
+         specialty_description) %&amp;gt;%
+  summarize(prescriptions = sum(total_claim_count)) %&amp;gt;%
+  arrange(desc(prescriptions))
+</code></pre>"><span class="hljs-comment"># who wrote the most prescriptions for fentanyl in 2015?</span>
+fentanyl_2015 &lt;- ca_opioids %&gt;%
+  filter(year == <span class="hljs-number">2015</span>
+         &amp; (generic_name == <span class="hljs-string">"FENTANYL"</span> | generic_name == <span class="hljs-string">"FENTANYL CITRATE"</span> | generic_name == <span class="hljs-string">"FENTANYL CITRATE/PF"</span>)) %&gt;%
+  group_by(npi,
+         nppes_provider_last_org_name,
+         nppes_provider_first_name,
+         nppes_provider_city,
+         specialty_description) %&gt;%
+  summarize(prescriptions = sum(total_claim_count)) %&gt;%
+  arrange(desc(prescriptions))
+</code></pre><p>There should be 5259 rows in the data, and the first few should look like this:</p><p><img src="img/class6_1.jpg" alt=""></p><p>The logic of this code should be starting to become familiar. Notice how the <code>OR</code> part of the filter, using <code>|</code>, is put into parentheses to run it first.</p><p>After the filter, we need to group by doctor, before summarizing the data. The unique identifying code for each healthcare provider is their National Provider Identifier, or <code>npi</code>. However, if we only group by this, the data returned won’t include any other information about each doctor. So the code above also groups by doctors’ names, locations, and specialties, so the data returned contains more information. This won’t change the grouping, because we are still grouping by individual healthcare provider.</p><p>In the <code>summarize</code> function, we need to add the numbers for <code>total_claim_count</code> for each provider, using the function <code>sum</code>, to get the total number of prescriptions written by each one for all the variants of fentanyl.</p><p>Here is another, more concise way to obtain the same result:</p><pre class="r hljs"><code class="r" data-origin="<pre><code class=&quot;r&quot;># who wrote the most prescriptions for fentanyl in 2015?
+fentanyl_2015 &amp;lt;- ca_opioids %&amp;gt;%
+  filter(year == 2015
+         &amp;amp; grepl(&quot;fentanyl&quot;, generic_name, ignore.case = TRUE)) %&amp;gt;%
+  group_by(npi,
+           nppes_provider_last_org_name,
+           nppes_provider_first_name,
+           nppes_provider_city,
+           specialty_description) %&amp;gt;%
+  summarize(prescriptions = sum(total_claim_count)) %&amp;gt;%
+  arrange(desc(prescriptions))
+</code></pre>"><span class="hljs-comment"># who wrote the most prescriptions for fentanyl in 2015?</span>
+fentanyl_2015 &lt;- ca_opioids %&gt;%
+  filter(year == <span class="hljs-number">2015</span>
+         &amp; grepl(<span class="hljs-string">"fentanyl"</span>, generic_name, ignore.case = <span class="hljs-literal">TRUE</span>)) %&gt;%
+  group_by(npi,
+           nppes_provider_last_org_name,
+           nppes_provider_first_name,
+           nppes_provider_city,
+           specialty_description) %&gt;%
+  summarize(prescriptions = sum(total_claim_count)) %&gt;%
+  arrange(desc(prescriptions))
+</code></pre><p>This demonstrates some simple pattern matching on text, using the function <code>grepl("pattern_a|pattern_b", x)</code>, which searches variable <code>x</code> for values containing any of a list of text values. Including <code>ignore.case = TRUE</code> means that matches are made irrespective of the case of any of the letters.</p><p><code>grepl</code> is useful for fuzzy text matching, when you want to find text entries that contain variations of the same word or phrase.</p><p>But notice that some of the top prescribers were not doctors, but physician assistants, nurse practitioners, or pharmacists. The following code also <strong>filters</strong> the data to remove data for these healthcare providers:</p><pre class="r hljs"><code class="r" data-origin="<pre><code class=&quot;r&quot;># which doctors wrote the most prescriptions for fentanyl in 2015?
+fentanyl_2015_doctors &amp;lt;- ca_opioids %&amp;gt;%
+  filter(year == 2015
+         &amp;amp; grepl(&quot;fentanyl&quot;, generic_name, ignore.case = TRUE)
+         &amp;amp; !grepl(&quot;assistant|practitioner|pharmacist&quot;, specialty_description, ignore.case = TRUE)) %&amp;gt;%
+  group_by(npi,
+           nppes_provider_last_org_name,
+           nppes_provider_first_name,
+           nppes_provider_city,
+           specialty_description) %&amp;gt;%
+  summarize(prescriptions = sum(total_claim_count)) %&amp;gt;%
+  arrange(desc(prescriptions))
+</code></pre>"><span class="hljs-comment"># which doctors wrote the most prescriptions for fentanyl in 2015?</span>
+fentanyl_2015_doctors &lt;- ca_opioids %&gt;%
+  filter(year == <span class="hljs-number">2015</span>
+         &amp; grepl(<span class="hljs-string">"fentanyl"</span>, generic_name, ignore.case = <span class="hljs-literal">TRUE</span>)
+         &amp; !grepl(<span class="hljs-string">"assistant|practitioner|pharmacist"</span>, specialty_description, ignore.case = <span class="hljs-literal">TRUE</span>)) %&gt;%
+  group_by(npi,
+           nppes_provider_last_org_name,
+           nppes_provider_first_name,
+           nppes_provider_city,
+           specialty_description) %&gt;%
+  summarize(prescriptions = sum(total_claim_count)) %&gt;%
+  arrange(desc(prescriptions))
+</code></pre><p>The new part of the <strong>filter</strong> function uses <code>!grepl</code> to search for text that does <em>not</em> match the pattern, and separates patterns to be searched with <code>|</code> for <code>OR</code>.</p><p>There whould be 4,600 rows in this data, and the first few rows should look like this:</p><p><img src="img/class6_2.jpg" alt=""></p><h4 id="calculate-the-total-number-of-fentanyl-prescriptions,-their-cost,-and-the-total-number-of-patients,-for-each-year"><a name="calculate-the-total-number-of-fentanyl-prescriptions,-their-cost,-and-the-total-number-of-patients,-for-each-year" href="#calculate-the-total-number-of-fentanyl-prescriptions,-their-cost,-and-the-total-number-of-patients,-for-each-year"></a>Calculate the total number of fentanyl prescriptions, their cost, and the total number of patients, for each year</h4><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># calculate the total number of fentanyl prescriptions, their cost, and the total number of patient/drug, for each year
+fentanyl_year_summary &amp;lt;- ca_opioids %&amp;gt;%
+  filter(grepl(&quot;fentanyl&quot;, generic_name, ignore.case = TRUE)) %&amp;gt;%
+  group_by(year) %&amp;gt;%
+  summarize(claims = sum(total_claim_count),
+            cost = sum(total_drug_cost),
+            patients = sum(bene_count))
+</code></pre>"><span class="hljs-comment"># calculate the total number of fentanyl prescriptions, their cost, and the total number of patient/drug, for each year</span>
+fentanyl_year_summary &lt;- ca_opioids %&gt;%
+  filter(grepl(<span class="hljs-string">"fentanyl"</span>, generic_name, ignore.case = <span class="hljs-literal">TRUE</span>)) %&gt;%
+  group_by(year) %&gt;%
+  summarize(claims = sum(total_claim_count),
+            cost = sum(total_drug_cost),
+            patients = sum(bene_count))
+</code></pre><p>This will be the result:</p><p><img src="img/class6_3.jpg" alt=""></p><p>Something has gone wrong: Instead of calculating the number of patients, the code has returned <code>NA</code>. This will happen when <strong>summarizing</strong> data if there are any missing, or <code>NA</code>, values. To solve the problem, use the following code, which includes <code>na.rm = TRUE</code>. This tells summary functions to remove <code>NA</code> values before running the calculation:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># calculate the total number of fentanyl prescriptions, their cost, and the total number of patient/drug, for each year
+fentanyl_year_summary &amp;lt;- ca_opioids %&amp;gt;%
+  filter(grepl(&quot;fentanyl&quot;, generic_name, ignore.case = TRUE)) %&amp;gt;%
+  group_by(year) %&amp;gt;%
+  summarize(claims = sum(total_claim_count),
+            cost = sum(total_drug_cost),
+            patients = sum(bene_count, na.rm = TRUE))
+</code></pre>"><span class="hljs-comment"># calculate the total number of fentanyl prescriptions, their cost, and the total number of patient/drug, for each year</span>
+fentanyl_year_summary &lt;- ca_opioids %&gt;%
+  filter(grepl(<span class="hljs-string">"fentanyl"</span>, generic_name, ignore.case = <span class="hljs-literal">TRUE</span>)) %&gt;%
+  group_by(year) %&gt;%
+  summarize(claims = sum(total_claim_count),
+            cost = sum(total_drug_cost),
+            patients = sum(bene_count, na.rm = <span class="hljs-literal">TRUE</span>))
+</code></pre><p><img src="img/class6_4.jpg" alt=""></p><p>Now we have data showing a number of patients prescribed fentanyl each year. However, we should treat this number with caution. The description of the data above explains that <code>NA</code> values are introduced wherever a doctor prescribed fentanyl to fewer than 11 patients. So each <code>NA</code> represents between 1 and 10 patients.</p><p>How many patients could be missing from the data each year?</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># how many patients might be missing from the data?
+fentanyl_year_missing &amp;lt;- ca_opioids %&amp;gt;%
+  filter(grepl(&quot;fentanyl&quot;, generic_name, ignore.case = TRUE)
+         &amp;amp; is.na(bene_count)) %&amp;gt;%
+  group_by(year) %&amp;gt;%
+  summarize(max_missing_patients = n()*10)
+</code></pre>"><span class="hljs-comment"># how many patients might be missing from the data?</span>
+fentanyl_year_missing &lt;- ca_opioids %&gt;%
+  filter(grepl(<span class="hljs-string">"fentanyl"</span>, generic_name, ignore.case = <span class="hljs-literal">TRUE</span>)
+         &amp; is.na(bene_count)) %&gt;%
+  group_by(year) %&gt;%
+  summarize(max_missing_patients = n()*<span class="hljs-number">10</span>)
+</code></pre><p>This should be the result:</p><p><img src="img/class6_5.jpg" alt=""></p><p>That’s a lot of potentially missing patients — more than we added up from the available data. We should abandon the idea of analyzing the number of patients.</p><p>In this code we used <code>is.na(bene_count)</code> to <strong>filter</strong> for only the missing values, then <strong>grouped</strong> by year, <strong>summarized</strong> by counting the number of records and multiplied by 10, because each missing value could represent up to 10 patients.</p><h4 id="create-a-summary,-showing-the-number-of-opioid-prescriptions-written-by-each-doctor,-the-total-cost-of-the-opioids-prescribed,-and-the-cost-per-claim"><a name="create-a-summary,-showing-the-number-of-opioid-prescriptions-written-by-each-doctor,-the-total-cost-of-the-opioids-prescribed,-and-the-cost-per-claim" href="#create-a-summary,-showing-the-number-of-opioid-prescriptions-written-by-each-doctor,-the-total-cost-of-the-opioids-prescribed,-and-the-cost-per-claim"></a>Create a summary, showing the number of opioid prescriptions written by each doctor, the total cost of the opioids prescribed, and the cost per claim</h4><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># Create a summary, showing the number of opioid prescriptions written by each doctor, the total cost of the opioids prescribed, and the cost per claim
+doctor_summary &amp;lt;- ca_opioids %&amp;gt;%
+  filter(!grepl(&quot;assistant|nurse|pharmacist&quot;, specialty_description, ignore.case = TRUE)) %&amp;gt;%
+  group_by(npi,
+           nppes_provider_last_org_name,
+           nppes_provider_first_name,
+           nppes_provider_city,
+           specialty_description) %&amp;gt;%
+  summarize(prescriptions = sum(total_claim_count),
+            cost = sum(total_drug_cost)) %&amp;gt;%
+  mutate(cost_per_prescription = cost/prescriptions) %&amp;gt;%
+  arrange(desc(prescriptions))
+</code></pre>"><span class="hljs-comment"># Create a summary, showing the number of opioid prescriptions written by each doctor, the total cost of the opioids prescribed, and the cost per claim</span>
+doctor_summary &lt;- ca_opioids %&gt;%
+  filter(!grepl(<span class="hljs-string">"assistant|nurse|pharmacist"</span>, specialty_description, ignore.case = <span class="hljs-literal">TRUE</span>)) %&gt;%
+  group_by(npi,
+           nppes_provider_last_org_name,
+           nppes_provider_first_name,
+           nppes_provider_city,
+           specialty_description) %&gt;%
+  summarize(prescriptions = sum(total_claim_count),
+            cost = sum(total_drug_cost)) %&gt;%
+  mutate(cost_per_prescription = cost/prescriptions) %&gt;%
+  arrange(desc(prescriptions))
+</code></pre><p>In this code, the <strong>filter</strong> removes the physician assistants, nurse practitioners, and pharmacists. Then we <strong>group</strong> by doctor, returning the same identifying information as in earlier examples, before <strong>summarizing</strong> by adding the number of prescriptions written, and the total cost of the drugs, across the entire three-year time period in the data. Then we use <code>mutate</code> to create a new column giving the cost per prescription for each doctor. Finally we <strong>sort</strong> in descending order of the total number of prescriptions written.</p><p>There should be 49,277 rows in the data, and the top few should look like this:</p><p><img src="img/class6_6.jpg" alt=""></p><h3 id="draw-some-charts-from-this-summary-data"><a name="draw-some-charts-from-this-summary-data" href="#draw-some-charts-from-this-summary-data"></a>Draw some charts from this summary data</h3><p>While running data analyses, it’s often useful to create charts to look at summaries of the data. Particularly useful are histograms, to examine a distribution, and scatterplots, to see how one variable varies with another.</p><p>To make simple charts, we will use <strong>ggplot2</strong>.</p><h4 id="introducing-ggplot2-and-the-grammar-of-graphics"><a name="introducing-ggplot2-and-the-grammar-of-graphics" href="#introducing-ggplot2-and-the-grammar-of-graphics"></a>Introducing ggplot2 and the grammar of graphics</h4><p>The “gg” in <strong>ggplot2</strong> stands for “<a href="http://www.amazon.com/The-Grammar-Graphics-Statistics-Computing/dp/0387245448">grammar of graphics</a>,” an approach to drawing charts devised by the statistician Leland Wilkinson. Rather than thinking in terms of finished charts like a scatter plot or a column chart, it starts by defining the coordinate system (usually the X and Y axes), maps data onto those coordinates, and then adds layers such as points, bars and so on. This is the logic behind ggplot2 code.</p><p>Some key things to understand about <strong>ggplot2</strong>:</p><ul>
+<li><code>ggplot</code> This is the master function that creates a <strong>ggplot2</strong> chart.</li><li><code>aes</code> This function, named for “aesthetic mapping,” is used whenever data values are mapped onto a chart. So it is used when you define which variables are plotted onto the X and Y axes, and also if you want to change the size or color of parts of the chart according to values for a variable.</li><li><code>geom</code> All of the functions that add layers to a chart start with <code>geom</code>, followed by an underscore, for example <code>geom_point</code> or <code>geom_bar</code>. The code in the parentheses for any <code>geom</code> layer styles the items in that layer, and can include <code>aes</code> mappings of values from data.</li><li><code>theme</code> This function modifies the appearance of elements of a plot, used, for example, to set size and font face for text, the position of a legend, and so on.</li><li><code>scale</code> Functions that begin with <code>scale</code>, followed by an underscore, are used to modify the way an <code>aes</code> mapping of data appears on a chart. They can change the axis range, for example, or specify a color palette to be used to encode values in the data.</li><li><code>+</code> is used each time you add a layer, a scale, a theme, or elements like axis labels and a title. After a <code>+</code> you can continue on the same line of code or move the next line. I usually write a new line after each <code>+</code>, which makes the code easier to follow.</li></ul><h4 id="make-a-histogram-of-the-prescriptions-data"><a name="make-a-histogram-of-the-prescriptions-data" href="#make-a-histogram-of-the-prescriptions-data"></a>Make a histogram of the prescriptions data</h4><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># histogram of the costs data
+ggplot(doctor_summary, aes(x = prescriptions)) +
+  geom_histogram()
+</code></pre>"><span class="hljs-comment"># histogram of the costs data</span>
+ggplot(doctor_summary, aes(x = prescriptions)) +
+  geom_histogram()
+</code></pre><p>This code first noted that the <code>doctor_summary</code> data would be used for the chart in the <code>ggplot</code> function, then specificies that values for the number of prescriptions should be mapped to the X, or horizontal axis. We didn’t need to specify a variable for the Y axis for a histogram, because that is automatically a count of the number of records (here the number of doctors) in each bin.</p><p>This should be the result:</p><p><img src="img/class6_7.png" alt=""></p><p>The following code customizes the width of the bins, to 50 prescriptions, changes the X axis range between 0 and 3,000, and uses <code>labels</code> from the <strong>scales</strong> package to plot numbers with comma separators for thousands. <code>theme_minimal</code> is one of the built-in themes in <strong>ggplot2</strong>, which gives a basic chart with grid lines on a white background.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>ggplot(doctor_summary, aes(x = prescriptions)) +
+  geom_histogram(binwidth = 50) +
+  theme_minimal() +
+  scale_x_continuous(limits = c(0,3000),
+                     labels = comma) +
+  scale_y_continuous(labels = comma)
+</code></pre>">ggplot(doctor_summary, aes(x = prescriptions)) +
+  geom_histogram(binwidth = <span class="hljs-number">50</span>) +
+  theme_minimal() +
+  scale_x_continuous(limits = c(<span class="hljs-number">0</span>,<span class="hljs-number">3000</span>),
+                     labels = comma) +
+  scale_y_continuous(labels = comma)
+</code></pre><p><img src="img/class6_8.png" alt=""></p><p>This is a very skewed distribution. Viewing this, we would conclude that the mean would not be a good summary statistic for this data; if we want to compare any doctor’s prescriptions of opioids to that for a “typical” doctor, it would be better to compare to the median number of prescriptions.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># calculate the mean and median number of opioid prescriptions written by CA doctors from 2013 to 2015
+mean_median &amp;lt;- doctor_summary %&amp;gt;%
+  ungroup() %&amp;gt;%
+  summarize(mean_prescriptions = mean(prescriptions),
+            median_prescriptions = median(prescriptions))
+</code></pre>"><span class="hljs-comment"># calculate the mean and median number of opioid prescriptions written by CA doctors from 2013 to 2015</span>
+mean_median &lt;- doctor_summary %&gt;%
+  ungroup() %&gt;%
+  summarize(mean_prescriptions = mean(prescriptions),
+            median_prescriptions = median(prescriptions))
+</code></pre><p>This should be the result:</p><p><img src="img/class6_9.jpg" alt=""></p><p>In the code above, we needed to <code>ungroup</code> before <strong>summarizing</strong>, otherwise the data would still be grouped by doctor.</p><h4 id="make-a-scatterplot-of-prescriptions-and-costs-data"><a name="make-a-scatterplot-of-prescriptions-and-costs-data" href="#make-a-scatterplot-of-prescriptions-and-costs-data"></a>Make a scatterplot of prescriptions and costs data</h4><p>Scatterplots are good for seeing how one variable relates to one another, and also for spotting outliers in data. Here we would expect the total cost of the drugs prescribed to increase with the total number of prescriptions. A scatterplot allows us to see whether all the doctors are closely clustered around the trend line, or whether there are some interesting outliers.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>#### Make a scatterplot of prescriptions and costs data
+ggplot(doctor_summary, aes(x = prescriptions, y = cost)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(method = lm) +
+  theme_minimal() +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = dollar)
+</code></pre>"><span class="hljs-comment">#### Make a scatterplot of prescriptions and costs data</span>
+ggplot(doctor_summary, aes(x = prescriptions, y = cost)) +
+  geom_point(alpha = <span class="hljs-number">0.3</span>) +
+  geom_smooth(method = lm) +
+  theme_minimal() +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = dollar)
+</code></pre><p>In this code, we mapped the number of <code>prescriptions</code> to the X axis and their total <code>cost</code> to the Y or vertical axis. We then used <code>geom_point</code> to add the points, and made them partially transparent using <code>alpha = 0.3</code> (0 would be completely transparent; 1 would be completely opaque). <code>geom_smooth</code> added a trend line through the data; <code>method = lm</code> ensured that this is fitted with a “linear model,” giving a straight line. <code>labels = dollar</code> formatted the Y axis so the numbers were shown in dollars.</p><p>This should be the result:</p><p><img src="img/class6_10.png" alt=""></p><p>We can look sort the data in <code>View</code> to take a look at the doctors with unusually large costs per prescriptions:</p><p><img src="img/class6_11.jpg" alt=""></p><p>Remember the words of caution from the previous class: There may be some story leads here, but we would have to find out more about each doctor’s practise and patients to determine whether their high costs per prescription are justified.</p><p>We have only scratched the surface of what is possible with <strong>ggplot2</strong>: Its capabilities are covered at length in <strong>J221: Introduction to Data Visualization</strong>.</p><p>See the links in Further Reading for reference on <strong>ggplot2</strong> code.</p><h3 id="join-data-to-find-doctors-who-prescribed-opioids-who-have-also-been-subject-to-disciplinary-actions."><a name="join-data-to-find-doctors-who-prescribed-opioids-who-have-also-been-subject-to-disciplinary-actions." href="#join-data-to-find-doctors-who-prescribed-opioids-who-have-also-been-subject-to-disciplinary-actions."></a>Join data to find doctors who prescribed opioids who have also been subject to disciplinary actions.</h3><p>There are a number of <strong>join</strong> functions in <strong>dplyr</strong> to combine data from two data frames. Here are the most useful:</p><ul>
+<li><code>inner_join()</code> returns values from both tables only where there is a match.</li><li><code>left_join()</code> returns all the values from the first-mentioned table, plus those from the second table that match.</li><li><code>semi_join()</code> filters the first-mentioned table to include only values that have matches in the second table.</li><li><code>anti_join()</code> filters the first-mentioned table to include only values that have no matches in the second table.</li></ul><p><a href="http://stat545-ubc.github.io/bit001_dplyr-cheatsheet.html">Here is a useful reference</a> for managing joins with <strong>dplyr</strong>.</p><p>We will join the <code>doctor_summary</code> data to the disciplinary action data to see which of the doctors prescribing opioids have been in trouble with the Medical Board of California. The unique identifier in the prescriber data is their National Provider Identifier, whereas the unique identifier in the disciplinary data are the doctors’ California medical license numbers. So we also need to load the file <code>npi_license.csv</code>, which relates these two identifiers to one another.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load data
+ca_discipline &amp;lt;- read_csv(&quot;ca_discipline.csv&quot;)
+
+npi_license &amp;lt;- read_csv(&quot;npi_license.csv&quot;)
+</code></pre>"><span class="hljs-comment"># load data</span>
+ca_discipline &lt;- read_csv(<span class="hljs-string">"ca_discipline.csv"</span>)
+
+npi_license &lt;- read_csv(<span class="hljs-string">"npi_license.csv"</span>)
+</code></pre><p>First we will join these two files to one another:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># join those two data frames
+ca_discipline_npi &amp;lt;- left_join(ca_discipline, npi_license)
+</code></pre>"><span class="hljs-comment"># join those two data frames</span>
+ca_discipline_npi &lt;- left_join(ca_discipline, npi_license)
+</code></pre><p>By default, <strong>dplyr</strong> will join by any variables with matching names, but you can also specify the variables on which to join. So this will achieve the same result:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># join those two data frames
+ca_discipline_npi &amp;lt;- left_join(ca_discipline, npi_license, by = &quot;license&quot;)
+</code></pre>"><span class="hljs-comment"># join those two data frames</span>
+ca_discipline_npi &lt;- left_join(ca_discipline, npi_license, by = <span class="hljs-string">"license"</span>)
+</code></pre><p>If we <code>View</code> the result, the first few rows reveal some of the limitations of the <code>npi_license</code> data. Some of the doctors have not been joined to an <code>npi</code> code, while others appear to have more than one <code>npi</code> code (this is why there are 9,680 rows in the joined data, and only 7,651 in the <code>ca_discipline</code> data).</p><p><img src="img/class6_12.jpg" alt=""></p><p>Having made this join, we can now join to the <code>doctors_summary</code> data:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># join disciplinary action data to the opioid prescription data
+doctor_summary_actions &amp;lt;- inner_join(doctor_summary, ca_discipline_npi, by = &quot;npi&quot;) %&amp;gt;%
+  arrange(desc(prescriptions))
+</code></pre>"><span class="hljs-comment"># join disciplinary action data to the opioid prescription data</span>
+doctor_summary_actions &lt;- inner_join(doctor_summary, ca_discipline_npi, by = <span class="hljs-string">"npi"</span>) %&gt;%
+  arrange(desc(prescriptions))
+</code></pre><p>Here are the first few rows in the data:</p><p><img src="img/class6_13.jpg" alt=""></p><p>Individual doctors may appear multiple times in the data if they have more than one disciplinary action on their file, because a join will be made to each individual action.</p><p>We can search for the disciplinary records and look at public documents at <a href="https://www.breeze.ca.gov/">this site</a>.</p><p>The second doctor on our list, Naga Thota, surrendered his California medical license on March 22, 2017. <a href="http://www2.mbc.ca.gov/BreezePDL/document.aspx?path=%5cDIDOCS%5c20170315%5cDMRAAAFC8%5c&amp;did=AAAFC170315180454982.DID">This public document</a> reveals that he was charged with prescribing excessive quantities of opioids to an addicted patient with whom he also engaged in a sexual relationship. In addition to disciplinary action from the Medical Board of California, he faced a criminal investigation by the federal Drug Enforcement Adminstration. In March 2017 <a href="http://www.sandiegouniontribune.com/news/courts/sd-me-thota-sentencing-20170306-story.html">sentenced to two years</a>, he was sentenced to two years in a federal prison.</p><p>The prescriptions data reveal that, prior to his convection and the loss of his medical license, Thota was also one of the largest prescribers of opioids in the state of California.</p><p>There are likely to be other story leads from this join, which you could follow up through public records and other reporting.</p><p>We’ve already seen that the <code>npi_license</code> data has some limitations. Another (less reliable) way to join the data would be by using the doctors’ first names, last names, and cities. First, however, we need to convert those variables in the <code>ca_discipline_npi</code> data to upper case, so they match the format of the <code>ca_opioids</code> data.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># change case of variables to be used in the join
+ca_discipline_npi &amp;lt;- ca_discipline_npi %&amp;gt;%
+  mutate(last_name = toupper(last_name),
+         first_name = toupper(first_name),
+         city = toupper(city))
+
+# join disciplinary action data to the opioid prescription data
+doctor_summary_actions_2 &amp;lt;- inner_join(doctor_summary, ca_discipline_npi, by = c(&quot;nppes_provider_last_org_name&quot; = &quot;last_name&quot;, 
+                                                                                 &quot;nppes_provider_first_name&quot; = &quot;first_name&quot;,
+                                                                                 &quot;nppes_provider_city&quot; = &quot;city&quot;)) %&amp;gt;%
+  arrange(desc(prescriptions))
+</code></pre>"><span class="hljs-comment"># change case of variables to be used in the join</span>
+ca_discipline_npi &lt;- ca_discipline_npi %&gt;%
+  mutate(last_name = toupper(last_name),
+         first_name = toupper(first_name),
+         city = toupper(city))
+
+<span class="hljs-comment"># join disciplinary action data to the opioid prescription data</span>
+doctor_summary_actions_2 &lt;- inner_join(doctor_summary, ca_discipline_npi, by = c(<span class="hljs-string">"nppes_provider_last_org_name"</span> = <span class="hljs-string">"last_name"</span>, 
+                                                                                 <span class="hljs-string">"nppes_provider_first_name"</span> = <span class="hljs-string">"first_name"</span>,
+                                                                                 <span class="hljs-string">"nppes_provider_city"</span> = <span class="hljs-string">"city"</span>)) %&gt;%
+  arrange(desc(prescriptions))
+</code></pre><p>Notice how the code is written to define the variables to be used for a custom join.</p><p>Now we can use an <code>anti_join</code> to see if this join picked up any doctors who were missing from the first.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># join disciplinary action data to the opioid prescription data
+doctors_summary_actions_extra &amp;lt;- anti_join(doctor_summary_actions_2, doctor_summary_actions)
+</code></pre>"><span class="hljs-comment"># join disciplinary action data to the opioid prescription data</span>
+doctors_summary_actions_extra &lt;- anti_join(doctor_summary_actions_2, doctor_summary_actions)
+</code></pre><p>Here are the first few rows in that data:</p><p><img src="img/class6_14.jpg" alt=""></p><p>Whenever making an join in this way, it crucial to verify through independent reporting that the individuals matched are the same person. For example, there are several doctors called Peter Lee in Los Angeles. The one with the disciplinary record is <a href="https://search.dca.ca.gov/details/8002/G/84673/aebacf63f2746d6ce6ac729ebbbe54f5">Peter Geon Lee</a>, a plastic surgeon. This is not <a href="https://search.dca.ca.gov/details/8002/A/47846/e516806f7ff2db771d5b14b7d175c755">Peter Chong Lee</a>, the physical medicine and rehabilitation specialist, with the NPI of <code>1063508786</code>, listed in the <code>ca_opioids</code> data. There may well be other false matches in the data.</p><h3 id="further-reading"><a name="further-reading" href="#further-reading"></a>Further reading</h3><p><strong><a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html">Introduction to dplyr</a></strong></p><p><strong><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">RStudio Data Wrangling Cheet Sheet</a></strong><br>Also introduces the <a href="https://blog.rstudio.org/2014/07/22/introducing-tidyr/">tidyr</a> package, which can manage wide-to-long transformations, and text-to-columns splits, among other data manipulations.</p><p><a href="http://www.amazon.com/R-Graphics-Cookbook-Winston-Chang/dp/1449316956"><strong><em>R Graphics Cookbook</em></strong></a> by Winston Chang<br>(Chang also has <a href="http://www.cookbook-r.com/">a helpful website</a> with much of the same information, available for free.)</p><p><a href="https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf"><strong>RStudio ggplot2 Cheat Sheet</strong></a></p><p><a href="http://ggplot2.tidyverse.org/reference/"><strong>ggplot2 documentation</strong></a></p><p><strong><a href="http://stackoverflow.com/">Stack Overflow</a></strong><br>For any work involving code, this question-and-answer site is a great resource for when you get stuck, to see how others have solved similar problems. Search the site, or <a href="http://stackoverflow.com/questions/tagged/r">browse R questions</a></p>
+
+
+
+	</div> <!-- /.container all -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
