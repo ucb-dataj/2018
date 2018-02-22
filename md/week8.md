@@ -13,3 +13,5 @@ Getting Set Up;
 Possibly: Puerto Rico power grid?
 
 Opiod data to demonstrate joins
+
+Working from the command line:
