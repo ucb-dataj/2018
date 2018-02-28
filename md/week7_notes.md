@@ -14,4 +14,4 @@ So we're actually going to establish a postgres server, and connect to it with a
 
 ## Create Statements
 
-Posgres isn't going to automatically read your csv and decide on data types. You have to define those manually. 
+Posgres isn't going to automatically read your csv and decide on data types. You have to define those manually.

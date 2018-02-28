@@ -3,7 +3,7 @@
 
 Tile map scale plugin allows you to pull in a tile base map:
 
-"tile map scale plugin" -- automatically zooms you to an available tile layer, which the other base map plugins don't do. 
+"tile map scale plugin" -- automatically zooms you to an available tile layer, which the other base map plugins don't do.
 
 osm mapnik
 
@@ -41,3 +41,8 @@ PETER: will dig out some of his favorite examples.
 Cal Fire shapefiles: Calculate ST_area for burn areas over last two years, vs parcel data. Intersect with land use data from 10 years ago? Building permits?
 
 How to go from making maps to coming out with really compelling conclusions.
+
+## Keep going with QGIS
+
+This series is highly recommended: 
+https://www.youtube.com/watch?v=Pf9cYvaCYWA&index=3&list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R
