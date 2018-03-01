@@ -6,14 +6,11 @@
 ## Dataset of The Week (10 Min)
 Presenting:  Sarah El Safty and Josh Slowiczek
 
-## SQL Bingo (30 min)
-
 ## Lies Data Tells
 
 ### Some people want to lie.
 
 * <https://qz.com/122921/the-chart-tim-cook-doesnt-want-you-to-see/> -- QZ on a very disingenous Apple chart.
-*
 
 You’re often going to find yourself working with numbers that were given to you by a source who has a vested interest in how your story turns out. Ask lots of questions. Be skeptical.
 
