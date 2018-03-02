@@ -92,6 +92,14 @@ Who is stuck? Let's brainstorm getting unstuck.
 <!-- if we have time, I can introduce the core concept of SQL. -->
 [Source](https://github.com/amandabee/workshops/tree/master/2018/sqlbingo)
 
+## Intro to Postico
+
+* Pull up the BINGO source, download the three CSVs and use 
+
+`COPY courses from '/path/to/courses.csv' DELIMITER ',' CSV HEADER;
+`COPY registration from '/path/to/registration.csv' DELIMITER ',' CSV HEADER;
+`COPY students from '/path/to/students.csv' DELIMITER ',' CSV HEADER;
+
 
 
 ## Next week (10 min)
