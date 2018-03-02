@@ -87,8 +87,10 @@ Who is stuck? Let's brainstorm getting unstuck.
 
 ## SQL Bingo
 
+[Slides](https://docs.google.com/presentation/d/1qsd1hZsd6U6b0sZJCoshFvjXnGcVy9yqafNlWe3SsB4/edit#slide=id.g344ba11d90_0_20)
+
 <!-- if we have time, I can introduce the core concept of SQL. -->
-https://github.com/amandabee/workshops/tree/master/2018/sqlbingo
+[Source](https://github.com/amandabee/workshops/tree/master/2018/sqlbingo)
 
 
 
