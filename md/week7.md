@@ -88,6 +88,7 @@ Who is stuck? Let's brainstorm getting unstuck.
 ## SQL Bingo
 
 <!-- if we have time, I can introduce the core concept of SQL. -->
+https://github.com/amandabee/workshops/tree/master/2018/sqlbingo
 
 
 
