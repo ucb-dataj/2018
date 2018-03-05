@@ -39,7 +39,7 @@ We're going to stop there because all we really need right now is access to the 
 Noah Veltman has an [excellent resource](https://github.com/veltman/clmystery/blob/master/cheatsheet.md) for learning your way around the command line, or this [2015 NICAR Workshop](https://github.com/chrislkeller/nicar15-command-line-basics) is a great place to start.
 
 ## Installing CSVkit
-One of the reasons we're doing this is to make `csvkit` a bit more accessible. 
+One of the reasons we're doing this is to make `csvkit` a bit more accessible.
 I wrote a [tutorial on installing CSVkit](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Tutorial:-Installing-CSVKit) that gives you a bunch of different options. I've heard that's a great place to start. From there you can [use](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tutorial:-Using-CSVkit) csvkit.
 
 
@@ -51,7 +51,120 @@ Postico does have [keyboard shortcuts](https://eggerapps.at/postico/docs/v1.3.2/
 
 I keep a running list of [SQL commands](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-SQL) that I wind up showing to students often.
 
+I have a few conventions that I use. The [Postgres manual](https://www.postgresql.org/docs/9.5/static/sql-syntax.html) is dense but incredibly helpful if you find yourself wondering _why_ something is the way it is.
 
+### [CREATE DATABASE](https://www.postgresql.org/docs/9.5/static/sql-createdatabase.html)
+
+You probably want to create a new database for each project, just to stay organized.  So go ahead and run `CREATE DATABASE week8` (you may need something closer to `CREATE DATABASE week8 WITH OWNER = amanda;`).
+
+Everything we do tonight we're going to do in that Week8 database.
+
+
+### [CREATE](https://www.postgresql.org/docs/9.5/static/sql-createtable.html)
+
+We're going to start by pulling some of the data Peter had you working with into Postgres -- this should give you a nice sense of how the tools compare.
+
+One thing to keep in mind: R is super efficient about referring back to your base data. If you start generating tables from old tables, you are going to duplicate data.
+
+I used `csvkit` to generate my create statements: `csvsql *.csv ` -- it took about 40 seconds to run through all of it.
+
+```sql
+CREATE TABLE ca_discipline (
+	alert_date DATE,
+	last_name VARCHAR(19),
+	first_name VARCHAR(14),
+	middle_name VARCHAR(19),
+	name_suffix VARCHAR(33),
+	city VARCHAR(22) NOT NULL,
+	state VARCHAR(11),
+	license VARCHAR(9),
+	action_type VARCHAR(62) NOT NULL,
+	action_date DATE NOT NULL
+);
+
+CREATE TABLE ca_medicare_opioids (
+	npi INTEGER NOT NULL,
+	nppes_provider_last_org_name VARCHAR(44),
+	nppes_provider_first_name VARCHAR(20),
+	nppes_provider_city VARCHAR(22) NOT NULL,
+	nppes_provider_state VARCHAR(2) NOT NULL,
+	specialty_description VARCHAR(62) NOT NULL,
+	description_flag VARCHAR(1) NOT NULL,
+	drug_name VARCHAR(30) NOT NULL,
+	generic_name VARCHAR(30) NOT NULL,
+	bene_count INTEGER,
+	total_claim_count INTEGER NOT NULL,
+	total_30_day_fill_count FLOAT NOT NULL,
+	total_day_supply INTEGER NOT NULL,
+	total_drug_cost FLOAT NOT NULL,
+	bene_count_ge65 INTEGER,
+	bene_count_ge65_suppress_flag VARCHAR(4),
+	total_claim_count_ge65 INTEGER,
+	ge65_suppress_flag VARCHAR(4),
+	total_30_day_fill_count_ge65 FLOAT,
+	total_day_supply_ge65 INTEGER,
+	total_drug_cost_ge65 FLOAT,
+	year INTEGER NOT NULL
+);
+
+CREATE TABLE npi_license (
+	npi INTEGER NOT NULL,
+	plicnum VARCHAR(20) NOT NULL,
+	license VARCHAR(22) NOT NULL
+);
+
+```
+We can just run with this since we aren't going to add new data. Our next project is to load in the data. Last week we used this command to load `courses.csv` into the `courses` table:
+
+`COPY courses from '/path/to/courses.csv' DELIMITER ',' CSV HEADER;`
+
+How do you think we should populate the `ca_discipline` table? First, try running `head ca_discipline.csv` in your terminal. Does this file have a header row? What is the delimeter?
+
+<!-- Note: I actually had to use psql at the terminal and `copy ca_discipline FROM '~/Public/2018/data/week5/ca_discipline.csv'  DELIMITER ',' CSV HEADER;` -->
+
+You probably got an error:
+
+```
+ERROR:  value too long for type character varying(11)
+CONTEXT:  COPY ca_discipline, line 1314, column state: " South Korea"
+```
+
+I used `csvkit` to see what was going on: `csvstat -c "state" ca_discipline.csv`.
+
+I can use an [ALTER](https://www.postgresql.org/docs/9.5/static/sql-altertable.html) statement to make more room: `ALTER TABLE ca_discipline ALTER COLUMN state TYPE varchar(15)` but now that I know that's happening I probably also want to know how often it is happening.
+
+```sql
+SELECT DISTINCT state FROM ca_discipline;
+
+SELECT DISTINCT state FROM ca_discipline ORDER BY state;
+
+SELECT DISTINCT state, count(*) FROM ca_discipline ORDER BY state;
+
+UPDATE ca_discipline SET state=trim(state);
+
+SELECT DISTINCT state, count(*) FROM ca_discipline GROUP BY state ORDER BY state;
+```
+
+
+
+### [SELECT](https://www.postgresql.org/docs/9.5/static/sql-select.html)
+
+
+revoked_berk <- ca_discipline %>%
+  filter(action_type == "Revoked"
+       & city == "Berkeley")
+
+# doctors in Oakland who had their licenses revoked
+revoked_oak <- ca_discipline %>%
+  filter(action_type == "Revoked"
+       & city == "Oakland")
+
+
+### JOIN
+
+<https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/>
+
+### UPDATE
 
 
 Introduction to Databases and SQL
