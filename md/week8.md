@@ -131,53 +131,124 @@ CONTEXT:  COPY ca_discipline, line 1314, column state: " South Korea"
 
 I used `csvkit` to see what was going on: `csvstat -c "state" ca_discipline.csv`.
 
-I can use an [ALTER](https://www.postgresql.org/docs/9.5/static/sql-altertable.html) statement to make more room: `ALTER TABLE ca_discipline ALTER COLUMN state TYPE varchar(15)` but now that I know that's happening I probably also want to know how often it is happening.
+I can use an [ALTER](https://www.postgresql.org/docs/9.5/static/sql-altertable.html) statement to make more room.
 
 ```sql
+ALTER TABLE ca_discipline ALTER COLUMN state TYPE varchar(15)
+
+```
+
+And then let's try the `COPY` statement again. And once all the data is in there, we need to clean it up.
+
+```sql
+
 SELECT DISTINCT state FROM ca_discipline;
+
+/* That's a little disordered.*/
 
 SELECT DISTINCT state FROM ca_discipline ORDER BY state;
 
+/* Better. Just out of curiousity, how are these distributed? */
+
 SELECT DISTINCT state, count(*) FROM ca_discipline ORDER BY state;
+
+/* Ok. So now we need to trim those spaces. */
 
 UPDATE ca_discipline SET state=trim(state);
 
 SELECT DISTINCT state, count(*) FROM ca_discipline GROUP BY state ORDER BY state;
 ```
 
-
-
 ### [SELECT](https://www.postgresql.org/docs/9.5/static/sql-select.html)
 
+We just tried some SELECT statements to examine the "State" column. We added in a [COUNT]() function and two clauses, [GROUP BY(https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-GROUP) and [ORDER BY](https://www.postgresql.org/docs/9.5/static/sql-select.html#SQL-ORDERBY)
 
-revoked_berk <- ca_discipline %>%
-  filter(action_type == "Revoked"
-       & city == "Berkeley")
+The next thing we did in R was create a smaller view with just a few cities, so let's resolve our query to look at what cities exist in the data:
 
-# doctors in Oakland who had their licenses revoked
-revoked_oak <- ca_discipline %>%
-  filter(action_type == "Revoked"
-       & city == "Oakland")
+```sql
+SELECT DISTINCT city, state, count(*) FROM ca_discipline GROUP BY city, state ORDER BY city, state;
+/* and add a WHERE clause to see just a few Alameda County cities */
 
 
-### JOIN
+SELECT DISTINCT city, state, count(*) FROM ca_discipline
+	WHERE city IN ('Kensington','Piedmont','Berkeley','Oakland', 'Alameda')
+	GROUP BY city, state ORDER BY city, state;
+
+SELECT action_type, count(*) FROM ca_discipline GROUP BY action_type;
+
+/* I like to know I'm hitting everything first  */
+
+```
+
+So: if we want to SELECT only those entries where the license was revoked, what are we going to do? I want everyone to sketch out what you think it is going to be, in [Etherpad](https://public.etherpad-mozilla.org/p/J298). And then try running it.
+
+<https://public.etherpad-mozilla.org/p/J298>
+
+Then see if you can make these two queries happen:
+
+* Filter the ca_discipline data to show licenses Revoked for doctors based in Los Angeles, with the most recent first.
+
+* Filter the data to show licenses Suspended or Revoked for doctors in Los Angeles or San Diego. Sort the results by Doctor's names.
+
+Note: I find it a bit easier to compose my scripts separately in a [text editor](https://beebom.com/best-text-editors-for-mac/) -- [Sublime](https://www.sublimetext.com/docs/3/linux_repositories.html) and [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-mac) are both good bets. TextEdit is actually a lightweight word processor. (One good clue is that you can tweak the fonts in TextEdit) but you can use it as a text editor if you switch to Plain Text mode. (It's under format for any one document, or under preferences for the software as a whole.)
+
+#### [VIEWS](https://www.postgresql.org/docs/9.5/static/sql-createview.html)
+
+One of the ways that SQL is a little less efficient than R is that it doesn't do a great job of caching views. So sometimes it makes sense to create a new table with a subset of the data, while other times [CREATE VIEW](https://www.postgresql.org/docs/9.5/static/sql-createview.html)
+
+```sql
+
+CREATE TEMP VIEW ca_discipline_local_revoked AS
+	SELECT * FROM public.ca_discipline
+	WHERE
+	  ca_discipline.city IN ('Alameda', 'Albany', 'Berkeley', 'Dublin', 'Emeryville', 'Fremont', 'Hayward', 'Kensington', 'Livermore', 'Newark', 'Oakland', 'Piedmont', 'Pleasaanton', 'San Leandro', 'Union City')
+	AND
+	  ca_discipline.action_type = 'Revoked';
+
+/* Note that this assumes my database is called "public" */
+
+```
+
+Working with [dates](https://www.postgresql.org/docs/9.5/static/functions-datetime.html)
+
+```sql
+SELECT date_part('year', alert_date) AS year, date_part('month', alert_date) AS month, count(*)
+	FROM  ca_discipline_local_revoked
+	GROUP BY date_part('year', alert_date), date_part('month', alert_date)
+	ORDER BY year, month;
+
+```
+
+So let's think about how we might go about looking at how many licenses are revoked in CA each year.  Sketch out what you think it is going to be, in a text editor. Drop your query in  [Etherpad](https://public.etherpad-mozilla.org/p/J298). And then try running it.
+
+```sql
+SELECT date_part('year', alert_date) AS year, count(*)
+	FROM  ca_discipline WHERE action_type = 'Revoked'
+	GROUP BY date_part('year', alert_date)
+	ORDER BY year;
+```
+
+And if you want to start playing with fentanyl prescriptions:
+
+```sql
+SELECT generic_name, count(*) FROM  public.ca_medicare_opioids
+	WHERE generic_name LIKE '%FENTANYL%' GROUP BY generic_name;
+
+SELECT year, count(*) FROM  public.ca_medicare_opioids
+	WHERE generic_name LIKE '%FENTANYL%' GROUP BY year ORDER BY year;
+
+```
+
+### [JOIN](https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-JOIN)
+
+We played with this a bit last week, and I know that you did some joins Week 6 as well. So I wanted to translate those queries into SQL for you.
+
+#### Create a summary, showing the number of opioid prescriptions written by each doctor, the total cost of the opioids prescribed, and the cost per claim.
+
+Sketch out how you think you would do it. 
 
 <https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/>
 
-### UPDATE
+### [UPDATE](https://www.postgresql.org/docs/9.5/static/sql-update.html)
 
-
-Introduction to Databases and SQL
-
-Postico
-
-Exercise: SQL Bingo
-Council Members, Votes, Districts, committees
-
-Getting Set Up;
-
-Possibly: Puerto Rico power grid?
-
-Opiod data to demonstrate joins
-
-Working from the command line:
+We actually introduced update above. You can use Postico to manually tweak individual values, but if you want to change values en masse, UPDATE is your friend.
