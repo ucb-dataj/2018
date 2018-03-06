@@ -1,6 +1,9 @@
 ## Week 8 | Tuesday March 6, 2018
 *Instructor: Amanda Hickman*
 
+The SQL portion of this lesson plan draws heavily from the Medicare opioid prescription data. If you're interested in reporting on the opioid crisis in the US, I highly recommend Charles Ornstein's  guide to [Covering Opioids with Data](https://docs.google.com/document/d/1NDjd-7I2GlENPfRgMi5cT63Q6KRzWsvTHohbXEStnHg/edit). Unfortunately, this is a story with a lot of angles an endless opportunities to report. 
+
+
 # Learning to Love the Terminal
 
 We're going to use a few command line tools.   
@@ -258,7 +261,7 @@ SELECT npi, nppes_provider_last_org_name, nppes_provider_first_name, nppes_provi
 
 ### [JOIN](https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-JOIN)
 
-We played with this a bit last week, and I know that you did some joins Week 6 as well. So I wanted to translate those queries into SQL so we can look at what it looks like to do this in SQL. 
+We played with this a bit last week, and I know that you did some joins Week 6 as well. So I wanted to translate those queries into SQL so we can look at what it looks like to do this in SQL.
 
 ```sql
 CREATE TEMP VIEW ca_discipline_npi
