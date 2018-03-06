@@ -239,13 +239,33 @@ SELECT year, count(*) FROM  public.ca_medicare_opioids
 
 ```
 
-### [JOIN](https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-JOIN)
-
-We played with this a bit last week, and I know that you did some joins Week 6 as well. So I wanted to translate those queries into SQL for you.
 
 #### Create a summary, showing the number of opioid prescriptions written by each doctor, the total cost of the opioids prescribed, and the cost per claim.
 
-Sketch out how you think you would do it. 
+Sketch out how you think you would do it.
+
+```sql
+SELECT npi, nppes_provider_last_org_name, nppes_provider_first_name, nppes_provider_city,
+	specialty_description, COUNT(*), SUM(total_claim_count) AS prescriptions,
+	SUM(total_drug_cost) AS costs, SUM(total_drug_cost)/SUM(total_claim_count) AS cost_per_prescription
+	FROM public.ca_medicare_opioids
+	GROUP BY npi, nppes_provider_last_org_name, nppes_provider_first_name, nppes_provider_city,
+	specialty_description
+	ORDER BY prescriptions DESC
+
+
+```
+
+### [JOIN](https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-JOIN)
+
+We played with this a bit last week, and I know that you did some joins Week 6 as well. So I wanted to translate those queries into SQL so we can look at what it looks like to do this in SQL. 
+
+```sql
+CREATE TEMP VIEW ca_discipline_npi
+	AS SELECT ca_discipline.*, npi_license.npi, npi_license.plicnum
+	FROM ca_discipline LEFT JOIN npi_license
+	ON npi_license.license = ca_discipline.license
+```
 
 <https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/>
 
