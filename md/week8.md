@@ -1,7 +1,7 @@
 ## Week 8 | Tuesday March 6, 2018
 *Instructor: Amanda Hickman*
 
-The SQL portion of this lesson plan draws heavily from the Medicare opioid prescription data. If you're interested in reporting on the opioid crisis in the US, I highly recommend Charles Ornstein's  guide to [Covering Opioids with Data](https://docs.google.com/document/d/1NDjd-7I2GlENPfRgMi5cT63Q6KRzWsvTHohbXEStnHg/edit). Unfortunately, this is a story with a lot of angles an endless opportunities to report. 
+The SQL portion of this lesson plan draws heavily from the Medicare opioid prescription data. If you're interested in reporting on the opioid crisis in the US, I highly recommend Charles Ornstein's  guide to [Covering Opioids with Data](https://docs.google.com/document/d/1NDjd-7I2GlENPfRgMi5cT63Q6KRzWsvTHohbXEStnHg/edit). Unfortunately, this is a story with a lot of angles an endless opportunities to report.
 
 
 # Learning to Love the Terminal
@@ -50,7 +50,7 @@ I wrote a [tutorial on installing CSVkit](https://github.com/amandabee/CUNY-SOJ-
 
 There are a lot of reasons I want you to get comfortable with Postgres. Last week we talked a little bit about generating CREATE statements and I want you to be able to do that, but you're also going to find a lot of situations where facility with Postgres will make a big difference. It opens the door to some geographic queries that are quite powerful.
 
-Postico does have [keyboard shortcuts](https://eggerapps.at/postico/docs/v1.3.2/keyboard-shortcuts.html)
+Postico does have [keyboard shortcuts](https://eggerapps.at/postico/docs/v1.3.2/keyboard-shortcuts.html).
 
 I keep a running list of [SQL commands](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-SQL) that I wind up showing to students often.
 
@@ -164,7 +164,7 @@ SELECT DISTINCT state, count(*) FROM ca_discipline GROUP BY state ORDER BY state
 
 ### [SELECT](https://www.postgresql.org/docs/9.5/static/sql-select.html)
 
-We just tried some SELECT statements to examine the "State" column. We added in a [COUNT]() function and two clauses, [GROUP BY(https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-GROUP) and [ORDER BY](https://www.postgresql.org/docs/9.5/static/sql-select.html#SQL-ORDERBY)
+We just tried some SELECT statements to examine the "State" column. We added in a [COUNT]() function and two clauses, [GROUP BY](https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-GROUP) and [ORDER BY](https://www.postgresql.org/docs/9.5/static/sql-select.html#SQL-ORDERBY)
 
 The next thing we did in R was create a smaller view with just a few cities, so let's resolve our query to look at what cities exist in the data:
 
@@ -202,9 +202,9 @@ One of the ways that SQL is a little less efficient than R is that it doesn't do
 ```sql
 
 CREATE TEMP VIEW ca_discipline_local_revoked AS
-	SELECT * FROM public.ca_discipline
+	SELECT * FROM ca_discipline
 	WHERE
-	  ca_discipline.city IN ('Alameda', 'Albany', 'Berkeley', 'Dublin', 'Emeryville', 'Fremont', 'Hayward', 'Kensington', 'Livermore', 'Newark', 'Oakland', 'Piedmont', 'Pleasaanton', 'San Leandro', 'Union City')
+	  ca_discipline.city IN ('Alameda','Albany','Berkeley','Dublin','Emeryville','Fremont','Hayward', 'Kensington','Livermore','Newark','Oakland','Piedmont','Pleasanton', 'San Leandro','Union City')
 	AND
 	  ca_discipline.action_type = 'Revoked';
 
@@ -212,7 +212,7 @@ CREATE TEMP VIEW ca_discipline_local_revoked AS
 
 ```
 
-Working with [dates](https://www.postgresql.org/docs/9.5/static/functions-datetime.html)
+Working with [dates](https://www.postgresql.org/docs/9.5/static/functions-datetime.html):
 
 ```sql
 SELECT date_part('year', alert_date) AS year, date_part('month', alert_date) AS month, count(*)
