@@ -234,30 +234,31 @@ SELECT date_part('year', alert_date) AS year, count(*)
 And if you want to start playing with fentanyl prescriptions:
 
 ```sql
-SELECT generic_name, count(*) FROM  public.ca_medicare_opioids
+SELECT generic_name, count(*) FROM  ca_medicare_opioids
 	WHERE generic_name LIKE '%FENTANYL%' GROUP BY generic_name;
 
-SELECT year, count(*) FROM  public.ca_medicare_opioids
+SELECT year, count(*) FROM ca_medicare_opioids
 	WHERE generic_name LIKE '%FENTANYL%' GROUP BY year ORDER BY year;
 
 ```
 
 
-#### Create a summary, showing the number of opioid prescriptions written by each doctor, the total cost of the opioids prescribed, and the cost per claim.
+#### Don't just copy and paste.
+Create a summary, showing the number of opioid prescriptions written by each doctor, the total cost of the opioids prescribed, and the cost per claim.
 
-Sketch out how you think you would do it.
+Sketch out how you think you would do it. Drop your query in etherpad, and try running it.
 
 ```sql
 SELECT npi, nppes_provider_last_org_name, nppes_provider_first_name, nppes_provider_city,
-	specialty_description, COUNT(*), SUM(total_claim_count) AS prescriptions,
+	specialty_description, SUM(total_claim_count) AS prescriptions,
 	SUM(total_drug_cost) AS costs, SUM(total_drug_cost)/SUM(total_claim_count) AS cost_per_prescription
-	FROM public.ca_medicare_opioids
+	FROM ca_medicare_opioids
 	GROUP BY npi, nppes_provider_last_org_name, nppes_provider_first_name, nppes_provider_city,
 	specialty_description
 	ORDER BY prescriptions DESC
-
-
 ```
+
+What if you just wanted to look for Fentanyl prescriptions? Try it and share your query. 
 
 ### [JOIN](https://www.postgresql.org/docs/9.5/static/queries-table-expressions.html#QUERIES-JOIN)
 
