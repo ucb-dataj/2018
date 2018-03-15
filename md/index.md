@@ -69,16 +69,17 @@ We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions
 
 -  ####**Mar. 29:** Spring Break -- No class
 
-- ####**Apr. 5:**	[**More with fun with R**](week11.html)
+- ####**Apr. 5:**  [**Going deeper with PostGIS**](week11.html)
+We'll keep working on pulling together GIS and databases so everyone has a good handle on the tools we're using. (**Amanda Hickman**)
+
+	- **Assignment** Skill reinforcement assignment.
+
+- ####**Apr. 12:**	[**More with fun with R**](week12.html)
 Connecting to databases from R. Pulling data from the web. Correcting for inflation and seasonal trends. (**Peter Aldhous**)
 
 	- **Assignment** Submit a progress report on your data analysis.
 
 
-- ####**Apr. 12:**  [**Open class: To be determined**](week12.html)
-As the semester progresses, we want to hear from you about tools you're interested in tackling. We're leaving week 12 open to new opportunities and inspiration that present themselves this semester.  (**Amanda Hickman**)
-
-	- **Assignment** Skill reinforcement assignment.
 
 
 - ####**Apr. 19:**  [Putting it all into practice: 1](week13.html)
