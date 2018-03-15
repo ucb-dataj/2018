@@ -36,6 +36,63 @@ CONTROL,TOTROOMS,TOTHCAMT,PERPOVLVL,JACPRIMARY,JACSECNDRY,JADEQUACY,JARTACCESS,J
 '11000001',7,'14',501,'0','0','2','0','0','0','0',
 ```
 
++ Josh had a question about [number formats](https://www.postgresql.org/docs/9.5/static/functions-formatting.html). Go ahead and [grab his data](https://drive.google.com/file/d/1qyVKQkpmJ1Tj4A0_He2rU_E1blcLkELg/view), create a table for it, and import the data into the table.
+
+```sql
+CREATE TABLE forfeiture (
+	admin_number VARCHAR(17) NOT NULL,
+	docket_number VARCHAR(24),
+	amount_forfeit FLOAT NOT NULL,
+	date_dispersed DATE NOT NULL,
+	recipient VARCHAR(26),
+	amount_dispersed FLOAT NOT NULL,
+	county VARCHAR(14) NOT NULL,
+	year INTEGER NOT NULL
+);
+
+COPY {tablename} FROM {file path} CSV HEADER;
+
+SELECT county, year, SUM(amount_forfeit)
+FROM forfeiture GROUP BY county, year ORDER BY county;
+
+SELECT county, recipient, SUM(amount_forfeit)
+FROM forfeiture WHERE county = 'Los Angeles' AND recipient = 'GENERAL FUND'
+GROUP BY county, recipient ORDER BY county;
+```
+
+The second problem is super quirky. The short version is [math is hard](https://www.postgresql.org/docs/9.5/static/datatype-numeric.html) even for computers. And honestly I'm a little embarrassed that I've just never bothered to dig into this, so the best I can do is wave my hands around and mumble about how computers store numeric data and optimization. In fairness to myself the Postgres manual isn't a lot more specific:
+
+> Inexact means that some values cannot be converted exactly to the internal format and are stored as approximations, so that storing and retrieving a value might show slight discrepancies. Managing these errors and how they propagate through calculations is the subject of an entire branch of mathematics and computer science and will not be discussed here
+
+What I can tell you is what your options are for solving the problem.
+
+There are a few different options. You can use [formatting](https://www.postgresql.org/docs/9.5/static/functions-formatting.html) to customize the number, you can [round it off](https://www.postgresql.org/docs/9.5/static/typeconv-func.html) or, you cast as [money](https://www.postgresql.org/docs/9.5/static/datatype-money.html).
+
+```SQL
+SELECT county, year, SUM(amount_forfeit::numeric)
+FROM forfeiture GROUP BY county, year ORDER BY county;
+
+/* You might want actual currency: */
+SELECT county, year, SUM(amount_forfeit::numeric::money)
+FROM forfeiture GROUP BY county, year ORDER BY county;
+
+/* We're smart, so we can figure out how to make this work: */
+SELECT county, year, to_char(SUM(amount_forfeit), '9999.00') as total
+FROM forfeiture GROUP BY county, year ORDER BY total DESC;
+
+```
+
+I have a bigger question though: should we be taking the sum of all `amount_forfeit` to begin with? Try these two queries and let's discuss.
+
+```SQL
+
+SELECT * FROM forfeiture WHERE admin_number = '13-121J';
+
+SELECT SUM(amount_forfeit) FROM forfeiture WHERE admin_number = '13-121J';
+
+```
+
+
 # Digging into Mapping
 
 Cartography and GIS aren't the same thing. We're talking about very basic maps as visualizations here. [More on that](http://maptime.io/lessons-resources/)
