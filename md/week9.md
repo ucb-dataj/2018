@@ -1,10 +1,42 @@
 ## Week 9 | March 15, 2018
 *Instructor: Amanda Hickman*
 
-# Some Technical Notes
-Don't ignore errors, but I don't want to try to troubleshoot individual errors in class, either. So if you're getting an error, let's look at how to resolve it.
+# 10 Min: Data of the Week
 
-My error:`Couldn't load plugin MetaSearch due to an error when calling its classFactory() method`
+# SQL: What was tricky?
+
+We're going to spend the next three weeks on SQL and mapping. I want to look at where folks got stuck and how to get unstuck.
+
+Charlotte had a fun one this week, and I want to walk through some of my troubleshooting:
+
++ I didn't tell you what the redirect operator `>` does. Did anyone try it? What does it do?
++ Some of you tried running that in Postico, instead of in the Terminal. What's the difference?
++ Some of you tried to run "snippet.csv" -- why wouldn't that work?
++ Here's an example of a question that I immediately knew the answer to. What does that Error mean?:
+
+
+    I tried loading the three datasets I have from AHS into Postico just to view the tables and I got:
+
+    "ERROR:  relation "household" does not exist"
+
+    This was the code I used to load the data:
+
+    COPY household FROM '/Users/Charlotte/Desktop/Spring 2018/Data/AHS data/AHS files/household.csv' DELIMITER ',' CSV HEADER;
+
++ Which one is the Postgres table? Which is the csv file?
++ And then we encountered a new error. What clues do you see in this error? I had to look at the [Posgres COPY](https://www.postgresql.org/docs/9.5/static/sql-copy.html) documentation to resolve it.
+
+    ERROR:  invalid input syntax for integer: "'11000001'"
+    CONTEXT:  COPY household_snip, line 2, column CONTROL: "'11000001'"
+
++ If you're curious, here's a data sample:
+
+```CSV
+CONTROL,TOTROOMS,TOTHCAMT,PERPOVLVL,JACPRIMARY,JACSECNDRY,JADEQUACY,JARTACCESS,JARTATTRACT,JARTAWARE,JARTECON,
+'11000001',7,'14',501,'0','0','2','0','0','0','0',
+```
+
+# Digging into Mapping
 
 Cartography and GIS aren't the same thing. We're talking about very basic maps as visualizations here. [More on that](http://maptime.io/lessons-resources/)
 
@@ -26,19 +58,37 @@ Zipcodes, council districts, police precincts -- these are all polygons. Most of
 Often (usually) your data won't include a shapefile. If you have High School graduation rates by school districts, and you want to map those, you need to find a shapefile that describes the outline of each school district, and then you need to combine that shapefile with your data, by identifying a column that the two tables have in common.
 
 ## Projections
-We don't deal with [projections](http://xkcd.com/977/) much but they matter.
+We don't deal with [projections](http://xkcd.com/977/) much but they matter. And if you have inconsistent projections you might end up with a map where the city of [San Francisco is floating about 10 miles NE of where it belongs](https://amandabee.carto.com/viz/d42d245a-5aa2-11e5-ba80-0e853d047bba/public_map).  I had to [ask for help](https://gis.stackexchange.com/questions/162779/why-is-the-city-of-san-francsico-floating-over-point-richmond) to resolve that.
+
 
 ## Vectors and Rasters
 
-We can head down some serious rabbit holes here. But it is worth understanding the distinction between a vector and a raster.
+We can head down some serious rabbit holes here. But it is worth understanding the distinction between a [vector](https://en.wikipedia.org/wiki/Vector_graphics) and a [raster](https://en.wikipedia.org/wiki/Raster_graphics), because they'll come up again and again in all kinds of contexts.
+
+## Shapefiles
+What is a shapefile? There are a few different widely used formats for storing geographic information. ESRI makes ArcGIS which is popular and expensive. Their shapefile format is almost universal. Google Maps uses it's own KML format.
+
+## Asking for help
+
+I can't say enough about the importance of learning how to ask for help. If you look at my [gis.stackexchange.com](https://gis.stackexchange.com/users/24497/amanda?tab=questions&sort=newest) profile you can see where I got stuck and then unstuck, starting back in 2013. There's a community there that is very good about [thoroughly explaining](https://gis.stackexchange.com/questions/84443/what-is-this-postgis-query-doing-to-show-great-circle-connections) what you're dealing with.
+
+# Open QGIS
+
+Okay, so let's actually do some mapping.
 
 
+[BLS Walkthrough](/home/amanda/Public/CUNY_Coursebits/CUNY-data-skills_pages/_posts/2015-02-18-mapping.md)
 
-# Loading our first data
+[CSV Sound System's 2014 NICAR Workshop](https://github.com/csvsoundsystem/nicar-cartodb-postgis)
+
+California layer CRS:
+National layer CRS:
+
+
 
 QUESTIONS: How do I reset the zoom? (Right click; zoom to layer.)
 
-What is a shapefile? There are a few different widely used formats for storing geographic information. ESRI makes ArcGIS which is popular and expensive. Their shapefile format is almost universal. Google Maps uses it's own format.
+
 
 QUESTIONS: How do I refactor fields if table whatever is depricated?
 
@@ -47,91 +97,19 @@ layer crs: best for us, sf?
 
 ## Loading a basemap
 
-You need a basemap.
+You need a basemap. The "tile map scale plugin" -- does a nice job of automatically zooming you to an available tile layer, which the other base map plugins don't do.
 
-"tile map scale plugin" -- automatically zooms you to an available tile layer, which the other base map plugins don't do.
+So go ahead and download the plugin. `Plugins > Manage and Install Plugins ...`  and search for "Tile Map Scale"
+
+![adding a layer](img/week9_01.png)
+
+
 
 ## Don't unzip your shapefiles
 
 ## Finding points that intersect with shapes
 
-[BLS Walkthrough](/home/amanda/Public/CUNY_Coursebits/CUNY-data-skills_pages/_posts/2015-02-18-mapping.md)
 
-[CSV Sound System's 2014 NICAR Workshop](https://github.com/csvsoundsystem/nicar-cartodb-postgis)
-
-### From Peter, probably too hard.
-
-Should look for hurricane tracks.
-
-Here <http://paldhous.github.io/ucb/2017/dataviz/week10.html>'s a basic
-QGIS mapping class, more for data viz than analysis (a bit of that
-toward the end), but might be useful:.
-
-Also attached is the point data for planes from Acorn Growth Companies
-(the star of this story
-<https://www.buzzfeed.com/christianstork/spy-planes-over-american-cities>)
-flying surveillance patterns over the Gulf Coast to support US Marines
-Special Ops RAVEN training exercises.
-
-For the maps in the story, I had to turn the points into lines. Once you
-get this loaded into PostgreSQL/PostGIS, the query should be something like:
-
-CREATE TABLE acorn_tracks_gulf AS
-SELECT ST_Makeline(tracks.geom) AS geom,
-tracks.REG,tracks.FLIGHT_ID,tracks.ADSHEX,tracks.NAME,tracks.AGENCY,tracks.AGENC
-+Y2,tracks.DATE
-FROM (SELECT
-geom,REG,FLIGHT_IS,ADSHEX,NAME,AGENCY,AGENCY2,CAST(CENTRAL_TI AS date)
-AS DATE FROM acorn_points_gulf ORDER BY
-REG,FLIGHT_ID,ADSHEX,NAME,AGENCY,AGENCY2,DATE,CENTRAL_TI) AS tracks
-GROUP BY
-tracks.REG,tracks.FLIGHT_ID,tracks.ADSHEX,tracks.NAME,tracks.AGENCY,tracks.AGENC
-+Y2,tracks.DATE;
-
-Sorry about all the capitals. That's what happens when you save out from
-QGIS as a shapefile. I can explain what all the fields are ..
-
-------------------------
-
-Tile map scale plugin allows you to pull in a tile base map:
-
-
-osm mapnik
-
-in project properties, enable on the fly crs transformation
-
-write the query that pulls points from the db and turns them into tracks
-
-
-
-
-QGIS
-Finding Stories Using Maps
-
-* Super basic stuff; where is this happening? Where is this concentrated?
-* Campaign donations from outside your district
-
-Spatial functions and how they work;
-Looking at incarceration location vs. home zip and calculating differences
-
-Taking some kind of point data and turning it into line data with st_makeline function. eg. hurricane data;
-
-2017 Hurricane data -- Peter has a good python script to transform into a CSV
-
-Counting things within a box and without a box? (Campaign donations.)
-
-Sex offender residency restrictions: Map the facilities and use ST_Buffer / ST_union to map a shape and look at where there are zero places outside the buffer. Does that intersect with low cost housing.
-
-Distance to abortion clinics. https://pudding.cool/2017/09/clinics/ / https://www.npr.org/sections/health-shots/2017/10/03/555166033/for-many-women-the-nearest-abortion-clinic-is-hundreds-of-miles-away
-
-Mapping Quakes (and filtering USGS data by geography)
-http://2015.padjo.org/tutorials/spreadsheets/maps-earthquakes-spreadsheets-part-1/
-
-PETER: will dig out some of his favorite examples.
-
-Cal Fire shapefiles: Calculate ST_area for burn areas over last two years, vs parcel data. Intersect with land use data from 10 years ago? Building permits?
-
-How to go from making maps to coming out with really compelling conclusions.
 
 
 ### Where to Find Boundary Files
@@ -142,7 +120,6 @@ How to go from making maps to coming out with really compelling conclusions.
 + [GeoCommons](http://geocommons.com/)
 + [CartoDB's Common Data](https://cunydata.cartodb.com/dashboard/common_data)
 + [Census.gov](https://www.census.gov/geo/maps-data/)
-+
 
 [My List](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles)
 
@@ -158,3 +135,28 @@ If you need to transform addresses into lat/lon pairs, you have a couple of opti
 
 This series is highly recommended:
 https://www.youtube.com/watch?v=Pf9cYvaCYWA&index=3&list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R
+
+
+
+# Advanced query
+We probably won't get to this. And this week all we're going to do is talk it through. We're not going to tackle it.
+
+In 2006, California voters passed [Prop 83](http://www.lao.ca.gov/ballot/2006/83_11_2006.htm), which requires registered sex offenders to live at least 2000 feet from any school or playground. In 2015, the state supreme court said the [blanket restriction was too broad](https://www.nbclosangeles.com/news/local/California-Loosens-Sex-Offender-Residency-Restrictions-297740931.html) and the law could only be applied to offenders whose crimes involved children.
+
+Sex offender restrictions buffered around schools to show how much of a city is off limits.
+* Walk through how we would do it, in theory. What do we need?
+
+```
++ location of every public school in the county
++ location of every private school in the county
++ location of every playground in the county
+```
+
+Alameda publishes at least the schools: <https://data.acgov.org/Education/Alameda-County-Schools/yza6-6jwu>
+
+Then we're going to need a way to calculate circles around those points. I want you to take five minutes to think of a Google search that might let you get at that. Put your search terms in the Etherpad.
+
+<!-- http://postgis.net/docs/ST_Buffer.html -->
+
+
+More applications of this? If you aren't following SB 827 you should be. So how would you map the impact of that bill? <https://transitrichhousing.org/> tried.
