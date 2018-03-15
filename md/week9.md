@@ -60,6 +60,9 @@ Often (usually) your data won't include a shapefile. If you have High School gra
 ## Projections
 We don't deal with [projections](http://xkcd.com/977/) much but they matter. And if you have inconsistent projections you might end up with a map where the city of [San Francisco is floating about 10 miles NE of where it belongs](https://amandabee.carto.com/viz/d42d245a-5aa2-11e5-ba80-0e853d047bba/public_map).  I had to [ask for help](https://gis.stackexchange.com/questions/162779/why-is-the-city-of-san-francsico-floating-over-point-richmond) to resolve that.
 
+Most of the time you're going to be in WGS84.
+
+The Wikipedia article on [web mercator](https://en.wikipedia.org/wiki/Web_Mercator) is pretty good if you're dying to understand how this all fits together, but EPSG is an obsolete acronym for European Petroleum Survey Group a scientific research group with ties to the petroleum industry. They compiled a comprehensive database of projections and coordinate systems.  
 
 ## Vectors and Rasters
 
@@ -76,26 +79,68 @@ I can't say enough about the importance of learning how to ask for help. If you 
 
 Okay, so let's actually do some mapping.
 
+In 2011, the BLS published a [map of fatal workplace injuries](https://www.bls.gov/opub/btn/volume-2/death-on-the-job-fatal-work-injuries-in-2011.htm) by state.
 
-[BLS Walkthrough](/home/amanda/Public/CUNY_Coursebits/CUNY-data-skills_pages/_posts/2015-02-18-mapping.md)
+What do we think of this map?
 
-[CSV Sound System's 2014 NICAR Workshop](https://github.com/csvsoundsystem/nicar-cartodb-postgis)
+* Are these colors continuous or categorical? Should they be? Is anyone surprised that CA and TX have a lot of workplace injuries? How can we improve on this?
 
-California layer CRS:
-National layer CRS:
+<!-- Takeaway: BLS data is mapped, but it isn’t normalized to the population and the gradient makes no sense at all. -->
+
+So we'll recreate it:
++ [BLS Fatality Data](data/week9/)
++ [2011 Population Estimates](https://www.census.gov/popest/data/state/totals/2011/tables/NST-EST2011-01.csv) (via [census.gov](http://www.census.gov/popest/data/historical/2010s/vintage_2011/state.html))
+
+I already combined the Census 2011 population estimates with the BLS workplace fatality data. We're actually going to use Postgres to do the first piece of this -- we could do it just as easily in [a spreadsheet](https://www.libreoffice.org/discover/calc/) but we need the SQL practice.
+
+```SQL
+CREATE TABLE bls_fatalities_2011 (
+  state character varying(20) NOT NULL,
+  fatalities integer NOT NULL,
+  population integer NOT NULL
+);
+```
+
+Do you remember how to load data into a table?
+
+And how are we going to normalize this?
+
+```SQL
+ALTER TABLE bls_fatalities_2011 ADD COLUMN fatality_rate float;
+```
+
+And then try out a query to fill that rate column:
+
+```sql
+SELECT *,
+  ((fatalities::float/population)*100000) AS rate
+  FROM bls_fatalities_2011
+```
+
+And then actually do it:
+
+```sql
+UPDATE bls_fatalities_2011 SET fatality_rate = ((fatalities::float/population)*100000);
+```
+
+Why did we have to re-cast it? Well, [because](https://dba.stackexchange.com/questions/200320/what-am-i-doing-wrong-with-my-math).
+And then output it:
+
+```sql
+COPY bls_fatalities_2011 TO '~/Desktop/bls_normalized.csv' DELIMITER ',' CSV HEADER;
+```
+
+### Adding a shapefile
+To actually map this, we need some states. Who keeps track of US State boundaries? [The Census](https://www.census.gov/geo/maps-data/data/tiger.html). You want "Cartographic Boundary Shapefiles" > "States". The state boundaries don't actually change, so it doesnt matter which year.
+
+For our purposes 1:20,000,000 is plenty of resolution.
+
+You should be able to load the zip file in as a layer.
+
+Why does it look all squished? Once upon a time [I asked about that](https://gis.stackexchange.com/questions/167181/why-would-an-svg-output-from-cartodb-look-squished-when-the-map-doesnt), too. The answer is kind of cool. If we use the toggle on the bottom right to switch to "EPSG 54004" we get something that looks a little more familiar.  
 
 
-
-QUESTIONS: How do I reset the zoom? (Right click; zoom to layer.)
-
-
-
-QUESTIONS: How do I refactor fields if table whatever is depricated?
-
-layer crs: best for us, sf?
-
-
-## Loading a basemap
+### Loading a basemap
 
 You need a basemap. The "tile map scale plugin" -- does a nice job of automatically zooming you to an available tile layer, which the other base map plugins don't do.
 
@@ -103,14 +148,26 @@ So go ahead and download the plugin. `Plugins > Manage and Install Plugins ...` 
 
 ![adding a layer](img/week9_01.png)
 
+That will give you a tiny pulldown on the map that lets you add a base layer so you can see where you are in the world.
+
+### QGIS Built In Join
+
+Add your CSV to QGIS (it has no geometry.)
+
+Look at the Attribute table for the Shapefile. How are we going to join this?
+
+And then style it.
+
+* Use equal intervals. [I found a bug once](https://gis.stackexchange.com/questions/84562/am-i-misunderstanding-equal-interval) which is another reason to ask for help. They had no idea.
+
+* Make compound labels with the `||` operator.
+
+ NAME  || '\n' || "bls_fatalities_2011_Workplace Fatalities 2011"
 
 
-## Don't unzip your shapefiles
-
-## Finding points that intersect with shapes
 
 
-
+# Resources
 
 ### Where to Find Boundary Files
 + [NYC:](http://www.nyc.gov/html/dcp/html/bytes/dwndistricts.shtml)
