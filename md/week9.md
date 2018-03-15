@@ -217,11 +217,7 @@ And then style it.
 
 * Use equal intervals. [I found a bug once](https://gis.stackexchange.com/questions/84562/am-i-misunderstanding-equal-interval) which is another reason to ask for help. They had no idea.
 
-* Make compound labels with the `||` operator.
-
- NAME  || '\n' || "bls_fatalities_2011_Workplace Fatalities 2011"
-
-
+* Make compound labels with the `||` operator. Eg. `NAME  || '\n' || "bls_fatalities_2011_Workplace Fatalities 2011"`
 
 
 # Resources
@@ -274,3 +270,9 @@ Then we're going to need a way to calculate circles around those points. I want 
 
 
 More applications of this? If you aren't following SB 827 you should be. So how would you map the impact of that bill? <https://transitrichhousing.org/> tried.
+
+
+# Homework
+I want you to find one shapefile that is relevant to your story, load it and label it. By Wednesday night you should be able to send me a screenshot of QGIS with the data loaded as well as a clear sentence or two describing the source of the data, the URL you got it from, and the relevance to your project. 
+
+Who is data of the week next week?
