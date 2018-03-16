@@ -3,6 +3,10 @@
 
 # 10 Min: Data of the Week
 
+Carlos & Nikka
+
+Let's take a few minutes to capture and organize [the presentation schedule](https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0).
+
 # SQL: What was tricky?
 
 We're going to spend the next three weeks on SQL and mapping. I want to look at where folks got stuck and how to get unstuck.
@@ -35,6 +39,45 @@ Charlotte had a fun one this week, and I want to walk through some of my trouble
 CONTROL,TOTROOMS,TOTHCAMT,PERPOVLVL,JACPRIMARY,JACSECNDRY,JADEQUACY,JARTACCESS,JARTATTRACT,JARTAWARE,JARTECON,
 '11000001',7,'14',501,'0','0','2','0','0','0','0',
 ```
+
+## Creating New databases
+
+This might be easy. Try just running this in the Postico SQL Query pane:
+
+
+```SQL
+
+CREATE DATABASE week9;
+
+```
+
+If that doesn't work, then we get to do some fancy footwork. One more reason to learning to  love the command line. The Postgres documentation has a walk through for enabling [command line tools](http://postgresapp.com/documentation/cli-tools.html) but what did I say last week about `sudo`?
+
+So we're going to use their second option.
+
+```sh
+echo $path
+which psql
+cd
+nano .profile
+```
+You're going to edit your `.profile` file to add this line:
+
+`export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"`
+
+Use <kbd>ctrl</kbd><kbd>o</kbd> then <kbd>ctrl</kbd><kbd>x</kbd> to save.
+
+```sh
+which psql
+source ~/.profile
+which psql
+psql
+```
+
+That should get you into a postgres command prompt. Then we need to run `CREATE DATABASE week9;` in the psql command prompt. Use `\q` to exit.
+
+## More Homework Troubleshooting
+
 
 + Josh had a question about [number formats](https://www.postgresql.org/docs/9.5/static/functions-formatting.html). Go ahead and [grab his data](https://drive.google.com/file/d/1qyVKQkpmJ1Tj4A0_He2rU_E1blcLkELg/view), create a table for it, and import the data into the table.
 
@@ -91,6 +134,7 @@ SELECT * FROM forfeiture WHERE admin_number = '13-121J';
 SELECT SUM(amount_forfeit) FROM forfeiture WHERE admin_number = '13-121J';
 
 ```
+
 
 
 # Digging into Mapping
@@ -220,31 +264,10 @@ And then style it.
 * Make compound labels with the `||` operator. Eg. `NAME  || '\n' || "bls_fatalities_2011_Workplace Fatalities 2011"`
 
 
-# Resources
-
-### Where to Find Boundary Files
-+ [NYC:](http://www.nyc.gov/html/dcp/html/bytes/dwndistricts.shtml)
-+ [CUNY Research Center](http://researchcenter.journalism.cuny.edu/digital-maps-database/)
-+ [Google Fusion Table search](http://www.google.com/fusiontables/search)
-+ [NYC Data sets](https://github.com/jweir/nyc-gov-data/blob/master/data/nyc_data_sets.markdown)
-+ [GeoCommons](http://geocommons.com/)
-+ [CartoDB's Common Data](https://cunydata.cartodb.com/dashboard/common_data)
-+ [Census.gov](https://www.census.gov/geo/maps-data/)
-
-[My List](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles)
-
-### How to Geocode
-If you need to transform addresses into lat/lon pairs, you have a couple of options:
-
-+ Fusion Tables will do it, but their terms of service say you have to use that data on a Google Map.
-+ Geocoder.us Will do one address at a time, or you can pay for a batch
-+ CartoDB gives you a bunch free and you can pay for more.
-+ More [suggestions](https://stackoverflow.com/questions/373383/geocoding-libraries)
-
 ## Keep going with QGIS
 
 This series is highly recommended:
-https://www.youtube.com/watch?v=Pf9cYvaCYWA&index=3&list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R
+<https://www.youtube.com/watch?v=Pf9cYvaCYWA&index=3&list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R>
 
 
 
@@ -273,6 +296,10 @@ More applications of this? If you aren't following SB 827 you should be. So how 
 
 
 # Homework
-I want you to find one shapefile that is relevant to your story, load it and label it. By Wednesday night you should be able to send me a screenshot of QGIS with the data loaded as well as a clear sentence or two describing the source of the data, the URL you got it from, and the relevance to your project. 
+I want you to find one shapefile that is relevant to your story, load it and label it. By Wednesday night you should be able to send me a screenshot of QGIS with the data loaded as well as a clear sentence or two describing the source of the data, the URL you got it from, and the relevance to your project.
 
-Who is data of the week next week?
+
+I keep a [list of shapefile sources](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles), and a [list of geocoders](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding) which you'll need if you have addresses, but no latitude or longitude. Note that for this week's homework I want you to identify a shapefile.
+
+The Data of the Week is a little scattered so let's fill in a Google Spreadsheet:
+[with the presentation schedule](https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0).
