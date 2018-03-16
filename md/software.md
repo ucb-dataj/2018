@@ -27,7 +27,8 @@ This software allows you to work with [PostgreSQL](https://www.postgresql.org/) 
 Postico is a user interface that makes it much (much) easier to work with PostgreSQL databases. Download from [here](https://eggerapps.at/postico/).
 
 ### [QGIS](http://qgis.org/en/site/)
-The leading open source Geographic Information System, which we will use to make maps and analyze geographic data. Download the latest **standard** version of QGIS and its requirements [from here](http://www.kyngchaos.com/software/qgis/).
+The leading open source Geographic Information System, which we will use to make maps and analyze geographic data. Download the Long Term Support version of QGIS and its requirements [from here](http://www.kyngchaos.com/software/qgis/). Currently this is QGIS 2.18.15-4. 
+
 
 Double-click on the downloaded `.dmg` file, which will open this window
 
