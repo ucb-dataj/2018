@@ -24,6 +24,7 @@ Understanding spreadsheet functions and pivot tables is the foundation for the r
 
 	- **Assignment:** Pivot table assignment.
 
+
 - #### Feb. 8: [**Acquiring, cleaning, and formatting data**](week4.html)
 Where and how to find data online. Tips and tricks for downloading unruly data, including browser extensions to extract data from web tables and download from multiple files *en masse*. (**Peter Aldhous**)
 
@@ -73,6 +74,7 @@ We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions
 We'll keep working on pulling together GIS and databases so everyone has a good handle on the tools we're using. (**Amanda Hickman**)
 
 	- **Assignment** Skill reinforcement assignment.
+	
 
 - ####**Apr. 12:**	[**More with fun with R**](week12.html)
 Connecting to databases from R. Pulling data from the web. Correcting for inflation and seasonal trends. (**Peter Aldhous**)
