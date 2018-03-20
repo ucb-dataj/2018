@@ -296,8 +296,7 @@ More applications of this? If you aren't following SB 827 you should be. So how 
 
 
 # Homework
-I want you to find one shapefile that is relevant to your story, load it and label it. By Wednesday night you should be able to send me a screenshot of QGIS with the data loaded as well as a clear sentence or two describing the source of the data, the URL you got it from, and the relevance to your project.
-
+See bCourses.
 
 I keep a [list of shapefile sources](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles), and a [list of geocoders](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding) which you'll need if you have addresses, but no latitude or longitude. Note that for this week's homework I want you to identify a shapefile.
 
