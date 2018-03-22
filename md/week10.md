@@ -28,13 +28,11 @@ We do want to see the code you have used in your analysis, but please do not sho
 
 # A Word About SQL
 
-I've taught MySQL before, but I haven't tried to teach Postgres, mostly because it is just fussier about the SQL it will accept. A few of you hit real walls around that with cases in your column names and I apologize for not anticipating that.
+When I've taught Postgres before I've taught it inside of Carto, which does a good job of forcing things into shape for you. I haven't tried to teach Desktop Postgres, mostly because it is just fussier about the SQL it will accept. A few of you hit real walls around that with cases in your column names and I apologize for not anticipating that.
 
 The tradeoff is what we're going to start to get into this week and next, which is that we have a lot of much deeper functionality available to us in Postgres, including PostGIS.
 
 Don't create a lot of new tables. If you need to refer back to the results of a particular query often, you can use CREATE VIEW, but creating tables will add a lot of overhead and you almost never need it.
-
-
 
 # Digging into Mapping
 
@@ -60,7 +58,7 @@ Often (usually) your data won't include a shapefile. If you have High School gra
 ## Projections
 We don't deal with [projections](http://xkcd.com/977/) much but they matter. And if you have inconsistent projections you might end up with a map where the city of [San Francisco is floating about 10 miles NE of where it belongs](https://amandabee.carto.com/viz/d42d245a-5aa2-11e5-ba80-0e853d047bba/public_map).  I had to [ask for help](https://gis.stackexchange.com/questions/162779/why-is-the-city-of-san-francsico-floating-over-point-richmond) to resolve that.
 
-Most of the time you're going to be in WGS84.
+Most of the time you're going to be in WGS84. But your takeaway here should not be that you need to remember what projection to use, or that you need to internalize when to use one projection over another. Your takeaway should just be that projects are a thing and if you're finding things positioned super weirdly, look into the possibility that you've got a projection problem.
 
 The Wikipedia article on [web mercator](https://en.wikipedia.org/wiki/Web_Mercator) is pretty good if you're dying to understand how this all fits together, but EPSG is an obsolete acronym for European Petroleum Survey Group a scientific research group with ties to the petroleum industry. They compiled a comprehensive database of projections and coordinate systems.  
 
@@ -77,7 +75,7 @@ I can't say enough about the importance of learning how to ask for help. If you 
 
 # Open QGIS
 
-Okay, so let's actually do some mapping.
+Let's actually do some mapping.
 
 In 2011, the BLS published a [map of fatal workplace injuries](https://www.bls.gov/opub/btn/volume-2/death-on-the-job-fatal-work-injuries-in-2011.htm) by state.
 
@@ -123,7 +121,7 @@ And then actually do it:
 UPDATE bls_fatalities_2011 SET fatality_rate = ((fatalities::float/population)*100000);
 ```
 
-Why did we have to re-cast it? Well, [because](https://dba.stackexchange.com/questions/200320/what-am-i-doing-wrong-with-my-math).
+That `::float` is recasting fatalities, which are stored as an integer, into a decimal number. Well,  [because](https://dba.stackexchange.com/questions/200320/what-am-i-doing-wrong-with-my-math).
 And then output it:
 
 ```sql
@@ -131,24 +129,25 @@ COPY bls_fatalities_2011 TO '~/Desktop/bls_normalized.csv' DELIMITER ',' CSV HEA
 ```
 
 ### Adding a shapefile
-To actually map this, we need some states. Who keeps track of US State boundaries? [The Census](https://www.census.gov/geo/maps-data/data/tiger.html). You want "Cartographic Boundary Shapefiles" > "States". The state boundaries don't actually change, so it doesnt matter which year.
+To actually map this, we need some states. Who keeps track of US State boundaries? [The Census](https://www.census.gov/geo/maps-data/data/tiger.html). You want "Cartographic Boundary Shapefiles" > "States". The state boundaries don't actually change, so it doesn't matter which year.
 
-For our purposes 1:20,000,000 is plenty of resolution.
+For our purposes 1:20,000,000 is plenty of resolution. Download the shapefile, but don't unzip or extract it. Do use `Layer > Add Layer > Add Vector `
 
 You should be able to load the zip file in as a layer.
 
 Why does it look all squished? Once upon a time [I asked about that](https://gis.stackexchange.com/questions/167181/why-would-an-svg-output-from-cartodb-look-squished-when-the-map-doesnt), too. The answer is kind of cool. If we use the toggle on the bottom right to switch to "EPSG 54004" we get something that looks a little more familiar.  
 
+You may also need to enable "on the fly" CRS transformation, down in the bottom right.
 
 ### Loading a basemap
 
-You need a basemap. The "tile map scale plugin" -- does a nice job of automatically zooming you to an available tile layer, which the other base map plugins don't do.
+If you want any context for where you are in the world, you need a basemap. The "tile map scale plugin" does a nice job of automatically zooming you to an available tile layer, which the other base map plugins don't do.
 
 So go ahead and download the plugin. `Plugins > Manage and Install Plugins ...`  and search for "Tile Map Scale"
 
 ![adding a layer](img/week9_01.png)
 
-That will give you a tiny pulldown on the map that lets you add a base layer so you can see where you are in the world.
+That will give you a tiny pulldown on the map that lets you add a base layer so you can see where you are in the world. Two of the three options require an API key, so use Mapnik.
 
 ### QGIS Built In Join
 
@@ -197,7 +196,7 @@ Or you can do something like analyze how far people in various communities have 
 
 
 # Homework
-Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column's can you use in that join? 
+Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column's can you use in that join?
 
 I keep a [list of shapefile sources](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles), and a [list of geocoders](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding) which you'll need if you have addresses, but no latitude or longitude.
 
