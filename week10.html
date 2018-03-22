@@ -60,119 +60,120 @@
 		</div> <!-- /.navbar-header -->
 	</header>
 	<div class="container all">
-
     <h2 id="week-10-march-22-2018">Week 10 | March 22, 2018</h2>
-  <p><em>Instructor: Amanda Hickman</em></p>
-  <h1 id="story-progress">Story Progress</h1>
-  <p>Let's touch base about where folks have needed help to get unstuck. There's no way you can learn everything you might need to know and store it in your head. So the best way we can guide you is to get you used to articulating the question you want to ask, and trying to ask it and then addressing the errors that inevitably surface.</p>
-  <h1 id="next-assignment">Next assignment</h1>
-  <p>At this point everyone should have met with one of us to talk through what your pitch / reporting plan needs. If you haven't, you should.</p>
-  <p><strong>The next update to your data journalism project is due Saturday April 7 at 8 pm.</strong></p>
-  <p>Updates should be cumulative: your submission should include everything we need to evaluate your work. At this point you should be making progress both in analyzing your data and understanding the underlying story or potential stories. With this update, you should clearly and concisely:</p>
-  <ul>
-  <li><p>Describe the analysis you have conducted so far. Frame your description in terms of the questions you have asked of the data, and the answers you have obtained. Include the data you are using, a description of how you obtained it, and any code you have used for your analysis.</p>
-  </li>
-  <li><p>In clear sentences, describe the main conclusions you have drawn so far from your analysis.</p>
-  </li>
-  <li><p>Describe the further questions you wish to ask of your data.</p>
-  </li>
-  <li><p>Describe any obstacles you face. Important: you should be seeking help from your instructors when you get stuck! Do not wait until this assignment deadline for that.</p>
-  </li>
-  <li><p>Outline the additional reporting, beyond data analysis, that would be required to turn this project into a story.</p>
-  </li>
-  </ul>
-  <p>We do want to see the code you have used in your analysis, but please do not show us every last SELECT/ALTER/UPDATE query that you used. Clean your work up so that someone can replicate it without having to replicate the casting about that we all do as we find our way through this stuff. This isn't just about making busy work. These final scripts are your resource to refer back to when you inevitably find yourself facing a problem you've solved before and trying to remember the solution. They also become your resource when you shelve a story and come back to it after two months working on some other breaking project: you want to be able to get yourself back up to speed on the work you've already done.</p>
-  <h1 id="a-word-about-sql">A Word About SQL</h1>
-  <p>I've taught MySQL before, but I haven't tried to teach Postgres, mostly because it is just fussier about the SQL it will accept. A few of you hit real walls around that with cases in your column names and I apologize for not anticipating that.</p>
-  <p>The tradeoff is what we're going to start to get into this week and next, which is that we have a lot of much deeper functionality available to us in Postgres, including PostGIS.</p>
-  <p>Don't create a lot of new tables. If you need to refer back to the results of a particular query often, you can use CREATE VIEW, but creating tables will add a lot of overhead and you almost never need it.</p>
-  <h1 id="digging-into-mapping">Digging into Mapping</h1>
-  <p>Cartography and GIS aren't the same thing. We're talking about very basic maps as visualizations here. <a href="http://maptime.io/lessons-resources/">More on that</a></p>
-  <h2 id="shapes-points-lines">Shapes, Points, Lines</h2>
-  <h3 id="mapping-points">Mapping Points</h3>
-  <p>"Geocoding" refers to the process of identifying an individual latitude/longitude pair for an address or other location description. To actually plot a location on a map, you need the location's latitude and longitude. <code>219 West 40th Street</code> means nothing without coordinates.</p>
-  <p>Geocoding is actually challenging because there aren't good, free resources for doing batch jobs, where many addresses are geocoded at once. My <a href="https://github.com/amandabee/cunyjdata/wiki/Tip-Sheet:-Geocoding">Geocoding Tip Sheet</a> includes some helpful resources, but many city data sources actually include coordinates, so double check that, first.</p>
-  <p>If you're committed to mapping points, you may need my help geocoding them.</p>
-  <h3 id="mapping-lines">Mapping Lines</h3>
-  <p>No student has ever pitched me a compelling map that features lines rather than shapes or points. I did a project that drew out flight maps showing how far from home every prisoner incarcerated in Florence, CO is, but I pitched that, so it doesn't count. To draw that map I had to take a <a href="http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/">crash course</a> in rendering lines. If you're excited about doing something like this, great! But you're going to need to install R and walk through Nathan Yau's tutorial before you do anything else.</p>
-  <h3 id="mapping-polygons">Mapping Polygons</h3>
-  <p>Zipcodes, council districts, police precincts -- these are all polygons. Most of your maps will be in polygons. These polygons are defined in (usually) one of two specialized file formats -- a "Shapefile" or a "KML" file. The syntax of the file types varies, but they contain basically the same information -- the polygon called "Bronx CB 04" is defined by this series of lat/lon pairs. My <a href="https://github.com/amandabee/cunyjdata/wiki/Where-to-Find-Shapefiles">Shapefiles Tip Sheet</a> has some excellent resources for finding shapefiles though a lot of the resources there are New York City specific.</p>
-  <p>Often (usually) your data won't include a shapefile. If you have High School graduation rates by school districts, and you want to map those, you need to find a shapefile that describes the outline of each school district, and then you need to combine that shapefile with your data, by identifying a column that the two tables have in common.</p>
-  <h2 id="projections">Projections</h2>
-  <p>We don't deal with <a href="http://xkcd.com/977/">projections</a> much but they matter. And if you have inconsistent projections you might end up with a map where the city of <a href="https://amandabee.carto.com/viz/d42d245a-5aa2-11e5-ba80-0e853d047bba/public_map">San Francisco is floating about 10 miles NE of where it belongs</a>.  I had to <a href="https://gis.stackexchange.com/questions/162779/why-is-the-city-of-san-francsico-floating-over-point-richmond">ask for help</a> to resolve that.</p>
-  <p>Most of the time you're going to be in WGS84.</p>
-  <p>The Wikipedia article on <a href="https://en.wikipedia.org/wiki/Web_Mercator">web mercator</a> is pretty good if you're dying to understand how this all fits together, but EPSG is an obsolete acronym for European Petroleum Survey Group a scientific research group with ties to the petroleum industry. They compiled a comprehensive database of projections and coordinate systems.  </p>
-  <h2 id="vectors-and-rasters">Vectors and Rasters</h2>
-  <p>We can head down some serious rabbit holes here. But it is worth understanding the distinction between a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> and a <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a>, because they'll come up again and again in all kinds of contexts.</p>
-  <h2 id="shapefiles">Shapefiles</h2>
-  <p>What is a shapefile? There are a few different widely used formats for storing geographic information. ESRI makes ArcGIS which is popular and expensive. Their shapefile format is almost universal. Google Maps uses it's own KML format.</p>
-  <h2 id="asking-for-help">Asking for help</h2>
-  <p>I can't say enough about the importance of learning how to ask for help. If you look at my <a href="https://gis.stackexchange.com/users/24497/amanda?tab=questions&amp;sort=newest">gis.stackexchange.com</a> profile you can see where I got stuck and then unstuck, starting back in 2013. There's a community there that is very good about <a href="https://gis.stackexchange.com/questions/84443/what-is-this-postgis-query-doing-to-show-great-circle-connections">thoroughly explaining</a> what you're dealing with.</p>
-  <h1 id="open-qgis">Open QGIS</h1>
-  <p>Okay, so let's actually do some mapping.</p>
-  <p>In 2011, the BLS published a <a href="https://www.bls.gov/opub/btn/volume-2/death-on-the-job-fatal-work-injuries-in-2011.htm">map of fatal workplace injuries</a> by state.</p>
-  <p>What do we think of this map?</p>
-  <ul>
-  <li>Are these colors continuous or categorical? Should they be? Is anyone surprised that CA and TX have a lot of workplace injuries? How can we improve on this?</li>
-  </ul>
+    <p><em>Instructor: Amanda Hickman</em></p>
+    <h1 id="story-progress">Story Progress</h1>
+    <p>Let's touch base about where folks have needed help to get unstuck. There's no way you can learn everything you might need to know and store it in your head. So the best way we can guide you is to get you used to articulating the question you want to ask, and trying to ask it and then addressing the errors that inevitably surface.</p>
+    <h1 id="next-assignment">Next assignment</h1>
+    <p>At this point everyone should have met with one of us to talk through what your pitch / reporting plan needs. If you haven't, you should.</p>
+    <p><strong>The next update to your data journalism project is due Saturday April 7 at 8 pm.</strong></p>
+    <p>Updates should be cumulative: your submission should include everything we need to evaluate your work. At this point you should be making progress both in analyzing your data and understanding the underlying story or potential stories. With this update, you should clearly and concisely:</p>
+    <ul>
+    <li><p>Describe the analysis you have conducted so far. Frame your description in terms of the questions you have asked of the data, and the answers you have obtained. Include the data you are using, a description of how you obtained it, and any code you have used for your analysis.</p>
+    </li>
+    <li><p>In clear sentences, describe the main conclusions you have drawn so far from your analysis.</p>
+    </li>
+    <li><p>Describe the further questions you wish to ask of your data.</p>
+    </li>
+    <li><p>Describe any obstacles you face. Important: you should be seeking help from your instructors when you get stuck! Do not wait until this assignment deadline for that.</p>
+    </li>
+    <li><p>Outline the additional reporting, beyond data analysis, that would be required to turn this project into a story.</p>
+    </li>
+    </ul>
+    <p>We do want to see the code you have used in your analysis, but please do not show us every last SELECT/ALTER/UPDATE query that you used. Clean your work up so that someone can replicate it without having to replicate the casting about that we all do as we find our way through this stuff. This isn't just about making busy work. These final scripts are your resource to refer back to when you inevitably find yourself facing a problem you've solved before and trying to remember the solution. They also become your resource when you shelve a story and come back to it after two months working on some other breaking project: you want to be able to get yourself back up to speed on the work you've already done.</p>
+    <h1 id="a-word-about-sql">A Word About SQL</h1>
+    <p>When I've taught Postgres before I've taught it inside of Carto, which does a good job of forcing things into shape for you. I haven't tried to teach Desktop Postgres, mostly because it is just fussier about the SQL it will accept. A few of you hit real walls around that with cases in your column names and I apologize for not anticipating that.</p>
+    <p>The tradeoff is what we're going to start to get into this week and next, which is that we have a lot of much deeper functionality available to us in Postgres, including PostGIS.</p>
+    <p>Don't create a lot of new tables. If you need to refer back to the results of a particular query often, you can use CREATE VIEW, but creating tables will add a lot of overhead and you almost never need it.</p>
+    <h1 id="digging-into-mapping">Digging into Mapping</h1>
+    <p>Cartography and GIS aren't the same thing. We're talking about very basic maps as visualizations here. <a href="http://maptime.io/lessons-resources/">More on that</a></p>
+    <h2 id="shapes-points-lines">Shapes, Points, Lines</h2>
+    <h3 id="mapping-points">Mapping Points</h3>
+    <p>"Geocoding" refers to the process of identifying an individual latitude/longitude pair for an address or other location description. To actually plot a location on a map, you need the location's latitude and longitude. <code>219 West 40th Street</code> means nothing without coordinates.</p>
+    <p>Geocoding is actually challenging because there aren't good, free resources for doing batch jobs, where many addresses are geocoded at once. My <a href="https://github.com/amandabee/cunyjdata/wiki/Tip-Sheet:-Geocoding">Geocoding Tip Sheet</a> includes some helpful resources, but many city data sources actually include coordinates, so double check that, first.</p>
+    <p>If you're committed to mapping points, you may need my help geocoding them.</p>
+    <h3 id="mapping-lines">Mapping Lines</h3>
+    <p>No student has ever pitched me a compelling map that features lines rather than shapes or points. I did a project that drew out flight maps showing how far from home every prisoner incarcerated in Florence, CO is, but I pitched that, so it doesn't count. To draw that map I had to take a <a href="http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/">crash course</a> in rendering lines. If you're excited about doing something like this, great! But you're going to need to install R and walk through Nathan Yau's tutorial before you do anything else.</p>
+    <h3 id="mapping-polygons">Mapping Polygons</h3>
+    <p>Zipcodes, council districts, police precincts -- these are all polygons. Most of your maps will be in polygons. These polygons are defined in (usually) one of two specialized file formats -- a "Shapefile" or a "KML" file. The syntax of the file types varies, but they contain basically the same information -- the polygon called "Bronx CB 04" is defined by this series of lat/lon pairs. My <a href="https://github.com/amandabee/cunyjdata/wiki/Where-to-Find-Shapefiles">Shapefiles Tip Sheet</a> has some excellent resources for finding shapefiles though a lot of the resources there are New York City specific.</p>
+    <p>Often (usually) your data won't include a shapefile. If you have High School graduation rates by school districts, and you want to map those, you need to find a shapefile that describes the outline of each school district, and then you need to combine that shapefile with your data, by identifying a column that the two tables have in common.</p>
+    <h2 id="projections">Projections</h2>
+    <p>We don't deal with <a href="http://xkcd.com/977/">projections</a> much but they matter. And if you have inconsistent projections you might end up with a map where the city of <a href="https://amandabee.carto.com/viz/d42d245a-5aa2-11e5-ba80-0e853d047bba/public_map">San Francisco is floating about 10 miles NE of where it belongs</a>.  I had to <a href="https://gis.stackexchange.com/questions/162779/why-is-the-city-of-san-francsico-floating-over-point-richmond">ask for help</a> to resolve that.</p>
+    <p>Most of the time you're going to be in WGS84. But your takeaway here should not be that you need to remember what projection to use, or that you need to internalize when to use one projection over another. Your takeaway should just be that projects are a thing and if you're finding things positioned super weirdly, look into the possibility that you've got a projection problem.</p>
+    <p>The Wikipedia article on <a href="https://en.wikipedia.org/wiki/Web_Mercator">web mercator</a> is pretty good if you're dying to understand how this all fits together, but EPSG is an obsolete acronym for European Petroleum Survey Group a scientific research group with ties to the petroleum industry. They compiled a comprehensive database of projections and coordinate systems.  </p>
+    <h2 id="vectors-and-rasters">Vectors and Rasters</h2>
+    <p>We can head down some serious rabbit holes here. But it is worth understanding the distinction between a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> and a <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a>, because they'll come up again and again in all kinds of contexts.</p>
+    <h2 id="shapefiles">Shapefiles</h2>
+    <p>What is a shapefile? There are a few different widely used formats for storing geographic information. ESRI makes ArcGIS which is popular and expensive. Their shapefile format is almost universal. Google Maps uses it's own KML format.</p>
+    <h2 id="asking-for-help">Asking for help</h2>
+    <p>I can't say enough about the importance of learning how to ask for help. If you look at my <a href="https://gis.stackexchange.com/users/24497/amanda?tab=questions&amp;sort=newest">gis.stackexchange.com</a> profile you can see where I got stuck and then unstuck, starting back in 2013. There's a community there that is very good about <a href="https://gis.stackexchange.com/questions/84443/what-is-this-postgis-query-doing-to-show-great-circle-connections">thoroughly explaining</a> what you're dealing with.</p>
+    <h1 id="open-qgis">Open QGIS</h1>
+    <p>Let's actually do some mapping.</p>
+    <p>In 2011, the BLS published a <a href="https://www.bls.gov/opub/btn/volume-2/death-on-the-job-fatal-work-injuries-in-2011.htm">map of fatal workplace injuries</a> by state.</p>
+    <p>What do we think of this map?</p>
+    <ul>
+    <li>Are these colors continuous or categorical? Should they be? Is anyone surprised that CA and TX have a lot of workplace injuries? How can we improve on this?</li>
+    </ul>
 
-  <p>So we'll recreate it:</p>
-  <ul>
-  <li><a href="data/week9/">BLS Fatality Data</a></li>
-  <li><a href="https://www.census.gov/popest/data/state/totals/2011/tables/NST-EST2011-01.csv">2011 Population Estimates</a> (via <a href="http://www.census.gov/popest/data/historical/2010s/vintage_2011/state.html">census.gov</a>)</li>
-  </ul>
-  <p>I already combined the Census 2011 population estimates with the BLS workplace fatality data. We're actually going to use Postgres to do the first piece of this -- we could do it just as easily in <a href="https://www.libreoffice.org/discover/calc/">a spreadsheet</a> but we need the SQL practice.</p>
-  <pre class="editor-colors lang-SQL"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--meta syntax--create syntax--sql"><span class="syntax--keyword syntax--other syntax--create syntax--sql"><span>CREATE</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--sql"><span>TABLE</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--sql"><span>bls_fatalities_2011</span></span></span><span>&nbsp;(</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;state&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>character&nbsp;varying</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>20</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;fatalities&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>integer</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;population&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>integer</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>);</span></span></div></pre>
-  <p>Do you remember how to load data into a table?</p>
-  <p>And how are we going to normalize this?</p>
-  <pre class="editor-colors lang-SQL"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--meta syntax--alter syntax--sql"><span class="syntax--keyword syntax--other syntax--create syntax--sql"><span>ALTER</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--table syntax--sql"><span>TABLE</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--sql"><span>bls_fatalities_2011</span></span></span><span>&nbsp;ADD&nbsp;COLUMN&nbsp;fatality_rate&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>float</span></span><span>;</span></span></div></pre>
-  <p>And then try out a query to fill that rate column:</p>
-  <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;((fatalities::</span><span class="syntax--storage syntax--type syntax--sql"><span>float</span></span><span class="syntax--keyword syntax--operator syntax--math syntax--sql"><span>/</span></span><span>population)</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span class="syntax--constant syntax--numeric syntax--sql"><span>100000</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;rate</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;bls_fatalities_2011</span></span></div></pre>
-  <p>And then actually do it:</p>
-  <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>UPDATE</span></span><span>&nbsp;bls_fatalities_2011&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SET</span></span><span>&nbsp;fatality_rate&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;((fatalities::</span><span class="syntax--storage syntax--type syntax--sql"><span>float</span></span><span class="syntax--keyword syntax--operator syntax--math syntax--sql"><span>/</span></span><span>population)</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span class="syntax--constant syntax--numeric syntax--sql"><span>100000</span></span><span>);</span></span></div></pre>
-  <p>Why did we have to re-cast it? Well, <a href="https://dba.stackexchange.com/questions/200320/what-am-i-doing-wrong-with-my-math">because</a>.
-  And then output it:</p>
-  <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span>COPY&nbsp;bls_fatalities_2011&nbsp;TO&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>~/Desktop/bls_normalized.csv</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>&nbsp;DELIMITER&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>,</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>&nbsp;CSV&nbsp;HEADER;</span></span></div></pre>
-  <h3 id="adding-a-shapefile">Adding a shapefile</h3>
-  <p>To actually map this, we need some states. Who keeps track of US State boundaries? <a href="https://www.census.gov/geo/maps-data/data/tiger.html">The Census</a>. You want "Cartographic Boundary Shapefiles" &gt; "States". The state boundaries don't actually change, so it doesnt matter which year.</p>
-  <p>For our purposes 1:20,000,000 is plenty of resolution.</p>
-  <p>You should be able to load the zip file in as a layer.</p>
-  <p>Why does it look all squished? Once upon a time <a href="https://gis.stackexchange.com/questions/167181/why-would-an-svg-output-from-cartodb-look-squished-when-the-map-doesnt">I asked about that</a>, too. The answer is kind of cool. If we use the toggle on the bottom right to switch to "EPSG 54004" we get something that looks a little more familiar.  </p>
-  <h3 id="loading-a-basemap">Loading a basemap</h3>
-  <p>You need a basemap. The "tile map scale plugin" -- does a nice job of automatically zooming you to an available tile layer, which the other base map plugins don't do.</p>
-  <p>So go ahead and download the plugin. <code>Plugins &gt; Manage and Install Plugins ...</code>  and search for "Tile Map Scale"</p>
-  <p><img alt="adding a layer" src="/home/amanda/Public/2018/md/img/week9_01.png"></p>
-  <p>That will give you a tiny pulldown on the map that lets you add a base layer so you can see where you are in the world.</p>
-  <h3 id="qgis-built-in-join">QGIS Built In Join</h3>
-  <p>Add your CSV to QGIS (it has no geometry.)</p>
-  <p>Look at the Attribute table for the Shapefile. How are we going to join this?</p>
-  <p>And then style it.</p>
-  <ul>
-  <li><p>Use equal intervals. <a href="https://gis.stackexchange.com/questions/84562/am-i-misunderstanding-equal-interval">I found a bug once</a> which is another reason to ask for help. They had no idea.</p>
-  </li>
-  <li><p>Make compound labels with the <code>||</code> operator. Eg. <code>NAME  || '\n' || "bls_fatalities_2011_Workplace Fatalities 2011"</code></p>
-  </li>
-  </ul>
-  <h2 id="keep-going-with-qgis">Keep going with QGIS</h2>
-  <p>This series is highly recommended:
-  <a href="https://www.youtube.com/watch?v=Pf9cYvaCYWA&amp;index=3&amp;list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R">https://www.youtube.com/watch?v=Pf9cYvaCYWA&amp;index=3&amp;list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R</a></p>
-  <h1 id="advanced-query">Advanced query</h1>
-  <p>We probably won't get to this. And this week all we're going to do is talk it through. We're not going to tackle it.</p>
-  <p>In 2006, California voters passed <a href="http://www.lao.ca.gov/ballot/2006/83_11_2006.htm">Prop 83</a>, which requires registered sex offenders to live at least 2000 feet from any school or playground. In 2015, the state supreme court said the <a href="https://www.nbclosangeles.com/news/local/California-Loosens-Sex-Offender-Residency-Restrictions-297740931.html">blanket restriction was too broad</a> and the law could only be applied to offenders whose crimes involved children.</p>
-  <p>Sex offender restrictions buffered around schools to show how much of a city is off limits.</p>
-  <ul>
-  <li>Walk through how we would do it, in theory. What do we need?</li>
-  </ul>
-  <pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>+&nbsp;location&nbsp;of&nbsp;every&nbsp;public&nbsp;school&nbsp;in&nbsp;the&nbsp;county</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>+&nbsp;location&nbsp;of&nbsp;every&nbsp;private&nbsp;school&nbsp;in&nbsp;the&nbsp;county</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>+&nbsp;location&nbsp;of&nbsp;every&nbsp;playground&nbsp;in&nbsp;the&nbsp;county</span></span></div></pre><p>Alameda publishes at least the schools: <a href="https://data.acgov.org/Education/Alameda-County-Schools/yza6-6jwu">https://data.acgov.org/Education/Alameda-County-Schools/yza6-6jwu</a></p>
-  <p>Then we're going to need a way to calculate circles around those points. I want you to take five minutes to think of a Google search that might let you get at that. Put your search terms in the Etherpad.</p>
+    <p>So we'll recreate it:</p>
+    <ul>
+    <li><a href="data/week9/">BLS Fatality Data</a></li>
+    <li><a href="https://www.census.gov/popest/data/state/totals/2011/tables/NST-EST2011-01.csv">2011 Population Estimates</a> (via <a href="http://www.census.gov/popest/data/historical/2010s/vintage_2011/state.html">census.gov</a>)</li>
+    </ul>
+    <p>I already combined the Census 2011 population estimates with the BLS workplace fatality data. We're actually going to use Postgres to do the first piece of this -- we could do it just as easily in <a href="https://www.libreoffice.org/discover/calc/">a spreadsheet</a> but we need the SQL practice.</p>
+    <pre class="editor-colors lang-SQL"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--meta syntax--create syntax--sql"><span class="syntax--keyword syntax--other syntax--create syntax--sql"><span>CREATE</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--sql"><span>TABLE</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--sql"><span>bls_fatalities_2011</span></span></span><span>&nbsp;(</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;state&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>character&nbsp;varying</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>20</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;fatalities&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>integer</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;population&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>integer</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>);</span></span></div></pre>
+    <p>Do you remember how to load data into a table?</p>
+    <p>And how are we going to normalize this?</p>
+    <pre class="editor-colors lang-SQL"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--meta syntax--alter syntax--sql"><span class="syntax--keyword syntax--other syntax--create syntax--sql"><span>ALTER</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--table syntax--sql"><span>TABLE</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--sql"><span>bls_fatalities_2011</span></span></span><span>&nbsp;ADD&nbsp;COLUMN&nbsp;fatality_rate&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>float</span></span><span>;</span></span></div></pre>
+    <p>And then try out a query to fill that rate column:</p>
+    <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;((fatalities::</span><span class="syntax--storage syntax--type syntax--sql"><span>float</span></span><span class="syntax--keyword syntax--operator syntax--math syntax--sql"><span>/</span></span><span>population)</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span class="syntax--constant syntax--numeric syntax--sql"><span>100000</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;rate</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;bls_fatalities_2011</span></span></div></pre>
+    <p>And then actually do it:</p>
+    <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>UPDATE</span></span><span>&nbsp;bls_fatalities_2011&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SET</span></span><span>&nbsp;fatality_rate&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;((fatalities::</span><span class="syntax--storage syntax--type syntax--sql"><span>float</span></span><span class="syntax--keyword syntax--operator syntax--math syntax--sql"><span>/</span></span><span>population)</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span class="syntax--constant syntax--numeric syntax--sql"><span>100000</span></span><span>);</span></span></div></pre>
+    <p>That <code>::float</code> is recasting fatalities, which are stored as an integer, into a decimal number. Well,  <a href="https://dba.stackexchange.com/questions/200320/what-am-i-doing-wrong-with-my-math">because</a>.
+    And then output it:</p>
+    <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span>COPY&nbsp;bls_fatalities_2011&nbsp;TO&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>~/Desktop/bls_normalized.csv</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>&nbsp;DELIMITER&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>,</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>&nbsp;CSV&nbsp;HEADER;</span></span></div></pre>
+    <h3 id="adding-a-shapefile">Adding a shapefile</h3>
+    <p>To actually map this, we need some states. Who keeps track of US State boundaries? <a href="https://www.census.gov/geo/maps-data/data/tiger.html">The Census</a>. You want "Cartographic Boundary Shapefiles" &gt; "States". The state boundaries don't actually change, so it doesn't matter which year.</p>
+    <p>For our purposes 1:20,000,000 is plenty of resolution. Download the shapefile, but don't unzip or extract it. Do use <code>Layer &gt; Add Layer &gt; Add Vector</code></p>
+    <p>You should be able to load the zip file in as a layer.</p>
+    <p>Why does it look all squished? Once upon a time <a href="https://gis.stackexchange.com/questions/167181/why-would-an-svg-output-from-cartodb-look-squished-when-the-map-doesnt">I asked about that</a>, too. The answer is kind of cool. If we use the toggle on the bottom right to switch to "EPSG 54004" we get something that looks a little more familiar.  </p>
+    <p>You may also need to enable "on the fly" CRS transformation, down in the bottom right.</p>
+    <h3 id="loading-a-basemap">Loading a basemap</h3>
+    <p>If you want any context for where you are in the world, you need a basemap. The "tile map scale plugin" does a nice job of automatically zooming you to an available tile layer, which the other base map plugins don't do.</p>
+    <p>So go ahead and download the plugin. <code>Plugins &gt; Manage and Install Plugins ...</code>  and search for "Tile Map Scale"</p>
+    <p><img alt="adding a layer" src="/home/amanda/Public/2018/md/img/week9_01.png"></p>
+    <p>That will give you a tiny pulldown on the map that lets you add a base layer so you can see where you are in the world. Use Mapnik -- it doesn't require an API key.</p>
+    <h3 id="qgis-built-in-join">QGIS Built In Join</h3>
+    <p>Add your CSV to QGIS (it has no geometry.)</p>
+    <p>Look at the Attribute table for the Shapefile. How are we going to join this?</p>
+    <p>And then style it.</p>
+    <ul>
+    <li><p>Use equal intervals. <a href="https://gis.stackexchange.com/questions/84562/am-i-misunderstanding-equal-interval">I found a bug once</a> which is another reason to ask for help. They had no idea.</p>
+    </li>
+    <li><p>Make compound labels with the <code>||</code> operator. Eg. <code>NAME  || '\n' || "bls_fatalities_2011_Workplace Fatalities 2011"</code></p>
+    </li>
+    </ul>
+    <h2 id="keep-going-with-qgis">Keep going with QGIS</h2>
+    <p>This series is highly recommended:
+    <a href="https://www.youtube.com/watch?v=Pf9cYvaCYWA&amp;index=3&amp;list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R">https://www.youtube.com/watch?v=Pf9cYvaCYWA&amp;index=3&amp;list=PL7HotvlLKHCs9nD1fFUjSOsZrsnctyV2R</a></p>
+    <h1 id="advanced-query">Advanced query</h1>
+    <p>We probably won't get to this. And this week all we're going to do is talk it through. We're not going to tackle it.</p>
+    <p>In 2006, California voters passed <a href="http://www.lao.ca.gov/ballot/2006/83_11_2006.htm">Prop 83</a>, which requires registered sex offenders to live at least 2000 feet from any school or playground. In 2015, the state supreme court said the <a href="https://www.nbclosangeles.com/news/local/California-Loosens-Sex-Offender-Residency-Restrictions-297740931.html">blanket restriction was too broad</a> and the law could only be applied to offenders whose crimes involved children.</p>
+    <p>Sex offender restrictions buffered around schools to show how much of a city is off limits.</p>
+    <ul>
+    <li>Walk through how we would do it, in theory. What do we need?</li>
+    </ul>
+    <pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>+&nbsp;location&nbsp;of&nbsp;every&nbsp;public&nbsp;school&nbsp;in&nbsp;the&nbsp;county</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>+&nbsp;location&nbsp;of&nbsp;every&nbsp;private&nbsp;school&nbsp;in&nbsp;the&nbsp;county</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>+&nbsp;location&nbsp;of&nbsp;every&nbsp;playground&nbsp;in&nbsp;the&nbsp;county</span></span></div></pre><p>Alameda publishes at least the schools: <a href="https://data.acgov.org/Education/Alameda-County-Schools/yza6-6jwu">https://data.acgov.org/Education/Alameda-County-Schools/yza6-6jwu</a></p>
+    <p>Then we're going to need a way to calculate circles around those points. I want you to take five minutes to think of a Google search that might let you get at that. Put your search terms in the Etherpad.</p>
 
-  <p>More applications of this? If you aren't following SB 827 you should be. So how would you map the impact of that bill? <a href="https://transitrichhousing.org/">https://transitrichhousing.org/</a> tried.</p>
-  <p>Or you can do something like analyze how far people in various communities have to travel to <a href="https://pudding.cool/2017/09/clinics/">access an abortion clinic</a>. Often, as NPR found, <a href="https://www.npr.org/sections/health-shots/2017/10/03/555166033/for-many-women-the-nearest-abortion-clinic-is-hundreds-of-miles-away">the nearest clinic is hundreds of miles away</a>.</p>
-  <h1 id="homework">Homework</h1>
-  <p>Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column's can you use in that join? </p>
-  <p>I keep a <a href="https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles">list of shapefile sources</a>, and a <a href="https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding">list of geocoders</a> which you'll need if you have addresses, but no latitude or longitude.</p>
-  <p>The Data of the Week is in a Google Spreadsheet. <a href="https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0">Who is up after the break?</a>.</p>
-
+    <p>More applications of this? If you aren't following SB 827 you should be. So how would you map the impact of that bill? <a href="https://transitrichhousing.org/">https://transitrichhousing.org/</a> tried.</p>
+    <p>Or you can do something like analyze how far people in various communities have to travel to <a href="https://pudding.cool/2017/09/clinics/">access an abortion clinic</a>. Often, as NPR found, <a href="https://www.npr.org/sections/health-shots/2017/10/03/555166033/for-many-women-the-nearest-abortion-clinic-is-hundreds-of-miles-away">the nearest clinic is hundreds of miles away</a>.</p>
+    <h1 id="spend-some-time-on-your-shapefile">Spend some time on your shapefile</h1>
+    <p>Load it. Label it.  </p>
+    <h1 id="homework">Homework</h1>
+    <p>Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column's can you use in that join?</p>
+    <p>I keep a <a href="https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles">list of shapefile sources</a>, and a <a href="https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding">list of geocoders</a> which you'll need if you have addresses, but no latitude or longitude.</p>
+    <p>The Data of the Week is in a Google Spreadsheet. <a href="https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0">Who is up after the break?</a>.</p>
 	</div> <!-- /.container all -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

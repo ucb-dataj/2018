@@ -147,7 +147,7 @@ So go ahead and download the plugin. `Plugins > Manage and Install Plugins ...` 
 
 ![adding a layer](img/week9_01.png)
 
-That will give you a tiny pulldown on the map that lets you add a base layer so you can see where you are in the world. Two of the three options require an API key, so use Mapnik.
+That will give you a tiny pulldown on the map that lets you add a base layer so you can see where you are in the world. Use Mapnik -- it doesn't require an API key.
 
 ### QGIS Built In Join
 
@@ -194,6 +194,10 @@ More applications of this? If you aren't following SB 827 you should be. So how 
 
 Or you can do something like analyze how far people in various communities have to travel to [access an abortion clinic](https://pudding.cool/2017/09/clinics/). Often, as NPR found, [the nearest clinic is hundreds of miles away](https://www.npr.org/sections/health-shots/2017/10/03/555166033/for-many-women-the-nearest-abortion-clinic-is-hundreds-of-miles-away).
 
+
+# Spend some time on your shapefile
+
+Load it. Label it.  
 
 # Homework
 Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column's can you use in that join?
