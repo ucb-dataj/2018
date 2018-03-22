@@ -9,7 +9,22 @@ Let's touch base about where folks have needed help to get unstuck. There's no w
 
 At this point everyone should have met with one of us to talk through what your pitch / reporting plan needs. If you haven't, you should.
 
-And don't show us every last SELECT/ALTER/UPDATE query that you used. Clean your work up so that someone can replicate it without having to replicate the casting about that we all do as we find our way through this stuff. This isn't just about making busy work. These final scripts are your resource to refer back to when you inevitably find yourself facing a problem you've solved before and trying to remember the solution. They also become your resource when you shelve a story and come back to it after two months working on some other breaking project: you want to be able to get yourself back up to speed on the work you've already done.
+**The next update to your data journalism project is due Saturday April 7 at 8 pm.**
+
+Updates should be cumulative: your submission should include everything we need to evaluate your work. At this point you should be making progress both in analyzing your data and understanding the underlying story or potential stories. With this update, you should clearly and concisely:
+
+* Describe the analysis you have conducted so far. Frame your description in terms of the questions you have asked of the data, and the answers you have obtained. Include the data you are using, a description of how you obtained it, and any code you have used for your analysis.
+
+* In clear sentences, describe the main conclusions you have drawn so far from your analysis.
+
+* Describe the further questions you wish to ask of your data.
+
+* Describe any obstacles you face. Important: you should be seeking help from your instructors when you get stuck! Do not wait until this assignment deadline for that.
+
+* Outline the additional reporting, beyond data analysis, that would be required to turn this project into a story.
+
+
+We do want to see the code you have used in your analysis, but please do not show us every last SELECT/ALTER/UPDATE query that you used. Clean your work up so that someone can replicate it without having to replicate the casting about that we all do as we find our way through this stuff. This isn't just about making busy work. These final scripts are your resource to refer back to when you inevitably find yourself facing a problem you've solved before and trying to remember the solution. They also become your resource when you shelve a story and come back to it after two months working on some other breaking project: you want to be able to get yourself back up to speed on the work you've already done.
 
 # A Word About SQL
 
@@ -182,7 +197,7 @@ Or you can do something like analyze how far people in various communities have 
 
 
 # Homework
-Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column
+Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column's can you use in that join? 
 
 I keep a [list of shapefile sources](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles), and a [list of geocoders](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding) which you'll need if you have addresses, but no latitude or longitude.
 
