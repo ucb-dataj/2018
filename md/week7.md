@@ -87,14 +87,16 @@ Who is stuck? Let's brainstorm getting unstuck.
 
 ## SQL Bingo
 
+**NOTE**: this needs revising & retesting. There are errors in the SQL. 
+
+
 [Slides](https://docs.google.com/presentation/d/1qsd1hZsd6U6b0sZJCoshFvjXnGcVy9yqafNlWe3SsB4/edit#slide=id.g344ba11d90_0_20)
 
-<!-- if we have time, I can introduce the core concept of SQL. -->
 [Source](https://github.com/amandabee/workshops/tree/master/2018/sqlbingo)
 
 ## Intro to Postico
 
-* Pull up the BINGO source, download the three CSVs and use 
+* Pull up the BINGO source, download the three CSVs and use
 
 `COPY courses from '/path/to/courses.csv' DELIMITER ',' CSV HEADER;
 `COPY registration from '/path/to/registration.csv' DELIMITER ',' CSV HEADER;
