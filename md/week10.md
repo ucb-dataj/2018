@@ -1,6 +1,24 @@
 ## Week 10 | March 22, 2018
 *Instructor: Amanda Hickman*
 
+# Story Progress
+
+Let's touch base about where folks have needed help to get unstuck. There's no way you can learn everything you might need to know and store it in your head. So the best way we can guide you is to get you used to articulating the question you want to ask, and trying to ask it and then addressing the errors that inevitably surface.
+
+# Next assignment
+
+At this point everyone should have met with one of us to talk through what your pitch / reporting plan needs. If you haven't, you should.
+
+And don't show us every last SELECT/ALTER/UPDATE query that you used. Clean your work up so that someone can replicate it without having to replicate the casting about that we all do as we find our way through this stuff. This isn't just about making busy work. These final scripts are your resource to refer back to when you inevitably find yourself facing a problem you've solved before and trying to remember the solution. They also become your resource when you shelve a story and come back to it after two months working on some other breaking project: you want to be able to get yourself back up to speed on the work you've already done.
+
+# A Word About SQL
+
+I've taught MySQL before, but I haven't tried to teach Postgres, mostly because it is just fussier about the SQL it will accept. A few of you hit real walls around that with cases in your column names and I apologize for not anticipating that.
+
+The tradeoff is what we're going to start to get into this week and next, which is that we have a lot of much deeper functionality available to us in Postgres, including PostGIS.
+
+Don't create a lot of new tables. If you need to refer back to the results of a particular query often, you can use CREATE VIEW, but creating tables will add a lot of overhead and you almost never need it.
+
 
 
 # Digging into Mapping
@@ -160,12 +178,12 @@ Then we're going to need a way to calculate circles around those points. I want 
 
 More applications of this? If you aren't following SB 827 you should be. So how would you map the impact of that bill? <https://transitrichhousing.org/> tried.
 
+Or you can do something like analyze how far people in various communities have to travel to [access an abortion clinic](https://pudding.cool/2017/09/clinics/). Often, as NPR found, [the nearest clinic is hundreds of miles away](https://www.npr.org/sections/health-shots/2017/10/03/555166033/for-many-women-the-nearest-abortion-clinic-is-hundreds-of-miles-away).
+
 
 # Homework
-TK.
+Spend some time in your shapefile and describe, in words, a join that you can use to populate it with data. What column
 
+I keep a [list of shapefile sources](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles), and a [list of geocoders](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding) which you'll need if you have addresses, but no latitude or longitude.
 
-I keep a [list of shapefile sources](https://github.com/amandabee/CUNY-SOJ-data-storytelling/wiki/Where-to-Find-Shapefiles), and a [list of geocoders](https://github.com/amandabee/CUNY-data-storytelling/wiki/Tip-Sheet:-Geocoding) which you'll need if you have addresses, but no latitude or longitude. Note that for this week's homework I want you to identify a shapefile.
-
-The Data of the Week is a little scattered so let's fill in a Google Spreadsheet:
-[with the presentation schedule](https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0).
+The Data of the Week is in a Google Spreadsheet. [Who is up after the break?](https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0).
