@@ -74,7 +74,7 @@ We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions
 We'll keep working on pulling together GIS and databases so everyone has a good handle on the tools we're using. (**Amanda Hickman**)
 
 	- **Assignment** Skill reinforcement assignment.
-	
+
 
 - ####**Apr. 12:**	[**More with fun with R**](week12.html)
 Connecting to databases from R. Pulling data from the web. Correcting for inflation and seasonal trends. (**Peter Aldhous**)
@@ -93,7 +93,7 @@ Continuation from last week's class. (**Peter Aldhous and Amanda Hickman**)
 	- **Assignment** Submit your data journalism project.
 
 
-- ####**May 4:**  [Next steps: The cutting edge of data journalism](week15.html)
+- ####**May 3:**  [Next steps: The cutting edge of data journalism](week15.html)
 Show and tell on advanced methods on data journalism, including machine learning and text analysis. (**Peter Aldhous and Amanda Hickman**)
 
 
