@@ -1,6 +1,27 @@
 ## Week 11 | April 5, 2018
 *Instructor: Amanda Hickman*
 
+# Strategies for Slow Computers
+
+We already used [`head`](https://www.gnu.org/software/coreutils/manual/html_node/head-invocation.html) with the [`-n 100` flag](https://en.wikipedia.org/wiki/Head_(Unix)) set, to output the first hundred lines of a file. Another good option is to just create a smaller table to work with:
+
+```SQL
+
+CREATE TABLE example_shorter AS
+  SELECT * FROM example LIMIT 1000;
+
+```
+
+This will let you stumble around and figure out what you're trying to do without waiting for your computer to catch up with a larger data file. If QGIS is so slow that you can't get much done there are a few other good options to look into:
+
+* Actually **create a spatial index**. We'll do this to a data set today. We haven't talked a lot about indexing but it's (roughly) the process of creating a structured view of the data so that the computer can find it quickly. If you know you want to be able to search a particular column regularly, for instance, you'd want to create a search index for that column. This is more advanced than we need to go deep on, but creating a spatial index is always a good idea.
+
+* Turn off rendering (there's a checkbox in the lower right) so that QGIS isn't continually trying to re-draw.
+
+* 
+
+https://gis.stackexchange.com/questions/67736/qgis-very-slow-i-dont-know-what-to-do#67779
+
 # Adding PostGIS to QGIS
 
 Few setup steps:
@@ -63,7 +84,7 @@ Read the error message. What does it actually say?
 
 ```sql
 
-UPDATE test SET longitude = split_part(btrim(location, '()'), ',', 2)::float,
+UPDATE example SET longitude = split_part(btrim(location, '()'), ',', 2)::float,
                  latitude = split_part(btrim(location, '()'), ',', 1)::float;
 
 ```
@@ -76,7 +97,8 @@ The first thing we need to do is actually `CREATE EXTENSION postgis;` -- but we'
 ### [ST_MakePoint](https://postgis.net/docs/ST_MakePoint.html)
 
 ```sql
-UPDATE test SET the_geom =  ST_MakePoint(longitude, latitude);
+ALTER TABLE example ADD COLUMN the_geom GEOMETRY;
+UPDATE example SET the_geom =  ST_MakePoint(longitude, latitude);
 ```
 
 So now we need to connect in QGIS. You can go to `Layer > Add Layer > Postgis` or look for the elephant on the sidebar.
@@ -95,8 +117,15 @@ A few more observations:
 
 # Tidying
 
-ALTER TABLE test ADD PRIMARY KEY (call_number, unit_id);
+Look for `Database > DB Manager` in the menu. You should be able to drill down to `PostGIS > Localhost > public > {tablename}` and you'll see some warnings.
 
+> ￼   No spatial index defined (create it)
+
+Use the link to create a spatial index. And then add a primary key, with:  
+
+```sql
+ALTER TABLE test ADD PRIMARY KEY (call_number, unit_id);
+```
 
 # Queries We Want To Accomplish
 
