@@ -1,7 +1,12 @@
 ## Week 11 | April 5, 2018
 *Instructor: Amanda Hickman*
 
-# Strategies for Slow Computers
+
+# A few QGIS Notes
+
+* You can save your work as an image. Or as an SVG (`file > print composer`)
+
+## Strategies for Slow Computers
 
 We already used [`head`](https://www.gnu.org/software/coreutils/manual/html_node/head-invocation.html) with the [`-n 100` flag](https://en.wikipedia.org/wiki/Head_(Unix)) set, to output the first hundred lines of a file. Another good option is to just create a smaller table to work with:
 
@@ -18,9 +23,11 @@ This will let you stumble around and figure out what you're trying to do without
 
 * Turn off rendering (there's a checkbox in the lower right) so that QGIS isn't continually trying to re-draw.
 
-* 
+* Ask for help! If you're doing just fine with a smaller file, but the larger file is choking, there may be some ways to smooth it. The [options will vary](https://gis.stackexchange.com/questions/67736/qgis-very-slow-i-dont-know-what-to-do#67779) depending on your particular case so getting good at asking questions is key. I can't reiterate this enough.
 
-https://gis.stackexchange.com/questions/67736/qgis-very-slow-i-dont-know-what-to-do#67779
+* Can you make your file smaller?
+
+
 
 # Adding PostGIS to QGIS
 
@@ -115,7 +122,7 @@ A few more observations:
 * The QGIS documentation is really bad. But the [PostGIS documentation](http://postgis.net/docs/manual-2.4/) is great.
 * Using the "the_geom" convention is optional but it will save you a lot of aggravation.
 
-# Tidying
+## Tidying
 
 Look for `Database > DB Manager` in the menu. You should be able to drill down to `PostGIS > Localhost > public > {tablename}` and you'll see some warnings.
 
@@ -127,12 +134,108 @@ Use the link to create a spatial index. And then add a primary key, with:
 ALTER TABLE test ADD PRIMARY KEY (call_number, unit_id);
 ```
 
-# Queries We Want To Accomplish
+## Queries We Want To Accomplish
 
-* Find all the points that are inside of a shape.
+* Find all of the zipcodes that are inside of Alameda county. Start by spelling out how you'd approach this. Can you describe in words what you're trying to do?
+
+We're looking for a way to capture all the shapes in one layer that intersect with a single shape in another layer.
+
+The census publishes zipcode maps of the US:
+https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html
+
+We already have a map of US states, from [Week 9](data/week9/) -- we're going to start with California.
+
+### Load into Postgres
+To use these in PostGIS, we need to convert them into SQL, but you've got a built in terminal utility, `shp2pgsql` that does exactly that:
+
+```
+shp2pgsql cb_2016_us_zcta510_500k.shp zipcodes postgres > cb_2016_us_zcta510_500k.sql
+shp2pgsql gz_2010_us_040_00_20m.shp us_states postgres > gz_2010_us_040_00_20m.sql
+```
+
+You can either use Postico's "load query" button, or load these right at the command line with:
+
+```
+psql -d week11_postgis -f cb_2016_us_zcta510_500k.sql
+psql -d week11_postgis -f gz_2010_us_040_00_20m.sql
+```
+
+### Find Your PostGIS command
+
+There are a few that sound like they might be what we want: [ST_Within](http://postgis.net/docs/ST_Within.html), [ST_Contains](http://postgis.net/docs/ST_Contains.html),  [ST_Intersection ](http://postgis.net/docs/ST_Intersection.html),  [ST_Intersects](http://postgis.net/docs/ST_Intersects.html). Take a look at the documentation: how do these differ?
+
+
+```SQL
+
+SELECT
+  us_states.geom AS state_gom,
+  us_states.state AS state,
+  zipcodes.zcta5ce10 AS zipcode,
+  zipcodes.geom as zip_geom
+FROM
+  us_states, zipcodes
+WHERE
+  ST_Intersects(zipcodes.geom, us_states.geom) AND us_states.name = 'California';
+
+```
+
+So then we have a smaller set that we can work with, so let's actually make a table out of that:
+
+```sql
+CREATE TABLE ca_zipcodes AS
+  SELECT zipcodes.* FROM zipcodes, us_states
+  WHERE ST_Intersects(zipcodes.geom, us_states.geom) AND us_states.name = 'California';
+```
+
+### Your Turn
+
+Alameda County publishes a [county boundary file](https://data.acgov.org/Geospatial-Data/County-Boundary/rygg-x9nr). So try it again. Remember that your steps are:
+
+1. Use `shp2pgsql` to convert the Shapefile into SQL.
+2. Import the SQL into Postgres.
+3. Index it (you can do this in QGIS, or you can look at your table definitions from the last exercise and see if you can guess the SQL statement that will index your table.)
+4. Use [ST_Intersects](http://postgis.net/docs/ST_Intersects.html) to find all the zipcode shapes that intersect with Alameda county.
+
+You're going to wind up capturing a few zipcodes that only cross the county line in tiny spots. Can you brainstorm some ways to address those?
+
+
+## Next Challenge
+
+
+## More things you can do:
+
+Find the [length of each line](https://gis.stackexchange.com/questions/143436/how-do-i-calculate-st-length-in-miles) in a map of bike lanes.
+
+Draw flight maps. Here's the [SQL](https://gist.github.com/amandabee/22cfe6588ae40f2f42f7c5a21588354f) I used, and one of the [questions](https://gis.stackexchange.com/questions/84443/what-is-this-postgis-query-doing-to-show-great-circle-connections) I asked as I was getting my bearings. And the final map:
+
+
+![Florence](img/distance_to_florence.png)
 
 
 
 
+# Lab
 
-Note: you're going to notice that I slip between Geometry and Geography.
+Everyone has got a lot to work on, so let's spend some time in it.
+
+
+
+# Homework: Reporting Plan
+
+At this point everyone should have met with one of us to talk through what your pitch / reporting plan needs.
+
+The next update to your data journalism project is due **Saturday April 7 at 8 pm**.
+
+Updates should be cumulative: your submission should include everything we need to evaluate your work. At this point you should be making progress both in analyzing your data and understanding the underlying story or potential stories. With this update, you should clearly and concisely:
+
+    + Describe the analysis you have conducted so far. Frame your description in terms of the questions you have asked of the data, and the answers you have obtained. Include the data you are using, a description of how you obtained it, and any code you have used for your analysis.
+
+    + In clear sentences, describe the main conclusions you have drawn so far from your analysis.
+
+    + Describe the further questions you wish to ask of your data.
+
+    + Describe any obstacles you face. Important: you should be seeking help from your instructors when you get stuck! Do not wait until this assignment deadline for that.
+
+    + Outline the additional reporting, beyond data analysis, that would be required to turn this project into a story.
+
+We do want to see the code you have used in your analysis, but please do not show us every last SELECT/ALTER/UPDATE query that you used. Clean your work up so that someone can replicate it without having to replicate the casting about that we all do as we find our way through this stuff. This isn't just about making busy work. These final scripts are your resource to refer back to when you inevitably find yourself facing a problem you've solved before and trying to remember the solution. They also become your resource when you shelve a story and come back to it after two months working on some other breaking project: you want to be able to get yourself back up to speed on the work you've already done.
