@@ -84,10 +84,10 @@ Connecting to databases from R. Pulling data from the web. Correcting for inflat
 
 
 
-- ####**Apr. 19:**  [Putting it all into practice: 1](week13.html)
+- ####**Apr. 19:**  [Lab Class](week13.html)
 Drawing from the headlines, we'll attempt some original reporting from data. We may emerge with a story. We may crash and burn. The goal is for you to experience how this works in an actual newsroom, under deadline pressure. (**Peter Aldhous and Amanda Hickman**)
 
-- ####**Apr. 26:**  [Putting it all into practice: 2](week14.html)
+- ####**Apr. 26:**  [Lab Class](week14.html)
 Continuation from last week's class. (**Peter Aldhous and Amanda Hickman**)
 
 	- **Assignment** Submit your data journalism project.
