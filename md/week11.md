@@ -1,6 +1,9 @@
 ## Week 11 | April 5, 2018
 *Instructor: Amanda Hickman*
 
+# Data of the Week
+
+Who is on [the presentation schedule](https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0)?
 
 # A few QGIS Notes
 
@@ -8,7 +11,7 @@
 
 ## Strategies for Slow Computers
 
-We already used [`head`](https://www.gnu.org/software/coreutils/manual/html_node/head-invocation.html) with the [`-n 100` flag](https://en.wikipedia.org/wiki/Head_(Unix)) set, to output the first hundred lines of a file. Another good option is to just create a smaller table to work with:
+We already used [`head`](https://www.gnu.org/software/coreutils/manual/html_node/head-invocation.html) (with the [`-n 100` flag](https://en.wikipedia.org/wiki/Head_(Unix)) set, to output the first hundred lines of a file. Another good option is to just create a smaller table to work with:
 
 ```SQL
 
@@ -117,8 +120,8 @@ Once you've successfully connected, you might have to look for the "Also list ta
 A few more observations:
 
 * The distinction between GEOGRAPHY and GEOMETRY [is fuzzy](https://postgis.net/docs/manual-2.1/using_postgis_dbmanagement.html#PostGIS_GeographyVSGeometry) but my general rule is that I use GEOMETRY until I get stuck and then I adjust.
-* I think it is important to think in terms of tables and to recognize that this data is all super accessible.
-* I think it is also important to get to a place where you can frame the question in front of you in a meaningful way.
+* It is important to get used to thinking in terms of tables and to recognize that this data is all super accessible.
+* It is important to get to a place where you can frame the question in front of you in a meaningful way.
 * The QGIS documentation is really bad. But the [PostGIS documentation](http://postgis.net/docs/manual-2.4/) is great.
 * Using the "the_geom" convention is optional but it will save you a lot of aggravation.
 
@@ -199,7 +202,7 @@ Alameda County publishes a [county boundary file](https://data.acgov.org/Geospat
 You're going to wind up capturing a few zipcodes that only cross the county line in tiny spots. Can you brainstorm some ways to address those?
 
 
-## Next Challenge
+<!-- ## Next Challenge -->
 
 
 ## More things you can do:
@@ -211,7 +214,12 @@ Draw flight maps. Here's the [SQL](https://gist.github.com/amandabee/22cfe6588ae
 
 ![Florence](img/distance_to_florence.png)
 
+Connect the points to trace the path of a hurricane or storm forecast.
 
+[![Irma](img/tracking_irma.png)](https://www.buzzfeed.com/peteraldhous/hurricane-irma-predicted-track)
+
+
+[![Irma](https://img.buzzfeed.com/buzzfeed-static/static/2017-09/6/17/asset/buzzfeed-prod-fastlane-03/sub-buzz-24265-1504734691-3.png?downsize=715:*&output-format=auto&output-quality=auto)](https://www.buzzfeed.com/danvergano/record-breaking-hurricane-irma)
 
 
 # Lab
