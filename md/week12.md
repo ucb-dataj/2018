@@ -1,4 +1,9 @@
-## Week 12
-*Instructor: Amanda Hickman*
+## Week 12 -- April 12
+*Instructor: Peter Aldhous*
 
-Core: TBD
+Small Groups:
+* Simon, Chloe, Charlotte
+* Tod, Tien, Josh
+* Serena, Susie, James
+* Sarah, Nick, Reis
+* Saemmool, Cat, Carlos
