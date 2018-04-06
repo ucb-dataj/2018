@@ -73,28 +73,23 @@ We'll work [PostgreSQL](https://www.postgresql.org/) using SQL, to ask questions
 - ####**Apr. 5:**  [**Going deeper with PostGIS**](week11.html)
 We'll keep working on pulling together GIS and databases so everyone has a good handle on the tools we're using. (**Amanda Hickman**)
 
-	- **Assignment** Skill reinforcement assignment.
-
-
-- ####**Apr. 12:**	[**More with fun with R**](week12.html)
-Connecting to databases from R. Pulling data from the web. Correcting for inflation and seasonal trends. (**Peter Aldhous**)
-
 	- **Assignment** Submit a progress report on your data analysis.
 
 
+- ####**Apr. 12:**	[**R practice**](week12.html)
+After a few weeks working with SQL and maps, we'll get reacquainted with R. In groups, you will answer questions from data using dplyr code. (**Peter Aldhous**)
 
+- ####**Apr. 19:**  [**PostGIS practice**](week13.html)
+Another practice session to reinforce skills covered previously, working in groups to write PostGIS queries. (**Amanda Hickman**)
 
-- ####**Apr. 19:**  [Lab Class](week13.html)
-Drawing from the headlines, we'll attempt some original reporting from data. We may emerge with a story. We may crash and burn. The goal is for you to experience how this works in an actual newsroom, under deadline pressure. (**Peter Aldhous and Amanda Hickman**)
-
-- ####**Apr. 26:**  [Lab Class](week14.html)
-Continuation from last week's class. (**Peter Aldhous and Amanda Hickman**)
+- ####**Apr. 26:**  [**More with fun with R**](week14.html)
+Some more useful tricks in R, including loading data from multiple files, making new columns in your data, and pulling data from the US Census API. Plus: When you need step beyond dplyr, and do a statistical analysis. (**Peter Aldhous**)
 
 	- **Assignment** Submit your data journalism project.
 
 
-- ####**May 3:**  [Next steps: The cutting edge of data journalism](week15.html)
-Show and tell on advanced methods on data journalism, including machine learning and text analysis. (**Peter Aldhous and Amanda Hickman**)
+- ####**May 3:**  [Project show and tell](week15.html)
+Students present their data journalism projects. (**Peter Aldhous and Amanda Hickman**)
 
 
 ### Recommended reading
