@@ -79,10 +79,7 @@ We'll keep working on pulling together GIS and databases so everyone has a good 
 - ####**Apr. 12:**	[**R practice**](week12.html)
 After a few weeks working with SQL and maps, we'll get reacquainted with R. In groups, you will write the code to answer questions from data using dplyr code. (**Peter Aldhous**)
 
-	- **Assignment** Submit a progress report on your data analysis.
-
-
-- ####**Apr. 19:**  [PostGIS practice](week13.html)
+- ####**Apr. 19:**  [**PostGIS practice**](week13.html)
 Another practice session to reinforce skills covered previously, working in groups to write PostGIS queries. (**Amanda Hickman**)
 
 - ####**Apr. 26:**  [**More with fun with R**](week14.html)
