@@ -1,5 +1,5 @@
 ## Week 14
-*Instructor: Amanda Hickman and Peter Aldhous*
+*Instructor: Peter Aldhous*
 
 Beyond the basics with R, some more useful things you can do.
 
