@@ -30,16 +30,7 @@ Click on the title links to download the data. Email your instructors if you hav
 - `ca_medicare_opioids.csv` Data on prescriptions of opioid drugs under the Medicare Part D Prescription Drug Program by doctors in California, from 2013 to 2015. Filtered from the national data downloads available [here](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Part-D-Prescriber.html). This is the public release of the data that ProPublica used FOIA to obtain for earlier years for the story we discussed in Week 2. 
 - `npi_license.csv` Crosswalk file to join [National Provider Identifier](https://npiregistry.cms.hhs.gov/) codes to state license numbers, processed from the download available [here](http://www.nber.org/data/npi-state-license-crosswalk.html) to include license numbers potentially matching California doctors.
 
-
-#### [Download Week 7](./data/week7.zip)
-
-#### [Download Week 8](./data/week8.zip)
-
-#### [Download Week 9](./data/week9.zip)
-
-#### [Download Week 10](./data/week10.zip)
-
-#### [Download Week 11](./data/week11.zip)
+#### [Download Week 12](./data/week12.zip)
 
 #### [Download Week 13](./data/week13.zip)
 

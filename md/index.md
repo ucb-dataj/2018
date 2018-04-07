@@ -88,7 +88,7 @@ Some more useful tricks in R, including loading data from multiple files, making
 	- **Assignment** Submit your data journalism project.
 
 
-- ####**May 3:**  [Project show and tell](week15.html)
+- ####**May 3:**  Project show and tell
 Students present their data journalism projects. (**Peter Aldhous and Amanda Hickman**)
 
 
