@@ -2,3 +2,5 @@ raw-data/week5&6/medicare_prescriptions/PartD_Prescriber_PUF_NPI_Drug_13.txt
 raw-data/week5&6/medicare_prescriptions/PartD_Prescriber_PUF_NPI_Drug_14.txt
 raw-data/week5&6/medicare_prescriptions/PartD_Prescriber_PUF_NPI_Drug_15.txt
 raw-data/week5&6/nber/statelic.csv
+*.Rhistory
+*.RData
