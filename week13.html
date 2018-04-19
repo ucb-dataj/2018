@@ -7,7 +7,736 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+
+  <style>
+  pre.editor-colors {
+    color: #839496;
+    background-color: #002b36;
+  }
+  pre.editor-colors .gutter {
+    color: #839496;
+    background-color: #073642;
+  }
+  pre.editor-colors .gutter .line-number.cursor-line {
+    background-color: #084150;
+  }
+  pre.editor-colors .invisible-character {
+    color: #0a4d5e;
+  }
+  pre.editor-colors .indent-guide {
+    color: #0a4d5e;
+  }
+  pre.editor-colors .cursor {
+    border-color: #fdf6e3;
+  }
+  pre.editor-colors .selection .region {
+    background-color: #073a47;
+  }
+  pre.editor-colors .fold-marker:after,
+  pre.editor-colors .gutter .line-number.folded {
+    color: #d33682;
+  }
+  pre.editor-colors .bracket-matcher .region {
+    border-color: #d33682;
+  }
+  .syntax--comment {
+    color: #586e75;
+    font-style: italic;
+  }
+  .syntax--comment .syntax--markup.syntax--link {
+    color: #586e75;
+  }
+  .syntax--string {
+    color: #2aa198;
+  }
+  .syntax--string.syntax--regexp {
+    color: #dc322f;
+  }
+  .syntax--constant.syntax--numeric {
+    color: #d33682;
+  }
+  .syntax--constant.syntax--language {
+    color: #b58900;
+  }
+  .syntax--constant.syntax--character,
+  .syntax--constant.syntax--other {
+    color: #cb4b16;
+  }
+  .syntax--variable {
+    color: #268bd2;
+  }
+  .syntax--keyword {
+    color: #859900;
+  }
+  .syntax--storage {
+    color: #859900;
+  }
+  .syntax--entity.syntax--name.syntax--class,
+  .syntax--entity.syntax--name.syntax--type,
+  .syntax--entity.syntax--name.syntax--function {
+    color: #268bd2;
+  }
+  .syntax--entity.syntax--other.syntax--attribute-name {
+    color: #657b83;
+  }
+  .syntax--support.syntax--function {
+    color: #268bd2;
+  }
+  .syntax--support.syntax--function.syntax--builtin {
+    color: #859900;
+  }
+  .syntax--support.syntax--type,
+  .syntax--support.syntax--class {
+    color: #859900;
+  }
+  .syntax--tag.syntax--entity.syntax--name {
+    color: #268bd2;
+  }
+  .syntax--tag.syntax--punctuation.syntax--definition.syntax--html,
+  .syntax--tag.syntax--punctuation.syntax--definition.syntax--begin,
+  .syntax--tag.syntax--punctuation.syntax--definition.syntax--end {
+    color: #586e75;
+  }
+  .syntax--invalid.syntax--deprecated {
+    color: #b58900;
+    text-decoration: underline;
+  }
+  .syntax--invalid.syntax--illegal {
+    color: #dc322f;
+    text-decoration: underline;
+  }
+  .syntax--none {
+    color: #839496;
+  }
+  .syntax--source.syntax--c .syntax--meta.syntax--preprocessor,
+  .syntax--source.syntax--cpp .syntax--meta.syntax--preprocessor {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--c .syntax--keyword.syntax--control.syntax--directive,
+  .syntax--source.syntax--cpp .syntax--keyword.syntax--control.syntax--directive {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--c .syntax--punctuation.syntax--string,
+  .syntax--source.syntax--cpp .syntax--punctuation.syntax--string {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--c .syntax--constant,
+  .syntax--source.syntax--cpp .syntax--constant {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--c .syntax--constant.syntax--numeric,
+  .syntax--source.syntax--cpp .syntax--constant.syntax--numeric,
+  .syntax--source.syntax--c .syntax--constant.syntax--language.syntax--c,
+  .syntax--source.syntax--cpp .syntax--constant.syntax--language.syntax--c {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--c .syntax--storage,
+  .syntax--source.syntax--cpp .syntax--storage {
+    color: #b58900;
+  }
+  .syntax--source.syntax--c .syntax--entity,
+  .syntax--source.syntax--cpp .syntax--entity {
+    color: #839496;
+  }
+  .syntax--source.syntax--c .syntax--entity.syntax--name.syntax--function.syntax--preprocessor,
+  .syntax--source.syntax--cpp .syntax--entity.syntax--name.syntax--function.syntax--preprocessor {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--c .syntax--support.syntax--type,
+  .syntax--source.syntax--cpp .syntax--support.syntax--type {
+    color: #b58900;
+  }
+  .syntax--source.syntax--c .syntax--support.syntax--type.syntax--posix-reserved,
+  .syntax--source.syntax--cpp .syntax--support.syntax--type.syntax--posix-reserved {
+    color: #839496;
+  }
+  .syntax--source.syntax--c .syntax--variable.syntax--other.syntax--dot-access,
+  .syntax--source.syntax--cpp .syntax--variable.syntax--other.syntax--dot-access {
+    color: #839496;
+  }
+  .syntax--source.syntax--c .syntax--variable.syntax--parameter.syntax--preprocessor,
+  .syntax--source.syntax--cpp .syntax--variable.syntax--parameter.syntax--preprocessor {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--coffee .syntax--support.syntax--class {
+    color: #859900;
+  }
+  .syntax--source.syntax--coffee .syntax--variable,
+  .syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--function,
+  .syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--class {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--coffee .syntax--variable.syntax--parameter.syntax--function {
+    color: #839496;
+  }
+  .syntax--source.syntax--coffee .syntax--variable.syntax--other.syntax--readwrite {
+    color: #859900;
+  }
+  .syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--function {
+    color: #859900;
+  }
+  .syntax--source.syntax--coffee .syntax--entity.syntax--name {
+    color: #839496;
+  }
+  .syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--round,
+  .syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--square {
+    color: #839496;
+  }
+  .syntax--source.syntax--coffee .syntax--meta.syntax--delimiter {
+    color: #839496;
+  }
+  .syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--class {
+    color: #859900;
+  }
+  .syntax--source.syntax--coffee .syntax--punctuation.syntax--terminator {
+    color: #839496;
+  }
+  .syntax--source.syntax--coffee .syntax--punctuation.syntax--section.syntax--embedded {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--coffee .syntax--embedded.syntax--source {
+    color: #839496;
+  }
+  .syntax--source.syntax--coffee .syntax--constant.syntax--numeric {
+    color: #d33682;
+  }
+  .syntax--source.syntax--coffee .syntax--constant.syntax--language.syntax--boolean {
+    color: #b58900;
+  }
+  .syntax--source.syntax--css .syntax--punctuation.syntax--separator,
+  .syntax--source.syntax--css .syntax--punctuation.syntax--terminator {
+    color: #839496;
+  }
+  .syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--begin,
+  .syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--end {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--css .syntax--punctuation.syntax--section.syntax--function {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--css .syntax--entity.syntax--name {
+    color: #859900;
+  }
+  .syntax--source.syntax--css .syntax--attribute-name.syntax--class,
+  .syntax--source.syntax--css .syntax--id {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--css .syntax--pseudo-element,
+  .syntax--source.syntax--css .syntax--pseudo-class {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--css .syntax--property-value {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--css .syntax--constant.syntax--numeric {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--css .syntax--constant.syntax--numeric .syntax--unit {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--css .syntax--rgb-value {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--css .syntax--support.syntax--constant {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--css .syntax--support.syntax--constant.syntax--media {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--css .syntax--keyword.syntax--important {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--less .syntax--keyword.syntax--unit,
+  .syntax--source.syntax--scss .syntax--keyword.syntax--unit {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--go .syntax--operator {
+    color: #839496;
+  }
+  .syntax--source.syntax--go .syntax--operator.syntax--assignment {
+    color: #859900;
+  }
+  .syntax--source.syntax--java .syntax--keyword.syntax--operator {
+    color: #859900;
+  }
+  .syntax--source.syntax--java .syntax--keyword.syntax--import {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+    color: #586e75;
+  }
+  .syntax--source.syntax--java .syntax--meta.syntax--class .syntax--storage.syntax--modifier {
+    color: #b58900;
+  }
+  .syntax--source.syntax--java .syntax--meta.syntax--class .syntax--meta.syntax--class.syntax--identifier .syntax--entity.syntax--name.syntax--type.syntax--class {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--java .syntax--storage.syntax--type.syntax--primitive.syntax--array {
+    color: #859900;
+  }
+  .syntax--source.syntax--java .syntax--constant.syntax--numeric {
+    color: #d33682;
+  }
+  .syntax--source.syntax--java .syntax--constant.syntax--other {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--java .syntax--storage.syntax--type {
+    color: #859900;
+  }
+  .syntax--source.syntax--java .syntax--meta.syntax--method-call {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--meta.syntax--method {
+    color: #6c71c4;
+  }
+  .syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--punctuation.syntax--definition.syntax--seperator.syntax--parameter {
+    color: #859900;
+  }
+  .syntax--source.syntax--java .syntax--punctuation.syntax--definition.syntax--method-parameters {
+    color: #93a1a1;
+  }
+  .syntax--source.syntax--js .syntax--constant {
+    color: #859900;
+  }
+  .syntax--source.syntax--js .syntax--comma {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--support.syntax--class {
+    color: #859900;
+  }
+  .syntax--source.syntax--js .syntax--entity.syntax--name.syntax--type {
+    color: #b58900;
+  }
+  .syntax--source.syntax--js .syntax--entity.syntax--name {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--meta.syntax--brace {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--keyword {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new {
+    color: #859900;
+  }
+  .syntax--source.syntax--js .syntax--keyword.syntax--control {
+    color: #859900;
+  }
+  .syntax--source.syntax--js .syntax--keyword.syntax--control.syntax--regexp {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--js .syntax--variable {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--variable.syntax--dom {
+    color: #859900;
+  }
+  .syntax--source.syntax--js .syntax--delimiter + .syntax--dom {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--name {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--variable.syntax--language {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--js .syntax--variable.syntax--parameter {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--regexp {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--js .syntax--support.syntax--function {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--support.syntax--constant {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--storage {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--js .syntax--constant.syntax--numeric {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--meta.syntax--delimiter.syntax--method.syntax--period {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--square {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--curly {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--js .syntax--definition.syntax--begin.syntax--curly,
+  .syntax--source.syntax--js .syntax--definition.syntax--end.syntax--curly {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source {
+    color: #839496;
+  }
+  .syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source > .syntax--embedded.syntax--punctuation {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--js.syntax--embedded .syntax--entity.syntax--name.syntax--tag {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--js.syntax--jsx .syntax--entity.syntax--name.syntax--tag {
+    color: #268bd2;
+  }
+  .syntax--gfm .syntax--link .syntax--entity {
+    color: #6c71c4;
+  }
+  .syntax--gfm .syntax--list.syntax--ordered {
+    color: #859900;
+  }
+  .syntax--gfm .syntax--list.syntax--unordered {
+    color: #b58900;
+  }
+  .syntax--gfm .syntax--raw {
+    font-style: italic;
+  }
+  .syntax--gfm.syntax--support {
+    color: #586e75;
+  }
+  .syntax--gfm.syntax--support.syntax--quote {
+    color: #6c71c4;
+  }
+  .syntax--markup.syntax--bold {
+    font-weight: bold;
+  }
+  .syntax--markup.syntax--italic {
+    font-style: italic;
+  }
+  .syntax--markup.syntax--heading {
+    color: #268bd2;
+  }
+  .syntax--markup.syntax--link {
+    color: #2aa198;
+  }
+  .syntax--markup.syntax--deleted {
+    color: #dc322f;
+  }
+  .syntax--markup.syntax--changed {
+    color: #b58900;
+  }
+  .syntax--markup.syntax--inserted {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--php .syntax--storage.syntax--type.syntax--class {
+    color: #b58900;
+  }
+  .syntax--source.syntax--php .syntax--storage.syntax--type.syntax--function {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--php .syntax--storage.syntax--modifier {
+    color: #b58900;
+  }
+  .syntax--source.syntax--php .syntax--entity.syntax--name.syntax--type.syntax--class {
+    color: #839496;
+  }
+  .syntax--source.syntax--php .syntax--entity.syntax--name.syntax--function {
+    color: #839496;
+  }
+  .syntax--source.syntax--php .syntax--entity.syntax--other {
+    color: #839496;
+  }
+  .syntax--source.syntax--php .syntax--variable {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--php .syntax--punctuation.syntax--definition {
+    color: #839496;
+  }
+  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--comment {
+    color: #586e75;
+  }
+  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--array {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--string {
+    color: #839496;
+  }
+  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--variable {
+    color: #859900;
+  }
+  .syntax--source.syntax--php .syntax--support.syntax--function.syntax--construct {
+    color: #b58900;
+  }
+  .syntax--source.syntax--php .syntax--support.syntax--function.syntax--array {
+    color: #859900;
+  }
+  .syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--class {
+    color: #b58900;
+  }
+  .syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--assignment {
+    color: #859900;
+  }
+  .syntax--source.syntax--php .syntax--keyword.syntax--other {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--python .syntax--entity {
+    color: #839496;
+  }
+  .syntax--source.syntax--python .syntax--entity.syntax--name {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--entity.syntax--other {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--function {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--function.syntax--magic {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--punctuation.syntax--string {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--python .syntax--keyword.syntax--operator {
+    color: #839496;
+  }
+  .syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--quantifier {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical {
+    color: #859900;
+  }
+  .syntax--source.syntax--python .syntax--keyword.syntax--control.syntax--import {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--python .syntax--keyword.syntax--other {
+    color: #859900;
+  }
+  .syntax--source.syntax--python .syntax--constant.syntax--language {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--constant.syntax--character {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--python .syntax--constant.syntax--other {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--python .syntax--entity.syntax--name.syntax--type.syntax--class {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--variable {
+    color: #839496;
+  }
+  .syntax--source.syntax--python .syntax--support.syntax--function.syntax--builtin {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--support.syntax--type.syntax--exception.syntax--python {
+    color: #b58900;
+  }
+  .syntax--source.syntax--python .syntax--support.syntax--type.syntax--python {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--string {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class {
+    color: #859900;
+  }
+  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class.syntax--todo {
+    color: #d33682;
+  }
+  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--function {
+    color: #859900;
+  }
+  .syntax--source.syntax--python .syntax--punctuation.syntax--definition.syntax--parameters {
+    color: #839496;
+  }
+  .syntax--source.syntax--python .syntax--punctuation.syntax--section.syntax--function.syntax--begin {
+    color: #839496;
+  }
+  .syntax--source.syntax--python .syntax--punctuation.syntax--separator.syntax--parameters {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--meta.syntax--embedded .syntax--punctuation.syntax--section {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--ruby .syntax--punctuation.syntax--definition {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--string {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--comment {
+    color: #586e75;
+  }
+  .syntax--source.syntax--ruby .syntax--entity.syntax--inherited-class {
+    color: #b58900;
+  }
+  .syntax--source.syntax--ruby .syntax--variable.syntax--parameter {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--variable.syntax--constant {
+    color: #b58900;
+  }
+  .syntax--source.syntax--ruby .syntax--constant.syntax--boolean {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--ruby .syntax--instance .syntax--punctuation.syntax--definition {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--ruby .syntax--class {
+    color: #b58900;
+  }
+  .syntax--source.syntax--ruby .syntax--class.syntax--control {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--module {
+    color: #b58900;
+  }
+  .syntax--source.syntax--ruby .syntax--require .syntax--keyword.syntax--other.syntax--special-method {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--ruby .syntax--keyword.syntax--other.syntax--special-method {
+    color: #cb4b16;
+  }
+  .syntax--source.syntax--ruby .syntax--keyword.syntax--other {
+    color: #859900;
+  }
+  .syntax--source.syntax--ruby .syntax--keyword.syntax--control {
+    color: #859900;
+  }
+  .syntax--source.syntax--ruby .syntax--keyword.syntax--operator {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--special-method {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--ruby .syntax--symbol {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--ruby .syntax--symbol .syntax--punctuation.syntax--definition {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--ruby .syntax--hashkey {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--ruby .syntax--hashkey .syntax--punctuation.syntax--definition {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--ruby .syntax--string.syntax--regexp {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--ruby .syntax--todo {
+    color: #d33682;
+  }
+  .syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global .syntax--punctuation {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--ruby .syntax--variable.syntax--block {
+    color: #268bd2;
+  }
+  .syntax--source.syntax--ruby .syntax--variable.syntax--self {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--ruby .syntax--punctuation.syntax--separator {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--numeric {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--ruby .syntax--punctuation.syntax--section.syntax--regexp {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated {
+    color: #2aa198;
+  }
+  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--punctuation .syntax--source.syntax--ruby {
+    color: #dc322f;
+  }
+  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--array,
+  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--function {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--support.syntax--function {
+    color: #839496;
+  }
+  .syntax--source.syntax--ruby .syntax--support.syntax--function.syntax--kernel {
+    color: #859900;
+  }
+  .syntax--source.syntax--scala .syntax--variable {
+    color: #93a1a1;
+  }
+  .syntax--source.syntax--scala .syntax--declaration {
+    color: #93a1a1;
+    font-weight: bold;
+  }
+  .syntax--source.syntax--scala .syntax--comparison {
+    color: #93a1a1;
+  }
+  .syntax--source.syntax--scala .syntax--class,
+  .syntax--source.syntax--scala .syntax--type {
+    color: #b58900;
+  }
+  .syntax--source.syntax--scala .syntax--val {
+    font-weight: normal;
+  }
+  .syntax--source.syntax--scala .syntax--variable {
+    font-weight: bold;
+  }
+  .syntax--source.syntax--scala .syntax--variable.syntax--parameter {
+    color: #6c71c4;
+    font-weight: normal;
+  }
+  .syntax--source.syntax--scala .syntax--control.syntax--flow {
+    color: #93a1a1;
+    font-weight: bold;
+  }
+  .syntax--source.syntax--scala .syntax--constant.syntax--language {
+    color: #93a1a1;
+    font-weight: bold;
+  }
+  .syntax--source.syntax--scala .syntax--function.syntax--declaration {
+    color: #6c71c4;
+  }
+  .syntax--source.syntax--scala .syntax--modifier.syntax--other {
+    font-weight: bold;
+  }
+  .syntax--source.syntax--scala .syntax--package {
+    color: #93a1a1;
+  }
+  .syntax--source.syntax--scala .syntax--variable.syntax--import {
+    font-weight: normal;
+  }
+  .syntax--source.syntax--scala .syntax--type .syntax--bounds,
+  .syntax--source.syntax--scala .syntax--type .syntax--class {
+    color: #6c71c4;
+  }
+  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded).syntax--link.syntax--entity {
+    color: #268bd2;
+    text-decoration: underline;
+  }
+  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--class,
+  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--parameter {
+    color: #93a1a1;
+  }
+  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--description {
+    color: #586e75;
+  }
+  .syntax--source.syntax--scala .syntax--embedded {
+    color: #6c7c7c;
+    font-style: italic;
+  }
+  .syntax--source.syntax--scala .syntax--embedded .syntax--margin,
+  .syntax--source.syntax--scala .syntax--embedded .syntax--delimiters {
+    font-style: normal;
+  }
+  </style>
+
 </head>
+
 
 <body class="markdown github">
 
@@ -46,7 +775,8 @@
 							</ul>
 						</li>
 						<li><a href="software.html">Software</a></li>
-						<li><a href="datasets.html">Data</a></li>						<li><a href="questions.html">If you get stuck</a></li>
+						<li><a href="datasets.html">Data</a></li>
+						<li><a href="questions.html">If you get stuck</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Email instructors<b class="caret"></b></a>
 							<ul class="dropdown-menu">
@@ -60,22 +790,29 @@
 		</div> <!-- /.navbar-header -->
 	</header>
 	<div class="container all">
-
-    <h2>Week 13 -- April 19, 2018</h2>
-  <p><em>Instructor: Amanda Hickman</em></p>
-  <h1>Fixing your path</h1>
-  <p>This is a good explanation of the command path issues we were navigating last time we worked in the terminal.</p>
-  <p>http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k</p>
-  <p>If you run <code>echo $PATH</code> at the command line, you can see a list of all the directories your shell looks in for executable programs. To add <code>shp2pgsql</code> so you can access it easily, you want to tell your shell that it needs to look in <code>/Applications/Postgres.app/Contents/Versions/10/bin/</code> for programs.</p>
-  <p>To do that, you're going to edit a hidden file in your home directory (probably <code>/Users/yourname/</code>) called <code>.profile</code>, to add a line like:</p>
-  <pre><code>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH
-  </code></pre>
-  <p><code>PATH</code> is the <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#index-shell-variable">shell variable</a> that contains the array of directories that bash looks in to find executable programs, and we print the contents of that variable with <code>$PATH</code>. This command <code>exports</code> or "sets" a new <code>PATH</code> by concatenating the new directory (<code>/Applications/Postgres.app/Contents/Versions/10/bin/</code>) that you want to include, with the existing values stored in <code>PATH</code>.</p>
-  <h1>Data of the Week</h1>
-  <h1>SQL Vocabulary</h1>
-  <p>Another thing that came up in class was why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- and for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Floating point arithmetic</a> is no exception.</p>
-  <p>You can see the full list of data types that Postgres supports in <a href="https://www.postgresql.org/docs/10/static/datatype.html">the Postgres documentation</a>. You're almost always going to be using one of only a few:  numeric, float, integer, text, char, varchar, and geometry.</p>
-  <h1>Hands On PostGIS</h1>
+    <h2 id="week-13-april-19-2018">Week 13 -- April 19, 2018</h2>
+    <p><em>Instructor: Amanda Hickman</em></p>
+    <h1 id="fixing-your-path">Fixing your path</h1>
+    <p>This is a good explanation of the command path issues we were navigating last time we worked in the terminal:</p>
+    <p><a href="http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k">http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k</a></p>
+    <p>Roughly, your command line interpreter, <code>bash</code>, uses a variable called <code>PATH</code> to decide where to look for programs to run. If you run <code>echo $PATH</code> at the command line, you can see a list of all the directories your shell looks in for executable programs. Yours is probably different from mine, but on my primary laptop (which runs Ubuntu, not OSX), my path looks like this:</p>
+    <pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span>amanda@mona:</span><span class="syntax--keyword syntax--operator syntax--tilde syntax--shell"><span>~</span></span><span>$&nbsp;</span><span class="syntax--support syntax--function syntax--builtin syntax--shell"><span>echo</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--normal syntax--shell"><span class="syntax--punctuation syntax--definition syntax--variable syntax--shell"><span>$</span></span><span>PATH</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/heroku/bin:/opt/venvs/vdirsyncer-latest/bin/</span></span></div></pre>
+    <p>Note that I manually added a few paths there: <code>/usr/local/heroku/bin</code> lets me run a handful of specialized heroku commands, and <code>/opt/venvs/vdirsyncer-latest/bin/</code> lets me run vidirsyncer, which I'm super happy to talk about but is kind of a rabbit hole in this context.</p>
+    <p>If you want to run a program that isn't in your <code>PATH</code> variable, you have to use the "absolute path" -- the full path to the program, starting with <code>/</code> for the root directory. Alternatively, you can edit your <code>PATH</code> to include the path to the directory that includes that program.</p>
+    <p>To add <code>shp2pgsql</code> so you can access it easily, you want to tell your shell that it needs to look in <code>/Applications/Postgres.app/Contents/Versions/10/bin/</code> for programs.</p>
+    <p>To do that, you're going to edit a hidden file in your home directory (probably <code>/Users/yourname/</code>) called <code>.profile</code>, to add a line like:</p>
+    <pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>export&nbsp;PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH</span></span></div></pre><p><code>PATH</code> is the <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#index-shell-variable">shell variable</a> that contains the array of directories that bash looks in to find executable programs, and we print the contents of that variable with <code>$PATH</code>. This command <code>exports</code> or "sets" a new <code>PATH</code> by concatenating the new directory (<code>/Applications/Postgres.app/Contents/Versions/10/bin/</code>) that you want to include, with the existing values stored in <code>PATH</code>.</p>
+    <h1 id="do-you-have-enough-ram-for-this-">Do you have enough RAM for this?</h1>
+    <p>I was surprised to discover that quite a few of you couldn't actually load the US zipcode file into postgres via Postico. My suspicion is that you could load it if you use the command line tools, but Postico wasn't able to load the whole thing into its preview window -- queueing it up so you can scroll around in it takes more memory than just loading it.</p>
+    <p>Use <a href="https://support.apple.com/en-us/HT201260">these instructions</a> to find some basic information about your computer. Please complete this survey: <a href="https://goo.gl/forms/oIsHQAUuyWREvlrC3">https://goo.gl/forms/oIsHQAUuyWREvlrC3</a> so we can get a handle on the problem.</p>
+    <h1 id="data-of-the-week">Data of the Week</h1>
+    <p>Charlotte and Susie are up:
+    <a href="https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0">https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0</a></p>
+    <h1 id="sql-vocabulary">SQL Vocabulary</h1>
+    <p>Another thing that came up in class was why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- and for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Floating point arithmetic</a> is no exception.</p>
+    <p>You can see the full list of data types that Postgres supports in <a href="https://www.postgresql.org/docs/10/static/datatype.html">the Postgres documentation</a>. You're almost always going to be using one of only a few:  numeric, float, integer, text, char, varchar, and geometry.</p>
+    <h1 id="hands-on-postgis">Hands On PostGIS</h1>
+    <p>We started this two weeks ago and hit some walls that I wasn't expecting.</p>
 
 	</div> <!-- /.container all -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
