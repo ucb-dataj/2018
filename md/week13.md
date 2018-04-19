@@ -38,10 +38,26 @@ Charlotte and Susie are up:
 https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0
 
 # SQL Vocabulary
-Another thing that came up in class was why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- and for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. [Floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) is no exception.
+Quick follow up to a conversation we had two weeks ago about why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- As for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. [Floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) is no exception.
 
 You can see the full list of data types that Postgres supports in [the Postgres documentation](https://www.postgresql.org/docs/10/static/datatype.html). You're almost always going to be using one of only a few:  numeric, float, integer, text, char, varchar, and geometry.
 
+  format   | usage
+  ---------|--------
+  NUMERIC  | any number -- this is the preferable format but some systems default to `FLOAT` if you don't specify `NUMERIC`
+  FLOAT    | a decimal number, synonymous with `DOUBLE PRECISION`-- if you plan to do any math on the number, `NUMERIC` is preferable
+  INTEGER  | any whole number
+  BIGINT   | very large integer (> 2.1B or < -2.1B)
+  TEXT     | any text -- this is an efficient format to use in Postgres but in other SQL databases you may not be able to index, search or sort a `TEXT` column. It isn't standard across SQL implementations.
+  CHAR     | text that is always the same length
+  VARCHAR  | text of varying length
+  GEOMETRY | geographic data (points, lines, polygons)
+
+
 # Hands On PostGIS
 
-We started this two weeks ago and hit some walls that I wasn't expecting.
+We started this two weeks ago and hit some walls that I wasn't expecting, so let's try again.
+
+## Where are you working?
+
+[Remember](week11.html) that to do PostGIS queries you will need to make sure you've enabled it on the database you're working in, with `CREATE EXTENSION postgis;` -- so make sure that you're working in a database where you've enabled postgis.
