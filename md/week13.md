@@ -61,3 +61,87 @@ We started this two weeks ago and hit some walls that I wasn't expecting, so let
 ## Where are you working?
 
 [Remember](week11.html) that to do PostGIS queries you will need to make sure you've enabled it on the database you're working in, with `CREATE EXTENSION postgis;` -- so make sure that you're working in a database where you've enabled postgis.
+
+## Find Alameda County zipcodes
+
+what are the zipcodes that are overlap with Alameda county. Start by spelling out how you'd approach this. Can you describe in words what you're trying to do? Write this in a comment at the top of your script.
+
+You're looking for a way to capture all the shapes in one layer that intersect with a single shape in another layer.  The census publishes [zipcode boundaries for the whole US](https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html), but for some of your computers that was too much data, so I cut it down to just California zipcodes for you. You'll need the [sql]() to create a table and the data itself is in a [separate csv]()
+
+
+
+
+
+### Load into Postgres
+To use these in PostGIS, we need to convert them into SQL, but you've got a built in terminal utility, `shp2pgsql` that does exactly that:
+
+```
+shp2pgsql cb_2016_us_zcta510_500k.shp zipcodes postgres > cb_2016_us_zcta510_500k.sql
+shp2pgsql gz_2010_us_040_00_20m.shp us_states postgres > gz_2010_us_040_00_20m.sql
+```
+
+You can either use Postico's "load query" button, or load these right at the command line with:
+
+```
+psql -d week11_postgis -f cb_2016_us_zcta510_500k.sql
+psql -d week11_postgis -f gz_2010_us_040_00_20m.sql
+```
+
+### Find Your PostGIS command
+
+There are a few that sound like they might be what we want: [ST_Within](http://postgis.net/docs/ST_Within.html), [ST_Contains](http://postgis.net/docs/ST_Contains.html),  [ST_Intersection ](http://postgis.net/docs/ST_Intersection.html),  [ST_Intersects](http://postgis.net/docs/ST_Intersects.html). Take a look at the documentation: how do these differ?
+
+
+```SQL
+
+SELECT
+  us_states.geom AS state_gom,
+  us_states.state AS state,
+  zipcodes.zcta5ce10 AS zipcode,
+  zipcodes.geom as zip_geom
+FROM
+  us_states, zipcodes
+WHERE
+  ST_Intersects(zipcodes.geom, us_states.geom) AND us_states.name = 'California';
+
+```
+
+So then we have a smaller set that we can work with, so let's actually make a table out of that:
+
+```sql
+CREATE TABLE ca_zipcodes AS
+  SELECT zipcodes.* FROM zipcodes, us_states
+  WHERE ST_Intersects(zipcodes.geom, us_states.geom) AND us_states.name = 'California';
+```
+
+### Your Turn
+
+Alameda County publishes a [county boundary file](https://data.acgov.org/Geospatial-Data/County-Boundary/rygg-x9nr). So try it again. Remember that your steps are:
+
+1. Use `shp2pgsql` to convert the Shapefile into SQL.
+2. Import the SQL into Postgres.
+3. Index it (you can do this in QGIS, or you can look at your table definitions from the last exercise and see if you can guess the SQL statement that will index your table.)
+4. Use [ST_Intersects](http://postgis.net/docs/ST_Intersects.html) to find all the zipcode shapes that intersect with Alameda county.
+
+You're going to wind up capturing a few zipcodes that only cross the county line in tiny spots. Can you brainstorm some ways to address those?
+
+
+## Find San Francisco zipcodes
+
+## Create mappable points
+
+San Francisco publishes [car break in data](https://data.sfgov.org/Public-Safety/Car-Break-ins/6har-q36k).
+
+Can you ...
+* Import the data into a PostGIS database?
+* Look up the function you need to make a point out of latitude and longitude values?
+* Run that function.
+* Map it in QGIS?
+
+
+
+
+# Keep Learning
+
+* [QGIS Tutorial](https://multimedia.journalism.berkeley.edu/tutorials/qgis-basics-journalists/)
+* Lynda

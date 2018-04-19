@@ -137,7 +137,7 @@ Use the link to create a spatial index. And then add a primary key, with:
 ALTER TABLE test ADD PRIMARY KEY (call_number, unit_id);
 ```
 
-## Queries We Want To Accomplish
+## What Do We Want To Accomplish?
 
 * Find all of the zipcodes that are inside of Alameda county. Start by spelling out how you'd approach this. Can you describe in words what you're trying to do?
 
