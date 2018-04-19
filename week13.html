@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Week 13</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="markdown github">
+
+	<header class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<nav role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">J298 Data Journalism</a>
+				</div> <!-- /.navbar-header -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Class notes<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="week1.html">What is data?</a></li>
+								<li><a href="week2.html">Types of stories</a></li>
+								<li><a href="week3.html">Working with spreadsheets</a></li>
+								<li><a href="week4.html">Acquiring, cleaning, and formatting data</a></li>
+								<li><a href="week5.html">R, RStudio, and the tidyverse</a></li>
+								<li><a href="week6.html">Data journalism in the tidyverse</a></li>
+								<li><a href="week7.html">Don't let the data lie to you</a></li>
+								<li><a href="week8.html">Databases and SQL</a></li>
+								<li><a href="week9.html">Finding stories using maps</a></li>
+								<li><a href="week10.html">Maps meet databases</a></li>
+								<li><a href="week11.html">More PostGIS</a></li>
+								<li><a href="week12.html">R practice</a></li>
+								<li><a href="week13.html">PostGIS practice</a></li>
+								<li><a href="week14.html">More fun with R</a></li>
+							</ul>
+						</li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="datasets.html">Data</a></li>						<li><a href="questions.html">If you get stuck</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Email instructors<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="mailto:p.aldhous@gmail.com">Peter Aldhous</a></li>
+								<li><a href="mailto:abh@berkeley.edu">Amanda Hickman</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</div> <!-- /.navbar-header -->
+	</header>
+	<div class="container all">
+
+    <h2>Week 13 -- April 19, 2018</h2>
+  <p><em>Instructor: Amanda Hickman</em></p>
+  <h1>Fixing your path</h1>
+  <p>This is a good explanation of the command path issues we were navigating last time we worked in the terminal.</p>
+  <p>http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k</p>
+  <p>If you run <code>echo $PATH</code> at the command line, you can see a list of all the directories your shell looks in for executable programs. To add <code>shp2pgsql</code> so you can access it easily, you want to tell your shell that it needs to look in <code>/Applications/Postgres.app/Contents/Versions/10/bin/</code> for programs.</p>
+  <p>To do that, you're going to edit a hidden file in your home directory (probably <code>/Users/yourname/</code>) called <code>.profile</code>, to add a line like:</p>
+  <pre><code>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH
+  </code></pre>
+  <p><code>PATH</code> is the <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#index-shell-variable">shell variable</a> that contains the array of directories that bash looks in to find executable programs, and we print the contents of that variable with <code>$PATH</code>. This command <code>exports</code> or "sets" a new <code>PATH</code> by concatenating the new directory (<code>/Applications/Postgres.app/Contents/Versions/10/bin/</code>) that you want to include, with the existing values stored in <code>PATH</code>.</p>
+  <h1>Data of the Week</h1>
+  <h1>SQL Vocabulary</h1>
+  <p>Another thing that came up in class was why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- and for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Floating point arithmetic</a> is no exception.</p>
+  <p>You can see the full list of data types that Postgres supports in <a href="https://www.postgresql.org/docs/10/static/datatype.html">the Postgres documentation</a>. You're almost always going to be using one of only a few:  numeric, float, integer, text, char, varchar, and geometry.</p>
+  <h1>Hands On PostGIS</h1>
+
+	</div> <!-- /.container all -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
