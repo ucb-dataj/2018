@@ -809,11 +809,92 @@
     <p>Charlotte and Susie are up:
     <a href="https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0">https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0</a></p>
     <h1 id="sql-vocabulary">SQL Vocabulary</h1>
-    <p>Another thing that came up in class was why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- and for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Floating point arithmetic</a> is no exception.</p>
+    <p>Quick follow up to a conversation we had two weeks ago about why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- As for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Floating point arithmetic</a> is no exception.</p>
     <p>You can see the full list of data types that Postgres supports in <a href="https://www.postgresql.org/docs/10/static/datatype.html">the Postgres documentation</a>. You're almost always going to be using one of only a few:  numeric, float, integer, text, char, varchar, and geometry.</p>
+    <table>
+    <thead>
+    <tr>
+    <th>format</th>
+    <th>usage</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>  NUMERIC</td>
+    <td>any number -- this is the preferable format but some systems default to <code>FLOAT</code> if you don't specify <code>NUMERIC</code></td>
+    </tr>
+    <tr>
+    <td>  FLOAT</td>
+    <td>a decimal number, synonymous with <code>DOUBLE PRECISION</code>-- if you plan to do any math on the number, <code>NUMERIC</code> is preferable</td>
+    </tr>
+    <tr>
+    <td>  INTEGER</td>
+    <td>any whole number</td>
+    </tr>
+    <tr>
+    <td>  BIGINT</td>
+    <td>very large integer (&gt; 2.1B or &lt; -2.1B)</td>
+    </tr>
+    <tr>
+    <td>  TEXT</td>
+    <td>any text -- this is an efficient format to use in Postgres but in other SQL databases you may not be able to index, search or sort a <code>TEXT</code> column. It isn't standard across SQL implementations.</td>
+    </tr>
+    <tr>
+    <td>  CHAR</td>
+    <td>text that is always the same length</td>
+    </tr>
+    <tr>
+    <td>  VARCHAR</td>
+    <td>text of varying length</td>
+    </tr>
+    <tr>
+    <td>  GEOMETRY</td>
+    <td>geographic data (points, lines, polygons)</td>
+    </tr>
+    </tbody>
+    </table>
     <h1 id="hands-on-postgis">Hands On PostGIS</h1>
-    <p>We started this two weeks ago and hit some walls that I wasn't expecting.</p>
-
+    <p>We started this two weeks ago and hit some walls that I wasn't expecting, so let's try again. Download the <a href="data/week13.zip">Week 13 data</a> bundle so you have everything in one place.</p>
+    <h2 id="where-are-you-working-">Where are you working?</h2>
+    <p><a href="week11.html">Remember</a> that to do PostGIS queries you will need to make sure you've enabled it on the database you're working in, with <code>CREATE EXTENSION postgis;</code> -- so make sure that you're working in a database where you've enabled postgis.</p>
+    <h2 id="find-alameda-county-zipcodes">Find Alameda County zipcodes</h2>
+    <p>what are the zipcodes that are overlap with Alameda county. Start by spelling out how you'd approach this. Can you describe in words what you're trying to do? Write this in a comment at the top of your script.</p>
+    <p>You're looking for a way to capture all the shapes in one layer that intersect with a single shape in another layer.  The census publishes <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html">zipcode boundaries for the whole US</a>, but for some of your computers that was too much data, so I cut it down to just California zipcodes for you. You'll need the <a href="https://ucb-dataj.github.io/2018/data/week13/ca_zips.sql">sql</a> to create a table and the data itself is in a <a href="https://ucb-dataj.github.io/2018/data/week13/ca_zips.csv">separate csv</a>.</p>
+    <p>Alameda County's open data portal publishes a <a href="https://data.acgov.org/Geospatial-Data/County-Boundary/rygg-x9nr">county boundary file</a>. I already used <a href="http://bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg"><code>shp2pgsql</code></a> to convert the shapefile to SQL.</p>
+    <ol>
+    <li>Use <code>shp2pgsql</code> to convert the Shapefile into SQL.</li>
+    <li>Import the SQL into Postgres. You can either
+    a. use Postico's "Load Query" button to load <code>alameda_county_boundary.sql</code>, or<br>b. use <code>psql</code> at the command line with <code>psql -d week11_postgis -f alameda_county_boundary.sql</code> (but note that <code>week11_postgis</code> is my database name. You may not have named your database <code>week11_postgis</code>.)</li>
+    <li>Create a spatial index. You can either
+    a. Load it into QGIS and click "create index" or
+    b. run <code>CREATE INDEX sidx_alameda_geom ON alameda USING gist (geom);</code></li>
+    </ol>
+    <h3 id="find-your-postgis-command">Find Your PostGIS command</h3>
+    <p>  There are a few that sound like they might be what we want: <a href="http://postgis.net/docs/ST_Within.html">ST_Within</a>, <a href="http://postgis.net/docs/ST_Contains.html">ST_Contains</a>,  <a href="http://postgis.net/docs/ST_Intersection.html">ST_Intersection </a>,  <a href="http://postgis.net/docs/ST_Intersects.html">ST_Intersects</a>. Take a look at the documentation: how do these differ?</p>
+    <p>We're going to use <a href="http://postgis.net/docs/ST_Intersects.html">ST_Intersects</a> to find all the California zipcode shapes that intersect with Alameda county.</p>
+    <pre class="editor-colors lang-SQL"><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;county_geom,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;county,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>zcta5ce10</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;zipcode,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>as</span></span><span>&nbsp;zip_geom</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;alameda,&nbsp;zipcodes</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;ST_Intersects(</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>AND</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>Alameda&nbsp;County</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>;</span></span></div></pre>
+    <p>Since that seems like it worked, make a table out of that:</p>
+    <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--meta syntax--create syntax--sql"><span class="syntax--keyword syntax--other syntax--create syntax--sql"><span>CREATE</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--sql"><span>TABLE</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--sql"><span>alameda_zipcodes</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;zipcodes.</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;zipcodes,&nbsp;alameda</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span><span>&nbsp;ST_Intersects(</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>AND</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>Alameda&nbsp;County</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>;</span></span></div></pre>
+    <h3 id="troubleshooting">Troubleshooting</h3>
+    <p>You're going to wind up capturing a few zipcodes that only cross the county line in tiny spots. Can you brainstorm some ways to address those?</p>
+    <h2 id="find-san-francisco-zipcodes">Find San Francisco zipcodes</h2>
+    <p>San Francisco doesn't publish a handy county file, so I pulled down the <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_counties.html">TIGER county shapefiles</a>. This is smaller than the zipcode file but it's still pretty big, so I also ran it through <a href="http://bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg"><code>shp2pgsql</code></a> with <code>shp2pgsql cb_2017_us_county_20m.shp counties postgres &gt; counties.sql</code>, and then pruned it by loading it into Postgres and running:</p>
+    <pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>DELETE&nbsp;FROM&nbsp;counties&nbsp;WHERE&nbsp;statefp&nbsp;!=&nbsp;'06';</span></span></div></pre><p>You can load the smaller, California only file from the <a href="data/week13.zip">week 13 data</a> file -- it's <code>counties.sql</code>.</p>
+    <h3 id="find-all-the-zipcodes-in-san-francisco-county-what-about-fresno-county-">Find all the zipcodes in San Francisco county? What about Fresno county?</h3>
+    <p>Start by writing down the steps you need to take, then ... take them.</p>
+    <h2 id="create-mappable-points">Create mappable points</h2>
+    <p>San Francisco publishes <a href="https://data.sfgov.org/Public-Safety/Car-Break-ins/6har-q36k">car break in data</a>.</p>
+    <p>Can you ...</p>
+    <ul>
+    <li>Import the data into a PostGIS database?</li>
+    <li>Do you remember the function you need to make WKT point out of latitude and longitude values?</li>
+    <li>Then map it in QGIS</li>
+    </ul>
+    <h1 id="keep-learning">Keep Learning</h1>
+    <ul>
+    <li><a href="https://multimedia.journalism.berkeley.edu/tutorials/qgis-basics-journalists/">QGIS Tutorial</a></li>
+    <li><a href="https://www.lynda.com/search?q=qgis">Lynda QGIS</a> | <a href="https://www.lynda.com/search?q=postgis">Lynda PostGIS</a></li>
+    </ul>
 	</div> <!-- /.container all -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
