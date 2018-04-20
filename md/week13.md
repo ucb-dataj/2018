@@ -133,10 +133,32 @@ Start by writing down the steps you need to take, then ... take them.
 San Francisco publishes [car break in data](https://data.sfgov.org/Public-Safety/Car-Break-ins/6har-q36k).
 
 Can you ...
-* Import the data into a PostGIS database?
+* Create a new table for this data
+* Import the data into a PostGIS database
 * Do you remember the function you need to make WKT point out of latitude and longitude values?
-* Then map it in QGIS
+* View it in QGIS
 
+I did use [csvsql](https://csvkit.readthedocs.io/en/1.0.3/scripts/csvsql.html) to generate a CREATE statement for you.
+
+```sql
+CREATE TABLE car_breakins (
+	incidntnum VARCHAR(9) NOT NULL,
+	category VARCHAR(13) NOT NULL,
+	descript VARCHAR(28) NOT NULL,
+	dayofweek VARCHAR(9) NOT NULL,
+	event_date DATE NOT NULL,
+	event_time TIME WITHOUT TIME ZONE NOT NULL,
+	pddistrict VARCHAR(10) NOT NULL,
+	resolution VARCHAR(21),
+	address VARCHAR(42) NOT NULL,
+	x FLOAT NOT NULL,
+	y FLOAT NOT NULL,
+	location VARCHAR(41) NOT NULL
+);
+```
+
+
+Bonus questions: where is this data from? Who compiled it? Can you sniff anything out from the Socrata metadata?
 
 # Keep Learning
 
