@@ -156,9 +156,29 @@ CREATE TABLE car_breakins (
 	location VARCHAR(41) NOT NULL
 );
 ```
-
-
 Bonus questions: where is this data from? Who compiled it? Can you sniff anything out from the Socrata metadata?
+
+### Assigment
+
+Please submit your final data journalism project by **Tuesday May 1 at 8pm**.
+
+- In bCourses, submit a full write-up of your project. This should be written so that someone with no prior knowledge of your project can understand why this is interesting as well as what you have done. It should include:
+
+ - A clear and direct lede that tells us why we should keep reading, and what the main points of your work are. This should be written for a new audience and should demonstrate the writing skills you have learned in your other classes. Think of this as your chance to sell an editor on this work, by showing that you can write and that you understand this data.
+
+ - A description of the data you used, and how it was cleaned and processed for analysis. Again, imagine you are writing for an editor who doesn't know you and needs to know that you have made smart decisions about data to base your reporting on and that you truly understand what you are doing.
+
+ - The questions you asked of the data, and the tools you used to ask them.
+
+ - The conclusions you have drawn. Include any charts/maps that are relevant.
+
+ - Any further analyses you would need to run to turn this project into a story.
+
+ - The additional reporting, beyond data analysis, that would be required to turn this project into a story.
+
+- Share the data and code for your analysis. Code should be commented so that your instructors are able to understand each step of your analysis. You can share this in a zipped folder and email if the data files are not too large. If they are too large to email, you can share via a Dropbox link.
+
+- Plan to come to class on May 3 prepared to give a 5-7 minute presentation on your project, and answer questions from other students. Plan, also, to listen thoughtfully to your classroom colleagues and engage them on their work this semester.
 
 # Keep Learning
 
