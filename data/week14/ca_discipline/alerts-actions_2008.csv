@@ -1,0 +1,258 @@
+alert_date,last_name,first_name,middle_name,name_suffix,city,state,license,action_type,action_date
+2008-04-18T00:00:00Z,Boyajian,John,Arthur,,Boise,ID,A 25855,Surrendered,2008-04-18T00:00:00Z
+2008-04-21T00:00:00Z,Cragen,Richard,Darin,,Temecula,CA,A 54872,Surrendered,2008-04-21T00:00:00Z
+2008-04-23T00:00:00Z,Chow,Hubert,Wing,,San Gabriel,CA,G 45435,Superior Court Order/Restrictions,2008-03-10T00:00:00Z
+2008-04-28T00:00:00Z,Gravich,Anna,,,Los Angeles,CA,A 40805,Superior Court Order/Restrictions,2008-04-25T00:00:00Z
+2008-05-15T00:00:00Z,Kabacy,George,E.,,Lacey,WA,G 13766,Suspended,2008-05-15T00:00:00Z
+2008-05-15T00:00:00Z,Aboulhosn,Kamal,Fouad,,Yakima,WA,CFE 40080,Suspended,2008-05-15T00:00:00Z
+2008-06-18T00:00:00Z,Harron,Raymond,A.,,Bridgeport,WV,G 8415,Surrendered,2008-06-18T00:00:00Z
+2008-06-27T00:00:00Z,Fitzpatrick,Christian,John,,Las Vegas,NM,G 47520,Surrendered,2008-06-27T00:00:00Z
+2008-06-30T00:00:00Z,Adrian,Adrian,,,Las Vegas,NV,AFE 56237,Suspended,2008-06-30T00:00:00Z
+2008-06-30T00:00:00Z,McBride,Pamela,J.,,Alameda,CA,G 85601,Surrendered,2008-06-30T00:00:00Z
+2008-06-30T00:00:00Z,Bui,Can,Quoc,,San Diego,CA,A 39900,Surrendered,2008-07-01T00:00:00Z
+2008-06-30T00:00:00Z,Heric,Thomas,M.,,Malibu,CA,A 22944,Decision,2008-06-16T00:00:00Z
+2008-07-03T00:00:00Z,Taylor,Ursula,Elisabet,,Los Angeles,CA,A 55572,Public Letter of Reprimand,2008-07-03T00:00:00Z
+2008-07-03T00:00:00Z,Phen,Lovsho,,,Brentwood,CA,A 43266,Decision,2008-07-07T00:00:00Z
+2008-07-09T00:00:00Z,Goodwin,Glenda,Darlene,,Elk Grove,CA,A 71660,Public Reprimand,2008-07-08T00:00:00Z
+2008-07-09T00:00:00Z,Khuri,Radwan,R.,,Memphis,TN,C 52066,Public Letter of Reprimand,2008-07-08T00:00:00Z
+2008-07-10T00:00:00Z,Bass,Bernard,N.,,North Hollywood,CA,G 28057,Superior Court Order/Restrictions,2008-07-08T00:00:00Z
+2008-07-10T00:00:00Z,Castellanos,Alexander,F.,,Templeton,CA,G 37303,Public Letter of Reprimand,2008-07-09T00:00:00Z
+2008-07-11T00:00:00Z,Shaw,Hollis,Earl,,Tempe,AZ,C 41457,Public Letter of Reprimand,2008-07-10T00:00:00Z
+2008-07-11T00:00:00Z,Baje,Ulysses,Yanez,,Covina,CA,A 29462,Revoked,2008-07-11T00:00:00Z
+2008-07-15T00:00:00Z,Mata,David,Joseph,,Hemet,CA,G 64183,Superior Court Order/Restrictions,2008-06-24T00:00:00Z
+2008-07-18T00:00:00Z,Chao,Stan,Hung-Ya,,Riverside,CA,G 42304,Public Letter of Reprimand,2008-07-16T00:00:00Z
+2008-07-18T00:00:00Z,Anderson,Donovan,John,,Mohave Valley,AZ,G 48061,Accusation Filed,2008-07-10T00:00:00Z
+2008-07-18T00:00:00Z,Boyd,Ralph,Otto,,Glendale,CA,G 10073,Accusation Filed,2008-07-03T00:00:00Z
+2008-07-18T00:00:00Z,Brannigan,John,,,Los Banos,CA,A 77781,Second Amended Accusation Filed,2008-07-02T00:00:00Z
+2008-07-18T00:00:00Z,Chi,Peter,Lieh-Chuan,,Tracy,CA,A 53856,Accusation Filed,2008-07-14T00:00:00Z
+2008-07-18T00:00:00Z,Goldman,Robert,,,Larkspur,CA,G 67538,Accusation Filed,2008-07-07T00:00:00Z
+2008-07-18T00:00:00Z,Li,Evelyn,Evens,,Fremont,CA,G 48660,Accusation Filed,2008-07-02T00:00:00Z
+2008-07-18T00:00:00Z,Ritchie,Rand,Cecil,,Pismo Beach,CA,G 41327,First Amended Accusation Filed,2008-07-10T00:00:00Z
+2008-07-18T00:00:00Z,Sefa-Boakye,Kofi,D.,,Chula Vista,,G 59670,Accusation Filed,2008-07-07T00:00:00Z
+2008-07-18T00:00:00Z,Silver,Daniel,Mark,,Encino,CA,C 31379,First Amended Accusation Filed,2008-07-07T00:00:00Z
+2008-07-18T00:00:00Z,Loren,Leonard,M.,,Sherman Oaks,CA,C 23374,Accusation Withdrawn,2008-07-08T00:00:00Z
+2008-07-18T00:00:00Z,Luchetti,Mary,Ellen Joan,,Smyrna,GA,G 65392,Accusation Dismissed,2008-07-11T00:00:00Z
+2008-07-18T00:00:00Z,Morgan,Frank,William,,Redlands,CA,G 53917,Accusation Withdrawn,2008-07-07T00:00:00Z
+2008-07-21T00:00:00Z,Chiu,John,Chih,,Newbury Park,CA,C 31784,Decision,2008-07-21T00:00:00Z
+2008-07-21T00:00:00Z,Kerr,Mary,Campbell,,Beverly Hill,CA,A 65874,Decision,2008-07-21T00:00:00Z
+2008-07-23T00:00:00Z,Johnson,Gilbert,E.,,Idabel,OK,CFE 29408,Revoked,2008-07-23T00:00:00Z
+2008-07-23T00:00:00Z,Mabry,Quince,Lee,,La Mesa,CA,G 52265,Surrendered,2008-07-23T00:00:00Z
+2008-07-23T00:00:00Z,Chang,David,,,Irvine,CA,A 72717,Public Reprimand,2008-07-16T00:00:00Z
+2008-07-23T00:00:00Z,Flores,Louis,Benjamin,,Northridge,CA,A 32929,Public Letter of Reprimand,2008-07-22T00:00:00Z
+2008-07-23T00:00:00Z,Espinoza,Felipe,Vinicio,,Weston,WV,A 92430,Public Letter of Reprimand,2008-07-22T00:00:00Z
+2008-07-23T00:00:00Z,Sanchez,Alfonso,R.,,Monterey Park,CA,A 14537,Automatic Cancellation Order,2008-07-23T00:00:00Z
+2008-07-24T00:00:00Z,Sannar,Elise,Michelle,,Denver,CO,A 96357,Surrendered,2008-07-24T00:00:00Z
+2008-07-24T00:00:00Z,Valcarcel,Jorge,Alberto,,Downey,CA,A 36786,Suspended,2008-07-24T00:00:00Z
+2008-07-25T00:00:00Z,Winscott,Mary,Michelle,,Tucson,AZ,A 81979,Public Reprimand,2008-07-25T00:00:00Z
+2008-07-30T00:00:00Z,Modi,Jasvant,N.,,Los Angeles,CA,A 39818,Decision,2008-07-28T00:00:00Z
+2008-07-30T00:00:00Z,Rohart,Paul,O.,,Palm Harbor,FL,C 50212,Public Letter of Reprimand,2008-07-28T00:00:00Z
+2008-07-30T00:00:00Z,Manzo,Richard,O.,,La Habra,CA,C 21941,Public Reprimand,2008-07-30T00:00:00Z
+2008-07-31T00:00:00Z,Ajigbotafe,Christopher,I.,,Bellflower,CA,A 42564,Surrendered,2008-07-31T00:00:00Z
+2008-08-01T00:00:00Z,Sack,Johannes,Reinhard,,San Diego,CA,G 48845,Surrendered,2008-08-01T00:00:00Z
+2008-08-04T00:00:00Z,Mehrizi,Nasser,,,Paramount,CA,A 48610,Decision,2008-08-04T00:00:00Z
+2008-08-05T00:00:00Z,Barker,Bruce,C.,,San Francisco,CA,G 57849,Accusation Filed,2008-07-23T00:00:00Z
+2008-08-05T00:00:00Z,Burnham,John,R.,,Laguna Beach,CA,A 20659,Accusation Filed,2008-07-16T00:00:00Z
+2008-08-05T00:00:00Z,Corbin,Frederic,H.,,Brea,CA,G 41325,First Amended Accusation Filed,2008-07-30T00:00:00Z
+2008-08-05T00:00:00Z,Cowan,Christopher,Lee,,Camas,WA,G 64589,Accusation Filed,2008-07-31T00:00:00Z
+2008-08-05T00:00:00Z,Derakhshan,Iraj,,,Charleston,WV,A 26416,Accusation Filed,2008-07-31T00:00:00Z
+2008-08-05T00:00:00Z,Ewing,Douglass,Eugene,,Santa Ana,CA,G 20110,Accusation Filed,2008-07-21T00:00:00Z
+2010-08-05T00:00:00Z,Flores,Pepito,Lim,,Hemet,CA,A 37508,Accusation & Petition to Revoke Probation,2008-07-31T00:00:00Z
+2008-08-05T00:00:00Z,Honzel,Mark,Robert,,Beverly Hills,CA,A 43785,Second Amended Accusation Filed,2008-07-16T00:00:00Z
+2008-08-05T00:00:00Z,Jones,Nolan,Carthell,,Los Angeles,CA,A 30400,Accusation & Petition to Revoke Probation,2008-07-17T00:00:00Z
+2008-08-05T00:00:00Z,Khalid,Shahper,,,Riverside,CA,A 49816,Accusation & Petition to Revoke Probation,2008-07-17T00:00:00Z
+2008-08-05T00:00:00Z,Ott,Derek,Alan,,Los Angeles,CA,A 61601,Accusation Filed,2008-07-30T00:00:00Z
+2008-08-05T00:00:00Z,Ronan,Kevin,John,,Annapolis,MD,G 77176,Accusation Filed,2008-07-23T00:00:00Z
+2008-08-05T00:00:00Z,Sack,Jeffrey,Brett,,Sarasota,FL,A 47918,Accusation Filed,2008-07-31T00:00:00Z
+2008-08-05T00:00:00Z,Wigginton,Nancy,Hunt,,Castro Valley,CA,A 76070,Accusation Filed,2008-07-17T00:00:00Z
+2008-08-05T00:00:00Z,Ziyar,Latif,,,Fresno,CA,A 55320,Accusation Filed,2008-07-30T00:00:00Z
+2008-08-08T00:00:00Z,Bains,Sartaj,Singh,,Roseville,CA,A 51579,Suspended,2008-08-07T00:00:00Z
+2008-08-08T00:00:00Z,O'Donnell,Eugene,P.,,Whittier,CA,C 27965,Surrendered,2008-08-07T00:00:00Z
+2008-08-08T00:00:00Z,Hill,David,Michael,,Encinitas,CA,G 39362,Suspended,2008-08-08T00:00:00Z
+2008-08-15T00:00:00Z,Yedidsion,Davoud,,aka David Yedidsion,Los Angeles,CA,A 38412,Decision,2008-08-13T00:00:00Z
+2008-08-15T00:00:00Z,Tahilramaney,Mona,P.,,Torrance,CA,A 38363,Decision,2008-08-08T00:00:00Z
+2008-08-15T00:00:00Z,Pearlstein,Glen,Robert,,Los Angeles,CA,A 105256,Decision,2008-08-15T00:00:00Z
+2008-08-15T00:00:00Z,Shima,Gary,James,,San Marcos,CA,G 14742,Decision,2008-08-15T00:00:00Z
+2008-08-19T00:00:00Z,Cohen,Marc,Singman,,Gainesville,FL,GFE 36400,Public Letter of Reprimand,2008-08-18T00:00:00Z
+2008-08-20T00:00:00Z,Prakash,Anand,,,Corona,CA,A 26623,Public Reprimand,2008-08-20T00:00:00Z
+2008-08-20T00:00:00Z,Price,Michael,Richard,,Brawley,CA,G 36055,Public Reprimand,2008-08-20T00:00:00Z
+2008-08-20T00:00:00Z,Sura,Anjana,Sailesh,,Montebello,CA,A 30390,Decision,2008-08-20T00:00:00Z
+2008-08-21T00:00:00Z,Roberg,Bradford,Churchill,,Crystal Lake,IL,G 43905,Suspended,2008-08-21T00:00:00Z
+2008-08-21T00:00:00Z,Holland,Sundy,Rae,,Lynwood,WA,C 52693,Suspended,2008-08-21T00:00:00Z
+2008-08-21T00:00:00Z,Taaid,Hamid,,,Midland,MI,G 55732,Suspended,2008-08-21T00:00:00Z
+2008-08-22T00:00:00Z,Bararsani,Mohammad,,,Manhattan Beach,CA,A 35392,Decision,2008-08-21T00:00:00Z
+2008-08-22T00:00:00Z,Richmond,Harvey,Sheldon,,Beverely Hills,CA,C 40026,Public Reprimand,2008-08-21T00:00:00Z
+2008-08-22T00:00:00Z,Schafer,Jeffry,B.,,Coronado,CA,G 36897,Decision,2008-08-21T00:00:00Z
+2008-08-22T00:00:00Z,Nishiguchi,Don,Jerry,,Valencia,CA,G 55628,Public Reprimand,2008-08-22T00:00:00Z
+2008-08-22T00:00:00Z,Lessler,Paul,A.,,Newport Beach,CA,G 11583,Surrendered,2008-08-21T00:00:00Z
+2008-08-22T00:00:00Z,Barker,Bruce,C.,,San Francisco,CA,G 57849,Suspended,2008-08-22T00:00:00Z
+2008-08-25T00:00:00Z,Montenegro,Jose,Maria,,Oceanside,CA,C 35541,Decision,2008-08-25T00:00:00Z
+2008-08-27T00:00:00Z,Brusett,Kent,Alan,,Redding,CA,G 86006,Decision,2008-08-27T00:00:00Z
+2008-08-27T00:00:00Z,Kenaga,James,C.,,Santee,CA,A 28343,Surrendered,2008-08-27T00:00:00Z
+2008-08-27T00:00:00Z,Parikh,Bipin,J.,,Williston,NY,A 38353,Suspended,2008-08-27T00:00:00Z
+2008-08-28T00:00:00Z,Buzard,Kurt,Andre,,Henderson,NV,GFE 45325,Public Reprimand,2008-08-27T00:00:00Z
+2008-08-28T00:00:00Z,Padilla,Marlon,D.,,Dallas,TX,G 57472,Public Reprimand,2008-08-27T00:00:00Z
+2008-09-03T00:00:00Z,Edwards,Robert,Norfleet,,Klamath Falls,OR,C 39176,Revoked,2008-09-03T00:00:00Z
+2008-09-03T00:00:00Z,Owen,David,C.,,Torrance,CA,A 17160,Public Reprimand,2008-09-01T00:00:00Z
+2008-09-04T00:00:00Z,Yeung,Norman,Yuk Lam,,Sacramento,CA,G 84409,Decision,2008-09-04T00:00:00Z
+2008-09-05T00:00:00Z,Hoa,Don,Phong,,Miami,FL,A 52067,Public Letter of Reprimand,2008-09-04T00:00:00Z
+2008-09-05T00:00:00Z,Smith,Chadwick,F.,,Los Angeles,CA,C 22440,Public Reprimand,2008-09-04T00:00:00Z
+2008-09-11T00:00:00Z,Lowder,Harold,Edward,,Van Nuys,CA,G 48264,Public Letter of Reprimand,2008-09-09T00:00:00Z
+2008-09-11T00:00:00Z,Wesely,Andrew,Claudius,,Reno,NV,G 78000,Public Letter of Reprimand,2008-09-09T00:00:00Z
+2008-09-12T00:00:00Z,Ziemba,Jason,Scott,,Valencia,CA,A 68372,Superior Court Order/Restrictions,2008-09-10T00:00:00Z
+2008-09-12T00:00:00Z,Chung,Wayne,,,San Francisco,CA,A 63888,Decision,2008-09-11T00:00:00Z
+2008-09-18T00:00:00Z,Yung,Sham,,,Monterey Park,CA,A 33830,Revoked,2008-09-18T00:00:00Z
+2008-09-19T00:00:00Z,Marks,D.,Lawrence,,South Laguna,CA,C 35755,Surrendered,2008-09-19T00:00:00Z
+2008-09-19T00:00:00Z,Tsirbas,Angelo,,,Los Angeles,CA,,Statement of Issues Filed,2008-09-11T00:00:00Z
+2009-09-19T00:00:00Z,Randall,Kevin,,,Merced,CA,,Statement of Issues Filed,2008-09-15T00:00:00Z
+2008-09-19T00:00:00Z,Aram,Davar,,,Chino Hills,CA,A 46392,Accusation Filed,2008-09-10T00:00:00Z
+2008-09-19T00:00:00Z,Corona,Paul,Daniel,,Laguna Niguel,CA,G 69171,Accusation Filed,2008-09-05T00:00:00Z
+2008-09-19T00:00:00Z,Grant,John,Francis,,Frazier Park,CA,A 63101,Accusation Filed,2008-09-05T00:00:00Z
+2008-09-19T00:00:00Z,Gyi,Khin,Khin,,Culver City,CA,G 62062,Accusation Filed,2008-09-17T00:00:00Z
+2008-09-19T00:00:00Z,Lake,Gerald,Eugene,,San Diego,CA,G 20748,Accusation Filed,2008-09-05T00:00:00Z
+2008-09-19T00:00:00Z,Maddela,Evelyn,B.,,Fresno,CA,C 42730,Accusation Filed,2008-09-04T00:00:00Z
+2008-09-19T00:00:00Z,Magone,Margaret,Ann,,San Diego,CA,G 69985,Accusation Filed,2008-09-18T00:00:00Z
+2008-09-19T00:00:00Z,Mehlmauer,Marilyn,Ann,,Pasadena,CA,G 35270,Accusation Filed,2008-09-16T00:00:00Z
+2008-09-19T00:00:00Z,Meoni,Jill,Siren,,Coronado,CA,A 55229,Accusation Filed,2008-09-15T00:00:00Z
+2008-09-19T00:00:00Z,Neger,Robert,Edmond,,Burlingame,CA,A 26741,Accusation Filed,2008-09-09T00:00:00Z
+2008-09-19T00:00:00Z,Ramer,Cyril,M.,,San Francisco,CA,G 14293,Accusation Filed,2008-09-04T00:00:00Z
+2008-09-19T00:00:00Z,Taaid,Hamid,,,Midland,MI,G 55732,Accusation Filed,2008-09-17T00:00:00Z
+2008-09-19T00:00:00Z,Goings,Conchita,Yatar,,Cerritos,CA,A 41071,First Amended Accusation Filed,2008-09-12T00:00:00Z
+2008-09-19T00:00:00Z,Arenas,Francis,,,Bakersfield,CA,A 105582,Decision,2008-09-19T00:00:00Z
+2008-09-19T00:00:00Z,Basmajian,Hrayr,Georges,,West Hollywood,CA,A 105584,Decision,2008-09-19T00:00:00Z
+2008-09-19T00:00:00Z,Carandang,Francis,Raymund,,Palo Alto,CA,A 105586,Decision,2008-09-19T00:00:00Z
+2008-09-19T00:00:00Z,Thompson,Thomas,Payson,,Ventura,CA,A 105604,Decision,2008-09-19T00:00:00Z
+2008-09-24T00:00:00Z,Hakhamimi,Kamron,Kenneth,,Studio City,CA,A 74169,Superior Court Order/Restrictions,2008-08-15T00:00:00Z
+2008-09-24T00:00:00Z,McCall,Bruce,Burton,,San Francisco,CA,G 79333,Suspended,2008-09-19T00:00:00Z
+2008-09-25T00:00:00Z,Brown,Kevin,Antario,,Los Angeles,CA,G 66387,Superior Court Order/Restrictions,2008-09-09T00:00:00Z
+2008-09-25T00:00:00Z,Jenkins,Michael,Hawley,,Portland,OR,A 22627,Revoked,2008-09-25T00:00:00Z
+2008-09-25T00:00:00Z,Hong,Gregory,Kijong,,Los Angeles,CA,A 53990,Decision,2008-09-25T00:00:00Z
+2008-09-26T00:00:00Z,Vallejo,Arthur,,,West Covina,CA,G 64836,Revoked,2008-09-26T00:00:00Z
+2008-09-26T00:00:00Z,Brown,Kevin,Antario,,Los Angeles,CA,G 66387,Superior Court Order/Restrictions,2008-09-25T00:00:00Z
+2008-09-26T00:00:00Z,Wallace,Elizabeth,Ann,,Pomona,CA,G 86801,Automatic Cancellation Order,2008-09-26T00:00:00Z
+2008-09-29T00:00:00Z,Coates,Reginald,Alvin,,West Hills,CA,G 37252,Decision,2008-09-29T00:00:00Z
+2008-09-29T00:00:00Z,Larkin,David,,,Los Alamitos,CA,C 40016,Revoked,2008-09-26T00:00:00Z
+2008-09-29T00:00:00Z,Zweifach,Mark,,,La Jolla,CA,G 48626,Suspended,2008-09-24T00:00:00Z
+2008-09-30T00:00:00Z,Fiks,Vladimir,B.,,Portland,OR,A 55514,Public Reprimand,2008-09-23T00:00:00Z
+2008-09-30T00:00:00Z,Rosenberg,Mario,Z.,,Beverly Hills,CA,A 30941,Superior Court Order/Restrictions,2008-09-26T00:00:00Z
+2008-10-02T00:00:00Z,Ali,Wazir,N.,,Rowland Heights,CA,G 83188,Superior Court Order/Restrictions,2008-09-30T00:00:00Z
+2008-10-02T00:00:00Z,Ramirez,Alfredo,Carlos,,Tucson,AZ,AFE 37830,Suspended,2008-10-01T00:00:00Z
+2008-10-02T00:00:00Z,Suh,Jin,Ho,,Rowland Heights,CA,G 72008,Accusation Filed,2008-09-22T00:00:00Z
+2008-10-02T00:00:00Z,Ho,Joseph,Manhei,,Victorville,CA,G 73155,Accusation Filed,2008-09-23T00:00:00Z
+2008-10-02T00:00:00Z,Parikh,Bipin,J.,,Williston Park,NY,A 38353,Accusation Filed,2008-09-24T00:00:00Z
+2008-10-02T00:00:00Z,Houten,Lorne,,,Woodland Hills,CA,A 39450,Third Amended Accusation Filed,2008-09-23T00:00:00Z
+2008-10-02T00:00:00Z,Jung,James,Man-Gil,,Los Angeles,CA,A 48898,First Amended Accusation Filed,2008-09-30T00:00:00Z
+2008-10-02T00:00:00Z,Keung,Yi-Kong,,,Clemmons,NC,C 53429,Statement of Issues Withdrawn,2008-09-24T00:00:00Z
+2008-10-02T00:00:00Z,Lahmeyer,Henry,Walter,,Northfield,IL,G 40105,Public Letter of Reprimand,2008-10-01T00:00:00Z
+2010-10-03T00:00:00Z,Gescuk,Bryan,Douglas,,San Carlos,CA,A 65762,Decision,2008-10-03T00:00:00Z
+2008-10-03T00:00:00Z,Mittendorff,William,John,,San Diego,CA,G 44222,Public Reprimand,2008-10-03T00:00:00Z
+2008-10-03T00:00:00Z,Omidi,Michael,,,Los Angeles,CA,A 84519,Decision,2008-10-03T00:00:00Z
+2008-10-08T00:00:00Z,Mull,Brendan,Robert,,Anaheim Hills,CA,A 74733,Decision,2008-10-08T00:00:00Z
+2008-10-08T00:00:00Z,Varela,Donna,Marie,,Torrance,CA,A 105769,Decision,2008-10-08T00:00:00Z
+2008-10-08T00:00:00Z,Yu,Steve,Pyong,,Los Angeles,CA,A 105773,Decision,2008-10-08T00:00:00Z
+2008-10-09T00:00:00Z,Hill,David,Michael,,San Diego,CA,G 39362,Surrendered,2008-10-09T00:00:00Z
+2008-10-10T00:00:00Z,Casey,Sean,Owen,,Minnetonka,MN,G 87280,Public Letter of Reprimand,2008-10-08T00:00:00Z
+2008-10-10T00:00:00Z,Habbestad,Robert,,,Los Angeles,CA,A 35077,Public Reprimand,2008-10-10T00:00:00Z
+2008-10-10T00:00:00Z,Aboulhosn,Kamal,Fouad,,Yakima,WA,CFE 40080,Revoked,2008-09-08T00:00:00Z
+2008-10-10T00:00:00Z,Morgan,Charles,Dignam,,Oshkosh,WI,G 27598,Suspended,2008-10-09T00:00:00Z
+2008-10-10T00:00:00Z,Lin,Gene,Washington,,San Diego,CA,A 63944,Surrendered,2008-10-10T00:00:00Z
+2008-10-10T00:00:00Z,Mukerji,Sasanka,,,Napa,CA,A 16848,Revoked,2008-10-10T00:00:00Z
+2008-10-14T00:00:00Z,Sherman,Stephen,H.,,Arcadia,CA,G 15834,Suspended,2008-10-14T00:00:00Z
+2008-10-14T00:00:00Z,Chung,Wayne,,,San Francisco,CA,A 63888,Superior Court Order/Stay,2008-10-08T00:00:00Z
+2008-10-15T00:00:00Z,DeCarlo,Bruce,Phillip,,Long Beach,CA,C 51535,Public Reprimand,2008-10-07T00:00:00Z
+2008-10-15T00:00:00Z,Goldman,Robert,,,Larkspur,CA,G 67538,Revoked,2008-10-15T00:00:00Z
+2008-10-21T00:00:00Z,Allen,John,Warner,,El Cajon,CA,C 37706,Public Reprimand,2008-10-16T00:00:00Z
+2008-10-21T00:00:00Z,Chirban,Angelo,Louis,,West Bountiful,UT,G 86550,Accusation Filed,2008-10-01T00:00:00Z
+2008-10-21T00:00:00Z,McBay,Michael,Henry Cecil,,Los Angeles,CA,G 63748,Accusation Filed,2008-10-01T00:00:00Z
+2008-10-21T00:00:00Z,Patel,Bakulkumar,Kantilal,,Foothill Ranch,CA,A 45267,Accusation Filed,2008-10-02T00:00:00Z
+2008-10-21T00:00:00Z,Waxman,Samuel,,,West Hollywood,CA,A 28064,Accusation Filed,2008-10-02T00:00:00Z
+2008-10-21T00:00:00Z,King,David,Howe,,Darien,IL,G 81262,Accusation Filed,2008-10-07T00:00:00Z
+2008-10-21T00:00:00Z,Roberg,Bradford,Churchill,,Crystal Lake,IL,G 43905,Accusation Filed,2008-10-08T00:00:00Z
+2008-10-21T00:00:00Z,Tan,Kong-Meng,,,San Rafael,CA,G 29022,Accusation Filed,2008-10-08T00:00:00Z
+2008-10-21T00:00:00Z,Wasserman,Matthew,William,,Katy,TX,A 86109,Accusation Filed,2008-10-08T00:00:00Z
+2008-10-21T00:00:00Z,Ames,Bruce,Anthony,Jr.,Medford,OR,A 97046,Accusation Filed,2008-10-09T00:00:00Z
+2008-10-21T00:00:00Z,Holland,Sundy,Rae,,Lynwood,WA,C 52693,Accusation Filed,2008-10-09T00:00:00Z
+2008-10-21T00:00:00Z,Doane,Gregory,Cameron,,Palmdale,CA,G 79473,Accusation Dismissed,2008-10-10T00:00:00Z
+2008-10-21T00:00:00Z,Resnick,Lawrence,Harold,,Santa Monica,CA,G 16871,Accusation Dismissed,2008-10-14T00:00:00Z
+2008-10-22T00:00:00Z,Johnson,James,Bruce,,Metairie,LA,C 50403,Suspended,2008-10-20T00:00:00Z
+2008-10-24T00:00:00Z,Smolko,Milan,John,,Summit,PA,G 37798,Revoked,2008-10-24T00:00:00Z
+2008-10-27T00:00:00Z,McBay,Michael,Henry Cecil,,Los Angeles,CA,G 63748,Superior Court Order/Restrictions,2008-10-27T00:00:00Z
+2008-10-31T00:00:00Z,Leyton,Matthew,Neal,,Ventura,CA,A 86282,Public Letter of Reprimand,2008-10-29T00:00:00Z
+2008-11-03T00:00:00Z,Kuznetsky,Charles,A.,,Reseda,IL,C 9890,Revoked,2008-11-03T00:00:00Z
+2008-11-03T00:00:00Z,DeCarlo,Bruce,Phillip,,Long Beach,CA,C 51535,Public Reprimand,2008-10-07T00:00:00Z
+2008-11-03T00:00:00Z,Mecum,Robert,Andrew,,Whittier,CA,G 78258,Public Reprimand,2008-11-03T00:00:00Z
+2008-11-04T00:00:00Z,McBay,Michael,Henry Cecil,,Los Angeles,CA,G 63748,Surrendered,2008-11-04T00:00:00Z
+2008-11-04T00:00:00Z,Regis,Bonifacio,B.,,Apple Valley,CA,A 33165,Surrendered,2008-11-04T00:00:00Z
+2008-11-04T00:00:00Z,Somers,Howard,B.,,Coronado,CA,C 51096,Public Letter of Reprimand,2008-11-03T00:00:00Z
+2008-11-04T00:00:00Z,Wahab,Muhammed,Abdul,,Los Angeles,CA,A 49213,Public Reprimand,2008-11-03T00:00:00Z
+2008-11-04T00:00:00Z,Kurdy,Yousef,,,San Diego,CA,A 36827,Accusation & Petition to Revoke Probation,2008-10-17T00:00:00Z
+2008-11-04T00:00:00Z,Starks,Wayne,Dion,,Redlands,CA,C 50845,Accusation Filed,2008-10-17T00:00:00Z
+2008-11-04T00:00:00Z,Gleason,Peter,Charles,,Annapolis,MD,G 87635,Accusation Filed,2008-10-20T00:00:00Z
+2008-11-04T00:00:00Z,Serviss,Allan,R.,,Walton,NY,G 53275,Accusation Filed,2008-10-21T00:00:00Z
+2008-11-04T00:00:00Z,McCleve,Bryan,Richard,,Aptos,CA,G 75967,Accusation Filed,2008-10-23T00:00:00Z
+2008-11-04T00:00:00Z,Turner,Ernest,Alvin,,Lebanon,TN,C 38429,Accusation Filed,2008-10-24T00:00:00Z
+2008-11-04T00:00:00Z,Dyke,Gregory,John Van,,Mission Viejo,CA,A 51101,Accusation Filed,2008-10-24T00:00:00Z
+2008-11-04T00:00:00Z,Chung,Yong,Wun,,Santa Ana,CA,A 38317,Accusation Filed,2008-10-28T00:00:00Z
+2008-11-04T00:00:00Z,Breen,Peter,Herschel,,Orange,CA,G 78104,Accusation Filed,2008-10-30T00:00:00Z
+2008-11-04T00:00:00Z,Pena,Adela,P.,,Paramount,CA,A 37943,Accusation & Petition to Revoke Probation,2008-10-31T00:00:00Z
+2008-11-04T00:00:00Z,Hakhamimi,Kamron,Kenneth,,Studio City,CA,A 74169,First Amended Accusation Filed,2008-09-23T00:00:00Z
+2008-11-04T00:00:00Z,Derbes,Linda,Kaufman,,Honolulu,HI,G 81106,Second Amended Accusation Filed,2008-10-27T00:00:00Z
+2008-11-04T00:00:00Z,Sterner,Robert,Fulton,,San Diego,CA,G 51708,First Amended Accusation Filed,2008-10-27T00:00:00Z
+2008-11-04T00:00:00Z,Broderick,David,Michael,,Sacramento,CA,C 42099,Accusation Dismissed,2008-10-17T00:00:00Z
+2008-11-06T00:00:00Z,Anderson,Paul,William,,Hamilton,MT,G 61583,Surrendered,2008-11-06T00:00:00Z
+2008-11-06T00:00:00Z,Lewis,John,Denman,,Tucson,AZ,G 39949,Public Letter of Reprimand,2008-11-05T00:00:00Z
+2008-11-07T00:00:00Z,Cabrera,Rolando,,,Salinas,CA,A 75736,Decision,2008-11-07T00:00:00Z
+2008-11-10T00:00:00Z,Kinzie,Daniel,H.,IV,Midland,TX,G 11801,Revoked,2008-11-10T00:00:00Z
+2008-11-13T00:00:00Z,Cowan,Christopher,Lee,,Camas,WA,G 64589,Revoked,2008-11-13T00:00:00Z
+2008-11-13T00:00:00Z,Kellett,Richard,Stanley,,Greenville,SC,A 74713,Revoked,2008-11-13T00:00:00Z
+2008-11-13T00:00:00Z,Agee,Douglas,Moore,,Riverside,CA,AFE 28581,Revoked,2008-10-31T00:00:00Z
+2008-11-13T00:00:00Z,Newhard,Horace,Bixby,,Novato,CA,C 35133,Superior Court Order/Restrictions,2008-11-12T00:00:00Z
+2008-11-19T00:00:00Z,Forest-Lam,James,Way,,Suffolk,VA,G 70252,Public Letter of Reprimand,2008-11-18T00:00:00Z
+2008-11-19T00:00:00Z,Guzon,Joaquin,Pascual,,Chesterfield,MO,C 51373,Public Letter of Reprimand,2008-11-18T00:00:00Z
+2008-11-20T00:00:00Z,Reiss,Jeffrey,Ronald,,Marina Del Rey,,A 36946,Decision,2008-11-20T00:00:00Z
+2008-11-20T00:00:00Z,Malik,Michael,Yusef Abdul,,Los Angeles,CA,A 69726,Accusation & Petition to Revoke Probation,2008-11-13T00:00:00Z
+2008-11-20T00:00:00Z,Sandy,Victor,Hugo A.,,Riverside,CA,A 33435,Accusation Filed,2008-10-31T00:00:00Z
+2008-11-20T00:00:00Z,Huang,Milton,Peechuan,,Scotts Valley,CA,C 50791,Accusation Filed,2008-11-06T00:00:00Z
+2008-11-20T00:00:00Z,Newman,Jeffrey,L.,,Vista,CA,A 43808,Accusation Filed,2008-11-06T00:00:00Z
+2008-11-20T00:00:00Z,O'Neil,Kelly,James,,Temecula,CA,A 36888,Accusation Filed,2008-11-13T00:00:00Z
+2008-11-20T00:00:00Z,Lee,Michael,Hyun-Tae,,Sarasota,FL,G 86181,Accusation Filed,2008-11-14T00:00:00Z
+2008-11-20T00:00:00Z,Marks,Debbie,Louise,,Saint Helena,CA,G 58193,Accusation Filed,2008-11-14T00:00:00Z
+2008-11-20T00:00:00Z,Popplewell,James,R.,,Stockton,CA,G 42377,Accusation Filed,2008-11-14T00:00:00Z
+2008-11-20T00:00:00Z,Safari,C.,Hamid Reza,,Fresno,CA,A 53849,First Amended Accusation Filed,2008-11-03T00:00:00Z
+2008-11-24T00:00:00Z,Sabatini,John,Robert,,Torrance,CA,G 31402,Public Reprimand,2008-11-24T00:00:00Z
+2008-11-24T00:00:00Z,Bryan,Bruce,Jackson,,Pinetop,AZ,G 53799,Suspended,2008-11-24T00:00:00Z
+2008-11-24T00:00:00Z,Nguyen,Li,Quang,,Westminster,CA,G 63837,Revoked,2008-11-24T00:00:00Z
+2008-11-24T00:00:00Z,Sheen,Fu,Jen,,Knoxville,TN,A 36165,Revoked,2008-11-24T00:00:00Z
+2008-12-01T00:00:00Z,Ware,Dana,Suzanne,,Chester,CA,G 55407,Suspended,2008-11-26T00:00:00Z
+2008-12-01T00:00:00Z,Bolanos,Jose,Raul,,Los Gatos,CA,G 52463,Superior Court Order/Restrictions,2008-11-25T00:00:00Z
+2008-12-02T00:00:00Z,In,George,Chitham,,Los Angeles,CA,A 48565,Accusation Filed,2008-11-17T00:00:00Z
+2008-12-02T00:00:00Z,Sherman,Stephen,H.,,Arcadia,CA,G 15834,Accusation Filed,2008-11-17T00:00:00Z
+2008-12-02T00:00:00Z,McClain,Tracie,J.,,Van Nuys,CA,A 68968,Accusation Filed,2008-11-21T00:00:00Z
+2008-12-02T00:00:00Z,Sadeghi,Hossein,M.,,San Diego,CA,A 60751,Accusation Filed,2008-11-21T00:00:00Z
+2008-12-04T00:00:00Z,Rundell,Michael,Howard,,Bakersfield,CA,A 96890,Automatic Cancellation Order,2008-12-04T00:00:00Z
+2008-12-10T00:00:00Z,Poulos,Evangelos,George,,Miami Lakes,FL,G 87524,Public Letter of Reprimand,2008-12-09T00:00:00Z
+2008-12-10T00:00:00Z,Lee,Tan,Shin,,Rowland Heights,CA,A 50001,Surrendered,2008-12-10T00:00:00Z
+2008-12-11T00:00:00Z,Decunto,Mario,Julio,,Los Angeles,CA,A 32867,Surrendered,2008-12-11T00:00:00Z
+2008-12-12T00:00:00Z,Rashkin,Alan,,,Thousand Oaks,CA,G 38481,Public Reprimand,2008-12-08T00:00:00Z
+2008-12-12T00:00:00Z,Archie,Carol,Louise,,Torrance,CA,G 60046,Public Reprimand,2008-12-05T00:00:00Z
+2008-12-12T00:00:00Z,Leung,Raymond,WP,,Pasadena,CA,G 48262,Public Reprimand,2008-12-08T00:00:00Z
+2008-12-15T00:00:00Z,Yvorchuk,William,Alexander,,West Fargo,ND,G 55064,Revoked,2008-12-15T00:00:00Z
+2008-12-16T00:00:00Z,Cimoch,Paul,Joseph,,Fountain Valley,CA,A 46088,Accusation Filed,2008-12-01T00:00:00Z
+2008-12-16T00:00:00Z,Tran,Binh,To,,Torrance,CA,A 79716,Accusation Filed,2008-12-01T00:00:00Z
+2008-12-16T00:00:00Z,Riffel,Sergio,Roberto,,Brunswick,ME,A 41494,Accusation Filed,2008-12-02T00:00:00Z
+2008-12-16T00:00:00Z,Escalera,Robert,Louis,,Cudahy,CA,A 72136,Accusation Filed,2008-12-03T00:00:00Z
+2008-12-16T00:00:00Z,Ziemba,Jason,Scott,,Valencia,CA,A 68372,Accusation Filed,2008-12-03T00:00:00Z
+2008-12-16T00:00:00Z,Savit,Russ,Marc,,Coeur D' Alene,ID,G 52381,Public Letter of Reprimand,2008-12-11T00:00:00Z
+2008-12-17T00:00:00Z,Flores,Pepito,Lim,,Hemet,CA,A 37508,Surrendered,2008-12-17T00:00:00Z
+2008-12-17T00:00:00Z,Khalid,Shahper,,,Riverside,CA,A 49816,First Amended Accusation & Petition to Revoke Probation,2008-12-11T00:00:00Z
+2008-12-18T00:00:00Z,Park,Chong,Hee,,Livingston,NJ,A 38230,Suspended,2008-12-18T00:00:00Z
+2008-12-19T00:00:00Z,Esperanza,Bonifacio,C.,,Poway,CA,A 35268,Decision,2008-12-18T00:00:00Z
+2008-12-19T00:00:00Z,Robbins,Paul,C.,,Santa Clara,CA,GFE 9189,Decision,2008-12-18T00:00:00Z
+2008-12-19T00:00:00Z,Andrews,Thomas,James,,Redding,CA,G 79955,Decision,2008-12-19T00:00:00Z
+2008-12-19T00:00:00Z,Taylor,John,Nicholas,,Palm Desert,CA,A 90426,Decision,2008-12-19T00:00:00Z
+2008-12-19T00:00:00Z,Serviss,Allan,R.,,Walton,NY,G 53275,Surrendered,2008-12-18T00:00:00Z
+2008-12-22T00:00:00Z,Loya,Rene,Daniel,,Bonita,CA,A 38377,Public Reprimand,2008-12-22T00:00:00Z
+2008-12-22T00:00:00Z,Saks,Lawrence,,,Torrance,CA,G 36859,Revoked,2008-12-22T00:00:00Z
+2008-12-22T00:00:00Z,Mitchell,Thomas,Evans,Jr.,Pasadena,CA,G 54207,Suspended,2008-12-22T00:00:00Z
+2008-12-29T00:00:00Z,Schafle,Michael,F.,,Fortuna,CA,C 42249,Decision,2008-12-24T00:00:00Z
+2008-12-29T00:00:00Z,Pierce,John,Winthrop,,San Francisco,CA,G 45225,Public Reprimand,2008-12-24T00:00:00Z
+2008-12-29T00:00:00Z,Howard,Degrasia,Anne,,Bakersfield,CA,G 49333,Public Reprimand,2008-12-24T00:00:00Z
