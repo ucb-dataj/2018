@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>More fun with R</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="markdown github">
+
+	<header class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<nav role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">J298 Data Journalism</a>
+				</div> <!-- /.navbar-header -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Class notes<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="week1.html">What is data?</a></li>
+								<li><a href="week2.html">Types of stories</a></li>
+								<li><a href="week3.html">Working with spreadsheets</a></li>
+								<li><a href="week4.html">Acquiring, cleaning, and formatting data</a></li>
+								<li><a href="week5.html">R, RStudio, and the tidyverse</a></li>
+								<li><a href="week6.html">Data journalism in the tidyverse</a></li>
+								<li><a href="week7.html">Don't let the data lie to you</a></li>
+								<li><a href="week8.html">Databases and SQL</a></li>
+								<li><a href="week9.html">Finding stories using maps</a></li>
+								<li><a href="week10.html">Maps meet databases</a></li>
+								<li><a href="week11.html">More PostGIS</a></li>
+								<li><a href="week12.html">R practice</a></li>
+								<li><a href="week13.html">PostGIS practice</a></li>
+								<li><a href="week14.html">More fun with R</a></li>
+							</ul>
+						</li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="datasets.html">Data</a></li>
+						<li><a href="questions.html">If you get stuck</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Email instructors<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="mailto:p.aldhous@gmail.com">Peter Aldhous</a></li>
+								<li><a href="mailto:abh@berkeley.edu">Amanda Hickman</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</div> <!-- /.navbar-header -->
+	</header>
+	<div class="container all">
+
+<h1 id="more-fun-with-r-(and-qgis)"><a name="more-fun-with-r-(and-qgis)" href="#more-fun-with-r-(and-qgis)"></a>More fun with R (and QGIS)</h1><p>The goal of today’s class is to show you some more advanced teachniques in R, beyond using <strong>dplyr</strong> for our basic operations with data:</p><ul>
+<li><p><strong>Sort:</strong> Largest to smallest, oldest to newest, alphabetical etc.</p>
+</li><li><p><strong>Filter:</strong> Select a defined subset of the data.</p>
+</li><li><p><strong>Summarize/Aggregate:</strong> Deriving one value from a series of other values to produce a summary statistic. Examples include: count, sum, mean, median, maximum, minimum etc. Often you’ll <strong>group</strong> data into categories first, and then aggregate by group.</p>
+</li><li><p><strong>Join:</strong> Merging entries from two or more datasets based on common field(s), e.g. unique ID number, last name and first name.</p>
+</li></ul><p>The examples below have been chosen to reflect some of the problems encountered in students’ project work. I don’t suggest trying to follow along today, but rather focus on understanding what I show you. You can work through the examples at your leisure, or modify them to apply to your project. To run the code, you will need to install any required packages that are not already in listed in your RStudio <code>Packages</code> tab.</p><p>The message from thesse examples is that R is an incredibly powerful tool, capable of performing just about any analysis or data processing task you can imagine. Once you get confident in R, you’ll get used to looking for code examples and tutorials to solve the problems you encounter when working with data. That’s how I learned everything outlined below.</p><p>If you’re not sure what you are doing, however, seek help! The <a href="https://www.ire.org/resource-center/listservs/subscribe-nicar-l/">NICAR listserv</a>, the main online discussion forum for data journalists, is a great place to start.</p><h3 id="the-data-we-will-use"><a name="the-data-we-will-use" href="#the-data-we-will-use"></a>The data we will use</h3><p>Some of the data will be loaded using web <a href="https://en.wikipedia.org/wiki/Web_API">Application Programming Interfaces</a> that are set up to provide data on demand online.</p><p>The rest of the data is <a href="data/week14.zip">here</a>; unzip the folder and place it on your desktop. It contains the following folders and files:</p><ul>
+<li><p><code>ca_discipline</code> Folder containing multiple CSV files, one for each each, detailing disciplinary alerts and actions issued by the Medical Board of California from 2008 to 2017. Processed from downloads available <a href="http://www.mbc.ca.gov/Publications/Disciplinary_Actions/">here</a>. Each file contains the following variables:</p>
+<ul>
+<li><code>alert_date</code> Date alert issued.</li><li><code>last_name</code> Last name of doctor/health care provider.</li><li><code>first_name</code> First name of doctor/health care provider.</li><li><code>middle_name</code> Middle/other names.</li><li><code>name_suffix</code> Name suffix (Jr., II etc)</li><li><code>city</code> City of practice location.</li><li><code>state</code> State of practice location.</li><li><code>license</code> California medical license number.</li><li><code>action_type</code> Type of action.</li><li><code>action_date</code> Date of action.</li></ul>
+</li><li><p><code>ca_tracts</code> Shapefile of Census tracts in California, from the <a href="https://www.census.gov/geo/maps-data/data/tiger-line.html">US Census Bureau</a>.</p>
+</li><li><p><code>oakland_eei.csv</code> Data on educational attainment of children from low-income families (those qualifying for free or reduced price lunch) for schools in Oakland in 2015, originally compiled by <a href="http://www.educationcities.org/">Education Cities</a> for the <a href="https://www.educationequalityindex.org/">Education Equality Index</a>, and processed/simplified for this class (there is more data available). Contains the following variables:</p>
+<ul>
+<li><code>school_name</code></li><li><code>eei_score</code> School performance, based on tests for all subjects and grades, on a 0-100 scale.</li><li><code>charter</code> Is the school a charter school? <code>N</code> or <code>Y</code>.</li><li><code>pc_black</code> <code>pc_white</code> <code>pc_hispanic</code> Percent of students from each of these racial/ethnic groups.</li><li><code>enroll_100</code> Total number of students at the school, in multiples of 100.</li><li><code>pc_fr_lunch</code> Percentage of students on free or reduced price lunch.</li></ul>
+</li></ul><h3 id="setting-up"><a name="setting-up" href="#setting-up"></a>Setting up</h3><p>As usual, open RStudio, create a new script, save it into the folder with the data for this class, then set your working directory to the same folder.</p><h3 id="reading-in-multiple-files,-combining-into-a-single-data-frame"><a name="reading-in-multiple-files,-combining-into-a-single-data-frame" href="#reading-in-multiple-files,-combining-into-a-single-data-frame"></a>Reading in multiple files, combining into a single data frame</h3><p>Often data comes in a series of files, which you need to read into R and combine into a single data frame. This can be achieved using a <strong>for loop</strong>, a useful programming trick that allows you to iterate through a list of items, performing the same series of actions on each item. To obtain a single data frame with all the Medical Board of Califoria disciplinary actions from 2008 to 2017, we need to read in each file, and append it to the same data frame.</p><p>This is how to do it:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># required packages
+library(readr)
+library(dplyr)
+
+# list files
+files &amp;lt;- list.files(&quot;ca_discipline&quot;)
+
+# create empty data frame
+ca_discipline &amp;lt;- data_frame()
+
+# loop to read in files, and append them to that data frame
+for (f in files) {
+  print(f)
+  tmp &amp;lt;- read_csv(paste0(&quot;ca_discipline/&quot;,f), col_types = cols(
+    .default = col_character(),
+    alert_date = col_datetime(),
+    action_date = col_datetime()))
+  ca_discipline &amp;lt;- bind_rows(ca_discipline,tmp)
+}
+
+# cleanup
+rm(tmp,files,f)
+</code></pre>"><span class="hljs-comment"># required packages</span>
+<span class="hljs-keyword">library</span>(readr)
+<span class="hljs-keyword">library</span>(dplyr)
+
+<span class="hljs-comment"># list files</span>
+files &lt;- list.files(<span class="hljs-string">"ca_discipline"</span>)
+
+<span class="hljs-comment"># create empty data frame</span>
+ca_discipline &lt;- data_frame()
+
+<span class="hljs-comment"># loop to read in files, and append them to that data frame</span>
+<span class="hljs-keyword">for</span> (f <span class="hljs-keyword">in</span> files) {
+  print(f)
+  tmp &lt;- read_csv(paste0(<span class="hljs-string">"ca_discipline/"</span>,f), col_types = cols(
+    .default = col_character(),
+    alert_date = col_datetime(),
+    action_date = col_datetime()))
+  ca_discipline &lt;- bind_rows(ca_discipline,tmp)
+}
+
+<span class="hljs-comment"># cleanup</span>
+rm(tmp,files,f)
+</code></pre><p><strong>For loops</strong> in R have this general format:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>for (item in list) {
+    # Do stuff involving each item
+}
+</code></pre>"><span class="hljs-keyword">for</span> (item <span class="hljs-keyword">in</span> list) {
+    <span class="hljs-comment"># Do stuff involving each item</span>
+}
+</code></pre><p><code>item</code> can have any name you like; I usually give it the first letter of the name of the list I’m iterating through.</p><p>This example uses the function <code>list.files</code> to list all the files in the folder <code>ca_discipline</code>, then makes an empty data frame called <code>ca_discipline</code> using the <strong>dplyr</strong> function <code>data_frame</code>.</p><p>The loop prints each file name, then uses the <code>read_csv</code> function from <strong>readr</strong> to load each file into a temporary data frame called <code>tmp</code>, which gets overwritten in each iteration of the loop. The final step in each iteration of the loop is to append <code>tmp</code> to the <code>ca_discipline</code> data frame using the dplyr function <code>bind_rows</code>.</p><p>The <code>read_csv</code> function is a little more complicated than we’ve seen before. Because the files are in the <code>ca_discipline</code> folder, the location of each must be defined as <code>ca_discipline/f</code> using the <code>paste0</code> function, which concatenates strings of text.</p><p>The <code>read_csv</code> function also defines the default data type for columns in the data, and gives the data type for any exceptions. Explicitly decaring the data types in a loop like this is a good idea, because any inconsistency in data types for each <code>read_csv</code> may otherwise cause the <code>bind_rows</code> function to fail. (Other data types include <code>col_integer()</code> for whole numbers and <code>col_double()</code> for numbers that may include decimal fractions.)</p><p>The <code>rm</code> function removes objects from your environment.</p><h3 id="making-new-variables-with-conditional-statements"><a name="making-new-variables-with-conditional-statements" href="#making-new-variables-with-conditional-statements"></a>Making new variables with conditional statements</h3><p>Often you need to make new columns in your data, particularly when simplifying a categorical variable with many categories into something more manageable. This can be done with in a <strong>dplyr</strong> <code>mutate</code> using the function <code>case_when</code>, which applies conditional statements.</p><p>Continuing from the example above, this code simplifies the <code>action_types</code> variable into a new variable <code>type_edit</code> with just three possibilities: <code>Revoked</code>, <code>Surrendered</code>, or <code>Other</code>.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>ca_discipline &amp;lt;- ca_discipline %&amp;gt;%
+  mutate(type_edit = case_when(action_type == &quot;Revoked&quot; ~ &quot;Revoked&quot;,
+                               action_type == &quot;Surrendered&quot; ~ &quot;Surrendered&quot;,
+                               !grepl(&quot;Revoked|Surrendered&quot;, action_type) ~ &quot;Other&quot;))
+</code></pre>">ca_discipline &lt;- ca_discipline %&gt;%
+  mutate(type_edit = case_when(action_type == <span class="hljs-string">"Revoked"</span> ~ <span class="hljs-string">"Revoked"</span>,
+                               action_type == <span class="hljs-string">"Surrendered"</span> ~ <span class="hljs-string">"Surrendered"</span>,
+                               !grepl(<span class="hljs-string">"Revoked|Surrendered"</span>, action_type) ~ <span class="hljs-string">"Other"</span>))
+</code></pre><p>View the data to see the new row:</p><p><img src="img/class14_1.jpg" alt=""></p><h3 id="working-with-census-data-and-shapefiles,-and-writing-geographic-data-to-postgresql/postgis"><a name="working-with-census-data-and-shapefiles,-and-writing-geographic-data-to-postgresql/postgis" href="#working-with-census-data-and-shapefiles,-and-writing-geographic-data-to-postgresql/postgis"></a>Working with Census data and shapefiles, and writing geographic data to PostgreSQL/PostGIS</h3><p>R can process and analyze geographic data, and then write the results to PostgreSQL for mapping in QGIS and further analysis with PostGIS. To see this in action, we’ll first work with some Census data, which can be loaded using <a href="https://www.census.gov/data/developers/data-sets.html">US Census APIs</a> with the <strong><a href="https://walkerke.github.io/tidycensus/">tidycensus</a></strong> package, and Census shapefiles, which can be loaded using the <strong><a href="https://cran.r-project.org/web/packages/tigris/tigris.pdf">tigris</a></strong> package. In addition to <strong>dplyr</strong>, this example uses <strong><a href="https://cran.r-project.org/web/packages/rgdal/rgdal.pdf">rgdal</a></strong>, which reads and writes geographic data and handles its projection; <a href="https://cran.r-project.org/web/packages/RPostgreSQL/RPostgreSQL.pdf">RPostgreSQL</a>, which connects to a PostgreSQL database; and <strong><a href="https://cran.r-project.org/web/packages/rpostgis/rpostgis.pdf">rpostgis</a></strong>, to write geographic data into a PostGIS-enabled database table.</p><p>First, load all of the packages required for this example:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load required packages
+library(dplyr)
+library(tidycensus)
+library(tigris)
+library(rgdal)
+library(RPostgreSQL)
+library(rpostgis)
+</code></pre>"><span class="hljs-comment"># load required packages</span>
+<span class="hljs-keyword">library</span>(dplyr)
+<span class="hljs-keyword">library</span>(tidycensus)
+<span class="hljs-keyword">library</span>(tigris)
+<span class="hljs-keyword">library</span>(rgdal)
+<span class="hljs-keyword">library</span>(RPostgreSQL)
+<span class="hljs-keyword">library</span>(rpostgis)
+</code></pre><p><strong>tidycensus</strong> can pull data from the Census itself, run every 10 years, or the <a href="https://www.census.gov/programs-surveys/acs/">American Community Survey</a>, an annual snapshot of the country which extrapolates from samples, producing estimates for variables(median household income, population for various races and ethnicities, and so on) for the last year, the last 3 years, or the last 5 years, for geographies of various types. The smaller the geographic area and the shorter the time period, the wider the margin of error. So when analyzing data from small geographic areas, such as Census tracts, it’s generally wise to use the 5-year estimates.</p><p>To pull data from a US Census API, you need a Census API key, which you can request from <a href="https://api.census.gov/data/key_signup.html">here</a>.</p><p>This code creates a data frame showing all of the variables measured in the 2016 5-year American Community Survey:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load Census API key
+census_api_key(&quot;your key goes here&quot;, install = TRUE)
+
+# get variables acs_2016 5 year estimates
+acs_2016_variables &amp;lt;- load_variables(2016, &quot;acs5&quot;, cache = TRUE)
+</code></pre>"><span class="hljs-comment"># load Census API key</span>
+census_api_key(<span class="hljs-string">"your key goes here"</span>, install = <span class="hljs-literal">TRUE</span>)
+
+<span class="hljs-comment"># get variables acs_2016 5 year estimates</span>
+acs_2016_variables &lt;- load_variables(<span class="hljs-number">2016</span>, <span class="hljs-string">"acs5"</span>, cache = <span class="hljs-literal">TRUE</span>)
+</code></pre><p>View the data frame and use the search box to find the variables you need. Search for “median household income” and you should see the following:</p><p><img src="img/class14_2.jpg" alt=""></p><p>You will need to read the text under <code>concept</code> to see which variable you want. For the median household income across all households, irrespective of their size, the variable is <code>B19019_001E</code>. The <code>E</code> simply means “estimate”, and should be dropped when loading the variable using <strong>tidycensus</strong>.</p><p>The following code gets the median household income for all census tracts in California, as recorded in the 5-year estimates of the 2016 American Community Survey:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># use tidycensus to get data on medium household income for all Census tracts in California
+ca_tracts &amp;lt;- get_acs(state = &quot;CA&quot;,
+                     year = 2016,
+                     survey = &quot;acs5&quot;,
+                     geography = &quot;tract&quot;,
+                     variables = &quot;B19013_001&quot;,
+                     output = &quot;tidy&quot;,
+                     geometry = FALSE)
+</code></pre>"><span class="hljs-comment"># use tidycensus to get data on medium household income for all Census tracts in California</span>
+ca_tracts &lt;- get_acs(state = <span class="hljs-string">"CA"</span>,
+                     year = <span class="hljs-number">2016</span>,
+                     survey = <span class="hljs-string">"acs5"</span>,
+                     geography = <span class="hljs-string">"tract"</span>,
+                     variables = <span class="hljs-string">"B19013_001"</span>,
+                     output = <span class="hljs-string">"tidy"</span>,
+                     geometry = <span class="hljs-literal">FALSE</span>)
+</code></pre><p>This should return a data frame with 8057 rows, giving the <code>estimate</code> and margin of error (<code>moe</code>) for each tract. Each tract also has an unique code, <code>GEOID</code>:</p><p><img src="img/class14_3.jpg" alt=""></p><p>You can change the year and survey: use <code>acs3</code> for 3-year estimates, for example. Available geographies include <code>county</code> and <code>zcta</code>, for <a href="https://www.census.gov/geo/reference/zctas.html">zip code tabulation areas</a>; but don’t specify a state when using <code>ztca</code>, because zip codes can cross state lines. (<code>get_decennial</code> is the equivalent function for pulling data from the full Census.)</p><p>Now we can use <strong>tigris</strong> to load a shapefile for California Census tracts, and produce a rough plot:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># Use tigris to load shapefile for Census tracts in California
+ca_tracts_map &amp;lt;- tracts(state = &quot;CA&quot;, year = 2016)
+
+# plot
+plot(ca_tracts_map)
+</code></pre>"><span class="hljs-comment"># Use tigris to load shapefile for Census tracts in California</span>
+ca_tracts_map &lt;- tracts(state = <span class="hljs-string">"CA"</span>, year = <span class="hljs-number">2016</span>)
+
+<span class="hljs-comment"># plot</span>
+plot(ca_tracts_map)
+</code></pre><p>The plot should look like this:</p><p><img src="img/class14_4.png" alt=""></p><p>Often you won’t be able to load shapefiles from an API. But if you have downloaded a shapefile to your computer, you can load it like this:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># read in a shapefile from your computer
+ca_tracts_map &amp;lt;- readOGR(&quot;ca_tracts_map&quot;, &quot;ca_tracts_map&quot;)
+</code></pre>"><span class="hljs-comment"># read in a shapefile from your computer</span>
+ca_tracts_map &lt;- readOGR(<span class="hljs-string">"ca_tracts_map"</span>, <span class="hljs-string">"ca_tracts_map"</span>)
+</code></pre><p>This code uses the <code>readOGR</code> function from <strong>rgdal</strong>; the first mention of <code>ca_tracts_map</code> refers to the folder containing the shapefile, the second to the root name of all the files within.</p><p>Whether loading using <strong>tidycensus</strong> or from a saved shapefile, the data will load as a <code>SpatialPolygonsDataFrame</code>. Inspect the data connected to the map with this code:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># View the data associated with the map
+View(ca_tracts_map@data)
+</code></pre>"><span class="hljs-comment"># View the data associated with the map</span>
+View(ca_tracts_map@data)
+</code></pre><p><code>@</code> specifies a particular attritubute of a spatial data frame, here its table of associated data.</p><p>The data associated with the map also contains <code>GEOID</code> codes for each tract:</p><p><img src="img/class14_5.jpg" alt=""></p><p>Now use <strong>dplyr</strong> to join the median housefold income data to the map, based on matching <code>GEOID</code> codes:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># join the median household income data to the map
+ca_tracts_map@data &amp;lt;- inner_join(ca_tracts_map@data, ca_tracts, by = &quot;GEOID&quot;)
+
+# check the join has worked
+View(ca_tracts_map@data)
+</code></pre>"><span class="hljs-comment"># join the median household income data to the map</span>
+ca_tracts_map@data &lt;- inner_join(ca_tracts_map@data, ca_tracts, by = <span class="hljs-string">"GEOID"</span>)
+
+<span class="hljs-comment"># check the join has worked</span>
+View(ca_tracts_map@data)
+</code></pre><p>Having joined the data you can export the shapefile to your computer like this:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># write out a shapefile 
+writeOGR(ca_tracts_map, &quot;ca_tracts_income&quot;, &quot;ca_tracts_income&quot;, driver = &quot;ESRI Shapefile&quot;)
+</code></pre>"><span class="hljs-comment"># write out a shapefile </span>
+writeOGR(ca_tracts_map, <span class="hljs-string">"ca_tracts_income"</span>, <span class="hljs-string">"ca_tracts_income"</span>, driver = <span class="hljs-string">"ESRI Shapefile"</span>)
+</code></pre><p>If you have your Postgres app running, you can also upload the spatial data frame straight to PostgreSQL/PostGIS like this:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># create new database, if required
+system(&quot;createdb week14&quot;)
+
+# set up connection to that database
+drv &amp;lt;- dbDriver(&quot;PostgreSQL&quot;)
+con &amp;lt;- dbConnect(drv, dbname = &quot;week14&quot;, host = &quot;localhost&quot;)
+
+# reproject the data frame to the standard EPSG:4326
+ca_tracts_map &amp;lt;- spTransform(ca_tracts_map, CRS(&quot;+init=epsg:4326&quot;))
+
+# insert into a PostGIS-enabled table
+pgInsert(con, 
+         name = &quot;ca_tracts_income&quot;, 
+         data.obj = ca_tracts_map, 
+         geom = &quot;geom&quot;, 
+         overwrite = TRUE, 
+         df.mode = FALSE, partial.match = FALSE, new.id = NULL,
+         row.names = FALSE, upsert.using = NULL, 
+         alter.names = FALSE, encoding = NULL, return.pgi = FALSE)
+</code></pre>"><span class="hljs-comment"># create new database, if required</span>
+system(<span class="hljs-string">"createdb week14"</span>)
+
+<span class="hljs-comment"># set up connection to that database</span>
+drv &lt;- dbDriver(<span class="hljs-string">"PostgreSQL"</span>)
+con &lt;- dbConnect(drv, dbname = <span class="hljs-string">"week14"</span>, host = <span class="hljs-string">"localhost"</span>)
+
+<span class="hljs-comment"># reproject the data frame to the standard EPSG:4326</span>
+ca_tracts_map &lt;- spTransform(ca_tracts_map, CRS(<span class="hljs-string">"+init=epsg:4326"</span>))
+
+<span class="hljs-comment"># insert into a PostGIS-enabled table</span>
+pgInsert(con, 
+         name = <span class="hljs-string">"ca_tracts_income"</span>, 
+         data.obj = ca_tracts_map, 
+         geom = <span class="hljs-string">"geom"</span>, 
+         overwrite = <span class="hljs-literal">TRUE</span>, 
+         df.mode = <span class="hljs-literal">FALSE</span>, partial.match = <span class="hljs-literal">FALSE</span>, new.id = <span class="hljs-literal">NULL</span>,
+         row.names = <span class="hljs-literal">FALSE</span>, upsert.using = <span class="hljs-literal">NULL</span>, 
+         alter.names = <span class="hljs-literal">FALSE</span>, encoding = <span class="hljs-literal">NULL</span>, return.pgi = <span class="hljs-literal">FALSE</span>)
+</code></pre><p>The <code>system</code> function, from base R, sends a command to your computer’s Terminal, here to create a new database.</p><p><code>dbDriver</code> and <code>dbConnect</code> are functions from <strong>RPostgreSQL</strong>, used to establish a connection to that database.</p><p>PostGIS normally expects tables to be in a standard Coordinate Reference Rystem called <code>EPSG:4326</code>(this is also the default in QGIS). So before uploading to PostgreSQL/PostGIS, use the <code>spTransform</code> function from <strong>rgdal</strong> to ensure your data is in this format.</p><p>Finally, use the <code>pgInsert</code> function from <strong>rpostgis</strong> to write the data into a PostGIS-enabled table; <code>name</code> defines the name of the new table, <code>data.obj</code> is the name of the spatial data frame in your R environment. If you want to append data to an existing table, use <code>overwrite = FALSE</code> (using the code above, with <code>overwrite = TRUE</code>, any existing table with the same name would be overwritten).</p><p>You may find it much more convenient to load maps into PostgreSQL/PostGIS from R than by the methods you’ve used previously.</p><p>Now you can load your map into QGIS as we did previously.</p><h3 id="more-with-r,-postgresql,-and-qgis:-thefts-from-vehicles-in-san-francisco"><a name="more-with-r,-postgresql,-and-qgis:-thefts-from-vehicles-in-san-francisco" href="#more-with-r,-postgresql,-and-qgis:-thefts-from-vehicles-in-san-francisco"></a>More with R, PostgreSQL, and QGIS: thefts from vehicles in San Francisco</h3><p>This example uses another API, shows how to turn data with latitude and longitude coordinates into a spatial data frame, and introduces hexagonal binning to analyze the density of points in QGIS.</p><p>These are the required packages:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load required packages
+library(dplyr)
+library(rgdal)
+library(RPostgreSQL)
+library(rpostgis)
+library(jsonlite)
+</code></pre>"><span class="hljs-comment"># load required packages</span>
+<span class="hljs-keyword">library</span>(dplyr)
+<span class="hljs-keyword">library</span>(rgdal)
+<span class="hljs-keyword">library</span>(RPostgreSQL)
+<span class="hljs-keyword">library</span>(rpostgis)
+<span class="hljs-keyword">library</span>(jsonlite)
+</code></pre><p>If continuing from the example above, you only need load <strong><a href="https://cran.r-project.org/web/packages/jsonlite/jsonlite.pdf">jsonlite</a></strong>, which can read data from JSON into an R data frame.</p><p><a href="https://data.sfgov.org/Public-Safety/Police-Department-Incidents-Current-Year-2018-/956q-2t7k">This page</a> at DataSF contains incidents responded to by the San Francisco Police Department in 2018. The data is updated daily, with the most recently added incidents running two weeks behind the current date.</p><p>With frequently updated data like this, it’s a good idea to work with a script that can pull in the latest version of the data, rather than a downloaded snapshot. Then your analysis can be updated by simply running the entire script.</p><p>If you click on <code>Export</code> on the 2018 police incidents page, one of the options is to obtain the data using <a href="https://dev.socrata.com/">Socrata’s SODA API</a>:</p><p><img src="img/class14_6.jpg" alt=""></p><p>(Socrata is a company used by many state and local governments to put their data online.)</p><p>Notice that the endpoint is <code>https://data.sfgov.org/resource/956q-2t7k.json</code>. The SODA API includes many options, but to simply load the entire dataset into R, the code is simple:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># get San Francisco 2018 police incident data
+incidents &amp;lt;- fromJSON(&quot;https://data.sfgov.org/resource/956q-2t7k.json?$limit=50000&quot;)
+
+# check the data types for the data returned
+glimpse(incidents)
+</code></pre>"><span class="hljs-comment"># get San Francisco 2018 police incident data</span>
+incidents &lt;- fromJSON(<span class="hljs-string">"https://data.sfgov.org/resource/956q-2t7k.json?$limit=50000"</span>)
+
+<span class="hljs-comment"># check the data types for the data returned</span>
+glimpse(incidents)
+</code></pre><p>If you don’t specify a limit, <a href="https://dev.socrata.com/docs/queries/limit.html">only the first 1,000 rows</a> will be returned; use trial and error with the limit to make sure you get all the data.</p><p>This was the result of the <code>glimpse</code> on April 24, 2018:</p><pre class="css hljs"><code class="CSS" data-origin="<pre><code class=&quot;CSS&quot;>Observations: 26,688
+Variables: 13
+$ date       &amp;lt;chr&amp;gt; &quot;2018-04-01T00:00:00&quot;, &quot;2018-03-19T00:00:00&quot;, &quot;2018-03-19T00:00:00&quot;, &quot;2018-01...
+$ address    &amp;lt;chr&amp;gt; &quot;0 Block of ROBINSON DR&quot;, &quot;JOHNMUIR DR / LAKE MERCED BL&quot;, &quot;800 Block of BRUNS...
+$ resolution &amp;lt;chr&amp;gt; &quot;NONE&quot;, &quot;NONE&quot;, &quot;NONE&quot;, &quot;NONE&quot;, &quot;NONE&quot;, &quot;NONE&quot;, &quot;NONE&quot;, &quot;NONE&quot;, &quot;ARREST, BOOK...
+$ pddistrict &amp;lt;chr&amp;gt; &quot;INGLESIDE&quot;, &quot;TARAVAL&quot;, &quot;INGLESIDE&quot;, &quot;INGLESIDE&quot;, &quot;INGLESIDE&quot;, &quot;INGLESIDE&quot;, &quot;...
+$ incidntnum &amp;lt;chr&amp;gt; &quot;180250054&quot;, &quot;180208241&quot;, &quot;186066502&quot;, &quot;180018238&quot;, &quot;180047271&quot;, &quot;186033852&quot;,...
+$ x          &amp;lt;chr&amp;gt; &quot;-122.42871668187439&quot;, &quot;-122.4857362496041&quot;, &quot;-122.45048298008807&quot;, &quot;-122.420...
+$ dayofweek  &amp;lt;chr&amp;gt; &quot;Sunday&quot;, &quot;Monday&quot;, &quot;Monday&quot;, &quot;Sunday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Wednesday&quot;, &quot;W...
+$ y          &amp;lt;chr&amp;gt; &quot;37.70792190345863&quot;, &quot;37.70815359983144&quot;, &quot;37.70817029170297&quot;, &quot;37.7083109744...
+$ location   &amp;lt;data.frame&amp;gt; c(&quot;37.70792190345863&quot;, &quot;37.70815359983144&quot;, &quot;37.70817029170297&quot;, &quot;37.7...
+$ time       &amp;lt;chr&amp;gt; &quot;00:01&quot;, &quot;19:15&quot;, &quot;00:01&quot;, &quot;16:40&quot;, &quot;15:15&quot;, &quot;00:01&quot;, &quot;13:06&quot;, &quot;12:00&quot;, &quot;08:4...
+$ pdid       &amp;lt;chr&amp;gt; &quot;18025005405041&quot;, &quot;18020824128150&quot;, &quot;18606650206244&quot;, &quot;18001823804134&quot;, &quot;1800...
+$ category   &amp;lt;chr&amp;gt; &quot;BURGLARY&quot;, &quot;VANDALISM&quot;, &quot;LARCENY/THEFT&quot;, &quot;ASSAULT&quot;, &quot;SUSPICIOUS OCC&quot;, &quot;NON-C...
+$ descript   &amp;lt;chr&amp;gt; &quot;BURGLARY OF RESIDENCE, FORCIBLE ENTRY&quot;, &quot;MALICIOUS MISCHIEF, VANDALISM&quot;, &quot;GR...
+</code></pre>">Observations: 26,688
+Variables: 13
+$ date       &lt;chr&gt; "2018-04-01T00:00:00", "2018-03-19T00:00:00", "2018-03-19T00:00:00", "2018-01...
+$ address    &lt;chr&gt; "0 Block of ROBINSON DR", "JOHNMUIR DR / LAKE MERCED BL", "800 Block of BRUNS...
+$ resolution &lt;chr&gt; "NONE", "NONE", "NONE", "NONE", "NONE", "NONE", "NONE", "NONE", "ARREST, BOOK...
+$ pddistrict &lt;chr&gt; "INGLESIDE", "TARAVAL", "INGLESIDE", "INGLESIDE", "INGLESIDE", "INGLESIDE", "...
+$ incidntnum &lt;chr&gt; "180250054", "180208241", "186066502", "180018238", "180047271", "186033852",...
+$ x          &lt;chr&gt; "-122.42871668187439", "-122.4857362496041", "-122.45048298008807", "-122.420...
+$ dayofweek  &lt;chr&gt; "Sunday", "Monday", "Monday", "Sunday", "Thursday", "Friday", "Wednesday", "W...
+$ y          &lt;chr&gt; "37.70792190345863", "37.70815359983144", "37.70817029170297", "37.7083109744...
+$ location   &lt;data.frame&gt; c("37.70792190345863", "37.70815359983144", "37.70817029170297", "37.7...
+$ time       &lt;chr&gt; "00:01", "19:15", "00:01", "16:40", "15:15", "00:01", "13:06", "12:00", "08:4...
+$ pdid       &lt;chr&gt; "18025005405041", "18020824128150", "18606650206244", "18001823804134", "1800...
+$ category   &lt;chr&gt; "BURGLARY", "VANDALISM", "LARCENY/THEFT", "ASSAULT", "SUSPICIOUS OCC", "NON-C...
+$ descript   &lt;chr&gt; "BURGLARY OF RESIDENCE, FORCIBLE ENTRY", "MALICIOUS MISCHIEF, VANDALISM", "GR...
+</code></pre><p><code>location</code> is a data frame within this data frame, and every other variable is treated as text. So remove the location column and process the data with <strong>dplyr</strong> as follows:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># this ensures no loss of decimal places when converting text values for latitude and longitude
+options(digits = 17)
+
+# process the data
+incidents &amp;lt;- incidents %&amp;gt;%
+ select(-location) %&amp;gt;%
+  mutate(date = as.Date(date),
+         latitude = as.double(y),
+         longitude = as.double(x),
+         hour = as.integer(substr(time,1,2)))
+</code></pre>"><span class="hljs-comment"># this ensures no loss of decimal places when converting text values for latitude and longitude</span>
+options(digits = <span class="hljs-number">17</span>)
+
+<span class="hljs-comment"># process the data</span>
+incidents &lt;- incidents %&gt;%
+ select(-location) %&gt;%
+  mutate(date = as.Date(date),
+         latitude = as.double(y),
+         longitude = as.double(x),
+         hour = as.integer(substr(time,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)))
+</code></pre><p>When using <code>select</code>, putting a dash in front of a column removes it from the data. So this code removes the nested data frame, converts the dates into dates, and creates new numeric columns for latitude, longitude, and the hour of the day on the 24-hour clock. The <code>substr</code> function extracts part of a string of text, here the first two numbers in the <code>time</code> variable.</p><p>Theft from cars is a big issue in San Francisco, but we want to ensure that we include all crime categories and descriptions that might be relevant:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># find categories and descriptions for thefts
+theft_types &amp;lt;- incidents %&amp;gt;%
+  filter(grepl(&quot;theft|larceny&quot;, category, ignore.case=TRUE)) %&amp;gt;%
+  select(category, descript) %&amp;gt;%
+  unique()
+</code></pre>"><span class="hljs-comment"># find categories and descriptions for thefts</span>
+theft_types &lt;- incidents %&gt;%
+  filter(grepl(<span class="hljs-string">"theft|larceny"</span>, category, ignore.case=<span class="hljs-literal">TRUE</span>)) %&gt;%
+  select(category, descript) %&gt;%
+  unique()
+</code></pre><p>From the data returned from this code, it seems we need to filter the data to include petty or grand left from locked or unlocked autos:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># filter grand or petty theft from locked or unlocked auto
+car_breakins &amp;lt;- incidents %&amp;gt;%
+  filter(grepl(&quot;grand|petty&quot;, descript, ignore.case = TRUE)
+         &amp;amp; grepl(&quot;unlocked auto|locked auto&quot;, descript, ignore.case = TRUE))
+
+# check the crime descriptions resulting from that filter
+car_breakin_types &amp;lt;- car_breakins %&amp;gt;%
+  select(descript) %&amp;gt;%
+  unique()
+</code></pre>"><span class="hljs-comment"># filter grand or petty theft from locked or unlocked auto</span>
+car_breakins &lt;- incidents %&gt;%
+  filter(grepl(<span class="hljs-string">"grand|petty"</span>, descript, ignore.case = <span class="hljs-literal">TRUE</span>)
+         &amp; grepl(<span class="hljs-string">"unlocked auto|locked auto"</span>, descript, ignore.case = <span class="hljs-literal">TRUE</span>))
+
+<span class="hljs-comment"># check the crime descriptions resulting from that filter</span>
+car_breakin_types &lt;- car_breakins %&gt;%
+  select(descript) %&gt;%
+  unique()
+</code></pre><p>View these two data frames to check that the data has filtered correctly.</p><p>The temptation is to load the data straight into PostgreSQL for mapping, but let’s first take a look at the addresses that show up most often in the data.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># count car breakins by address
+car_breakin_locations &amp;lt;- car_breakins %&amp;gt;%
+  group_by(address) %&amp;gt;%
+  summarize(count = n()) %&amp;gt;%
+  arrange(desc(count))
+</code></pre>"><span class="hljs-comment"># count car breakins by address</span>
+car_breakin_locations &lt;- car_breakins %&gt;%
+  group_by(address) %&gt;%
+  summarize(count = n()) %&gt;%
+  arrange(desc(count))
+</code></pre><p>Here are the top ten addresses:</p><p><img src="img/class14_7.jpg" alt=""></p><p>Wow, there seems to be an epidemic of car break-ins on the 800 block of Bryant Street! What could be going on? Let’s take a look at what’s there:</p><p><img src="img/class14_8.jpg" alt=""></p><p>The San Francisco Hall of Justice is at 850 Bryant. Do we think that’s a real hotspot, or is it more likely that incidents without another location are being mapped to the courthouse by default? You’d want to speak to the person at SFPD who manages this data to find out, but I’m going to exclude this suspicious data before loading to PostgreSQL/PostGIS.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># remove incidents on 800 block of Bryant 
+car_breakins &amp;lt;- car_breakins %&amp;gt;%
+  filter(!grepl(&quot;800 block of bryant&quot;, address, ignore.case = TRUE))
+</code></pre>"><span class="hljs-comment"># remove incidents on 800 block of Bryant </span>
+car_breakins &lt;- car_breakins %&gt;%
+  filter(!grepl(<span class="hljs-string">"800 block of bryant"</span>, address, ignore.case = <span class="hljs-literal">TRUE</span>))
+</code></pre><p>Now write the data to PostgreSQL/PostGIS:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># you may need this line if your data frame is a tbl_df 
+car_breakins &amp;lt;- as.data.frame(car_breakins)
+
+# make a data frame with just the latitude and longitude coordinates
+xy &amp;lt;- car_breakins %&amp;gt;%
+  select(longitude,latitude)
+
+# convert to a spatial points data frame
+car_breakins &amp;lt;- SpatialPointsDataFrame(coords = xy, 
+                                       data = car_breakins, 
+                                       proj4string = CRS(&quot;+init=epsg:4326&quot;))
+
+# set up local connection to the database
+drv &amp;lt;- dbDriver(&quot;PostgreSQL&quot;)
+con &amp;lt;- dbConnect(drv, dbname = &quot;week14&quot;, host = &quot;localhost&quot;)
+
+# insert into a PostGIS-enabled table
+pgInsert(con, 
+         name = &quot;sf_car_breakins&quot;, 
+         data.obj = car_breakins, 
+         geom = &quot;geom&quot;, 
+         overwrite = TRUE, 
+         df.mode = FALSE, partial.match = FALSE, new.id = NULL,
+         row.names = FALSE, upsert.using = NULL, 
+         alter.names = FALSE, encoding = NULL, return.pgi = FALSE)
+</code></pre>"><span class="hljs-comment"># you may need this line if your data frame is a tbl_df </span>
+car_breakins &lt;- as.data.frame(car_breakins)
+
+<span class="hljs-comment"># make a data frame with just the latitude and longitude coordinates</span>
+xy &lt;- car_breakins %&gt;%
+  select(longitude,latitude)
+
+<span class="hljs-comment"># convert to a spatial points data frame</span>
+car_breakins &lt;- SpatialPointsDataFrame(coords = xy, 
+                                       data = car_breakins, 
+                                       proj4string = CRS(<span class="hljs-string">"+init=epsg:4326"</span>))
+
+<span class="hljs-comment"># set up local connection to the database</span>
+drv &lt;- dbDriver(<span class="hljs-string">"PostgreSQL"</span>)
+con &lt;- dbConnect(drv, dbname = <span class="hljs-string">"week14"</span>, host = <span class="hljs-string">"localhost"</span>)
+
+<span class="hljs-comment"># insert into a PostGIS-enabled table</span>
+pgInsert(con, 
+         name = <span class="hljs-string">"sf_car_breakins"</span>, 
+         data.obj = car_breakins, 
+         geom = <span class="hljs-string">"geom"</span>, 
+         overwrite = <span class="hljs-literal">TRUE</span>, 
+         df.mode = <span class="hljs-literal">FALSE</span>, partial.match = <span class="hljs-literal">FALSE</span>, new.id = <span class="hljs-literal">NULL</span>,
+         row.names = <span class="hljs-literal">FALSE</span>, upsert.using = <span class="hljs-literal">NULL</span>, 
+         alter.names = <span class="hljs-literal">FALSE</span>, encoding = <span class="hljs-literal">NULL</span>, return.pgi = <span class="hljs-literal">FALSE</span>)
+</code></pre><p>This code converts a regular data frame with latitude and longitude columns into a spaital data frame that can be mapped as points. If you have used <strong>readr</strong> to read in your data, it will be in <code>tbl_df</code> format, and you will need the first line to convert to a plain data frame.</p><p>The key step is to create a data frame called <code>xy</code> that has the data in the same row order (do not sort!), and just the columns <code>longitide</code> and <code>latitude</code> in that order. The <code>SpatialPointsDataFrame</code> function then uses this to convert the data to a spatial data frame, setting the Coordinate Reference System to <code>EPSG:4326</code>. (<code>SpatialPointsDataFrame</code> is from the <strong><a href="https://cran.r-project.org/web/packages/sp/sp.pdf">sp</a></strong> package, which loads automatically with <strong>rgdal</strong>).</p><p>Writing the data to PostgreSQL/PostGIS is exactly as in the previous example.</p><p>Now we can switch to QGIS to map hotspots for car break-ins. For this we will use a QGIS Plugin called <code>MMGQIS</code>. Install it by selecting <code>Plugins&gt;Manage and Install Plugins...</code> from the top menu. At the dialog box, search for MMGIS and install the plugin:</p><p><img src="img/class14_9.jpg" alt=""></p><p>Now load the data in the <code>sf_car_breakins</code> table:</p><p><img src="img/class14_10.jpg" alt=""></p><p>The problem with data like this is that points may be layered over the top of one another, which makes it hard to assess where the real hotspots are. One way around this is to impose a hexagonal grid on the map, and then count the points in each cell of the grid.</p><p>Select <code>MMQGIS&gt;Create&gt;Create Grid Layer</code> from the top menu and fill in the dialog box like this:</p><p><img src="img/class14_11.jpg" alt=""></p><p>In practice, you will need to experiment with <code>X Spacing</code> (<code>Y spacing</code>) will adjust automatically, to get a grid with cells of reasonable size.</p><p>Now <code>Browse...</code> to save the shapefile that will be created into your data folder, in a new folder called <code>grid</code>, and click <code>OK</code>.</p><p>This should be the result:</p><p><img src="img/class14_12.jpg" alt=""></p><p>Now select <code>Vector&gt;Analysis Tools&gt;Count points in polygon</code> from the top menu, and click <code>Run</code> at the dialog box:</p><p><img src="img/class14_13.jpg" alt=""></p><p>This will create a new layer, <code>Count</code>, with an Attribute Table with the count of the points in each grid cell in a column called <code>NUMPOINTS</code>:</p><p><img src="img/class14_14.jpg" alt=""></p><p>Right-click on the <code>Count</code> layer, select <code>Save As...</code> and save as an <code>ESRI Shapefile</code> in a new folder within your data folder.</p><p>Now create a new QGIS project and pull in an Open Streetmap layer using the Tile Map Scale Plugin. Right click on the layer, select <code>Proporties</code> and change its <code>Render type</code> to <code>Singleband gray</code> to obtain a neutral gray basemap:</p><p><img src="img/class14_15.jpg" alt=""></p><p>Select <code>Project&gt;Project properties from the top menu and check</code>Enable ‘on the fly’ CRS transformation (OTF)<code>, and click</code>OK`:</p><p><img src="img/class14_16.jpg" alt=""></p><p>This will ensure that subsequent layers will be reprojected to the Web Mercator projection used by the basemap.</p><p>To load the gridded car break-in hotspot shapefile, click the <code>Add Vector Layer</code> icon, and browse to the shapefile we just made:</p><p><img src="img/class14_17.jpg" alt=""></p><p>Zoom to this layer, then style it to make the layer semi-transparent, and with a <code>Graduated</code> color ramp based on the values in the <code>NUMPOINT</code> column. The map should now look something like this:</p><p><img src="img/class14_18.jpg" alt=""></p><p>Zoom into the concentrations of darker hexagons. Why do you think these areas are hotspots for car break-ins?</p><h3 id="analyzing-data-when-several-variables-may-influence-an-outcome:-when-to-use-regression-analysis"><a name="analyzing-data-when-several-variables-may-influence-an-outcome:-when-to-use-regression-analysis" href="#analyzing-data-when-several-variables-may-influence-an-outcome:-when-to-use-regression-analysis"></a>Analyzing data when several variables may influence an outcome: When to use regression analysis</h3><p>Often data journallists must consider how a number of different variables affect an outcome. You might, for instance, have data on bail amounts set for people charged with crimes, and want to analyze how the variables including arrestees’ crimes, their age, and their race affects the bail amounts set.</p><p>Even if your storyfocuses on only one variable, such as the effect of race on bail amounts, simply ignoring the effect of other variables is a bad idea: You risk drawing false conclusions because of the problem of “lurking” variables, which we discussed in week 1.</p><p>In cases like this, you should consider trying regression analysis, in which you build a statistical model to describe how multiple variables affect the outcome you are analyzing.</p><p>The example that follows uses <a href="https://www.investopedia.com/terms/m/mlr.asp">multiple linear regression</a> to analyze educational attainment of students from low-income families (those qualifying for free or reduced price lunch) for schools in Oakland in 2015.</p><p>First, load the required packages:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load required packages
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(GGally)
+library(forcats)
+</code></pre>"><span class="hljs-comment"># load required packages</span>
+<span class="hljs-keyword">library</span>(readr)
+<span class="hljs-keyword">library</span>(dplyr)
+<span class="hljs-keyword">library</span>(ggplot2)
+<span class="hljs-keyword">library</span>(GGally)
+<span class="hljs-keyword">library</span>(forcats)
+</code></pre><p>The only ones we haven’t encountered before are <strong><a href="http://ggobi.github.io/ggally/#ggally">GGally</a></strong> and <strong><a href="http://forcats.tidyverse.org/index.html">forcats</a></strong>. <strong>GGally</strong> is an extension to <strong>ggplot2</strong> that creates specific plots that can be useful when performing statistical analyses, including regression; <strong>forcats</strong> is part of the tidyverse, designed for working with categorical variables; it can be used to arrange the categories of a categorical variable in a specific order, which you may need to do for a regression analysis.</p><h4 id="plotting-the-relationship-between-variables"><a name="plotting-the-relationship-between-variables" href="#plotting-the-relationship-between-variables"></a>Plotting the relationship between variables</h4><p>The following code loads the data and then uses the <strong>GGally</strong> function <code>ggpairs</code> to plot relationships between the variables:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># load data
+oakland_eei_2015 &amp;lt;- read_csv(&quot;oakland_eei_2015.csv&quot;) 
+
+# remove the school names, which we don't want to consider
+oakland_eei_2015_pairs &amp;lt;- oakland_eei_2015 %&amp;gt;%
+  select(-school_name)
+
+# visualize the relationship between the remaining variables
+ggpairs(oakland_eei_2015_pairs) +
+  theme_minimal()
+</code></pre>"><span class="hljs-comment"># load data</span>
+oakland_eei_2015 &lt;- read_csv(<span class="hljs-string">"oakland_eei_2015.csv"</span>) 
+
+<span class="hljs-comment"># remove the school names, which we don't want to consider</span>
+oakland_eei_2015_pairs &lt;- oakland_eei_2015 %&gt;%
+  select(-school_name)
+
+<span class="hljs-comment"># visualize the relationship between the remaining variables</span>
+ggpairs(oakland_eei_2015_pairs) +
+  theme_minimal()
+</code></pre><p>This should be the result:</p><p><img src="img/class14_19.png" alt=""></p><p>This matrix of charts may seem bewildering at first. The key to understand it is to read the column and row headers at top and right to understand which pairs of variables are being plotted or analyzed.</p><p>The diagonal line of charts from top left to bottom right have the same column and row headers, so refer to just one variable. For a continuous variable, they show density plot of the distribution of that variable; for a categorical variable they showing the number of observations in each category, for a categorical variable. So here, for example, the column chart for <code>charter</code> shows that there are roughly twice as many non-charter schools as charter schools. The density plot for <code>eei_score</code>, our outcome, shows that it has a skew to lower values. (If your outcome variable is highly skewed, you may need to “transform” it to better approximate a normal distribution before running a miltiple linear regression, by calculating the base 10 logarithm of each value, like this: <code>variable_transform = log10(variable)</code>)</p><p>Above this diagonal line of charts, the matrix shows a correlation coefficient, a number measuring the strength of the correlation between two continous variables, or a <a href="https://en.wikipedia.org/wiki/Box_plot">box plot</a> summarizing the distribution for each category for the relationship between a categorical and continuous variable. In a box plot, the black line in the middle of the box gives the median value, the box shows the 25% of values above and below that, and the lines extend out to the main range of values. Any “outlier” values deemed to fall outside this range appear as separate points.</p><p>Values for correlation coeffients can vary between -1 (a perfect negative correlation), through 0 (no relationship at all) to 1 (a perfect positive correlation); a positive correlation means that the two variables increase together; a negative correlation means that one increases as the other decreases.</p><p>We are most interested in how the various potential explanatory variables relate to the <code>eei_score</code> outcome, which is summarized in the top row of the matrix. (Tip: When running regression analysis, organize your data so that the outcome variable is in the first column, so that the plot matrix is drawn in this way.)</p><p>The box plots for <code>charter</code> indicate that charter schools tend to have better EEI scores. The correlation coefficients reveal that the two most influential continuous variables seem to be the percentage of black students (<code>pc_black</code>), which has a negative correlation with <code>eei_score</code>, and the size of the school (<code>enroll_100</code>), which has a positive correlation with <code>eei_score</code>.</p><p>Below the diagonal the relationships between the variables are plotted as scatterplots, for two continuous variables, or histograms for each category, to illustrate the relationship between a categorical and a continuous variable.</p><h4 id="fitting-and-interpreting-a-regression-model"><a name="fitting-and-interpreting-a-regression-model" href="#fitting-and-interpreting-a-regression-model"></a>Fitting and interpreting a regression model</h4><p>When building a regression model, it is tempting to include all possible explanatory variables. But the variables chosen should be independent (i.e. the vaues for one should not depend on the values for another) and should not be strongly correlated with one another. The three variables for racial/ethnic composition are obviously not independent, because a school that consists mostly of black students, for example, is bound to have relatively few Hispanic or white students. The matrix also shows that the percentage of white students is strongly correlated (correlation coefficient = -0.899) with the percentage of students on free or reduced-price lunches: the more white students, the fewer students tend to be on free or reduced-price lunches.</p><p>If choosing only one of the racial/ethic composition variables, it makes sense to choose the percentage of black students, which seems to be the most important. So let’s drop the other three racial/ethnic composition variables, and build a regression model:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>oak_fit1 &amp;lt;- lm(eei_score ~ pc_free_lunch + pc_black + charter + enroll_100, data=oakland_eei_2015)
+summary(oak_fit1)
+</code></pre>">oak_fit1 &lt;- lm(eei_score ~ pc_free_lunch + pc_black + charter + enroll_100, data=oakland_eei_2015)
+summary(oak_fit1)
+</code></pre><p>This code uses the function <code>lm</code>, for linear model, to run a multiple linear regression. The outcome variable is given first, followed by a tilda (<code>~</code>), then the potential explanatory variables separated by <code>+</code> symbols).</p><p>This should be the output of the <code>summary</code> for the regression model:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>Call:
+lm(formula = eei_score ~ pc_free_lunch + pc_black + charter + 
+    enroll_100, data = oakland_eei_2015)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-46.155 -15.983  -2.347  12.154  47.044 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)   36.56627    8.32769   4.391 2.59e-05 ***
+pc_free_lunch -0.10045    0.08688  -1.156 0.250040    
+pc_black      -0.30586    0.10212  -2.995 0.003384 ** 
+charterY      19.30876    4.53853   4.254 4.39e-05 ***
+enroll_100     2.84883    0.74613   3.818 0.000222 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 21.41 on 111 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.3195,    Adjusted R-squared:  0.295 
+F-statistic: 13.03 on 4 and 111 DF,  p-value: 9.878e-09
+</code></pre>">Call:
+lm(formula = eei_score ~ pc_free_lunch + pc_black + charter + 
+    enroll_100, data = oakland_eei_2015)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-<span class="hljs-number">46.155</span> -<span class="hljs-number">15.983</span>  -<span class="hljs-number">2.347</span>  <span class="hljs-number">12.154</span>  <span class="hljs-number">47.044</span> 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   <span class="hljs-number">36.56627</span>    <span class="hljs-number">8.32769</span>   <span class="hljs-number">4.391</span> <span class="hljs-number">2.59e-05</span> ***
+pc_free_lunch -<span class="hljs-number">0.10045</span>    <span class="hljs-number">0.08688</span>  -<span class="hljs-number">1.156</span> <span class="hljs-number">0.250040</span>    
+pc_black      -<span class="hljs-number">0.30586</span>    <span class="hljs-number">0.10212</span>  -<span class="hljs-number">2.995</span> <span class="hljs-number">0.003384</span> ** 
+charterY      <span class="hljs-number">19.30876</span>    <span class="hljs-number">4.53853</span>   <span class="hljs-number">4.254</span> <span class="hljs-number">4.39e-05</span> ***
+enroll_100     <span class="hljs-number">2.84883</span>    <span class="hljs-number">0.74613</span>   <span class="hljs-number">3.818</span> <span class="hljs-number">0.000222</span> ***
+---
+Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span>
+
+Residual standard error: <span class="hljs-number">21.41</span> on <span class="hljs-number">111</span> degrees of freedom
+  (<span class="hljs-number">3</span> observations deleted due to missingness)
+Multiple R-squared:  <span class="hljs-number">0.3195</span>,    Adjusted R-squared:  <span class="hljs-number">0.295</span> 
+<span class="hljs-literal">F</span>-statistic: <span class="hljs-number">13.03</span> on <span class="hljs-number">4</span> and <span class="hljs-number">111</span> DF,  p-value: <span class="hljs-number">9.878e-09</span>
+</code></pre><p>The <code>Adjusted R-squared</code> value tells us how well the model explains the values for the outcome variable: A value of 0.295 means that the model explains only 29.5% of the variation in EEI scores. Still, three of the variables we considered seem to have a statistically significant influence on the scores, indicated by the asterisks.</p><p>School size, for instance, measured by <code>enroll_100</code>, is significant at a level of <code>p &lt; 0.001</code>. This rates the chances of seeing the observed results by chance if there was actually no relationship between school size and EEI scores; 0.001 means a 1 in 1,000 chance.</p><p>The percentage of students on free or reduced lunches, however, seems to have no significant relationship with the EEI scores.</p><p>The <code>Estimate</code> column measures size of the effect of each variable in the model, while <code>Std. Error</code> provides a measure of the uncertainty around that estimate. Here, the EEI scores tend to increase by 2.84 plus-or-minus 0.75 points for each additional 100 students in a school, if the effect of the other variables is held constant. Meanwhile, EEI scores tend to drop by 0.31 ± 0.1 for each additional percentage point of black students in the school.</p><p>In a regression model like this, the effect of categorical variables is assessed by comparing each category against a reference category. For <code>charter</code> we have only two categories, not being a charter school (<code>N</code>) or being a charter school (<code>Y</code>). Here, the estimate shows us that not being a charter school is the reference, and being a charter school (<code>charterY</code>) is associated with an increase in EEI scores of 19.31 ± 4.54 points, if the effect of the other variables is held constant.</p><p>In practice, you may want to experiment with different combinations of variables, to see how they effect the model’s explanatory power. Here, we might try dropping <code>pc_fr_lunch</code>, especially as its strong negative correlation with <code>pc_white</code> means it may just be a proxy for the percentage of white students in the school — a variable we already decided to exclude.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>oak_fit2 &amp;lt;- lm(eei_score ~ pc_black + charter + enroll_100, data=oakland_eei_2015)
+summary(oak_fit2)
+</code></pre>">oak_fit2 &lt;- lm(eei_score ~ pc_black + charter + enroll_100, data=oakland_eei_2015)
+summary(oak_fit2)
+</code></pre><p>This should be the output of the <code>summary</code>:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>Call:
+lm(formula = eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-47.770 -16.144  -2.293  12.326  48.813 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)  29.2924     5.4652   5.360 4.51e-07 ***
+pc_black     -0.3210     0.1014  -3.165 0.002000 ** 
+charterY     19.0416     4.5395   4.195 5.49e-05 ***
+enroll_100    2.8983     0.7460   3.885 0.000174 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 21.44 on 112 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.3113,    Adjusted R-squared:  0.2929 
+F-statistic: 16.88 on 3 and 112 DF,  p-value: 4.111e-09
+</code></pre>">Call:
+lm(formula = eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-<span class="hljs-number">47.770</span> -<span class="hljs-number">16.144</span>  -<span class="hljs-number">2.293</span>  <span class="hljs-number">12.326</span>  <span class="hljs-number">48.813</span> 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  <span class="hljs-number">29.2924</span>     <span class="hljs-number">5.4652</span>   <span class="hljs-number">5.360</span> <span class="hljs-number">4.51e-07</span> ***
+pc_black     -<span class="hljs-number">0.3210</span>     <span class="hljs-number">0.1014</span>  -<span class="hljs-number">3.165</span> <span class="hljs-number">0.002000</span> ** 
+charterY     <span class="hljs-number">19.0416</span>     <span class="hljs-number">4.5395</span>   <span class="hljs-number">4.195</span> <span class="hljs-number">5.49e-05</span> ***
+enroll_100    <span class="hljs-number">2.8983</span>     <span class="hljs-number">0.7460</span>   <span class="hljs-number">3.885</span> <span class="hljs-number">0.000174</span> ***
+---
+Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span>
+
+Residual standard error: <span class="hljs-number">21.44</span> on <span class="hljs-number">112</span> degrees of freedom
+  (<span class="hljs-number">3</span> observations deleted due to missingness)
+Multiple R-squared:  <span class="hljs-number">0.3113</span>,    Adjusted R-squared:  <span class="hljs-number">0.2929</span> 
+<span class="hljs-literal">F</span>-statistic: <span class="hljs-number">16.88</span> on <span class="hljs-number">3</span> and <span class="hljs-number">112</span> DF,  p-value: <span class="hljs-number">4.111e-09</span>
+</code></pre><p>The model still explains 20.3% of the variation in EEI scores.</p><p>After running a regression analysis like, a statistician will perform a number of tests and draw a series of charts to make sure that none of the assumptions of multiple linear have been violated. That’s beyond the scope of this class. But if you running a regression analysis for an important story, I strongly suggest getting expert statistical advice to ensure that your model isn’t lying to you!</p><p>One simple thing that can go wrong, however, is that apparent relationships between your explanatory variables and the outcome variable may be strongly influenced by a few outliers in the data. This is where the scatter plots in the plot matrix can be helpful. Here, they show that three schools are much larger than all the others, with values of <code>enroll_100</code> of more than 15, that is they have more than 1,500 students. Looking at the bottom-but-one scatterplot in the first column of the matrix, we should be concerned that the relationship between school size and eei scores might be due to the influence of these schools. To test this, we can remove them from the data and run the regression analysis again:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># take out the three outliers for school enrollment
+oakland_eei_2015_edit &amp;lt;- oakland_eei_2015 %&amp;gt;%
+  filter(enroll_100 &amp;lt; 15)
+
+# fit the model again
+oak_fit3 &amp;lt;- lm(eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015_edit)
+summary(oak_fit3)
+</code></pre>"><span class="hljs-comment"># take out the three outliers for school enrollment</span>
+oakland_eei_2015_edit &lt;- oakland_eei_2015 %&gt;%
+  filter(enroll_100 &lt; <span class="hljs-number">15</span>)
+
+<span class="hljs-comment"># fit the model again</span>
+oak_fit3 &lt;- lm(eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015_edit)
+summary(oak_fit3)
+</code></pre><p>This should be the output of the <code>summary</code>:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>Call:
+lm(formula = eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015_edit)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-45.122 -15.700  -2.461  11.135  49.081 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)  23.9248     7.6779   3.116  0.00234 ** 
+pc_black     -0.2894     0.1072  -2.700  0.00804 ** 
+charterY     19.5028     4.5817   4.257 4.41e-05 ***
+enroll_100    4.0856     1.4075   2.903  0.00448 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 21.55 on 109 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.2997,    Adjusted R-squared:  0.2805 
+F-statistic: 15.55 on 3 and 109 DF,  p-value: 1.728e-08
+</code></pre>">Call:
+lm(formula = eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015_edit)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-<span class="hljs-number">45.122</span> -<span class="hljs-number">15.700</span>  -<span class="hljs-number">2.461</span>  <span class="hljs-number">11.135</span>  <span class="hljs-number">49.081</span> 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  <span class="hljs-number">23.9248</span>     <span class="hljs-number">7.6779</span>   <span class="hljs-number">3.116</span>  <span class="hljs-number">0.00234</span> ** 
+pc_black     -<span class="hljs-number">0.2894</span>     <span class="hljs-number">0.1072</span>  -<span class="hljs-number">2.700</span>  <span class="hljs-number">0.00804</span> ** 
+charterY     <span class="hljs-number">19.5028</span>     <span class="hljs-number">4.5817</span>   <span class="hljs-number">4.257</span> <span class="hljs-number">4.41e-05</span> ***
+enroll_100    <span class="hljs-number">4.0856</span>     <span class="hljs-number">1.4075</span>   <span class="hljs-number">2.903</span>  <span class="hljs-number">0.00448</span> ** 
+---
+Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span>
+
+Residual standard error: <span class="hljs-number">21.55</span> on <span class="hljs-number">109</span> degrees of freedom
+  (<span class="hljs-number">3</span> observations deleted due to missingness)
+Multiple R-squared:  <span class="hljs-number">0.2997</span>,    Adjusted R-squared:  <span class="hljs-number">0.2805</span> 
+<span class="hljs-literal">F</span>-statistic: <span class="hljs-number">15.55</span> on <span class="hljs-number">3</span> and <span class="hljs-number">109</span> DF,  p-value: <span class="hljs-number">1.728e-08</span>
+</code></pre><p>The model has lost a small amount of explanatory power, and the significance level of school size has dropped to <code>p &lt; 0.01</code>, but the overall conclusions are the same. </p><p>From this regression analysis, we now have some questions to investigate. Why do students from low-income families seem to be doing better in charter schools, and in larger schools? And why are they doing worse in schools with a larger percentage of black students? These questions can’t be answered from this data. But you might want to explore, through further reporting, the resources available to the schools in Oakland, or other socioeconomic characteristics of students — black students may be disadvantaged in various ways, other than their families’ incomes, for example. </p><h5 id="reordering-categorical-variables"><a name="reordering-categorical-variables" href="#reordering-categorical-variables"></a>Reordering categorical variables</h5><p>Often, when running a regression analysis, you may need to chose which category for a categorical variable to use as the reference. If considering the effect of race/ethnicity on bail amounts, for instance, you would usually want to use white as the reference, and compare the outcome for other races/ethnicities to the outcome where the individual charged with a crime is white. By default, R will consider categories in alphabetical order, using the first in the list as the reference. But you can override this by explicitly turning a column containing text values into a categorical variable, and then reordering it, like this:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># turn charter into a categorical variable
+oakland_eei_2015_edit &amp;lt;- oakland_eei_2015_edit %&amp;gt;%
+  mutate(charter = as.factor(charter))
+
+# change from the dfeault alphabetical order
+oakland_eei_2015_edit &amp;lt;- oakland_eei_2015_edit %&amp;gt;%
+  mutate(charter = fct_relevel(charter, &quot;Y&quot;)
+
+# view the new order
+levels(oakland_eei_2015_edit$charter)
+</code></pre>"><span class="hljs-comment"># turn charter into a categorical variable</span>
+oakland_eei_2015_edit &lt;- oakland_eei_2015_edit %&gt;%
+  mutate(charter = as.factor(charter))
+
+<span class="hljs-comment"># change from the dfeault alphabetical order</span>
+oakland_eei_2015_edit &lt;- oakland_eei_2015_edit %&gt;%
+  mutate(charter = fct_relevel(charter, <span class="hljs-string">"Y"</span>)
+
+<span class="hljs-comment"># view the new order</span>
+levels(oakland_eei_2015_edit$charter)
+</code></pre><p>In this code, <code>fct_relevel</code> moves <code>Y</code> to the start of the list of values for the categorical variable <code>charter</code>. It works in exactly same way if you have more than two levels. Now the regression model will consider charter schools as the reference, and compare the effect of not being a charter school.</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># fit the model again
+oak_fit4 &amp;lt;- lm(eei_score ~ pc_black + charter + enroll_100, data=oakland_eei_2015_edit)
+summary(oak_fit4)
+</code></pre>"><span class="hljs-comment"># fit the model again</span>
+oak_fit4 &lt;- lm(eei_score ~ pc_black + charter + enroll_100, data=oakland_eei_2015_edit)
+summary(oak_fit4)
+</code></pre><p>This should be the output of the <code>summary</code>:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;>Call:
+lm(formula = eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015_edit)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-45.122 -15.700  -2.461  11.135  49.081 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)  43.4276     7.2336   6.004 2.58e-08 ***
+pc_black     -0.2894     0.1072  -2.700  0.00804 ** 
+charterN    -19.5028     4.5817  -4.257 4.41e-05 ***
+enroll_100    4.0856     1.4075   2.903  0.00448 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 21.55 on 109 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.2997,    Adjusted R-squared:  0.2805 
+F-statistic: 15.55 on 3 and 109 DF,  p-value: 1.728e-08
+</code></pre>">Call:
+lm(formula = eei_score ~ pc_black + charter + enroll_100, data = oakland_eei_2015_edit)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-<span class="hljs-number">45.122</span> -<span class="hljs-number">15.700</span>  -<span class="hljs-number">2.461</span>  <span class="hljs-number">11.135</span>  <span class="hljs-number">49.081</span> 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  <span class="hljs-number">43.4276</span>     <span class="hljs-number">7.2336</span>   <span class="hljs-number">6.004</span> <span class="hljs-number">2.58e-08</span> ***
+pc_black     -<span class="hljs-number">0.2894</span>     <span class="hljs-number">0.1072</span>  -<span class="hljs-number">2.700</span>  <span class="hljs-number">0.00804</span> ** 
+charterN    -<span class="hljs-number">19.5028</span>     <span class="hljs-number">4.5817</span>  -<span class="hljs-number">4.257</span> <span class="hljs-number">4.41e-05</span> ***
+enroll_100    <span class="hljs-number">4.0856</span>     <span class="hljs-number">1.4075</span>   <span class="hljs-number">2.903</span>  <span class="hljs-number">0.00448</span> ** 
+---
+Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span>
+
+Residual standard error: <span class="hljs-number">21.55</span> on <span class="hljs-number">109</span> degrees of freedom
+  (<span class="hljs-number">3</span> observations deleted due to missingness)
+Multiple R-squared:  <span class="hljs-number">0.2997</span>,    Adjusted R-squared:  <span class="hljs-number">0.2805</span> 
+<span class="hljs-literal">F</span>-statistic: <span class="hljs-number">15.55</span> on <span class="hljs-number">3</span> and <span class="hljs-number">109</span> DF,  p-value: <span class="hljs-number">1.728e-08</span>
+</code></pre><p>The result is the same as before, except that now the <code>Estimate</code> is for <code>charterN</code>, and it has a negative value.</p><h4 id="other-types-of-regression,-and-other-models"><a name="other-types-of-regression,-and-other-models" href="#other-types-of-regression,-and-other-models"></a>Other types of regression, and other models</h4><p>In some cases, your outcome measure may not be a continuous variable, but a binary outcome: In parole board decisions, for example, prisoners may be granted parole, or denied. For this type of analysis, you need to use logistic regression. Here you should code the outcome variable as either <code>0</code> or <code>1</code>. The format for the R code to fit the modek is as follows:</p><pre class="r hljs"><code class="R" data-origin="<pre><code class=&quot;R&quot;># fit a logistic regression model
+fit &amp;lt;- glm(outcome ~ variable1 + variable2 + variable3, family = binomial(link = &quot;logit&quot;), data = data_frame))
+summary(fit)
+</code></pre>"><span class="hljs-comment"># fit a logistic regression model</span>
+fit &lt;- glm(outcome ~ variable1 + variable2 + variable3, family = binomial(link = <span class="hljs-string">"logit"</span>), data = data_frame))
+summary(fit)
+</code></pre><p>There are many more types of statistic models that can be fitted to data, and R code in R follows the same general pattern. For a <a href="https://www.buzzfeed.com/peteraldhous/hidden-spy-planes">series</a> <a href="https://www.buzzfeed.com/peteraldhous/us-marshals-spy-plane-over-mexico">of</a> <a href="https://www.buzzfeed.com/christianstork/spy-planes-over-american-cities">stories</a> in 2017, for example, I used a form of machine learning called a <a href="https://cran.r-project.org/web/packages/randomForest/randomForest.pdf">random forest</a> model to identify hidden spy planes in months of flight tracking data, training the model on the characteristics of known government surveillance aircraft. The code for this is <a href="https://buzzfeednews.github.io/2017-08-spy-plane-finder/">here</a>.</p><h3 id="text-analysis,-and-more"><a name="text-analysis,-and-more" href="#text-analysis,-and-more"></a>Text analysis, and more</h3><p>One you get comfortable with R, there are almost endless possibilities for data analysis. Here, for example, are <a href="https://www.buzzfeed.com/peteraldhous/trump-twitter-wars">two</a> <a href="https://www.buzzfeed.com/peteraldhous/trump-state-of-the-union-words">stories</a> I did this year using the <strong><a href="https://cran.r-project.org/web/packages/tidytext/tidytext.pdf">tidytext</a></strong> package for <a href="https://www.tidytextmining.com/">text analysis</a>; the code is <a href="https://buzzfeednews.github.io/2018-01-trump-twitter-wars/">here</a> and <a href="https://buzzfeednews.github.io/2018-01-trump-state-of-the-union/">here</a>.</p><h3 id="further-reading"><a name="further-reading" href="#further-reading"></a>Further reading</h3><p><strong><a href="http://stackoverflow.com/">Stack Overflow</a></strong><br>For any work involving code, this question-and-answer site is a great resource for when you get stuck, to see how others have solved similar problems. Search the site, or <a href="http://stackoverflow.com/questions/tagged/r">browse R questions</a></p>
+
+	</div> <!-- /.container all -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -7,734 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
-
-  <style>
-  pre.editor-colors {
-    color: #839496;
-    background-color: #002b36;
-  }
-  pre.editor-colors .gutter {
-    color: #839496;
-    background-color: #073642;
-  }
-  pre.editor-colors .gutter .line-number.cursor-line {
-    background-color: #084150;
-  }
-  pre.editor-colors .invisible-character {
-    color: #0a4d5e;
-  }
-  pre.editor-colors .indent-guide {
-    color: #0a4d5e;
-  }
-  pre.editor-colors .cursor {
-    border-color: #fdf6e3;
-  }
-  pre.editor-colors .selection .region {
-    background-color: #073a47;
-  }
-  pre.editor-colors .fold-marker:after,
-  pre.editor-colors .gutter .line-number.folded {
-    color: #d33682;
-  }
-  pre.editor-colors .bracket-matcher .region {
-    border-color: #d33682;
-  }
-  .syntax--comment {
-    color: #586e75;
-    font-style: italic;
-  }
-  .syntax--comment .syntax--markup.syntax--link {
-    color: #586e75;
-  }
-  .syntax--string {
-    color: #2aa198;
-  }
-  .syntax--string.syntax--regexp {
-    color: #dc322f;
-  }
-  .syntax--constant.syntax--numeric {
-    color: #d33682;
-  }
-  .syntax--constant.syntax--language {
-    color: #b58900;
-  }
-  .syntax--constant.syntax--character,
-  .syntax--constant.syntax--other {
-    color: #cb4b16;
-  }
-  .syntax--variable {
-    color: #268bd2;
-  }
-  .syntax--keyword {
-    color: #859900;
-  }
-  .syntax--storage {
-    color: #859900;
-  }
-  .syntax--entity.syntax--name.syntax--class,
-  .syntax--entity.syntax--name.syntax--type,
-  .syntax--entity.syntax--name.syntax--function {
-    color: #268bd2;
-  }
-  .syntax--entity.syntax--other.syntax--attribute-name {
-    color: #657b83;
-  }
-  .syntax--support.syntax--function {
-    color: #268bd2;
-  }
-  .syntax--support.syntax--function.syntax--builtin {
-    color: #859900;
-  }
-  .syntax--support.syntax--type,
-  .syntax--support.syntax--class {
-    color: #859900;
-  }
-  .syntax--tag.syntax--entity.syntax--name {
-    color: #268bd2;
-  }
-  .syntax--tag.syntax--punctuation.syntax--definition.syntax--html,
-  .syntax--tag.syntax--punctuation.syntax--definition.syntax--begin,
-  .syntax--tag.syntax--punctuation.syntax--definition.syntax--end {
-    color: #586e75;
-  }
-  .syntax--invalid.syntax--deprecated {
-    color: #b58900;
-    text-decoration: underline;
-  }
-  .syntax--invalid.syntax--illegal {
-    color: #dc322f;
-    text-decoration: underline;
-  }
-  .syntax--none {
-    color: #839496;
-  }
-  .syntax--source.syntax--c .syntax--meta.syntax--preprocessor,
-  .syntax--source.syntax--cpp .syntax--meta.syntax--preprocessor {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--c .syntax--keyword.syntax--control.syntax--directive,
-  .syntax--source.syntax--cpp .syntax--keyword.syntax--control.syntax--directive {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--c .syntax--punctuation.syntax--string,
-  .syntax--source.syntax--cpp .syntax--punctuation.syntax--string {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--c .syntax--constant,
-  .syntax--source.syntax--cpp .syntax--constant {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--c .syntax--constant.syntax--numeric,
-  .syntax--source.syntax--cpp .syntax--constant.syntax--numeric,
-  .syntax--source.syntax--c .syntax--constant.syntax--language.syntax--c,
-  .syntax--source.syntax--cpp .syntax--constant.syntax--language.syntax--c {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--c .syntax--storage,
-  .syntax--source.syntax--cpp .syntax--storage {
-    color: #b58900;
-  }
-  .syntax--source.syntax--c .syntax--entity,
-  .syntax--source.syntax--cpp .syntax--entity {
-    color: #839496;
-  }
-  .syntax--source.syntax--c .syntax--entity.syntax--name.syntax--function.syntax--preprocessor,
-  .syntax--source.syntax--cpp .syntax--entity.syntax--name.syntax--function.syntax--preprocessor {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--c .syntax--support.syntax--type,
-  .syntax--source.syntax--cpp .syntax--support.syntax--type {
-    color: #b58900;
-  }
-  .syntax--source.syntax--c .syntax--support.syntax--type.syntax--posix-reserved,
-  .syntax--source.syntax--cpp .syntax--support.syntax--type.syntax--posix-reserved {
-    color: #839496;
-  }
-  .syntax--source.syntax--c .syntax--variable.syntax--other.syntax--dot-access,
-  .syntax--source.syntax--cpp .syntax--variable.syntax--other.syntax--dot-access {
-    color: #839496;
-  }
-  .syntax--source.syntax--c .syntax--variable.syntax--parameter.syntax--preprocessor,
-  .syntax--source.syntax--cpp .syntax--variable.syntax--parameter.syntax--preprocessor {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--coffee .syntax--support.syntax--class {
-    color: #859900;
-  }
-  .syntax--source.syntax--coffee .syntax--variable,
-  .syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--function,
-  .syntax--source.syntax--coffee .syntax--entity.syntax--name.syntax--class {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--coffee .syntax--variable.syntax--parameter.syntax--function {
-    color: #839496;
-  }
-  .syntax--source.syntax--coffee .syntax--variable.syntax--other.syntax--readwrite {
-    color: #859900;
-  }
-  .syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--function {
-    color: #859900;
-  }
-  .syntax--source.syntax--coffee .syntax--entity.syntax--name {
-    color: #839496;
-  }
-  .syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--round,
-  .syntax--source.syntax--coffee .syntax--meta.syntax--brace.syntax--square {
-    color: #839496;
-  }
-  .syntax--source.syntax--coffee .syntax--meta.syntax--delimiter {
-    color: #839496;
-  }
-  .syntax--source.syntax--coffee .syntax--storage.syntax--type.syntax--class {
-    color: #859900;
-  }
-  .syntax--source.syntax--coffee .syntax--punctuation.syntax--terminator {
-    color: #839496;
-  }
-  .syntax--source.syntax--coffee .syntax--punctuation.syntax--section.syntax--embedded {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--coffee .syntax--embedded.syntax--source {
-    color: #839496;
-  }
-  .syntax--source.syntax--coffee .syntax--constant.syntax--numeric {
-    color: #d33682;
-  }
-  .syntax--source.syntax--coffee .syntax--constant.syntax--language.syntax--boolean {
-    color: #b58900;
-  }
-  .syntax--source.syntax--css .syntax--punctuation.syntax--separator,
-  .syntax--source.syntax--css .syntax--punctuation.syntax--terminator {
-    color: #839496;
-  }
-  .syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--begin,
-  .syntax--source.syntax--css .syntax--punctuation.syntax--property-list.syntax--end {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--css .syntax--punctuation.syntax--section.syntax--function {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--css .syntax--entity.syntax--name {
-    color: #859900;
-  }
-  .syntax--source.syntax--css .syntax--attribute-name.syntax--class,
-  .syntax--source.syntax--css .syntax--id {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--css .syntax--pseudo-element,
-  .syntax--source.syntax--css .syntax--pseudo-class {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--css .syntax--property-value {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--css .syntax--constant.syntax--numeric {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--css .syntax--constant.syntax--numeric .syntax--unit {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--css .syntax--rgb-value {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--css .syntax--support.syntax--constant {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--css .syntax--support.syntax--constant.syntax--media {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--css .syntax--keyword.syntax--important {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--less .syntax--keyword.syntax--unit,
-  .syntax--source.syntax--scss .syntax--keyword.syntax--unit {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--go .syntax--operator {
-    color: #839496;
-  }
-  .syntax--source.syntax--go .syntax--operator.syntax--assignment {
-    color: #859900;
-  }
-  .syntax--source.syntax--java .syntax--keyword.syntax--operator {
-    color: #859900;
-  }
-  .syntax--source.syntax--java .syntax--keyword.syntax--import {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
-    color: #586e75;
-  }
-  .syntax--source.syntax--java .syntax--meta.syntax--class .syntax--storage.syntax--modifier {
-    color: #b58900;
-  }
-  .syntax--source.syntax--java .syntax--meta.syntax--class .syntax--meta.syntax--class.syntax--identifier .syntax--entity.syntax--name.syntax--type.syntax--class {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--java .syntax--storage.syntax--type.syntax--primitive.syntax--array {
-    color: #859900;
-  }
-  .syntax--source.syntax--java .syntax--constant.syntax--numeric {
-    color: #d33682;
-  }
-  .syntax--source.syntax--java .syntax--constant.syntax--other {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--java .syntax--storage.syntax--type {
-    color: #859900;
-  }
-  .syntax--source.syntax--java .syntax--meta.syntax--method-call {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--meta.syntax--method {
-    color: #6c71c4;
-  }
-  .syntax--source.syntax--java .syntax--meta.syntax--method-call .syntax--punctuation.syntax--definition.syntax--seperator.syntax--parameter {
-    color: #859900;
-  }
-  .syntax--source.syntax--java .syntax--punctuation.syntax--definition.syntax--method-parameters {
-    color: #93a1a1;
-  }
-  .syntax--source.syntax--js .syntax--constant {
-    color: #859900;
-  }
-  .syntax--source.syntax--js .syntax--comma {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--support.syntax--class {
-    color: #859900;
-  }
-  .syntax--source.syntax--js .syntax--entity.syntax--name.syntax--type {
-    color: #b58900;
-  }
-  .syntax--source.syntax--js .syntax--entity.syntax--name {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--meta.syntax--brace {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--keyword {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new {
-    color: #859900;
-  }
-  .syntax--source.syntax--js .syntax--keyword.syntax--control {
-    color: #859900;
-  }
-  .syntax--source.syntax--js .syntax--keyword.syntax--control.syntax--regexp {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--js .syntax--variable {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--variable.syntax--dom {
-    color: #859900;
-  }
-  .syntax--source.syntax--js .syntax--delimiter + .syntax--dom {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--name {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--variable.syntax--language {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--js .syntax--variable.syntax--parameter {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--regexp {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--js .syntax--support.syntax--function {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--support.syntax--constant {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--storage {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--js .syntax--constant.syntax--numeric {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--punctuation.syntax--terminator.syntax--statement {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--meta.syntax--delimiter.syntax--method.syntax--period {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--square {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--js .syntax--meta.syntax--brace.syntax--curly {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--js .syntax--definition.syntax--begin.syntax--curly,
-  .syntax--source.syntax--js .syntax--definition.syntax--end.syntax--curly {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source {
-    color: #839496;
-  }
-  .syntax--source.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--embedded.syntax--source > .syntax--embedded.syntax--punctuation {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--js.syntax--embedded .syntax--entity.syntax--name.syntax--tag {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--js.syntax--jsx .syntax--entity.syntax--name.syntax--tag {
-    color: #268bd2;
-  }
-  .syntax--gfm .syntax--link .syntax--entity {
-    color: #6c71c4;
-  }
-  .syntax--gfm .syntax--list.syntax--ordered {
-    color: #859900;
-  }
-  .syntax--gfm .syntax--list.syntax--unordered {
-    color: #b58900;
-  }
-  .syntax--gfm .syntax--raw {
-    font-style: italic;
-  }
-  .syntax--gfm.syntax--support {
-    color: #586e75;
-  }
-  .syntax--gfm.syntax--support.syntax--quote {
-    color: #6c71c4;
-  }
-  .syntax--markup.syntax--bold {
-    font-weight: bold;
-  }
-  .syntax--markup.syntax--italic {
-    font-style: italic;
-  }
-  .syntax--markup.syntax--heading {
-    color: #268bd2;
-  }
-  .syntax--markup.syntax--link {
-    color: #2aa198;
-  }
-  .syntax--markup.syntax--deleted {
-    color: #dc322f;
-  }
-  .syntax--markup.syntax--changed {
-    color: #b58900;
-  }
-  .syntax--markup.syntax--inserted {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--php .syntax--storage.syntax--type.syntax--class {
-    color: #b58900;
-  }
-  .syntax--source.syntax--php .syntax--storage.syntax--type.syntax--function {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--php .syntax--storage.syntax--modifier {
-    color: #b58900;
-  }
-  .syntax--source.syntax--php .syntax--entity.syntax--name.syntax--type.syntax--class {
-    color: #839496;
-  }
-  .syntax--source.syntax--php .syntax--entity.syntax--name.syntax--function {
-    color: #839496;
-  }
-  .syntax--source.syntax--php .syntax--entity.syntax--other {
-    color: #839496;
-  }
-  .syntax--source.syntax--php .syntax--variable {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--php .syntax--punctuation.syntax--definition {
-    color: #839496;
-  }
-  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--comment {
-    color: #586e75;
-  }
-  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--array {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--string {
-    color: #839496;
-  }
-  .syntax--source.syntax--php .syntax--punctuation.syntax--definition.syntax--variable {
-    color: #859900;
-  }
-  .syntax--source.syntax--php .syntax--support.syntax--function.syntax--construct {
-    color: #b58900;
-  }
-  .syntax--source.syntax--php .syntax--support.syntax--function.syntax--array {
-    color: #859900;
-  }
-  .syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--class {
-    color: #b58900;
-  }
-  .syntax--source.syntax--php .syntax--keyword.syntax--operator.syntax--assignment {
-    color: #859900;
-  }
-  .syntax--source.syntax--php .syntax--keyword.syntax--other {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--python .syntax--entity {
-    color: #839496;
-  }
-  .syntax--source.syntax--python .syntax--entity.syntax--name {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--entity.syntax--other {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--function {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--function.syntax--magic {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--punctuation.syntax--string {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--python .syntax--keyword.syntax--operator {
-    color: #839496;
-  }
-  .syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--quantifier {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical {
-    color: #859900;
-  }
-  .syntax--source.syntax--python .syntax--keyword.syntax--control.syntax--import {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--python .syntax--keyword.syntax--other {
-    color: #859900;
-  }
-  .syntax--source.syntax--python .syntax--constant.syntax--language {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--constant.syntax--character {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--python .syntax--constant.syntax--other {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--python .syntax--entity.syntax--name.syntax--type.syntax--class {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--variable {
-    color: #839496;
-  }
-  .syntax--source.syntax--python .syntax--support.syntax--function.syntax--builtin {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--support.syntax--type.syntax--exception.syntax--python {
-    color: #b58900;
-  }
-  .syntax--source.syntax--python .syntax--support.syntax--type.syntax--python {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--string {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class {
-    color: #859900;
-  }
-  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--class.syntax--todo {
-    color: #d33682;
-  }
-  .syntax--source.syntax--python .syntax--storage.syntax--type.syntax--function {
-    color: #859900;
-  }
-  .syntax--source.syntax--python .syntax--punctuation.syntax--definition.syntax--parameters {
-    color: #839496;
-  }
-  .syntax--source.syntax--python .syntax--punctuation.syntax--section.syntax--function.syntax--begin {
-    color: #839496;
-  }
-  .syntax--source.syntax--python .syntax--punctuation.syntax--separator.syntax--parameters {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--meta.syntax--embedded .syntax--punctuation.syntax--section {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--ruby .syntax--punctuation.syntax--definition {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--string {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--ruby .syntax--punctuation.syntax--definition.syntax--comment {
-    color: #586e75;
-  }
-  .syntax--source.syntax--ruby .syntax--entity.syntax--inherited-class {
-    color: #b58900;
-  }
-  .syntax--source.syntax--ruby .syntax--variable.syntax--parameter {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--variable.syntax--constant {
-    color: #b58900;
-  }
-  .syntax--source.syntax--ruby .syntax--constant.syntax--boolean {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--ruby .syntax--instance .syntax--punctuation.syntax--definition {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--ruby .syntax--class {
-    color: #b58900;
-  }
-  .syntax--source.syntax--ruby .syntax--class.syntax--control {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--module {
-    color: #b58900;
-  }
-  .syntax--source.syntax--ruby .syntax--require .syntax--keyword.syntax--other.syntax--special-method {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--ruby .syntax--keyword.syntax--other.syntax--special-method {
-    color: #cb4b16;
-  }
-  .syntax--source.syntax--ruby .syntax--keyword.syntax--other {
-    color: #859900;
-  }
-  .syntax--source.syntax--ruby .syntax--keyword.syntax--control {
-    color: #859900;
-  }
-  .syntax--source.syntax--ruby .syntax--keyword.syntax--operator {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--special-method {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--ruby .syntax--symbol {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--ruby .syntax--symbol .syntax--punctuation.syntax--definition {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--ruby .syntax--hashkey {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--ruby .syntax--hashkey .syntax--punctuation.syntax--definition {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--ruby .syntax--string.syntax--regexp {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--ruby .syntax--todo {
-    color: #d33682;
-  }
-  .syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--ruby .syntax--variable.syntax--ruby.syntax--global .syntax--punctuation {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--ruby .syntax--variable.syntax--block {
-    color: #268bd2;
-  }
-  .syntax--source.syntax--ruby .syntax--variable.syntax--self {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--ruby .syntax--punctuation.syntax--separator {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--numeric {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--ruby .syntax--punctuation.syntax--section.syntax--regexp {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated {
-    color: #2aa198;
-  }
-  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--punctuation .syntax--source.syntax--ruby {
-    color: #dc322f;
-  }
-  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--array,
-  .syntax--source.syntax--ruby .syntax--string.syntax--interpolated .syntax--embedded.syntax--line.syntax--ruby .syntax--source.syntax--ruby .syntax--punctuation.syntax--function {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--support.syntax--function {
-    color: #839496;
-  }
-  .syntax--source.syntax--ruby .syntax--support.syntax--function.syntax--kernel {
-    color: #859900;
-  }
-  .syntax--source.syntax--scala .syntax--variable {
-    color: #93a1a1;
-  }
-  .syntax--source.syntax--scala .syntax--declaration {
-    color: #93a1a1;
-    font-weight: bold;
-  }
-  .syntax--source.syntax--scala .syntax--comparison {
-    color: #93a1a1;
-  }
-  .syntax--source.syntax--scala .syntax--class,
-  .syntax--source.syntax--scala .syntax--type {
-    color: #b58900;
-  }
-  .syntax--source.syntax--scala .syntax--val {
-    font-weight: normal;
-  }
-  .syntax--source.syntax--scala .syntax--variable {
-    font-weight: bold;
-  }
-  .syntax--source.syntax--scala .syntax--variable.syntax--parameter {
-    color: #6c71c4;
-    font-weight: normal;
-  }
-  .syntax--source.syntax--scala .syntax--control.syntax--flow {
-    color: #93a1a1;
-    font-weight: bold;
-  }
-  .syntax--source.syntax--scala .syntax--constant.syntax--language {
-    color: #93a1a1;
-    font-weight: bold;
-  }
-  .syntax--source.syntax--scala .syntax--function.syntax--declaration {
-    color: #6c71c4;
-  }
-  .syntax--source.syntax--scala .syntax--modifier.syntax--other {
-    font-weight: bold;
-  }
-  .syntax--source.syntax--scala .syntax--package {
-    color: #93a1a1;
-  }
-  .syntax--source.syntax--scala .syntax--variable.syntax--import {
-    font-weight: normal;
-  }
-  .syntax--source.syntax--scala .syntax--type .syntax--bounds,
-  .syntax--source.syntax--scala .syntax--type .syntax--class {
-    color: #6c71c4;
-  }
-  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded).syntax--link.syntax--entity {
-    color: #268bd2;
-    text-decoration: underline;
-  }
-  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--class,
-  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--parameter {
-    color: #93a1a1;
-  }
-  .syntax--source.syntax--scala .syntax--documentation :not(.syntax--embedded) .syntax--description {
-    color: #586e75;
-  }
-  .syntax--source.syntax--scala .syntax--embedded {
-    color: #6c7c7c;
-    font-style: italic;
-  }
-  .syntax--source.syntax--scala .syntax--embedded .syntax--margin,
-  .syntax--source.syntax--scala .syntax--embedded .syntax--delimiters {
-    font-style: normal;
-  }
-  </style>
-
 </head>
 
 
@@ -790,116 +62,128 @@
 		</div> <!-- /.navbar-header -->
 	</header>
 	<div class="container all">
-    <h2 id="week-13-april-19-2018">Week 13 -- April 19, 2018</h2>
-  <p><em>Instructor: Amanda Hickman</em></p>
-  <h1 id="fixing-your-path">Fixing your path</h1>
-  <p>This is a good explanation of the command path issues we were navigating last time we worked in the terminal:</p>
-  <p><a href="http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k">http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k</a></p>
-  <p>Roughly, your command line interpreter, <code>bash</code>, uses a variable called <code>PATH</code> to decide where to look for programs to run. If you run <code>echo $PATH</code> at the command line, you can see a list of all the directories your shell looks in for executable programs. Yours is probably different from mine, but on my primary laptop (which runs Ubuntu, not OSX), my path looks like this:</p>
-  <pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span>amanda@mona:</span><span class="syntax--keyword syntax--operator syntax--tilde syntax--shell"><span>~</span></span><span>$&nbsp;</span><span class="syntax--support syntax--function syntax--builtin syntax--shell"><span>echo</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--normal syntax--shell"><span class="syntax--punctuation syntax--definition syntax--variable syntax--shell"><span>$</span></span><span>PATH</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/heroku/bin:/opt/venvs/vdirsyncer-latest/bin/</span></span></div></pre>
-  <p>Note that I manually added a few paths there: <code>/usr/local/heroku/bin</code> lets me run a handful of specialized heroku commands, and <code>/opt/venvs/vdirsyncer-latest/bin/</code> lets me run vidirsyncer, which I'm super happy to talk about but is kind of a rabbit hole in this context.</p>
-  <p>If you want to run a program that isn't in your <code>PATH</code> variable, you have to use the "absolute path" -- the full path to the program, starting with <code>/</code> for the root directory. Alternatively, you can edit your <code>PATH</code> to include the path to the directory that includes that program.</p>
-  <p>To add <code>shp2pgsql</code> so you can access it easily, you want to tell your shell that it needs to look in <code>/Applications/Postgres.app/Contents/Versions/10/bin/</code> for programs.</p>
-  <p>To do that, you're going to edit a hidden file in your home directory (probably <code>/Users/yourname/</code>) called <code>.profile</code>, to add a line like:</p>
-  <pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>export&nbsp;PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH</span></span></div></pre><p><code>PATH</code> is the <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#index-shell-variable">shell variable</a> that contains the array of directories that bash looks in to find executable programs, and we print the contents of that variable with <code>$PATH</code>. This command <code>exports</code> or "sets" a new <code>PATH</code> by concatenating the new directory (<code>/Applications/Postgres.app/Contents/Versions/10/bin/</code>) that you want to include, with the existing values stored in <code>PATH</code>.</p>
-  <h1 id="do-you-have-enough-ram-for-this-">Do you have enough RAM for this?</h1>
-  <p>I was surprised to discover that quite a few of you couldn't actually load the US zipcode file into postgres via Postico. My suspicion is that you could load it if you use the command line tools, but Postico wasn't able to load the whole thing into its preview window -- queueing it up so you can scroll around in it takes more memory than just loading it.</p>
-  <p>Use <a href="https://support.apple.com/en-us/HT201260">these instructions</a> to find some basic information about your computer. Please complete this survey: <a href="https://goo.gl/forms/oIsHQAUuyWREvlrC3">https://goo.gl/forms/oIsHQAUuyWREvlrC3</a> so we can get a handle on the problem.</p>
-  <h1 id="data-of-the-week">Data of the Week</h1>
-  <p>Charlotte and Susie are up:
-  <a href="https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0">https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0</a></p>
-  <h1 id="sql-vocabulary">SQL Vocabulary</h1>
-  <p>Quick follow up to a conversation we had two weeks ago about why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is "it has something to do with how computers store data" -- As for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Floating point arithmetic</a> is no exception.</p>
-  <p>You can see the full list of data types that Postgres supports in <a href="https://www.postgresql.org/docs/10/static/datatype.html">the Postgres documentation</a>. You're almost always going to be using one of only a few:  numeric, float, integer, text, char, varchar, and geometry.</p>
-  <table>
-  <thead>
-  <tr>
-  <th>format</th>
-  <th>usage</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td>  NUMERIC</td>
-  <td>any number -- this is the preferable format but some systems default to <code>FLOAT</code> if you don't specify <code>NUMERIC</code></td>
-  </tr>
-  <tr>
-  <td>  FLOAT</td>
-  <td>a decimal number, synonymous with <code>DOUBLE PRECISION</code>-- if you plan to do any math on the number, <code>NUMERIC</code> is preferable</td>
-  </tr>
-  <tr>
-  <td>  INTEGER</td>
-  <td>any whole number</td>
-  </tr>
-  <tr>
-  <td>  BIGINT</td>
-  <td>very large integer (&gt; 2.1B or &lt; -2.1B)</td>
-  </tr>
-  <tr>
-  <td>  TEXT</td>
-  <td>any text -- this is an efficient format to use in Postgres but in other SQL databases you may not be able to index, search or sort a <code>TEXT</code> column. It isn't standard across SQL implementations.</td>
-  </tr>
-  <tr>
-  <td>  CHAR</td>
-  <td>text that is always the same length</td>
-  </tr>
-  <tr>
-  <td>  VARCHAR</td>
-  <td>text of varying length</td>
-  </tr>
-  <tr>
-  <td>  GEOMETRY</td>
-  <td>geographic data (points, lines, polygons)</td>
-  </tr>
-  </tbody>
-  </table>
-  <h1 id="hands-on-postgis">Hands On PostGIS</h1>
-  <p>We started this two weeks ago and hit some walls that I wasn't expecting, so let's try again. Download the <a href="data/week13.zip">Week 13 data</a> bundle so you have everything in one place.</p>
-  <h2 id="where-are-you-working-">Where are you working?</h2>
-  <p><a href="week11.html">Remember</a> that to do PostGIS queries you will need to make sure you've enabled it on the database you're working in, with <code>CREATE EXTENSION postgis;</code> -- so make sure that you're working in a database where you've enabled postgis.</p>
-  <h2 id="find-alameda-county-zipcodes">Find Alameda County zipcodes</h2>
-  <p>what are the zipcodes that are overlap with Alameda county. Start by spelling out how you'd approach this. Can you describe in words what you're trying to do? Write this in a comment at the top of your script.</p>
-  <p>You're looking for a way to capture all the shapes in one layer that intersect with a single shape in another layer.  The census publishes <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html">zipcode boundaries for the whole US</a>, but for some of your computers that was too much data, so I cut it down to just California zipcodes for you. You'll need the <a href="https://ucb-dataj.github.io/2018/data/week13/ca_zips.sql">sql</a> to create a table and the data itself is in a <a href="https://ucb-dataj.github.io/2018/data/week13/ca_zips.csv">separate csv</a>.</p>
-  <p>Alameda County's open data portal publishes a <a href="https://data.acgov.org/Geospatial-Data/County-Boundary/rygg-x9nr">county boundary file</a>. I already used <a href="http://bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg"><code>shp2pgsql</code></a> to convert the shapefile to SQL.</p>
-  <ol>
-  <li>Use <code>shp2pgsql</code> to convert the Shapefile into SQL.</li>
-  <li>Import the SQL into Postgres. You can either
-  a. use Postico's "Load Query" button to load <code>alameda_county_boundary.sql</code>, or<br>b. use <code>psql</code> at the command line with <code>psql -d week11_postgis -f alameda_county_boundary.sql</code> (but note that <code>week11_postgis</code> is my database name. You may not have named your database <code>week11_postgis</code>.)</li>
-  <li>Create a spatial index. You can either
-  a. Load it into QGIS and click "create index" or
-  b. run <code>CREATE INDEX sidx_alameda_geom ON alameda USING gist (geom);</code></li>
-  </ol>
-  <h3 id="find-your-postgis-command">Find Your PostGIS command</h3>
-  <p>  There are a few that sound like they might be what we want: <a href="http://postgis.net/docs/ST_Within.html">ST_Within</a>, <a href="http://postgis.net/docs/ST_Contains.html">ST_Contains</a>,  <a href="http://postgis.net/docs/ST_Intersection.html">ST_Intersection </a>,  <a href="http://postgis.net/docs/ST_Intersects.html">ST_Intersects</a>. Take a look at the documentation: how do these differ?</p>
-  <p>We're going to use <a href="http://postgis.net/docs/ST_Intersects.html">ST_Intersects</a> to find all the California zipcode shapes that intersect with Alameda county.</p>
-  <pre class="editor-colors lang-SQL"><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;county_geom,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;county,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>zcta5ce10</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span><span>&nbsp;zipcode,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>as</span></span><span>&nbsp;zip_geom</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;alameda,&nbsp;zipcodes</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;ST_Intersects(</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>AND</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>Alameda&nbsp;County</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>;</span></span></div></pre>
-  <p>Since that seems like it worked, make a table out of that:</p>
-  <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--meta syntax--create syntax--sql"><span class="syntax--keyword syntax--other syntax--create syntax--sql"><span>CREATE</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--sql"><span>TABLE</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--sql"><span>alameda_zipcodes</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>AS</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;zipcodes.</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;zipcodes,&nbsp;alameda</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span><span>&nbsp;ST_Intersects(</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>zipcodes</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>geom</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>AND</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>alameda</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>Alameda&nbsp;County</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>;</span></span></div></pre>
-  <h3 id="troubleshooting">Troubleshooting</h3>
-  <p>You're going to wind up capturing a few zipcodes that only cross the county line in tiny spots. Can you brainstorm some ways to address those?</p>
-  <h2 id="find-san-francisco-zipcodes">Find San Francisco zipcodes</h2>
-  <p>San Francisco doesn't publish a handy county file, so I pulled down the <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_counties.html">TIGER county shapefiles</a>. This is smaller than the zipcode file but it's still pretty big, so I also ran it through <a href="http://bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg"><code>shp2pgsql</code></a> with <code>shp2pgsql cb_2017_us_county_20m.shp counties postgres &gt; counties.sql</code>, and then pruned it by loading it into Postgres and running:</p>
-  <pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>DELETE&nbsp;FROM&nbsp;counties&nbsp;WHERE&nbsp;statefp&nbsp;!=&nbsp;'06';</span></span></div></pre><p>You can load the smaller, California only file from the <a href="data/week13.zip">week 13 data</a> file -- it's <code>counties.sql</code>.</p>
-  <h3 id="find-all-the-zipcodes-in-san-francisco-county-what-about-fresno-county-">Find all the zipcodes in San Francisco county? What about Fresno county?</h3>
-  <p>Start by writing down the steps you need to take, then ... take them.</p>
-  <h2 id="create-mappable-points">Create mappable points</h2>
-  <p>San Francisco publishes <a href="https://data.sfgov.org/Public-Safety/Car-Break-ins/6har-q36k">car break in data</a>.</p>
-  <p>Can you ...</p>
-  <ul>
-  <li>Create a new table for this data</li>
-  <li>Import the data into a PostGIS database</li>
-  <li>Do you remember the function you need to make WKT point out of latitude and longitude values?</li>
-  <li>View it in QGIS</li>
-  </ul>
-  <p>I did use <a href="https://csvkit.readthedocs.io/en/1.0.3/scripts/csvsql.html">csvsql</a> to generate a CREATE statement for you.</p>
-  <pre class="editor-colors lang-sql"><div class="line"><span class="syntax--source syntax--sql"><span class="syntax--meta syntax--create syntax--sql"><span class="syntax--keyword syntax--other syntax--create syntax--sql"><span>CREATE</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--sql"><span>TABLE</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--sql"><span>car_breakins</span></span></span><span>&nbsp;(</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;incidntnum&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>9</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;category&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>13</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;descript&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>28</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;dayofweek&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>9</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;event_date&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>DATE</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;event_time&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>TIME</span></span><span>&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>WITHOUT&nbsp;TIME&nbsp;ZONE</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;pddistrict&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>10</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;resolution&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>21</span></span><span>)</span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;address&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>42</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>FLOAT</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>FLOAT</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span><span>,</span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;</span><span class="syntax--storage syntax--type syntax--sql"><span>VARCHAR</span></span><span>(</span><span class="syntax--constant syntax--numeric syntax--sql"><span>41</span></span><span>)</span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>NOT&nbsp;NULL</span></span></span></div><div class="line"><span class="syntax--source syntax--sql"><span>);</span></span></div></pre>
-  <p>Bonus questions: where is this data from? Who compiled it? Can you sniff anything out from the Socrata metadata?</p>
-  <h1 id="keep-learning">Keep Learning</h1>
-  <ul>
-  <li><a href="https://multimedia.journalism.berkeley.edu/tutorials/qgis-basics-journalists/">QGIS Tutorial</a></li>
-  <li><a href="https://www.lynda.com/search?q=qgis">Lynda QGIS</a> | <a href="https://www.lynda.com/search?q=postgis">Lynda PostGIS</a></li>
-  </ul>
-	</div> <!-- /.container all -->
+ 
+<h2 id="week-13----april-19,-2018"><a name="week-13----april-19,-2018" href="#week-13----april-19,-2018"></a>Week 13 — April 19, 2018</h2><p><em>Instructor: Amanda Hickman</em></p><h1 id="fixing-your-path"><a name="fixing-your-path" href="#fixing-your-path"></a>Fixing your path</h1><p>This is a good explanation of the command path issues we were navigating last time we worked in the terminal:</p><p><a href="http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k">http://www.tech-recipes.com/rx/2621/os_x_change_path_environment_variable/k</a></p><p>Roughly, your command line interpreter, <code>bash</code>, uses a variable called <code>PATH</code> to decide where to look for programs to run. If you run <code>echo $PATH</code> at the command line, you can see a list of all the directories your shell looks in for executable programs. Yours is probably different from mine, but on my primary laptop (which runs Ubuntu, not OSX), my path looks like this:</p><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>amanda@mona:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/heroku/bin:/opt/venvs/vdirsyncer-latest/bin/
+</code></pre>">amanda@mona:~$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span>
+/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="hljs-built_in">local</span>/games:/snap/bin:/usr/<span class="hljs-built_in">local</span>/heroku/bin:/opt/venvs/vdirsyncer-latest/bin/
+</code></pre><p>Note that I manually added a few paths there: <code>/usr/local/heroku/bin</code> lets me run a handful of specialized heroku commands, and <code>/opt/venvs/vdirsyncer-latest/bin/</code> lets me run vidirsyncer, which I’m super happy to talk about but is kind of a rabbit hole in this context.</p><p>If you want to run a program that isn’t in your <code>PATH</code> variable, you have to use the “absolute path” — the full path to the program, starting with <code>/</code> for the root directory. Alternatively, you can edit your <code>PATH</code> to include the path to the directory that includes that program.</p><p>To add <code>shp2pgsql</code> so you can access it easily, you want to tell your shell that it needs to look in <code>/Applications/Postgres.app/Contents/Versions/10/bin/</code> for programs.</p><p>To do that, you’re going to edit a hidden file in your home directory (probably <code>/Users/yourname/</code>) called <code>.profile</code>, to add a line like:</p><pre><code data-origin="<pre><code>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH
+</code></pre>">export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH
+</code></pre><p><code>PATH</code> is the <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#index-shell-variable">shell variable</a> that contains the array of directories that bash looks in to find executable programs, and we print the contents of that variable with <code>$PATH</code>. This command <code>exports</code> or “sets” a new <code>PATH</code> by concatenating the new directory (<code>/Applications/Postgres.app/Contents/Versions/10/bin/</code>) that you want to include, with the existing values stored in <code>PATH</code>.</p><h1 id="do-you-have-enough-ram-for-this?"><a name="do-you-have-enough-ram-for-this?" href="#do-you-have-enough-ram-for-this?"></a>Do you have enough RAM for this?</h1><p>I was surprised to discover that quite a few of you couldn’t actually load the US zipcode file into postgres via Postico. My suspicion is that you could load it if you use the command line tools, but Postico wasn’t able to load the whole thing into its preview window — queueing it up so you can scroll around in it takes more memory than just loading it.</p><p>Use <a href="https://support.apple.com/en-us/HT201260">these instructions</a> to find some basic information about your computer. Please complete this survey: <a href="https://goo.gl/forms/oIsHQAUuyWREvlrC3">https://goo.gl/forms/oIsHQAUuyWREvlrC3</a> so we can get a handle on the problem.</p><h1 id="data-of-the-week"><a name="data-of-the-week" href="#data-of-the-week"></a>Data of the Week</h1><p>Charlotte and Susie are up:<br><a href="https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0">https://docs.google.com/spreadsheets/d/11JLkkyWZf3fvVz3aebgMjcZ6mxV-j5Gw7hEpeiPAGY4/edit#gid=0</a></p><h1 id="sql-vocabulary"><a name="sql-vocabulary" href="#sql-vocabulary"></a>SQL Vocabulary</h1><p>Quick follow up to a conversation we had two weeks ago about why FLOAT is a synonym for DOUBLE PRECISION, and what that means to begin with. The short answer is “it has something to do with how computers store data” — As for almost any arcane topic in mathematics and computing there is a wikipedia article that goes deep on the finer points. <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">Floating point arithmetic</a> is no exception.</p><p>You can see the full list of data types that Postgres supports in <a href="https://www.postgresql.org/docs/10/static/datatype.html">the Postgres documentation</a>. You’re almost always going to be using one of only a few:  numeric, float, integer, text, char, varchar, and geometry.</p><table>
+<thead>
+<tr>
+<th>format</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  NUMERIC</td>
+<td>any number — this is the preferable format but some systems default to <code>FLOAT</code> if you don’t specify <code>NUMERIC</code></td>
+</tr>
+<tr>
+<td>  FLOAT</td>
+<td>a decimal number, synonymous with <code>DOUBLE PRECISION</code>— if you plan to do any math on the number, <code>NUMERIC</code> is preferable</td>
+</tr>
+<tr>
+<td>  INTEGER</td>
+<td>any whole number</td>
+</tr>
+<tr>
+<td>  BIGINT</td>
+<td>very large integer (&gt; 2.1B or &lt; -2.1B)</td>
+</tr>
+<tr>
+<td>  TEXT</td>
+<td>any text — this is an efficient format to use in Postgres but in other SQL databases you may not be able to index, search or sort a <code>TEXT</code> column. It isn’t standard across SQL implementations.</td>
+</tr>
+<tr>
+<td>  CHAR</td>
+<td>text that is always the same length</td>
+</tr>
+<tr>
+<td>  VARCHAR</td>
+<td>text of varying length</td>
+</tr>
+<tr>
+<td>  GEOMETRY</td>
+<td>geographic data (points, lines, polygons)</td>
+</tr>
+</tbody>
+</table><h1 id="hands-on-postgis"><a name="hands-on-postgis" href="#hands-on-postgis"></a>Hands On PostGIS</h1><p>We started this two weeks ago and hit some walls that I wasn’t expecting, so let’s try again. Download the <a href="data/week13.zip">Week 13 data</a> bundle so you have everything in one place.</p><h2 id="where-are-you-working?"><a name="where-are-you-working?" href="#where-are-you-working?"></a>Where are you working?</h2><p><a href="week11.html">Remember</a> that to do PostGIS queries you will need to make sure you’ve enabled it on the database you’re working in, with <code>CREATE EXTENSION postgis;</code> — so make sure that you’re working in a database where you’ve enabled postgis.</p><h2 id="find-alameda-county-zipcodes"><a name="find-alameda-county-zipcodes" href="#find-alameda-county-zipcodes"></a>Find Alameda County zipcodes</h2><p>what are the zipcodes that are overlap with Alameda county. Start by spelling out how you’d approach this. Can you describe in words what you’re trying to do? Write this in a comment at the top of your script.</p><p>You’re looking for a way to capture all the shapes in one layer that intersect with a single shape in another layer.  The census publishes <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html">zipcode boundaries for the whole US</a>, but for some of your computers that was too much data, so I cut it down to just California zipcodes for you. You’ll need the <a href="https://ucb-dataj.github.io/2018/data/week13/ca_zips.sql">sql</a> to create a table and the data itself is in a <a href="https://ucb-dataj.github.io/2018/data/week13/ca_zips.csv">separate csv</a>.</p><p>Alameda County’s open data portal publishes a <a href="https://data.acgov.org/Geospatial-Data/County-Boundary/rygg-x9nr">county boundary file</a>. I already used <a href="http://bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg"><code>shp2pgsql</code></a> to convert the shapefile to SQL.</p><ol>
+<li>Use <code>shp2pgsql</code> to convert the Shapefile into SQL.</li><li>Import the SQL into Postgres. You can either<br>a. use Postico’s “Load Query” button to load <code>alameda_county_boundary.sql</code>, or<br>b. use <code>psql</code> at the command line with <code>psql -d week11_postgis -f alameda_county_boundary.sql</code> (but note that <code>week11_postgis</code> is my database name. You may not have named your database <code>week11_postgis</code>.)</li><li>Create a spatial index. You can either<br>a. Load it into QGIS and click “create index” or<br>b. run <code>CREATE INDEX sidx_alameda_geom ON alameda USING gist (geom);</code></li></ol><h3 id="find-your-postgis-command"><a name="find-your-postgis-command" href="#find-your-postgis-command"></a>Find Your PostGIS command</h3><p>  There are a few that sound like they might be what we want: <a href="http://postgis.net/docs/ST_Within.html">ST_Within</a>, <a href="http://postgis.net/docs/ST_Contains.html">ST_Contains</a>,  <a href="http://postgis.net/docs/ST_Intersection.html">ST_Intersection </a>,  <a href="http://postgis.net/docs/ST_Intersects.html">ST_Intersects</a>. Take a look at the documentation: how do these differ?</p><p>We’re going to use <a href="http://postgis.net/docs/ST_Intersects.html">ST_Intersects</a> to find all the California zipcode shapes that intersect with Alameda county.</p><pre class="sql hljs"><code class="SQL" data-origin="<pre><code class=&quot;SQL&quot;>
+SELECT
+  alameda.geom AS county_geom,
+  alameda.name AS county,
+  zipcodes.zcta5ce10 AS zipcode,
+  zipcodes.geom as zip_geom
+FROM
+  alameda, zipcodes
+WHERE
+  ST_Intersects(zipcodes.geom, alameda.geom) AND alameda.name = 'Alameda County';
+</code></pre>">
+<span class="hljs-operator"><span class="hljs-keyword">SELECT</span>
+  alameda.geom <span class="hljs-keyword">AS</span> county_geom,
+  alameda.name <span class="hljs-keyword">AS</span> county,
+  zipcodes.zcta5ce10 <span class="hljs-keyword">AS</span> zipcode,
+  zipcodes.geom <span class="hljs-keyword">as</span> zip_geom
+<span class="hljs-keyword">FROM</span>
+  alameda, zipcodes
+<span class="hljs-keyword">WHERE</span>
+  ST_Intersects(zipcodes.geom, alameda.geom) <span class="hljs-keyword">AND</span> alameda.name = <span class="hljs-string">'Alameda County'</span>;</span>
+</code></pre><p>Since that seems like it worked, make a table out of that:</p><pre class="sql hljs"><code class="sql" data-origin="<pre><code class=&quot;sql&quot;>CREATE TABLE alameda_zipcodes AS
+  SELECT zipcodes.* FROM zipcodes, alameda
+  WHERE ST_Intersects(zipcodes.geom, alameda.geom) AND alameda.name = 'Alameda County';
+</code></pre>"><span class="hljs-operator"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> alameda_zipcodes <span class="hljs-keyword">AS</span>
+  <span class="hljs-keyword">SELECT</span> zipcodes.* <span class="hljs-keyword">FROM</span> zipcodes, alameda
+  <span class="hljs-keyword">WHERE</span> ST_Intersects(zipcodes.geom, alameda.geom) <span class="hljs-keyword">AND</span> alameda.name = <span class="hljs-string">'Alameda County'</span>;</span>
+</code></pre><h3 id="troubleshooting"><a name="troubleshooting" href="#troubleshooting"></a>Troubleshooting</h3><p>You’re going to wind up capturing a few zipcodes that only cross the county line in tiny spots. Can you brainstorm some ways to address those?</p><h2 id="find-san-francisco-zipcodes"><a name="find-san-francisco-zipcodes" href="#find-san-francisco-zipcodes"></a>Find San Francisco zipcodes</h2><p>San Francisco doesn’t publish a handy county file, so I pulled down the <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_counties.html">TIGER county shapefiles</a>. This is smaller than the zipcode file but it’s still pretty big, so I also ran it through <a href="http://bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg"><code>shp2pgsql</code></a> with <code>shp2pgsql cb_2017_us_county_20m.shp counties postgres &gt; counties.sql</code>, and then pruned it by loading it into Postgres and running:</p><pre><code data-origin="<pre><code>DELETE FROM counties WHERE statefp != '06';
+</code></pre>">DELETE FROM counties WHERE statefp != '06';
+</code></pre><p>You can load the smaller, California only file from the <a href="data/week13.zip">week 13 data</a> file — it’s <code>counties.sql</code>.</p><h3 id="find-all-the-zipcodes-in-san-francisco-county?-what-about-fresno-county?"><a name="find-all-the-zipcodes-in-san-francisco-county?-what-about-fresno-county?" href="#find-all-the-zipcodes-in-san-francisco-county?-what-about-fresno-county?"></a>Find all the zipcodes in San Francisco county? What about Fresno county?</h3><p>Start by writing down the steps you need to take, then … take them.</p><h2 id="create-mappable-points"><a name="create-mappable-points" href="#create-mappable-points"></a>Create mappable points</h2><p>San Francisco publishes <a href="https://data.sfgov.org/Public-Safety/Car-Break-ins/6har-q36k">car break in data</a>.</p><p>Can you …</p><ul>
+<li>Create a new table for this data</li><li>Import the data into a PostGIS database</li><li>Do you remember the function you need to make WKT point out of latitude and longitude values?</li><li>View it in QGIS</li></ul><p>I did use <a href="https://csvkit.readthedocs.io/en/1.0.3/scripts/csvsql.html">csvsql</a> to generate a CREATE statement for you.</p><pre class="sql hljs"><code class="sql" data-origin="<pre><code class=&quot;sql&quot;>CREATE TABLE car_breakins (
+    incidntnum VARCHAR(9) NOT NULL,
+    category VARCHAR(13) NOT NULL,
+    descript VARCHAR(28) NOT NULL,
+    dayofweek VARCHAR(9) NOT NULL,
+    event_date DATE NOT NULL,
+    event_time TIME WITHOUT TIME ZONE NOT NULL,
+    pddistrict VARCHAR(10) NOT NULL,
+    resolution VARCHAR(21),
+    address VARCHAR(42) NOT NULL,
+    x FLOAT NOT NULL,
+    y FLOAT NOT NULL,
+    location VARCHAR(41) NOT NULL
+);
+</code></pre>"><span class="hljs-operator"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> car_breakins (
+    incidntnum <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">9</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    category <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">13</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    descript <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">28</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    <span class="hljs-keyword">dayofweek</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">9</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    event_date <span class="hljs-built_in">DATE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    event_time <span class="hljs-keyword">TIME</span> WITHOUT <span class="hljs-keyword">TIME</span> ZONE <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    pddistrict <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    resolution <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">21</span>),
+    address <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">42</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    x <span class="hljs-built_in">FLOAT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    y <span class="hljs-built_in">FLOAT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    location <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">41</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>
+);</span>
+</code></pre><p>Bonus questions: where is this data from? Who compiled it? Can you sniff anything out from the Socrata metadata?</p><h3 id="assigment"><a name="assigment" href="#assigment"></a>Assigment</h3><p>Please submit your final data journalism project by <strong>Tuesday May 1 at 8pm</strong>.</p><ul>
+<li><p>In bCourses, submit a full write-up of your project. This should be written so that someone with no prior knowledge of your project can understand why this is interesting as well as what you have done. It should include:</p>
+<ul>
+<li><p>A clear and direct lede that tells us why we should keep reading, and what the main points of your work are. This should be written for a new audience and should demonstrate the writing skills you have learned in your other classes. Think of this as your chance to sell an editor on this work, by showing that you can write and that you understand this data.</p>
+</li><li><p>A description of the data you used, and how it was cleaned and processed for analysis. Again, imagine you are writing for an editor who doesn’t know you and needs to know that you have made smart decisions about data to base your reporting on and that you truly understand what you are doing.</p>
+</li><li><p>The questions you asked of the data, and the tools you used to ask them.</p>
+</li><li><p>The conclusions you have drawn. Include any charts/maps that are relevant.</p>
+</li><li><p>Any further analyses you would need to run to turn this project into a story.</p>
+</li><li><p>The additional reporting, beyond data analysis, that would be required to turn this project into a story.</p>
+</li></ul>
+</li><li><p>Share the data and code for your analysis. Code should be commented so that your instructors are able to understand each step of your analysis. You can share this in a zipped folder and email if the data files are not too large. If they are too large to email, you can share via a Dropbox link.</p>
+</li><li><p>Plan to come to class on May 3 prepared to give a 5-7 minute presentation on your project, and answer questions from other students. Plan, also, to listen thoughtfully to your classroom colleagues and engage them on their work this semester.</p>
+</li></ul><h1 id="keep-learning"><a name="keep-learning" href="#keep-learning"></a>Keep Learning</h1><ul>
+<li><a href="https://multimedia.journalism.berkeley.edu/tutorials/qgis-basics-journalists/">QGIS Tutorial</a></li><li><a href="https://www.lynda.com/search?q=qgis">Lynda QGIS</a> | <a href="https://www.lynda.com/search?q=postgis">Lynda PostGIS</a></li></ul>
+
+ 	</div> <!-- /.container all -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
