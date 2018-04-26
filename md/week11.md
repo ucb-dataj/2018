@@ -85,7 +85,7 @@ ALTER TABLE example
   ADD COLUMN latitude FLOAT;
 
 
-UPDATE test SET longitude = split_part(btrim(location, '()'), ',', 2),
+UPDATE example SET longitude = split_part(btrim(location, '()'), ',', 2),
                 latitude = split_part(btrim(location, '()'), ',', 1);
 
 ```
@@ -130,11 +130,22 @@ A few more observations:
 Look for `Database > DB Manager` in the menu. You should be able to drill down to `PostGIS > Localhost > public > {tablename}` and you'll see some warnings.
 
 > ￼   No spatial index defined (create it)
+>    There is no entry in geometry_columns!
+>    No primary key defined for this table!
 
-Use the link to create a spatial index. And then add a primary key, with:  
+You can actually charge ahead without addressing any of these warnings, but when you hit a wall, the first troubleshooting step is always to address any warnings, so do that.
+
+Use the link to create a spatial index.
+
+Register this table with QGIS (to create an entry in `geometry_columns`) with [`Populate_Geometry_Columns`](https://postgis.net/docs/Populate_Geometry_Columns.html):
 
 ```sql
-ALTER TABLE test ADD PRIMARY KEY (call_number, unit_id);
+SELECT Populate_Geometry_Columns('example'::regclass);
+```
+Add a primary key, with:  
+
+```sql
+ALTER TABLE example ADD PRIMARY KEY (call_number, unit_id);
 ```
 
 ## What Do We Want To Accomplish?
