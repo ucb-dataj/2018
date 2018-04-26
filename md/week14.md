@@ -29,7 +29,7 @@ The rest of the data is [here](data/week14.zip); unzip the folder and place it o
 	- `first_name` First name of doctor/health care provider.
 	- `middle_name` Middle/other names.
 	- `name_suffix` Name suffix (Jr., II etc)
-	- `city` City of practive location.
+	- `city` City of practice location.
 	- `state` State of practice location.
 	- `license` California medical license number.
 	- `action_type` Type of action.
@@ -93,7 +93,7 @@ for (item in list) {
 
 This example uses the function `list.files` to list all the files in the folder `ca_discipline`, then makes an empty data frame called `ca_discipline` using the **dplyr** function `data_frame`.
 
-The loop prints each file name, then ruses the `read_csv` function from **readr** to load each file into a temporary data frame called `tmp`, which gets overwritten in each iteration of the loop. The final step in each iteration of the loop is to append `tmp` to the `ca_discipline` data frame using the dplyr function `bind_rows`.
+The loop prints each file name, then uses the `read_csv` function from **readr** to load each file into a temporary data frame called `tmp`, which gets overwritten in each iteration of the loop. The final step in each iteration of the loop is to append `tmp` to the `ca_discipline` data frame using the dplyr function `bind_rows`.
 
 The `read_csv` function is a little more complicated than we've seen before. Because the files are in the `ca_discipline` folder, the location of each must be defined as `ca_discipline/f` using the `paste0` function, which concatenates strings of text.
 
@@ -186,7 +186,7 @@ The plot should look like this:
 
 ![](./img/class14_4.png)
 
-Often you won't be able to load shapefiles form an API. But if you have downloaded a shapefile to your computer, you can load it like this:
+Often you won't be able to load shapefiles from an API. But if you have downloaded a shapefile to your computer, you can load it like this:
 
 ```R
 # read in a shapefile from your computer
@@ -348,7 +348,7 @@ car_breakins <- incidents %>%
          & grepl("unlocked auto|locked auto", descript, ignore.case = TRUE))
 
 # check the crime descriptions resulting from that filter
-car_breakin_types <- car_breakin %>%
+car_breakin_types <- car_breakins %>%
   select(descript) %>%
   unique()
 ```

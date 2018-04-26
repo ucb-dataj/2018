@@ -141,10 +141,36 @@ theft_types <- incidents %>%
   select(category,descript) %>%
   unique()
 
+
+# if we're interested in theft from cars, what crimes should be included?
+theft_types <- incidents %>%
+  filter(grepl("theft|larceny", category, ignore.case=TRUE)) %>%
+  select(category,descript) %>%
+  unique()
+
+ATTEMPTED THEFT FROM LOCKED VEHICLE
+ATTEMPTED THEFT FROM UNLOCKED VEHICLE
+BURGLARY, VEHICLE (ARREST MADE)
+BURGLARY, VEHICLE, ATT. (ARREST MADE)
+GRAND THEFT FROM LOCKED AUTO
+GRAND THEFT FROM UNLOCKED AUTO
+PETTY THEFT FROM LOCKED AUTO
+PETTY THEFT FROM UNLOCKED AUTO
+
 # filter grand and petty theft from locked or unlocked auto
 car_breakins <- incidents %>%
   filter(grepl("grand|petty", descript, ignore.case = TRUE)
-         & grepl(" unlocked auto|locked auto", descript, ignore.case = TRUE))
+         & grepl("locked auto", descript, ignore.case = TRUE))
+
+# filter grand and petty theft from locked or unlocked auto
+car_breakins <- incidents %>%
+  filter((grepl("grand|petty", descript, ignore.case = TRUE) 
+          & grepl("locked auto", descript, ignore.case = TRUE)) 
+         | grepl("burglary, vehicle", descript,ignore.case = TRUE)
+         | (grepl("attempted theft", descript, ignore.case = TRUE)
+            & grepl("locked auto", descript, ignore.case = TRUE))) 
+
+
 
 # check we have just those types
 car_breakin_types <- car_breakin %>%
