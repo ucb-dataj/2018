@@ -157,8 +157,11 @@ CREATE TABLE car_breakins (
 );
 ```
 
-
 Bonus questions: where is this data from? Who compiled it? Can you sniff anything out from the Socrata metadata?
+
+## Points Within a Shape
+
+As James correctly deduced last week, we can use `ST_Within` or `ST_Contains` to find points within a shape. So I wanted to add a walk through of how we'd actually do that. It helps to take a look at the documentation to understand the distinction between the two functions. [ST_Within](http://postgis.net/docs/ST_Within.html) will find all the points (or shapes or lines) that are entirely inside of a polygon. [ST_Contains](http://postgis.net/docs/ST_Within.html) will capture points inside the polygon or exactly on its border. 
 
 # Keep Learning
 
