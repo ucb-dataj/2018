@@ -158,10 +158,105 @@ CREATE TABLE car_breakins (
 ```
 Bonus questions: where is this data from? Who compiled it? Can you sniff anything out from the Socrata metadata?
 
+<!-- Solution:
+
+COPY car_breakins FROM /home/amanda/Downloads/Car_Break-ins.csv DELIMITER ',' CSV HEADER;
+ALTER TABLE car_breakins ADD COLUMN geom GEOMETRY;
+UPDATE car_breakins SET geom = ST_MakePoint(x,y);
+
+And then head over to the QGIS > Database menu.
+
+-->
 
 ## Points Within a Shape
 
 As James correctly deduced last week, we can use `ST_Within` or `ST_Contains` to find points within a shape. So I wanted to add a walk through of how we'd actually do that. It helps to take a look at the documentation to understand the distinction between the two functions. [ST_Within](http://postgis.net/docs/ST_Within.html) will find all the points (or shapes or lines) that are entirely inside of a polygon. [ST_Contains](http://postgis.net/docs/ST_Within.html) will capture points inside the polygon or exactly on its border.
+
+As ever, I like to do this in steps:
+
+First, I just use a `SELECT` statement to find the matches:
+
+```SQL
+SELECT car_breakins.geom,
+       ca_zipcodes.zcta5ce10,
+       ca_zipcodes.geom
+FROM car_breakins, ca_zipcodes
+WHERE ST_Within(car_breakins.geom, ca_zipcodes.geom);
+```
+
+Then, I create a new column to hold the zipcode:
+
+```SQL
+ALTER TABLE car_breakins ADD COLUMN zipcode INTEGER;
+```
+And last I fill the column with values:
+
+```SQL
+UPDATE car_breakins
+  SET zipcode = (SELECT ca_zipcodes.zcta5ce10
+  FROM car_breakins, ca_zipcodes
+  WHERE ST_Within(car_breakins.geom, ca_zipcodes.geom)););
+```
+
+But there's an error there: `ERROR:  column "zipcode" is of type integer but expression is of type character varying` -- this is a clue that I need to recast the ca_zipcodes value:
+
+```SQL
+UPDATE car_breakins
+  SET zipcode = (SELECT ca_zipcodes.zcta5ce10::INTEGER
+  FROM car_breakins, ca_zipcodes
+  WHERE ST_Within(car_breakins.geom, ca_zipcodes.geom)););
+```
+
+
+Full disclosure: I actually tested this out first on a known-known: the `example_one` table we worked with in Week 11 already has zipcodes in it, so I actually tested my query by looking it up there:
+
+First, I just use a `SELECT` statement to find the matches:
+
+```SQL
+SELECT example_one.zipcode_of_incident,
+       example_one.geom,
+       ca_zipcodes.zcta5ce10,
+       ca_zipcodes.geom
+FROM example_one, ca_zipcodes
+WHERE ST_Within(example_one.geom, ca_zipcodes.geom);
+```
+I like to do a little sanity checking, to make sure I'm doing it right, so I usually test the query on a data set where I know the outcome, and I try a few tests for discrepancies:
+
+```SQL
+SELECT example_one.zipcode_of_incident,
+       example_one.geom,
+       ca_zipcodes.zcta5ce10,
+       ca_zipcodes.geom
+FROM example_one, ca_zipcodes
+WHERE ST_Within(example_one.geom, ca_zipcodes.geom)
+      AND example_one.zipcode_of_incident != ca_zipcodes.zcta5ce10;
+```
+
+That query gives me an error: `operator does not exist: integer !~~ character varying` -- a clue that in example_one, the zipcode is stored as INTEGER, while in ca_zipcodes it's stored as VARCHAR, so I need to recast one or the other.
+
+```SQL
+SELECT example_one.zipcode_of_incident,
+       example_one.geom,
+       ca_zipcodes.zcta5ce10,
+       ca_zipcodes.geom
+FROM example_one, ca_zipcodes
+WHERE ST_Within(example_one.geom, ca_zipcodes.geom)
+      AND example_one.zipcode_of_incident != ca_zipcodes.zcta5ce10::INTEGER;
+```
+
+That query draws up a few points where the police records and the zipcode shapefile don't concur. But I can just zoom in on the 94108/94109 border and confirm that the calculated zipcode is better. Use the "Identify" icon and then select the point, right click on it, and choose to view the "attribute table" to confirm that we're looking at the same incident.
+
+Once you know that your query makes sense, you can actually add a column to the table and populate it with the new data.
+
+
+
+
+
+Then, I add a column to contain the information I want to add:
+
+Finally, I use an `UPDATE` query to populate the column:
+
+
 
 ## Keep Learning
 
