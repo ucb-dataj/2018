@@ -107,8 +107,8 @@ The first thing we need to do is actually `CREATE EXTENSION postgis;` -- but we'
 ### [ST_MakePoint](https://postgis.net/docs/ST_MakePoint.html)
 
 ```sql
-ALTER TABLE example ADD COLUMN the_geom GEOMETRY;
-UPDATE example SET the_geom =  ST_MakePoint(longitude, latitude);
+ALTER TABLE example ADD COLUMN geom GEOMETRY;
+UPDATE example SET geom =  ST_MakePoint(longitude, latitude);
 ```
 
 So now we need to connect in QGIS. You can go to `Layer > Add Layer > Postgis` or look for the elephant on the sidebar.
@@ -123,7 +123,7 @@ A few more observations:
 * It is important to get used to thinking in terms of tables and to recognize that this data is all super accessible.
 * It is important to get to a place where you can frame the question in front of you in a meaningful way.
 * The QGIS documentation is really bad. But the [PostGIS documentation](http://postgis.net/docs/manual-2.4/) is great.
-* Using the "the_geom" convention is optional but it will save you a lot of aggravation.
+* Using the "geom" convention is optional but it will save you a lot of aggravation.
 
 ## Tidying
 
@@ -135,7 +135,11 @@ Look for `Database > DB Manager` in the menu. You should be able to drill down t
 
 You can actually charge ahead without addressing any of these warnings, but when you hit a wall, the first troubleshooting step is always to address any warnings, so do that.
 
-Use the link to create a spatial index.
+Use the "create it" link to create a spatial index, or you can create it with:
+
+```SQL
+CREATE INDEX sidx_test_the_geom ON public.example USING gist (geom);
+```
 
 Register this table with QGIS (to create an entry in `geometry_columns`) with [`Populate_Geometry_Columns`](https://postgis.net/docs/Populate_Geometry_Columns.html):
 
