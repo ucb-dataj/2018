@@ -138,7 +138,11 @@ You can actually charge ahead without addressing any of these warnings, but when
 Use the "create it" link to create a spatial index, or you can create it with:
 
 ```SQL
+<<<<<<< HEAD
 CREATE INDEX sidx_example_geom ON public.example USING gist (geom);
+=======
+CREATE INDEX sidx_test_the_geom ON public.example USING gist (geom);
+>>>>>>> 3ed80d32c30134fbf17ebcf5eb0359643696c531
 ```
 
 Register this table with QGIS (to create an entry in `geometry_columns`) with [`Populate_Geometry_Columns`](https://postgis.net/docs/Populate_Geometry_Columns.html):
