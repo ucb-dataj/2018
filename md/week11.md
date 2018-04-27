@@ -16,7 +16,7 @@ We already used [`head`](https://www.gnu.org/software/coreutils/manual/html_node
 ```SQL
 
 CREATE TABLE example_shorter AS
-  SELECT * FROM example LIMIT 1000;
+  SELECT * FROM example_one LIMIT 1000;
 
 ```
 
@@ -73,19 +73,19 @@ SELECT location,
 	split_part(location, ',', 1),                 
 	split_part(btrim(location, '()'), ',', 1),
 	split_part(btrim(location, '()'), ',', 2)
-	FROM example;
+	FROM example_one;
 ```
 
 Then pull it into it's own column:
 
 ```sql
 
-ALTER TABLE example
+ALTER TABLE example_one
   ADD COLUMN longitude FLOAT,
   ADD COLUMN latitude FLOAT;
 
 
-UPDATE example SET longitude = split_part(btrim(location, '()'), ',', 2),
+UPDATE example_one SET longitude = split_part(btrim(location, '()'), ',', 2),
                 latitude = split_part(btrim(location, '()'), ',', 1);
 
 ```
@@ -94,7 +94,7 @@ Read the error message. What does it actually say?
 
 ```sql
 
-UPDATE example SET longitude = split_part(btrim(location, '()'), ',', 2)::float,
+UPDATE example_one SET longitude = split_part(btrim(location, '()'), ',', 2)::float,
                  latitude = split_part(btrim(location, '()'), ',', 1)::float;
 
 ```
@@ -107,8 +107,8 @@ The first thing we need to do is actually `CREATE EXTENSION postgis;` -- but we'
 ### [ST_MakePoint](https://postgis.net/docs/ST_MakePoint.html)
 
 ```sql
-ALTER TABLE example ADD COLUMN geom GEOMETRY;
-UPDATE example SET geom =  ST_MakePoint(longitude, latitude);
+ALTER TABLE example_one ADD COLUMN geom GEOMETRY;
+UPDATE example_one SET geom =  ST_MakePoint(longitude, latitude);
 ```
 
 So now we need to connect in QGIS. You can go to `Layer > Add Layer > Postgis` or look for the elephant on the sidebar.
@@ -138,18 +138,18 @@ You can actually charge ahead without addressing any of these warnings, but when
 Use the "create it" link to create a spatial index, or you can create it with:
 
 ```SQL
-CREATE INDEX sidx_example_geom ON public.example USING gist (geom);
+CREATE INDEX sidx_example_one_geom ON public.example_one USING gist (geom);
 ```
 
 Register this table with QGIS (to create an entry in `geometry_columns`) with [`Populate_Geometry_Columns`](https://postgis.net/docs/Populate_Geometry_Columns.html):
 
 ```sql
-SELECT Populate_Geometry_Columns('example'::regclass);
+SELECT Populate_Geometry_Columns('example_one'::regclass);
 ```
 Add a primary key, with:  
 
 ```sql
-ALTER TABLE example ADD PRIMARY KEY (call_number, unit_id);
+ALTER TABLE example_one ADD PRIMARY KEY (call_number, unit_id);
 ```
 
 ## What Do We Want To Accomplish?
